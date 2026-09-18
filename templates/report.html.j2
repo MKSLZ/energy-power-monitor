@@ -70,6 +70,7 @@ section{margin-top:38px}
 .evc-table-wrap{overflow-x:auto}
 table.evc{width:100%;min-width:720px;border-collapse:collapse;table-layout:fixed;font-size:12.5px}
 table.evc th,table.evc td{padding:7px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;word-break:break-word;overflow-wrap:anywhere;white-space:normal;line-height:1.6}
+table.evc td.imp-detail{font-size:12px;color:#45413a;line-height:1.65}
 table.evc thead th{background:#EFEAE0;color:var(--accent);font-weight:700;font-size:11.5px}
 .dir{font-weight:700;white-space:normal;line-height:1.5}
 .dir.up{color:var(--bull)} .dir.down{color:var(--bear)} .dir.flat{color:var(--muted)}
@@ -202,7 +203,7 @@ td.num,td.num.up,td.num.down,td.num.flat,td.num.na{white-space:normal!important;
       <div class="cutoff">数据截止时间(UTC+8)：{{ meta.cutoff }}</div>
       <div>监控窗口：最近 24 小时（{{ meta.window }}）</div>
       <div>下次监控：{{ meta.next_update }}（本页每 5 分钟自动刷新）</div>
-	      <div>当日成篇（{{ day_date }}）：已累积事件 <b>{{ day_events_total }}</b> 条 · 本档新增 {{ day_events_new }} 条 · 新事件只增不删</div>
+	      <div>当日成篇（{{ day_date }}）：已分析上卡 <b>{{ day_events_total }}</b> 条 · 本档新增 {{ day_events_new }} 条 · 待分析 {{ day_events_pending }} 条 · 重要事件只增不删</div>
     </div>
   </div>
   <div class="badge-row">
@@ -255,7 +256,7 @@ td.num,td.num.up,td.num.down,td.num.flat,td.num.na{white-space:normal!important;
   <div class="eh-sub">{{ events|length }} 个最重要事件 · 逐事件给出方向 / 强度 / 时滞 / 置信度 / 是否 price-in / 传导逻辑 · 颜色：<span style="color:#F4B8B0">红 ▲看多</span>　<span style="color:#9FD4B6">绿 ▼看空</span>　<span style="color:#C9C1AE">灰 ■中性</span></div>
 </div>
 <section>
-  <div class="sec-head"><span class="sec-no">03</span><span class="sec-title">事件影响卡</span><span class="sec-note">当日累积 {{ events|length }} 条 · 本档新增 {{ day_events_new }} 条 · 按抓取先后 · 只增不删</span></div>
+  <div class="sec-head"><span class="sec-no">03</span><span class="sec-title">事件影响卡</span><span class="sec-note">当日已分析 {{ events|length }} 条 · 本档新增 {{ day_events_new }} · 待分析 {{ day_events_pending }} · 逐条四品种系列影响 · 只增不删</span></div>
 
   {% if events %}
   {% for ev in events %}
@@ -268,10 +269,10 @@ td.num,td.num.up,td.num.down,td.num.flat,td.num.na{white-space:normal!important;
     </div>
     <div class="evc-table-wrap"><table class="evc">
       <colgroup><col style="width:9%"><col style="width:11%"><col style="width:8%"><col style="width:12%"><col style="width:9%"><col style="width:11%"><col style="width:40%"></colgroup>
-      <thead><tr><th>品种</th><th>方向</th><th>强度</th><th>时滞</th><th>置信度</th><th>price-in</th><th>一句传导逻辑</th></tr></thead>
+      <thead><tr><th>品种</th><th>方向</th><th>强度</th><th>时滞</th><th>置信度</th><th>price-in</th><th>系列影响推演（传导路径 · 节奏 · 国内缓冲）</th></tr></thead>
       <tbody>
         {% for im in ev.impacts %}
-        <tr><td>{{ im.prod }}</td><td><span class="dir {{ im.dir }}">{{ im.dir_label }}</span></td><td>{{ im.strength }}</td><td>{{ im.lag }}</td><td>{{ im.confidence }}</td><td>{{ im.priced_in }}</td><td>{{ im.logic }}</td></tr>
+        <tr><td>{{ im.prod }}</td><td><span class="dir {{ im.dir }}">{{ im.dir_label }}</span></td><td>{{ im.strength }}</td><td>{{ im.lag }}</td><td>{{ im.confidence }}</td><td>{{ im.priced_in }}</td><td class="imp-detail">{{ im.detail }}</td></tr>
         {% else %}
         <tr><td colspan="7" class="na">N/A</td></tr>
         {% endfor %}

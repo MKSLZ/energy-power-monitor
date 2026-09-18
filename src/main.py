@@ -86,31 +86,40 @@ def run_online(data_dir: Path, out_dir: Path) -> Path:
     history_path = data_dir / "history.json"
     history = load_history(history_path)
 
-    # ===== 按日事件库（append-only）：只对当日“新抓取”事件调推演，全天只增不删 =====
+    # ===== 按日事件库（append-only）+ 待分析队列：所有重要事件分批逐条分析、只增不删 =====
     state = eventstore.load_day(data_dir, today_s)
-    new_raw = eventstore.split_new_raw(state, fetched["events"])
-    candidates = select_events(new_raw, cap=6, per_source=4) if new_raw else []
-    log(f"当日事件库已有 {len(state['events'])} 条；本档新抓取 {len(new_raw)} 条，送推演 {len(candidates)} 条。")
+    ingested = eventstore.ingest_pending(state, fetched["events"])
+    log(f"当日已累积 {len(state['events'])} 条；本档新入队 {ingested} 条；待分析队列 {len(state['pending'])} 条。")
+
+    BATCH_SIZE, MAX_BATCHES = 5, 2   # 每档最多分析 2 批 ×5 = 10 条；剩余下档继续，保证当天重要事件全部消化
+    new_events: list[dict] = []
+    batches = 0
+    while state["pending"] and batches < MAX_BATCHES:
+        batch = eventstore.take_batch(state, BATCH_SIZE)
+        log(f"第 {batches + 1} 批：对 {len(batch)} 条事件逐条做四品种影响分析…")
+        res = analyze.analyze_event_batch(batch)
+        new_events.extend(res["events"])
+        fin, gave = eventstore.settle_batch(state, batch, res["decided"])
+        log(f"本批作答出队 {fin} 条（含判无影响；放弃 {gave}），上影响卡 {len(res['events'])} 条；队列余 {len(state['pending'])} 条。")
+        batches += 1
 
     added = 0
-    if candidates:
-        log("仅对本档【新增】事件调用 LLM 推演（历史已抓事件不重复推演、不删除）…")
-        llm_new = analyze.run_llm({**fetched, "events": candidates})
-        if llm_new and llm_new.get("events"):
-            good_new = [e for e in llm_new["events"] if not analyze._is_junk_event(e)]
-            merged, added = eventstore.merge_events(state["events"], good_new)
-            state["events"] = merged
-            eventstore.mark_seen(state, candidates)   # 已处理原始事件不再重复送推演
-            eventstore.update_brief(state, llm_new)   # 简报段刷新为最近一次
-            state["updated_at"] = now_s
-            eventstore.save_day(data_dir, state)
-            log(f"已追加 {added} 条新事件；当日累积 {len(state['events'])} 条。")
-        else:
-            log("新增事件推演失败/为空：沿用当日已累积事件与既有推演，不覆盖。")
-    else:
-        log("本档无新增事件：沿用当日累积事件与最近一次整体推演。")
+    if new_events:
+        merged, added = eventstore.merge_events(state["events"], new_events)
+        state["events"] = merged
+        # 简报段（要点/因子/情景）当天首次成篇时生成一次，之后沿用，控制单档耗时
+        if not state.get("brief"):
+            log("生成当日整体简报（要点/因子/情景）…")
+            brief = analyze.run_llm(fetched)
+            if brief:
+                eventstore.update_brief(state, brief)
+        state["updated_at"] = now_s
+    # 队列变动（新入队/漏答重试）也持久化，保证下一档接着消化、不漏事件
+    eventstore.save_day(data_dir, state)
+    log(f"本档新上影响卡 {added} 条；当日累积 {len(state['events'])} 条，待分析 {len(state['pending'])} 条。")
 
     day_events = state["events"]
+    pending_left = len(state["pending"])
     if day_events:
         llm = dict(state.get("brief") or {})
         llm["events"] = day_events
@@ -147,6 +156,7 @@ def run_online(data_dir: Path, out_dir: Path) -> Path:
     report["day_date"] = today_s
     report["day_events_total"] = len(report.get("events", []))
     report["day_events_new"] = added
+    report["day_events_pending"] = pending_left
     eventstore.prune_old(data_dir, today_s)
 
 

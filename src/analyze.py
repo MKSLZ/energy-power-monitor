@@ -279,6 +279,126 @@ def _facts(fetched: dict, n: int = 30) -> dict:
     }
 
 
+_EV_LAG = {"oil": "即时", "gas": "数日", "coal": "数日", "power": "数日"}
+_EV_ANALOGY = {
+    "oil": "2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲",
+    "gas": "2022 俄乌冲突推升 TTF 与进口 LNG 成本",
+    "coal": "2021 动力煤暴涨与保供限价",
+    "power": "2021 全国电荒、煤价向电价的成本传导",
+}
+_EV_CHAIN = ("事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → "
+             "能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。")
+
+
+def _nature_of(title: str) -> str:
+    if any(k in title for k in ("袭击", "中断", "爆炸", "突发", "停运", "停产", "封锁",
+                                "停供", "地震", "泄漏", "升级", "扣船")):
+        return "突发"
+    if any(k in title for k in ("库存", "月报", "周报", "数据", "公布", "CPI", "PPI",
+                                "EIA", "OPEC", "IEA", "日耗", "产量", "指数")):
+        return "数据公布"
+    if any(k in title for k in ("会议", "政策", "通知", "办法", "印发", "批复",
+                                "规划", "公告", "部署", "试点")):
+        return "确认"
+    return "确认"
+
+
+def _clean_detail(s) -> str:
+    s = str(s or "").strip().strip("。.；; ")
+    for pre in ("系列影响：", "系列影响:", "影响：", "传导：", "逻辑：", "分析："):
+        if s.startswith(pre):
+            s = s[len(pre):]
+    return s.strip()[:70]
+
+
+def analyze_event_batch(items: list[dict]) -> dict:
+    """对一批（≤5）已编号【真实】事件逐条做国内四品种影响判断（picks 式）。
+
+    模型只回 {id, oil/gas/coal/power:{dir,strength,detail}}，不写 title/time/url，
+    从根本上杜绝编造；标题/时间/来源/链接全部由代码按 id 回填。
+    返回 {"events": [至少一个非 flat 的 LLM 事件 schema...],
+          "decided": [模型实际作答的 items 本地下标...]}。
+    模型漏答的下标不在 decided，调用方据此把事件留在待分析队列下档补做，
+    从而保证“所有重要事件最终都会被分析”。
+    """
+    n = len(items)
+    if not n:
+        return {"events": [], "decided": []}
+    lines = [f"E{i} [{it.get('source', '来源')}] {it.get('title', '')}（{it.get('time', '—')}）"
+             for i, it in enumerate(items, 1)]
+    user = (
+        f"以下是 {n} 条当日真实监控事件，已编号 E1..E{n}。请对【每一条】分别判断其对国内四品种的影响："
+        "oil=国内原油INE上海原油SC；gas=国内天然气SHPGX LNG/接收站现货/管道气门站；"
+        "coal=秦皇岛Q5500动力煤/港口坑口/焦煤/电厂日耗库存；power=广东及南方现货日前实时电价。\n"
+        '只输出一个JSON：{"picks":[{"id":"E1","oil":{"dir":"up","strength":"强","detail":"…"},'
+        '"gas":{...},"coal":{...},"power":{...}}]}\n'
+        "要求：①必须为每个 id 都输出一项，逐条不得遗漏；②dir 仅 up/down/flat，strength 仅 强/中/弱，"
+        "dir=flat 时 strength 填 弱；③detail 不超过55字：dir 非 flat 时写【系列影响】，沿"
+        "“地缘/宏观→外盘油气→进口到岸平价·汇率·海运费→国内油气→能源替代与预期→煤电燃料成本→国内现货电价”"
+        "说清连锁方向、先后节奏（即时/数日/数周）以及长协保供等国内缓冲；dir=flat 时一句话写明为何对该品种影响有限；"
+        "④中东/海峡/OPEC/制裁/美联储等海外事件必须据默认传导矩阵落到国内油气煤电，不得无据一律 flat；四品种独立判断、允许分化。\n"
+        "事件：\n" + "\n".join(lines))
+    obj, finish = _chat_json(_RULES, user, max_tokens=3000)
+    picks = obj.get("picks") if isinstance(obj, dict) else None
+    if not isinstance(picks, list):
+        print(f"[analyze] 批次 picks 不可用（finish={finish}），整批留待下档重试。", flush=True)
+        return {"events": [], "decided": []}
+
+    events: list[dict] = []
+    decided: list[int] = []
+    for pk in picks:
+        if not isinstance(pk, dict):
+            continue
+        pid = str(pk.get("id", "")).strip().upper()
+        if not (pid.startswith("E") and pid[1:].isdigit()):
+            continue
+        idx = int(pid[1:]) - 1
+        if not (0 <= idx < n) or idx in decided:
+            continue
+        ev = items[idx]
+        dirs, details, strengths = {}, {}, {}
+        for k in PROD_KEYS:
+            one = pk.get(k) if isinstance(pk.get(k), dict) else {}
+            d = _norm_dir(one.get("dir"))
+            st = one.get("strength") if one.get("strength") in ("强", "中", "弱") else "中"
+            det = _clean_detail(one.get("detail")) or (
+                "影响国内相关品种定价预期。" if d != "flat" else "对该品种直接影响有限。")
+            dirs[k], details[k], strengths[k] = d, det, st
+        decided.append(idx)
+        if all(d == "flat" for d in dirs.values()):
+            continue  # 已判定对四品种均无影响：下标进 decided（调用方终结它），但不上影响卡
+        conf = {"强": "中", "中": "中", "弱": "低"}
+        impacts = {}
+        for k in PROD_KEYS:
+            d, det = dirs[k], details[k]
+            impacts[k] = {
+                "dir": d,
+                "strength": strengths[k] if d != "flat" else "—",
+                "lag": _EV_LAG[k],
+                "confidence": conf.get(strengths[k], "中") if d != "flat" else "—",
+                "priced_in": "部分" if d != "flat" else "—",
+                "logic": det[:40],
+                "detail": det,
+            }
+        moved = [k for k in PROD_KEYS if dirs[k] != "flat"]
+        analogy = "；".join(_EV_ANALOGY[k] for k in moved)
+        up_any = any(dirs[k] == "up" for k in moved)
+        trig = "供给进一步收紧 / 需求超预期 / 冲突升级" if up_any else "供给恢复 / 需求转弱 / 风险缓和"
+        u = ev.get("url")
+        urls = [u] if isinstance(u, str) and u else (u if isinstance(u, list) else [])
+        events.append({
+            "title": ev["title"], "time": ev.get("time") or "—",
+            "source": ev.get("source", "—"), "url": urls,
+            "nature": _nature_of(str(ev.get("title", ""))), "impacts": impacts,
+            "chain": _EV_CHAIN, "analogy": "历史类比：" + analogy,
+            "trigger": "强化触发：" + trig,
+            "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。",
+        })
+    print(f"[analyze] 批次 {n} 条：模型作答 {len(decided)} 条，其中有四品种影响而上卡 {len(events)} 条"
+          f"（finish={finish}）。", flush=True)
+    return {"events": events, "decided": decided}
+
+
 def run_llm(fetched: dict) -> dict | None:
     """两段式（事件段优先、简报段尽力而为）+ 流式 + 截断修复。
     无 key / 事件段失败 -> None（main 走速览版）；简报段失败仅该段代码兜底。"""
@@ -645,6 +765,7 @@ def _llm_events_to_contract(llm_events: list[dict]) -> list[dict]:
                 "confidence": imp.get("confidence", "—"),
                 "priced_in": imp.get("priced_in", "—"),
                 "logic": imp.get("logic", "—"),
+                "detail": imp.get("detail", imp.get("logic", "—")),
             })
         urls = ev.get("url") or []
         links = [{"text": ev.get("source", "来源"), "url": u} for u in urls if u]

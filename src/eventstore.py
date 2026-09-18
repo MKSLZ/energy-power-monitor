@@ -15,7 +15,7 @@ import json
 import time
 from pathlib import Path
 
-from fetchers.base import norm_title  # noqa: E402
+from fetchers.base import norm_title, select_events  # noqa: E402
 
 KEEP_DAYS = 30
 _BRIEF_KEYS = ("core_points", "factor_board", "radar", "summary_rows",
@@ -40,6 +40,7 @@ def load_day(data_dir: Path, date_s: str) -> dict:
                 st.setdefault("seen_raw_keys", [])
                 st.setdefault("events", [])
                 st.setdefault("brief", {})
+                st.setdefault("pending", [])
                 return st
         except Exception:  # noqa: BLE001
             pass
@@ -160,3 +161,64 @@ def rebuild_summary_rows(events: list[dict]) -> list[dict]:
             "note": str(ev.get("chain", "") or "—")[:16],
         })
     return rows
+
+
+# ---------------------------------------------------------------------------
+# 待分析事件队列（pending）：保证当日所有重要事件最终都会被分析。
+# 新抓到的相关事件先进队列；每档取前若干条分批送模型；模型作答（含判定无影响）
+# 的出队并记入 seen，漏答的 attempts+1 留下档补做，超过上限才放弃（避免坏条目永久堵队列）。
+# ---------------------------------------------------------------------------
+def ingest_pending(state: dict, raw_events: list[dict], *,
+                   cap: int = 40, per_source: int = 10) -> int:
+    """把本期新抓取、且此前从未处理（未上卡/未判无影响/不在队）的相关事件排入待分析队列。"""
+    ordered = select_events(raw_events, cap=cap, per_source=per_source) if raw_events else []
+    termin = set(state.get("seen_raw_keys", []))
+    termin |= {norm_title(str(e.get("title", "")))
+               for e in state.get("events", []) if isinstance(e, dict)}
+    have = {p.get("key") for p in state.get("pending", []) if isinstance(p, dict)}
+    pend = state.setdefault("pending", [])
+    added = 0
+    for it in ordered:
+        k = norm_title(str(it.get("title", "")))
+        if not k or k in termin or k in have:
+            continue
+        pend.append({"key": k, "item": it, "attempts": 0})
+        have.add(k)
+        added += 1
+    return added
+
+
+def take_batch(state: dict, size: int = 5) -> list[dict]:
+    """取待分析队列最前 size 条的原始事件（不出队，结算时再定去留）。"""
+    return [p["item"] for p in state.get("pending", [])[:size] if isinstance(p, dict)]
+
+
+def settle_batch(state: dict, batch: list[dict], decided_idx: list[int],
+                 max_attempts: int = 3) -> tuple[int, int]:
+    """结算一批：模型作答的条目（含判无影响）出队并入 seen；漏答的 attempts+1，
+    达到上限则放弃出队（防止坏条目永久堵塞）。返回 (已作答出队数, 放弃数)。"""
+    pend = state.get("pending", [])
+    decided_keys = set()
+    for i in decided_idx:
+        if isinstance(i, int) and 0 <= i < len(batch):
+            decided_keys.add(norm_title(str(batch[i].get("title", ""))))
+    batch_keys = {norm_title(str(it.get("title", ""))) for it in batch}
+    seen = set(state.get("seen_raw_keys", []))
+    new_pend: list[dict] = []
+    finished = gave_up = 0
+    for p in pend:
+        k = p.get("key")
+        if k in batch_keys:
+            if k in decided_keys:
+                seen.add(k)
+                finished += 1
+                continue
+            p["attempts"] = int(p.get("attempts", 0)) + 1
+            if p["attempts"] >= max_attempts:
+                seen.add(k)
+                gave_up += 1
+                continue
+        new_pend.append(p)
+    state["pending"] = new_pend
+    state["seen_raw_keys"] = sorted(seen)
+    return finished, gave_up
