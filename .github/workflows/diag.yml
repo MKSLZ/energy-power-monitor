@@ -13,30 +13,44 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Probe
+      - name: ProbeBig
         run: |
           python -m pip install -q requests
           python3 - <<'PY'
-          import os,socket,requests
-          base=os.environ.get('LLM_BASE_URL','').rstrip('/')
-          key=os.environ.get('LLM_API_KEY','')
-          model=os.environ.get('LLM_MODEL','')
-          print('base=',base,'model=',model,'keyset=',bool(key),'keylen=',len(key))
-          for host in ['open.bigmodel.cn','api.deepseek.com','generativelanguage.googleapis.com','api.openai.com']:
-              try: print('DNS_OK',host,socket.gethostbyname(host))
-              except Exception as e: print('DNS_FAIL',host,type(e).__name__,str(e)[:120])
-          def probe(tag,url,payload):
+          import os,time,json,re,requests
+          base=os.environ['LLM_BASE_URL'].rstrip('/'); key=os.environ['LLM_API_KEY']; model=os.environ.get('LLM_MODEL','glm-4-flash')
+          cats=["地缘政治与制裁","宏观金融","供需库存","天气季节","中国政策与电力市场规则","替代能源与基础设施"]
+          srcs=["路透","新华社","财联社","OPEC","EIA","CCTD"]
+          events=[{"time":f"2026-09-18 17:{i%60:02d}","source":srcs[i%6],
+                   "title":f"测试事件{i+1}：中东局势/美联储议息/原油库存/欧洲储气/台风来水/电改现货等能源要闻编号{i+1} 的具体描述",
+                   "url":[f"https://example.com/news/{i+1}"],"category":cats[i%6]} for i in range(48)]
+          quotes=[{"name":n,"price":100+i,"unit":"元","day_chg":0.5,"src_time":"17:00","status":"ok"} for i,n in
+                  enumerate(["INE SC 主力","大连焦煤主力 JM0","秦港 Q5500 平仓价","中国 LNG 出厂指数 SHPGX","广东日前现货均价","Brent 原油","WTI 原油","NYMEX 天然气(HH)","欧洲 TTF","亚洲 JKM","EPEX 德国日前"])]
+          facts={"events":events,"quotes":quotes}
+          sysp=("你是能源交易分析引擎。只输出JSON，键为 events，每个元素含 title 与 impacts(对象，含 oil/gas/coal/power 四项，"
+               "每项含 dir(▲/▼/■)、strength、lag、confidence、priced_in、logic)，以及 chain/analogy/trigger/falsify。"
+               "从输入中挑对国内油气煤电最重要的8个事件，逐项用中文简短填写。")
+          user=("只输出JSON对象本身，不要markdown；logic≤40汉字，其余≤30汉字。\n"+json.dumps(facts,ensure_ascii=False))
+          payload={"model":model,"messages":[{"role":"system","content":sysp},{"role":"user","content":user}],
+                   "temperature":0.2,"max_tokens":4096,"response_format":{"type":"json_object"}}
+          t0=time.time()
+          try:
+              r=requests.post(base+'/chat/completions',headers={'Authorization':'Bearer '+key,'Content-Type':'application/json'},json=payload,timeout=180)
+              dt=time.time()-t0
+              print('STATUS',r.status_code,'ELAPSED=%.1f'%dt)
+              if r.status_code!=200:
+                  print('BODY',r.text[:400]); raise SystemExit
+              j=r.json(); ch=j['choices'][0]; c=ch['message']['content']
+              print('finish_reason=',ch.get('finish_reason'),'usage=',j.get('usage'),'content_len=',len(c))
+              print('HEAD=',c[:160].replace('\n',' '))
+              print('TAIL=',c[-160:].replace('\n',' '))
+              m=re.search(r'\{.*\}',c,re.S)
+              if not m: print('NO_JSON_MATCH'); raise SystemExit
               try:
-                  r=requests.post(url,headers={'Authorization':'Bearer '+key,'Content-Type':'application/json'},json=payload,timeout=25)
-                  print('POST_'+tag,'status',r.status_code,'body',r.text[:220].replace('\n',' '))
+                  obj=json.loads(m.group(0)); evs=obj.get('events',[])
+                  print('PARSE_OK events=',len(evs),'impacts_keys=',list((evs[0].get('impacts') or {}).keys()) if evs else None)
               except Exception as e:
-                  print('POSTFAIL_'+tag,type(e).__name__,str(e)[:200])
-          if base and key:
-              probe('ZM',base+'/chat/completions',{'model':model,'messages':[{'role':'user','content':'hi'}],'max_tokens':5})
-          # 纯TLS连通（不带鉴权）
-          for u in ['https://open.bigmodel.cn/','https://api.deepseek.com/','https://generativelanguage.googleapis.com/']:
-              try:
-                  rr=requests.get(u,timeout=15); print('GET_OK',u,rr.status_code)
-              except Exception as e:
-                  print('GET_FAIL',u,type(e).__name__,str(e)[:140])
+                  print('PARSE_FAIL',type(e).__name__,str(e)[:200])
+          except Exception as e:
+              print('REQUEST_FAIL',type(e).__name__,str(e)[:240])
           PY
