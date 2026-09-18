@@ -31,6 +31,8 @@ from jinja2 import Environment, FileSystemLoader  # noqa: E402
 
 import analyze  # noqa: E402
 import fetchers  # noqa: E402
+import eventstore  # noqa: E402
+from fetchers.base import select_events  # noqa: E402
 
 HISTORY_KEEP = 30
 
@@ -79,8 +81,45 @@ def run_online(data_dir: Path, out_dir: Path) -> Path:
     log(f"抓取完成：事件 {n_events} 条，行情 {n_quotes} 条，源状态 {len(fetched['source_status'])} 条")
 
     now = datetime.now(BEIJING)
+    today_s = now.strftime("%Y-%m-%d")
+    now_s = now.strftime("%Y-%m-%d %H:%M")
     history_path = data_dir / "history.json"
     history = load_history(history_path)
+
+    # ===== 按日事件库（append-only）：只对当日“新抓取”事件调推演，全天只增不删 =====
+    state = eventstore.load_day(data_dir, today_s)
+    new_raw = eventstore.split_new_raw(state, fetched["events"])
+    candidates = select_events(new_raw, cap=6, per_source=4) if new_raw else []
+    log(f"当日事件库已有 {len(state['events'])} 条；本档新抓取 {len(new_raw)} 条，送推演 {len(candidates)} 条。")
+
+    added = 0
+    if candidates:
+        log("仅对本档【新增】事件调用 LLM 推演（历史已抓事件不重复推演、不删除）…")
+        llm_new = analyze.run_llm({**fetched, "events": candidates})
+        if llm_new and llm_new.get("events"):
+            good_new = [e for e in llm_new["events"] if not analyze._is_junk_event(e)]
+            merged, added = eventstore.merge_events(state["events"], good_new)
+            state["events"] = merged
+            eventstore.mark_seen(state, candidates)   # 已处理原始事件不再重复送推演
+            eventstore.update_brief(state, llm_new)   # 简报段刷新为最近一次
+            state["updated_at"] = now_s
+            eventstore.save_day(data_dir, state)
+            log(f"已追加 {added} 条新事件；当日累积 {len(state['events'])} 条。")
+        else:
+            log("新增事件推演失败/为空：沿用当日已累积事件与既有推演，不覆盖。")
+    else:
+        log("本档无新增事件：沿用当日累积事件与最近一次整体推演。")
+
+    day_events = state["events"]
+    if day_events:
+        llm = dict(state.get("brief") or {})
+        llm["events"] = day_events
+        llm["summary_rows"] = eventstore.rebuild_summary_rows(day_events)  # 速查矩阵覆盖全天累积事件
+        ai_note = None
+    else:
+        llm = None
+        ai_note = "本期AI影响推演不可用/未配置Key（当日暂无已推演事件）"
+        log("无 LLM 返回且当日事件库为空，走【数据速览版】。")
 
     # 行情兜底摘要（国内原油 INE SC 优先，回退 Brent），仅在没有 AI 事件时用于快照
     sc = (analyze._find_quote(fetched["quotes"], "INE", "SC", "上海原油")
@@ -89,21 +128,13 @@ def run_online(data_dir: Path, out_dir: Path) -> Path:
                   if sc and sc["price"] is not None and sc["day_chg"] is not None
                   else "本期行情见价格区")
 
-    log("调用 LLM 结构化分析…")
-    llm = analyze.run_llm(fetched)
-    if llm:
-        ai_note = None
-        log("LLM 返回成功，生成完整推演版。")
-    else:
-        ai_note = "本期AI影响推演不可用/未配置Key"
-        log("无 LLM_API_KEY 或 LLM 失败，走【数据速览版】。")
-
-    # 快照在拿到 LLM 后构建：AI 版写入四品种净方向与头号事件，速览版退回行情一句话
-    if llm and llm.get("events"):
-        cev = analyze._llm_events_to_contract(llm["events"])
+    # 快照基于当日累积事件：AI 版写入四品种净方向与头号事件，速览版退回行情一句话
+    if day_events:
+        cev = analyze._llm_events_to_contract(day_events)
         ai_dir = analyze.snapshot_direction(cev)
-        top_event = re.sub(r"^EV\d+ · ", "", cev[0]["title"]) if cev else price_line
-        snap = analyze.build_snapshot(fetched["quotes"], now, top_event[:42], ai_dir=ai_dir)
+        top0 = re.sub(r"^EV\d+ · ", "", cev[0]["title"]) if cev else price_line
+        top_event = f"{top0[:30]}（当日{len(day_events)}事件/本档+{added}）"
+        snap = analyze.build_snapshot(fetched["quotes"], now, top_event, ai_dir=ai_dir)
     else:
         snap = analyze.build_snapshot(fetched["quotes"], now, price_line)
 
@@ -112,6 +143,12 @@ def run_online(data_dir: Path, out_dir: Path) -> Path:
     snapshots = snapshots[:HISTORY_KEEP]
 
     report = analyze.assemble_report(fetched, llm, snapshots, now, ai_note=ai_note)
+    # 供模板展示“当日累积 / 本档新增”；累积数以实际渲染（剔除全中性/伪事件后）的卡片数为准
+    report["day_date"] = today_s
+    report["day_events_total"] = len(report.get("events", []))
+    report["day_events_new"] = added
+    eventstore.prune_old(data_dir, today_s)
+
 
     templates_dir = REPO_ROOT / "templates"
     out_file = out_dir / "index.html"

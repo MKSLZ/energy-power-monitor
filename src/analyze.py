@@ -733,6 +733,7 @@ def assemble_report(fetched: dict, llm: dict | None, history: list[dict],
     has_llm = isinstance(llm, dict) and bool(llm)
 
     # ---- core_points ----
+    core_points: list = []  # 兜底：有事件但简报段未给 core_points 时不致 NameError，也不连累事件区降级
     if has_llm and llm.get("core_points"):
         core_points = [_clean_core_point(kp) for kp in llm["core_points"]
                        if isinstance(kp, dict) and str(kp.get("text", "")).strip()]

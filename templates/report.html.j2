@@ -202,6 +202,7 @@ td.num,td.num.up,td.num.down,td.num.flat,td.num.na{white-space:normal!important;
       <div class="cutoff">数据截止时间(UTC+8)：{{ meta.cutoff }}</div>
       <div>监控窗口：最近 24 小时（{{ meta.window }}）</div>
       <div>下次监控：{{ meta.next_update }}（本页每 5 分钟自动刷新）</div>
+	      <div>当日成篇（{{ day_date }}）：已累积事件 <b>{{ day_events_total }}</b> 条 · 本档新增 {{ day_events_new }} 条 · 新事件只增不删</div>
     </div>
   </div>
   <div class="badge-row">
@@ -254,7 +255,7 @@ td.num,td.num.up,td.num.down,td.num.flat,td.num.na{white-space:normal!important;
   <div class="eh-sub">{{ events|length }} 个最重要事件 · 逐事件给出方向 / 强度 / 时滞 / 置信度 / 是否 price-in / 传导逻辑 · 颜色：<span style="color:#F4B8B0">红 ▲看多</span>　<span style="color:#9FD4B6">绿 ▼看空</span>　<span style="color:#C9C1AE">灰 ■中性</span></div>
 </div>
 <section>
-  <div class="sec-head"><span class="sec-no">03</span><span class="sec-title">事件影响卡</span><span class="sec-note">共 {{ events|length }} 个重点事件 · 影响程度由大到小</span></div>
+  <div class="sec-head"><span class="sec-no">03</span><span class="sec-title">事件影响卡</span><span class="sec-note">当日累积 {{ events|length }} 条 · 本档新增 {{ day_events_new }} 条 · 按抓取先后 · 只增不删</span></div>
 
   {% if events %}
   {% for ev in events %}

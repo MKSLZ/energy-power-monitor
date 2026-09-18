@@ -54,7 +54,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add site data/history.json
+          git add site data
           # 无变化则跳过提交；有变化才提交
           if git diff --cached --quiet; then
             echo "No changes to commit."
