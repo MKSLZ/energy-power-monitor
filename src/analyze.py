@@ -271,7 +271,7 @@ def run_llm(fetched: dict) -> dict | None:
 
     # ---- 第 1 段：事件影响（核心，必须成功；只让模型输出 6 事件精简结构）----
     ev_user = (
-        "【抓取事实】如下。请只挑选对【国内油/气/煤/电】最重要的 6 个事件（按重要性排序），且仅输出：\n"
+        "【抓取事实】如下。请只挑选对【国内油/气/煤/电】最重要的 6 个真实事件，从影响最大到最小排列，title 必须是该事件本身的事实简述（不要复述本指令、不要出现“排序/仅输出”等字样），且仅输出：\n"
         '{"events":[{"title":"...","time":"...","source":"...","url":["https://..."],'
         '"nature":"突发|确认|数据公布|预期|辟谣",'
         '"impacts":{"oil":{"dir":"up|down|flat","strength":"弱|中|强","lag":"即时|数日|数周",'
@@ -279,8 +279,23 @@ def run_llm(fetched: dict) -> dict | None:
         '"gas":{...},"coal":{...},"power":{...}},'
         '"chain":"≤30字","analogy":"≤30字","trigger":"≤30字","falsify":"≤30字"}]}\n'
         "价格/链接/时间原样，缺则 N/A。抓取事实：\n" + fact_s)
-    ev_obj, finish = _chat_json(_RULES, ev_user, max_tokens=4096)
-    events = ev_obj.get("events") if isinstance(ev_obj, dict) else None
+    # 事件段内容达标重试：glm-4-flash 偶发 finish=stop 却只给 1 条（偷懒）。
+    # 仅在“正常结束但有效事件 <4”时要求补足重试；若是 max_tokens 截断（finish!=stop），
+    # _chat_json 已做截断挽救，拿到几条算几条，不再为凑数重试浪费时长。
+    events = None
+    finish = None
+    ev_ask = ev_user
+    for _attempt in range(2):
+        ev_obj, finish = _chat_json(_RULES, ev_ask, max_tokens=4096)
+        cand = ev_obj.get("events") if isinstance(ev_obj, dict) else None
+        if isinstance(cand, list) and cand:
+            valid = [e for e in cand if not _is_junk_event(e)]
+            if len(valid) >= 4 or finish != "stop":
+                events = cand
+                break
+            print(f"[analyze] 事件段正常结束但仅 {len(valid)} 条有效事件，要求补足后重试一次…", flush=True)
+            ev_ask = (ev_user + f"\n注意：上一次只给出了 {len(valid)} 个事件。"
+                                "请务必给出 6 个互不相同、对国内油/气/煤/电影响最重要的真实事件，不要只给 1 个。")
     if not isinstance(events, list) or not events:
         print(f"[analyze] 事件段不可用（{finish}），整轮降级数据速览版。", flush=True)
         return None
@@ -513,7 +528,32 @@ def build_snapshot(quotes: list[dict], dt: datetime, event_line: str) -> dict:
 # ---------------------------------------------------------------------------
 # LLM 输出 -> 契约 events / heatmap / factors ...
 # ---------------------------------------------------------------------------
+_JUNK_TITLE_HINTS = (
+    "按重要性排序", "最重要的", "仅输出", "抓取事实", "示例", "placeholder",
+    "your_", "事件标题", "标题…", "title", "xxx", "...", "…",
+)
+
+
+def _is_junk_event(ev: dict) -> bool:
+    """剔除模型把指令/JSON 模板示例误当成的伪事件，以及完全无方向信息的条目。"""
+    if not isinstance(ev, dict):
+        return True
+    t = str(ev.get("title", "")).strip()
+    if not t or set(t) <= {"·", " ", "-", ".", "…"}:
+        return True
+    low = t.lower()
+    if any(h.lower() in low for h in _JUNK_TITLE_HINTS):
+        return True
+    imps = ev.get("impacts") or {}
+    has_dir = any(_norm_dir((imps.get(k) or {}).get("dir")) != "flat" for k in PROD_KEYS)
+    return not has_dir
+
+
 def _llm_events_to_contract(llm_events: list[dict]) -> list[dict]:
+    # 先剔除指令残留/占位伪事件，过滤后重新连续编号 EV1..EVn
+    cleaned = [e for e in llm_events if not _is_junk_event(e)]
+    # 极端情况下若全被过滤（如全部中性），退回原始事件，避免整轮空白
+    llm_events = cleaned or [e for e in llm_events if isinstance(e, dict)]
     out = []
     for i, ev in enumerate(llm_events, 1):
         impacts = []
@@ -631,15 +671,19 @@ def assemble_report(fetched: dict, llm: dict | None, history: list[dict],
     # ---- events / heatmap ----
     if has_llm and llm.get("events"):
         events = _llm_events_to_contract(llm["events"])
-        short = llm.get("heatmap_events_short") or [f"{e['id']} {e['title'][:10]}" for e in events]
-        # 若 LLM 没给 matrix，用 events 的 impacts 方向折算
+        # 纵轴简称统一由代码从“已去 EV 前缀”的干净标题生成，避免 “EV1 EV1 ·” 重复
+        _strip_ev_local = re.compile(r"^EV\d+ · ")
+        short = [f"{e['id']} " + _strip_ev_local.sub("", e["title"])[:12] for e in events]
+        # 用 impacts 方向+强度折算热力值（强±3/中±2/弱±1），颜色深浅即强度
+        _mag = {"强": 3, "中": 2, "弱": 1}
         matrix = []
         logic = []
         for e in events:
             row, lrow = [], []
             for imp in e["impacts"]:
-                row.append({"up": 2, "down": -2, "flat": 0}[imp["dir"]])
-                lrow.append(imp["logic"][:18])
+                mag = _mag.get(str(imp.get("strength")), 2)
+                row.append({"up": mag, "down": -mag, "flat": 0}[imp["dir"]])
+                lrow.append(str(imp.get("logic") or "—")[:18])
             matrix.append(row)
             logic.append(lrow)
         heatmap = {"events": short[: len(events)], "prods": PRODS,

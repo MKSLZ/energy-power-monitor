@@ -577,15 +577,17 @@ const HEAT = {{ heatmap | tojson }};
   const logic = HEAT.logic;
   const data=[];
   raw.forEach((row,y)=>row.forEach((v,x)=>data.push([x,y,v,logic[y][x]])));
-  const fmt=v=>v===0?'■ 中性':(v>0?('▲ 看多 +'+v):('▼ 看空 '+v));
+  const dirWord=v=>v===0?'中性':(v>0?'看多':'看空');
+  const strWord=v=>({3:'强',2:'中',1:'弱'})[Math.abs(v)]||'';
+  const cellMark=v=>v===0?'■':(v>0?'▲':'▼');
   mk('chart-matrix8',{
-    grid:{left:110,right:30,top:26,bottom:60},
-    tooltip:{formatter:p=>`<b>${events[p.value[1]]}</b> × ${prods[p.value[0]]}<br/>${fmt(p.value[2])}<br/>传导：${p.value[3]}`},
+    grid:{left:124,right:30,top:26,bottom:60},
+    tooltip:{formatter:p=>`<b>${events[p.value[1]]}</b> × ${prods[p.value[0]]}<br/>${cellMark(p.value[2])} ${dirWord(p.value[2])}·${strWord(p.value[2])||'中性'}<br/>传导：${p.value[3]}`},
     xAxis:{type:'category',data:prods,...AXIS,splitArea:{show:true}},
     yAxis:{type:'category',data:events,...AXIS,splitArea:{show:true},axisLabel:{color:'#16181D',fontSize:11}},
     visualMap:{min:-3,max:3,calculable:false,show:false,inRange:{color:[BEAR,'#E9E4D6',BULL]}},
     series:[{type:'heatmap',data:data,
-      label:{show:true,fontSize:10,color:'#16181D',formatter:p=>fmt(p.value[2])},
+      label:{show:true,fontSize:13,color:'#16181D',formatter:p=>cellMark(p.value[2])},
       itemStyle:{borderColor:'#F4F1EA',borderWidth:2}}]
   });
 })();
