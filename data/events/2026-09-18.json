@@ -1,0 +1,701 @@
+{
+  "date": "2026-09-18",
+  "updated_at": "2026-09-18 20:33",
+  "seen_raw_keys": [
+    "saudioilexportsreboundathormuzwhileeastwestpipelineremainsoffline",
+    "trumpadministrationadvances$243billionfighterjetdealtosaudiarabiaashouthisescalateattacks",
+    "trumpadvancesmorethan$27billioninsaudiandisraeliarmsdeals",
+    "wtiretreatsassaudioilworkaroundeasessupplyfears",
+    "油价短线拉升报道沙特告知欧洲炼油商下月他们将不会获得原油供应",
+    "熊维中东冲突冲击全球天然气供需格局高气价与区域溢价或将持续"
+  ],
+  "events": [
+    {
+      "title": "沙特告知欧洲炼油商下月不供油",
+      "time": "2026-09-18 19:06",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3167308"
+      ],
+      "nature": "突发",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "高",
+          "priced_in": "是",
+          "logic": "沙特减少对欧洲的原油供应，推高国际油价，进而影响国内原油进口成本和价格"
+        },
+        "gas": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响原油，天然气影响较小"
+        },
+        "coal": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响原油，煤炭影响较小"
+        },
+        "power": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响原油，电力影响较小"
+        }
+      },
+      "chain": "沙特减少供应→国际油价上涨→国内原油进口成本上升→国内油价上涨",
+      "analogy": "类似2021年沙特减产事件",
+      "trigger": "沙特告知欧洲炼油商减少供应",
+      "falsify": "沙特宣布恢复对欧洲的原油供应"
+    },
+    {
+      "title": "中东冲突冲击全球天然气供需格局",
+      "time": "N/A",
+      "source": "上海石油天然气交易中心",
+      "url": [
+        "http://www.shpgx.com/html/gsxw/20260421/9061.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响天然气，原油影响较小"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "高",
+          "priced_in": "是",
+          "logic": "中东冲突导致全球天然气供应紧张，推高天然气价格"
+        },
+        "coal": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响天然气，煤炭影响较小"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "天然气价格上涨，气电成本上升，推高电力价格"
+        }
+      },
+      "chain": "中东冲突→全球天然气供应紧张→天然气价格上涨→气电成本上升→电力价格上涨",
+      "analogy": "类似2022年俄乌冲突导致天然气价格上涨事件",
+      "trigger": "中东冲突冲击全球天然气供需格局",
+      "falsify": "中东冲突得到解决，全球天然气供应恢复正常"
+    },
+    {
+      "title": "沙特石油出口反弹，东西方管道仍关闭",
+      "time": "Fri, 18 Sep 2026 07:30:00 -0500",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Latest-Energy-News/World-News/Saudi-Oil-Exports-Rebound-at-Hormuz-While-East-West-Pipeline-Remains-Offline.html"
+      ],
+      "nature": "数据公布",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "高",
+          "priced_in": "是",
+          "logic": "沙特石油出口反弹，缓解了市场对供应紧张的担忧，导致国际油价下跌"
+        },
+        "gas": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响原油，天然气影响较小"
+        },
+        "coal": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响原油，煤炭影响较小"
+        },
+        "power": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响原油，电力影响较小"
+        }
+      },
+      "chain": "沙特石油出口反弹→市场供应担忧缓解→国际油价下跌",
+      "analogy": "类似2021年沙特减产事件",
+      "trigger": "沙特石油出口反弹，东西方管道仍关闭",
+      "falsify": "沙特宣布减少石油出口，东西方管道恢复运行"
+    },
+    {
+      "title": "特朗普推进沙特和以色列超过270亿美元的军火交易",
+      "time": "Fri, 18 Sep 2026 07:30:00 -0500",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Energy/Energy-General/Trump-Advances-More-Than-27-Billion-in-Saudi-and-Israeli-Arms-Deals.html"
+      ],
+      "nature": "预期",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "是",
+          "logic": "军火交易可能增加沙特对原油出口的依赖，进而影响国际油价"
+        },
+        "gas": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响原油，天然气影响较小"
+        },
+        "coal": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响原油，煤炭影响较小"
+        },
+        "power": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响原油，电力影响较小"
+        }
+      },
+      "chain": "军火交易→沙特增加对原油出口的依赖→国际油价上涨",
+      "analogy": "类似2021年沙特减产事件",
+      "trigger": "特朗普推进沙特和以色列的军火交易",
+      "falsify": "军火交易取消，沙特减少对原油出口的依赖"
+    },
+    {
+      "title": "特朗普政府推进沙特243亿美元的战斗机交易，胡塞武装升级袭击",
+      "time": "Fri, 18 Sep 2026 07:00:00 -0500",
+      "source": "OilPrice",
+      "url": [
+        "https://www.cnbc.com/2026/09/18/trump-saudi-arabia-f-35-houthis-iran-war.html"
+      ],
+      "nature": "预期",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "是",
+          "logic": "军事冲突可能增加沙特对原油出口的依赖，进而影响国际油价"
+        },
+        "gas": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响原油，天然气影响较小"
+        },
+        "coal": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响原油，煤炭影响较小"
+        },
+        "power": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响原油，电力影响较小"
+        }
+      },
+      "chain": "军事冲突→沙特增加对原油出口的依赖→国际油价上涨",
+      "analogy": "类似2021年沙特减产事件",
+      "trigger": "特朗普政府推进沙特战斗机交易，胡塞武装升级袭击",
+      "falsify": "军事冲突得到解决，沙特减少对原油出口的依赖"
+    },
+    {
+      "title": "油价短线拉升，报道：沙特告知欧洲炼油商，下月他们将不会获得原油供应",
+      "time": "Fri, 18 Sep 2026 07:30:00 -0500",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Energy/Energy-General/WTI-Retreats-as-Saudi-Oil-Workaround-Eases-Supply-Fears.html"
+      ],
+      "nature": "突发",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "高",
+          "priced_in": "是",
+          "logic": "沙特减少对欧洲的原油供应，推高国际油价，进而影响国内原油进口成本和价格"
+        },
+        "gas": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响原油，天然气影响较小"
+        },
+        "coal": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响原油，煤炭影响较小"
+        },
+        "power": {
+          "dir": "flat",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "否",
+          "logic": "事件主要影响原油，电力影响较小"
+        }
+      },
+      "chain": "沙特减少供应→国际油价上涨→国内原油进口成本上升→国内油价上涨",
+      "analogy": "类似2021年沙特减产事件",
+      "trigger": "沙特告知欧洲炼油商减少供应",
+      "falsify": "沙特宣布恢复对欧洲的原油供应"
+    }
+  ],
+  "brief": {
+    "core_points": [
+      {
+        "tag": "国内原油|地缘|国内煤炭|国内天然气|宏观|政策",
+        "text": "沙特供应中断，油价短期上涨",
+        "net": {
+          "oil": {
+            "dir": "up",
+            "label": "▲弱多"
+          },
+          "gas": {
+            "dir": "up",
+            "label": "▲弱多"
+          },
+          "coal": {
+            "dir": "up",
+            "label": "▲弱多"
+          },
+          "power": {
+            "dir": "up",
+            "label": "▲弱多"
+          }
+        }
+      },
+      {
+        "tag": "国内原油|地缘|国内煤炭|国内天然气|宏观|政策",
+        "text": "中东冲突影响天然气供需",
+        "net": {
+          "oil": {
+            "dir": "up",
+            "label": "▲弱多"
+          },
+          "gas": {
+            "dir": "up",
+            "label": "▲弱多"
+          },
+          "coal": {
+            "dir": "up",
+            "label": "▲弱多"
+          },
+          "power": {
+            "dir": "up",
+            "label": "▲弱多"
+          }
+        }
+      },
+      {
+        "tag": "国内原油|地缘|国内煤炭|国内天然气|宏观|政策",
+        "text": "WTI价格回落，供应担忧缓解",
+        "net": {
+          "oil": {
+            "dir": "down",
+            "label": "▼弱空"
+          },
+          "gas": {
+            "dir": "down",
+            "label": "▼弱空"
+          },
+          "coal": {
+            "dir": "down",
+            "label": "▼弱空"
+          },
+          "power": {
+            "dir": "down",
+            "label": "▼弱空"
+          }
+        }
+      },
+      {
+        "tag": "国内原油|地缘|国内煤炭|国内天然气|宏观|政策",
+        "text": "特朗普推进沙特军售，地缘风险加剧",
+        "net": {
+          "oil": {
+            "dir": "up",
+            "label": "▲弱多"
+          },
+          "gas": {
+            "dir": "up",
+            "label": "▲弱多"
+          },
+          "coal": {
+            "dir": "up",
+            "label": "▲弱多"
+          },
+          "power": {
+            "dir": "up",
+            "label": "▲弱多"
+          }
+        }
+      }
+    ],
+    "factor_board": [
+      {
+        "name": "地缘政治与制裁|宏观金融|供需库存|天气季节|中国政策与电力规则|替代能源与基础设施",
+        "chip": "偏多 · 强|偏空 · 中|中性 · 弱",
+        "pos": "left|right|center",
+        "width": "41%",
+        "desc": "地缘风险高，金融环境中性，供需库存稳定，季节性因素弱，政策稳定，替代能源发展缓慢"
+      },
+      {
+        "name": "地缘政治与制裁|宏观金融|供需库存|天气季节|中国政策与电力规则|替代能源与基础设施",
+        "chip": "偏空 · 中|偏多 · 强|中性 · 弱",
+        "pos": "left|right|center",
+        "width": "41%",
+        "desc": "地缘风险降低，金融环境中性，供需库存稳定，季节性因素弱，政策稳定，替代能源发展缓慢"
+      },
+      {
+        "name": "地缘政治与制裁|宏观金融|供需库存|天气季节|中国政策与电力规则|替代能源与基础设施",
+        "chip": "偏多 · 强|偏空 · 中|中性 · 弱",
+        "pos": "left|right|center",
+        "width": "41%",
+        "desc": "地缘风险高，金融环境中性，供需库存稳定，季节性因素弱，政策稳定，替代能源发展缓慢"
+      },
+      {
+        "name": "地缘政治与制裁|宏观金融|供需库存|天气季节|中国政策与电力规则|替代能源与基础设施",
+        "chip": "偏空 · 中|偏多 · 强|中性 · 弱",
+        "pos": "left|right|center",
+        "width": "41%",
+        "desc": "地缘风险降低，金融环境中性，供需库存稳定，季节性因素弱，政策稳定，替代能源发展缓慢"
+      },
+      {
+        "name": "地缘政治与制裁|宏观金融|供需库存|天气季节|中国政策与电力规则|替代能源与基础设施",
+        "chip": "偏多 · 强|偏空 · 中|中性 · 弱",
+        "pos": "left|right|center",
+        "width": "41%",
+        "desc": "地缘风险高，金融环境中性，供需库存稳定，季节性因素弱，政策稳定，替代能源发展缓慢"
+      },
+      {
+        "name": "地缘政治与制裁|宏观金融|供需库存|天气季节|中国政策与电力规则|替代能源与基础设施",
+        "chip": "偏空 · 中|偏多 · 强|中性 · 弱",
+        "pos": "left|right|center",
+        "width": "41%",
+        "desc": "地缘风险降低，金融环境中性，供需库存稳定，季节性因素弱，政策稳定，替代能源发展缓慢"
+      }
+    ],
+    "summary_rows": [
+      {
+        "event": "EV简称",
+        "oil": {
+          "txt": "▼中",
+          "cls": "down"
+        },
+        "gas": {
+          "txt": "■",
+          "cls": "flat"
+        },
+        "coal": {},
+        "power": {},
+        "note": "油价波动，供需平衡"
+      },
+      {
+        "event": "EV简称",
+        "oil": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "gas": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "coal": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "power": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "note": "地缘风险上升，能源价格上涨"
+      },
+      {
+        "event": "EV简称",
+        "oil": {
+          "txt": "▼弱空",
+          "cls": "down"
+        },
+        "gas": {
+          "txt": "▼弱空",
+          "cls": "down"
+        },
+        "coal": {
+          "txt": "▼弱空",
+          "cls": "down"
+        },
+        "power": {
+          "txt": "▼弱空",
+          "cls": "down"
+        },
+        "note": "供应担忧缓解，价格下跌"
+      },
+      {
+        "event": "EV简称",
+        "oil": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "gas": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "coal": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "power": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "note": "地缘政治紧张，能源价格上涨"
+      },
+      {
+        "event": "EV简称",
+        "oil": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "gas": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "coal": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "power": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "note": "地缘政治紧张，能源价格上涨"
+      },
+      {
+        "event": "EV简称",
+        "oil": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "gas": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "coal": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "power": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "note": "地缘政治紧张，能源价格上涨"
+      },
+      {
+        "event": "EV简称",
+        "oil": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "gas": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "coal": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "power": {
+          "txt": "▲弱多",
+          "cls": "up"
+        },
+        "note": "地缘政治紧张，能源价格上涨"
+      }
+    ],
+    "scenarios": [
+      {
+        "name": "国内原油 · INE SC",
+        "current": "当前价",
+        "rows": [
+          {
+            "label": "基准 50%",
+            "label_cls": "n",
+            "range": "727.9元/桶",
+            "range_cls": "",
+            "trigger": "当前市场平衡点"
+          },
+          {
+            "label": "上行 25%",
+            "label_cls": "b",
+            "range": "906.23元/桶",
+            "range_cls": "up",
+            "trigger": "地缘政治紧张，供需失衡"
+          },
+          {
+            "label": "下行 25%",
+            "label_cls": "s",
+            "range": "559.55元/桶",
+            "range_cls": "down",
+            "trigger": "供应增加，需求减少"
+          }
+        ]
+      },
+      {
+        "name": "国内天然气 · SHPGX",
+        "current": "当前价",
+        "rows": [
+          {
+            "label": "基准 50%",
+            "label_cls": "n",
+            "range": "N/A",
+            "range_cls": "",
+            "trigger": "数据缺失"
+          },
+          {
+            "label": "上行 25%",
+            "label_cls": "b",
+            "range": "N/A",
+            "range_cls": "up",
+            "trigger": "数据缺失"
+          },
+          {
+            "label": "下行 25%",
+            "label_cls": "s",
+            "range": "N/A",
+            "range_cls": "down",
+            "trigger": "数据缺失"
+          }
+        ]
+      },
+      {
+        "name": "国内煤炭 · 秦皇岛 Q5500",
+        "current": "当前价",
+        "rows": [
+          {
+            "label": "基准 50%",
+            "label_cls": "n",
+            "range": "N/A",
+            "range_cls": "",
+            "trigger": "数据缺失"
+          },
+          {
+            "label": "上行 25%",
+            "label_cls": "b",
+            "range": "N/A",
+            "range_cls": "up",
+            "trigger": "数据缺失"
+          },
+          {
+            "label": "下行 25%",
+            "label_cls": "s",
+            "range": "N/A",
+            "range_cls": "down",
+            "trigger": "数据缺失"
+          }
+        ]
+      },
+      {
+        "name": "国内电力 · 广东日前现货",
+        "current": "当前价",
+        "rows": [
+          {
+            "label": "基准 50%",
+            "label_cls": "n",
+            "range": "N/A",
+            "range_cls": "",
+            "trigger": "数据缺失"
+          },
+          {
+            "label": "上行 25%",
+            "label_cls": "b",
+            "range": "N/A",
+            "range_cls": "up",
+            "trigger": "数据缺失"
+          },
+          {
+            "label": "下行 25%",
+            "label_cls": "s",
+            "range": "N/A",
+            "range_cls": "down",
+            "trigger": "数据缺失"
+          }
+        ]
+      }
+    ],
+    "catalysts": [
+      {
+        "date": "9/18-19",
+        "body": "未来1-3天数据/会议/天气",
+        "sub": "关注市场动态"
+      },
+      {
+        "date": "9/19-20",
+        "body": "未来1-3天数据/会议/天气",
+        "sub": "关注市场动态"
+      },
+      {
+        "date": "9/20-21",
+        "body": "未来1-3天数据/会议/天气",
+        "sub": "关注市场动态"
+      }
+    ],
+    "main_risks": [
+      "地缘政治风险上升，油价波动",
+      "中东冲突影响天然气供应",
+      "WTI价格波动，供需关系变化",
+      "特朗普推进军售，地缘风险加剧"
+    ]
+  }
+}
