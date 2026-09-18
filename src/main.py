@@ -91,7 +91,7 @@ def run_online(data_dir: Path, out_dir: Path) -> Path:
     ingested = eventstore.ingest_pending(state, fetched["events"])
     log(f"当日已累积 {len(state['events'])} 条；本档新入队 {ingested} 条；待分析队列 {len(state['pending'])} 条。")
 
-    BATCH_SIZE, MAX_BATCHES = 5, 2   # 每档最多分析 2 批 ×5 = 10 条；剩余下档继续，保证当天重要事件全部消化
+    BATCH_SIZE, MAX_BATCHES = 5, 3   # 每档最多分析 3 批 ×5 = 15 条；剩余下档继续，保证当天重要事件全部消化
     new_events: list[dict] = []
     batches = 0
     while state["pending"] and batches < MAX_BATCHES:

@@ -330,13 +330,14 @@ def analyze_event_batch(items: list[dict]) -> dict:
         f"以下是 {n} 条当日真实监控事件，已编号 E1..E{n}。请对【每一条】分别判断其对国内四品种的影响："
         "oil=国内原油INE上海原油SC；gas=国内天然气SHPGX LNG/接收站现货/管道气门站；"
         "coal=秦皇岛Q5500动力煤/港口坑口/焦煤/电厂日耗库存；power=广东及南方现货日前实时电价。\n"
-        '只输出一个JSON：{"picks":[{"id":"E1","oil":{"dir":"up","strength":"强","detail":"…"},'
+        '只输出一个JSON：{"picks":[{"id":"E1","zh":"事件标题的准确简体中译(若原标题已是中文则原样保留)","oil":{"dir":"up","strength":"强","detail":"…"},'
         '"gas":{...},"coal":{...},"power":{...}}]}\n'
         "要求：①必须为每个 id 都输出一项，逐条不得遗漏；②dir 仅 up/down/flat，strength 仅 强/中/弱，"
-        "dir=flat 时 strength 填 弱；③detail 不超过55字：dir 非 flat 时写【系列影响】，沿"
-        "“地缘/宏观→外盘油气→进口到岸平价·汇率·海运费→国内油气→能源替代与预期→煤电燃料成本→国内现货电价”"
-        "说清连锁方向、先后节奏（即时/数日/数周）以及长协保供等国内缓冲；dir=flat 时一句话写明为何对该品种影响有限；"
-        "④中东/海峡/OPEC/制裁/美联储等海外事件必须据默认传导矩阵落到国内油气煤电，不得无据一律 flat；四品种独立判断、允许分化。\n"
+        "dir=flat 时 strength 填 弱；③detail 写 40–70 字的【系列影响】，dir 非 flat 时须按顺序体现"
+        "“外盘/地缘冲击 → 进口到岸平价·汇率·海运费 → 国内油气 → 能源替代与冬储预期 → 煤电度电燃料成本 → 广东等国内现货电价”"
+        "中至少 2–3 个环节，并点明节奏（即时/数日/数周）与长协保供、容量电价、门站管制等国内缓冲的强弱；"
+        "dir=flat 时一句话写明为何对该品种影响有限；④zh 只做标题中译或原样保留，严禁添加原文没有的事实；"
+        "⑤中东/海峡/OPEC/制裁/美联储等海外事件必须据默认传导矩阵落到国内油气煤电，不得无据一律 flat；四品种独立判断、允许分化。\n"
         "事件：\n" + "\n".join(lines))
     obj, finish = _chat_json(_RULES, user, max_tokens=3000)
     picks = obj.get("picks") if isinstance(obj, dict) else None
@@ -356,6 +357,12 @@ def analyze_event_batch(items: list[dict]) -> dict:
         if not (0 <= idx < n) or idx in decided:
             continue
         ev = items[idx]
+        # 标题中译（英文源）：仅当模型给出“含中文、长度合理、无指令残留/链接”的译名才采用，否则用原始标题，杜绝改写事实
+        zh = str(pk.get("zh", "")).strip()
+        _bad = ("仅输出" in zh or "排序" in zh or "JSON" in zh or "http" in zh
+                or "dir" in zh.lower() or "抓取" in zh)
+        _cjk = len(re.findall(r"[\u4e00-\u9fff]", zh))
+        title = zh if (_cjk >= 2 and 4 <= len(zh) <= 42 and not _bad) else ev["title"]
         dirs, details, strengths = {}, {}, {}
         for k in PROD_KEYS:
             one = pk.get(k) if isinstance(pk.get(k), dict) else {}
@@ -387,7 +394,7 @@ def analyze_event_batch(items: list[dict]) -> dict:
         u = ev.get("url")
         urls = [u] if isinstance(u, str) and u else (u if isinstance(u, list) else [])
         events.append({
-            "title": ev["title"], "time": ev.get("time") or "—",
+            "title": title, "time": ev.get("time") or "—",
             "source": ev.get("source", "—"), "url": urls,
             "nature": _nature_of(str(ev.get("title", ""))), "impacts": impacts,
             "chain": _EV_CHAIN, "analogy": "历史类比：" + analogy,
