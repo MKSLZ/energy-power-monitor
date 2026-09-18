@@ -217,11 +217,11 @@ td.num,td.num.up,td.num.down,td.num.flat,td.num.na{white-space:normal!important;
 
 <!-- 2. 今日核心要点（事件→四品种净影响） -->
 <section>
-  <div class="sec-head"><span class="sec-no">02</span><span class="sec-title">今日核心要点</span><span class="dim-tag">当日最新情况</span><span class="sec-note">事件一句话 → 四品种净影响</span></div>
+  <div class="sec-head"><span class="sec-no">02</span><span class="sec-title">今日核心要点</span><span class="dim-tag">当日最新情况</span><span class="sec-note">事件一句话 → 国内四品种净影响</span></div>
   {% if core_points %}
   <div class="keypoints">
     {% for kp in core_points %}
-    <div class="kp"><span class="kptag">{{ kp.tag }}</span><p>{{ kp.text }}<span class="net"><b>净影响：</b>油 <span class="{{ dirmap[kp.net.oil.dir] }}">{{ kp.net.oil.label }}</span>　气 <span class="{{ dirmap[kp.net.gas.dir] }}">{{ kp.net.gas.label }}</span>　煤 <span class="{{ dirmap[kp.net.coal.dir] }}">{{ kp.net.coal.label }}</span>　电 <span class="{{ dirmap[kp.net.power.dir] }}">{{ kp.net.power.label }}</span></span></p></div>
+    <div class="kp"><span class="kptag">{{ kp.tag }}</span><p>{{ kp.text }}<span class="net"><b>国内四品种净影响：</b>原油 <span class="{{ dirmap[kp.net.oil.dir] }}">{{ kp.net.oil.label }}</span>　天然气 <span class="{{ dirmap[kp.net.gas.dir] }}">{{ kp.net.gas.label }}</span>　煤炭 <span class="{{ dirmap[kp.net.coal.dir] }}">{{ kp.net.coal.label }}</span>　电力 <span class="{{ dirmap[kp.net.power.dir] }}">{{ kp.net.power.label }}</span></span></p></div>
     {% endfor %}
   </div>
   {% else %}
@@ -250,7 +250,7 @@ td.num,td.num.up,td.num.down,td.num.flat,td.num.na{white-space:normal!important;
 <!-- ========== 3. 事件驱动专区 ========== -->
 <div class="event-hero">
   <div class="eh-kicker">EVENT-DRIVEN DAILY · 事件驱动 · 逐条推演</div>
-  <h2>当日新闻事件 → 四品种影响</h2>
+  <h2>当日新闻事件 → 国内四品种影响</h2>
   <div class="eh-sub">{{ events|length }} 个最重要事件 · 逐事件给出方向 / 强度 / 时滞 / 置信度 / 是否 price-in / 传导逻辑 · 颜色：<span style="color:#F4B8B0">红 ▲看多</span>　<span style="color:#9FD4B6">绿 ▼看空</span>　<span style="color:#C9C1AE">灰 ■中性</span></div>
 </div>
 <section>
@@ -289,7 +289,7 @@ td.num,td.num.up,td.num.down,td.num.flat,td.num.na{white-space:normal!important;
   {% endif %}
 
   <div class="chart-box" style="margin-top:16px">
-    <h4>图 3-1　事件 × 四品种 影响矩阵（-3 极强空 ~ +3 极强多，0=中性）</h4>
+    <h4>图 3-1　事件 × 国内四品种 影响矩阵（-3 极强空 ~ +3 极强多，0=中性）</h4>
     <div class="cnote">红=看多（越深越强），绿=看空（越深越强），灰=中性；悬停查看事件名、方向强度与一句传导逻辑。</div>
     <div id="chart-matrix8" class="echart tall"></div>
   </div>
@@ -309,7 +309,7 @@ td.num,td.num.up,td.num.down,td.num.flat,td.num.na{white-space:normal!important;
   <div class="tbl-wrap">
   <table>
     <colgroup><col style="width:19%"><col style="width:15%"><col style="width:24%"><col style="width:19%"><col style="width:23%"></colgroup>
-    <caption>表 5-1　四品种最新价 / 日涨跌 / 周涨跌（单位各异，不跨品种直接比价；来源与时间见末列）</caption>
+    <caption>表 5-1　国内四品种最新价 / 日涨跌（外盘列为进口成本传导参照；单位各异，不跨品种直接比价；来源与时间见末列）</caption>
     <thead><tr><th>品种 / 合约</th><th>最新价</th><th>日涨跌</th><th>周涨跌</th><th>数据时间 / 来源</th></tr></thead>
     <tbody>
       {% if price_groups %}
@@ -327,13 +327,13 @@ td.num,td.num.up,td.num.down,td.num.flat,td.num.na{white-space:normal!important;
   </div>
   <div class="chart-row" style="margin-top:14px">
     <div class="chart-box">
-      <h4>图 5-1　四品种日度 vs 周度涨跌幅（%）</h4>
+      <h4>图 5-1　国内四品种 + 外盘参照 日度涨跌幅（%）</h4>
       <div class="cnote">单位不可比，本图仅比较涨跌方向与幅度；绝对值见表 5-1。</div>
       <div id="chart-change" class="echart"></div>
     </div>
     <div class="chart-box">
-      <h4>图 5-2　Brent 近期关键节点走势示意</h4>
-      <div class="cnote">基于公开报道的关键点位标注，非连续行情序列；周中曾冲 $109 四个月高位。</div>
+      <h4>图 5-2　INE SC / 外盘油价关键节点走势示意</h4>
+      <div class="cnote">国内原油以 INE SC 为主，Brent 等外盘油价经进口到岸价/汇率传导；基于公开报道的关键点位标注，非连续行情序列。</div>
       <div id="chart-brent" class="echart"></div>
     </div>
   </div>
@@ -347,7 +347,7 @@ td.num,td.num.up,td.num.down,td.num.flat,td.num.na{white-space:normal!important;
   <table>
     <colgroup><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:15%"><col style="width:20%"></colgroup>
     <caption>表 6-1　滚动快照序列（本期为首条基线）</caption>
-    <thead><tr><th>快照时间(UTC+8)</th><th>石油 Brent</th><th>天然气 TTF</th><th>煤炭 秦Q5500</th><th>电力 广东日前</th><th>方向判断</th><th>重大事件一句话</th></tr></thead>
+    <thead><tr><th>快照时间(UTC+8)</th><th>国内原油 INE SC</th><th>国内天然气 SHPGX</th><th>国内煤炭 秦Q5500</th><th>国内电力 广东日前</th><th>方向判断</th><th>重大事件一句话</th></tr></thead>
     <tbody id="rt-body"></tbody>
   </table>
   </div>
@@ -393,7 +393,7 @@ td.num,td.num.up,td.num.down,td.num.flat,td.num.na{white-space:normal!important;
   <table>
     <colgroup><col style="width:22%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:26%"></colgroup>
     <caption>表 9-1　事件 × 四品种方向速查（▲多 / ▼空 / ■中性）</caption>
-    <thead><tr><th>事件</th><th>石油</th><th>天然气</th><th>煤炭</th><th>电力</th><th>历史类比 / 关键证伪点</th></tr></thead>
+    <thead><tr><th>事件</th><th>国内原油</th><th>国内天然气</th><th>国内煤炭</th><th>国内电力</th><th>历史类比 / 关键证伪点</th></tr></thead>
     <tbody>
       {% if summary_rows %}
       {% for r in summary_rows %}
@@ -409,7 +409,7 @@ td.num,td.num.up,td.num.down,td.num.flat,td.num.na{white-space:normal!important;
 
 <!-- ========== 10. 四品种短期展望 ========== -->
 <section>
-  <div class="sec-head"><span class="sec-no">10</span><span class="sec-title">四品种短期展望（1–3 日三情景）</span><span class="sec-note">基准 / 乐观 / 悲观 + 触发点</span></div>
+  <div class="sec-head"><span class="sec-no">10</span><span class="sec-title">国内四品种短期展望（1–3 日三情景）</span><span class="sec-note">基准 / 乐观 / 悲观 + 触发点</span></div>
   <div class="scn-grid">
     {% for s in scenarios %}
     <div class="scn"><h4>{{ s.name }} <span class="px">当前 {{ s.current }}</span></h4>
@@ -499,7 +499,7 @@ function renderTracker(){
       <td class="num">${s.gas}<br><span class="${cls(s.gasUp)}">${s.gasChg}</span></td>
       <td class="num">${s.coal}<br><span class="${cls(s.coalUp)}">${s.coalChg}</span></td>
       <td class="num">${s.power}<br><span class="na">${s.powerChg}</span></td>
-      <td>${chip('油 偏空','bear')} ${chip('气 偏多','bull')}<br>${chip('煤 中性偏空','neu')} ${chip('电 中性偏多','amb')}</td>
+      <td class="na">${s.dir||'—'}</td>
       <td>${s.event}</td>
     </tr>`;
   }).join('');

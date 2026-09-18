@@ -13,10 +13,23 @@ from datetime import datetime
 from typing import Any
 
 # ---------------------------------------------------------------------------
-# 常量：固定栏目名 / 配色映射
+# 常量：固定四品种（内部英文键恒为 oil/gas/coal/power，展示名国内化）
 # ---------------------------------------------------------------------------
-PRODS = ["石油", "天然气", "煤炭", "电力"]
+# 内部键 -> 国内展示名。LLM impacts / net / summary_rows 一律按英文键取，再映射到中文名。
+KEY2NAME = {"oil": "国内原油", "gas": "国内天然气", "coal": "国内煤炭", "power": "国内电力"}
 PROD_KEYS = ["oil", "gas", "coal", "power"]
+PRODS = [KEY2NAME[k] for k in PROD_KEYS]  # 热力图四列 / 事件卡品种标签 / 行情分组的展示名
+
+# 口径定义（同时写进 SYSTEM_PROMPT）：
+#   国内原油(oil) = INE 上海原油 SC 主力 + 成品油/化工成本；Brent/WTI 仅作外盘驱动，
+#                  经进口到岸平价 / USDCNY / 运费传导到 SC。
+#   国内天然气(gas) = SHPGX LNG 出厂与接收站现货、LNG 槽批、管道气门站价；
+#                  JKM/TTF 仅经进口成本 / 汇率 / 海运费 / 冬储 / 城燃需求传导。
+#   国内煤炭(coal) = 秦皇岛 Q5500 动力煤、港口/坑口、焦煤焦炭、电厂日耗与港口库存、
+#                  进口煤内外价差、保供限产安监。
+#   国内电力(power) = 广东及南方区域现货日前/实时为主 + 其他现货省；
+#                  核心“煤价→度电燃料成本→现货电价”，叠加来水水电/风光出力/
+#                  气温负荷/工业需求/容量电价；EPEX/EEX 仅国际参照。
 
 NEWS_CATEGORIES = ["地缘政治", "宏观金融", "供需库存", "天气季节", "中国政策", "替代能源"]
 
@@ -54,20 +67,32 @@ def _dir_label(d: str, strength: str = "") -> str:
 # ---------------------------------------------------------------------------
 # LLM
 # ---------------------------------------------------------------------------
-SYSTEM_PROMPT = """你是能源电力市场事件影响推演引擎。严格规则：
+SYSTEM_PROMPT = """你是【国内】能源电力市场事件影响推演引擎，分析结论聚焦国内四品种。严格规则：
+0. 口径（务必遵守）：
+   - 国内原油(oil)=INE 上海原油 SC 主力 + 成品油/化工成本；Brent/WTI 仅作外盘驱动，经进口到岸平价/USDCNY/运费传导到 SC。
+   - 国内天然气(gas)=SHPGX LNG 出厂与接收站现货、LNG 槽批、管道气门站价；JKM/TTF 仅经进口成本/汇率/海运费/冬储/城燃需求传导。
+   - 国内煤炭(coal)=秦皇岛 Q5500 动力煤、港口/坑口、焦煤焦炭、电厂日耗与港口库存、进口煤内外价差、保供限产安监。
+   - 国内电力(power)=广东及南方区域现货日前/实时为主+其他现货省；核心“煤价→度电燃料成本→现货电价”，叠加来水水电/风光出力/气温负荷/工业需求/容量电价；EPEX/EEX 仅国际参照。
 1. 仅依据用户提供的【抓取事实】（标题/时间/来源/原始价格）推演，价格、链接、时间一律使用原文，禁止虚构任何价格/链接/数字。
-2. 缺数据一律写 "N/A"，不要编造。
-3. 只做定性结构化：每个事件给出对 石油oil/天然气gas/煤炭coal/电力power 四品种的方向(▲/▼/■)、强度、时滞、置信度、是否priced_in、一句传导逻辑。
-4. 输出必须是且仅是一个 JSON 对象，不要任何 markdown 代码块或解释。
-JSON 结构：
+2. 缺数据一律写 "N/A"，不要编造。严格区分事实/报道/推测。
+3. 每个事件对【国内四品种】给出：方向(▲/▼/■)、强度(弱/中/强)、时滞、置信度、是否priced_in(是/否/部分)、一句“对国内品种”的传导逻辑。impacts 的键固定为 oil/gas/coal/power，禁止用中文品种名做键。
+4. 传导必须落到国内，示例范式：
+   - 中东冲突→Brent 溢价→进口到岸成本+汇率→SC↑；
+   - 暖冬高库存→JKM/TTF↓→中国 LNG 进口成本↓→SHPGX/门站↓；
+   - OPEC 减产→油↑→油气替代→LNG 与煤电经济性变化；
+   - 来水偏枯/高温→火电日耗↑→Q5500↑→广东现货电价↑；
+   - 保供增产/安监放松→煤价↓→电价成本↓。
+5. 历史类比优先国内：2021 全国电荒拉闸限电、2021 煤价暴涨与电价浮动、2022 俄乌致进口能源/LNG 成本抬升、OPEC 意外减产、极端高温限电拉动动力煤。
+6. 输出必须是且仅是一个 JSON 对象，不要任何 markdown 代码块或解释。
+JSON 结构（与现有契约一致，仅 impacts 键固定 oil/gas/coal/power）：
 {
- "core_points":[{"tag":"石油|地缘|煤炭|天然气|宏观|政策","text":"一句话","net":{"oil":{"dir":"up|down|flat","label":"▲弱多"},"gas":{...},"coal":{...},"power":{...}}}],
- "events":[{"title":"...","time":"...","source":"...","url":["https://..."],"nature":"确认|突发|数据公布","impacts":{"oil":{"dir":"▲/▼/■","strength":"弱/中/强","lag":"...","confidence":"...","priced_in":"是/否/部分","logic":"..."},"gas":{...},"coal":{...},"power":{...}},"chain":"传导链：...","analogy":"历史类比：...","trigger":"强化触发：...","falsify":"证伪：..."}],
+ "core_points":[{"tag":"国内原油|地缘|国内煤炭|国内天然气|宏观|政策","text":"一句话","net":{"oil":{"dir":"up|down|flat","label":"▲弱多"},"gas":{...},"coal":{...},"power":{...}}}],
+ "events":[{"title":"...","time":"...","source":"...","url":["https://..."],"nature":"确认|突发|数据公布","impacts":{"oil":{"dir":"▲/▼/■","strength":"弱/中/强","lag":"...","confidence":"...","priced_in":"是/否/部分","logic":"..."},"gas":{...},"coal":{...},"power":{...}},"chain":"传导链：...","analogy":"历史类比（优先国内）：...","trigger":"强化触发：...","falsify":"证伪：..."}],
  "heatmap_events_short":["EV1 简称",...],
  "factor_board":[{"name":"地缘政治与制裁","chip":"偏多 · 强","pos":"left|right|center","width":"41%","desc":"..."}],
  "radar":[2.5,-1.3,0.2,-0.8,0.6,-0.2],
  "summary_rows":[{"event":"EVx ...","oil":{"txt":"▼中强","cls":"up|down|flat"},"gas":{...},"coal":{...},"power":{...},"note":"..."}],
- "scenarios":[{"name":"石油 · Brent","current":"当前 $97.92","rows":[{"label":"基准 50%","label_cls":"n|b|s","range":"...","range_cls":"up|down|","trigger":"..."}]}],
+ "scenarios":[{"name":"国内原油 · INE SC","current":"当前 728 元/桶","rows":[{"label":"基准 50%","label_cls":"n|b|s","range":"...","range_cls":"up|down|","trigger":"..."}]}],
  "catalysts":[{"date":"9/18–19","body":"...","sub":"..."}],
  "main_risks":["...","..."],
  "source_status":[{"chip":"已更新|沿用上期|未抓到","chip_cls":"bull|neu|amb","content":"...","data":"..."}]
@@ -160,32 +185,49 @@ def _find_quote(quotes: list[dict], *keywords: str) -> dict | None:
 # 装配：行情分组表 / 图表
 # ---------------------------------------------------------------------------
 def build_price_groups(quotes: list[dict]) -> list[dict]:
-    groups = [
-        ("石油", ["Brent", "WTI", "SC", "纽约原油", "布伦特"]),
-        ("天然气·LNG", ["TTF", "JKM", "HH", "天然气", "LNG", "SHPGX"]),
-        ("煤炭", ["秦港", "Q5500", "纽卡斯尔", "动力煤", "焦煤"]),
-        ("电力（中国现货）", ["广东", "EPEX", "山东", "日前", "现货"]),
+    # 国内四组在前；Brent/WTI/HH/TTF/JKM/纽煤/EPEX 等外盘合并为末尾「外盘驱动参照」。
+    # 采用“首次匹配归属”：每条 quote 只进一个组，避免国内外重复出现。
+    domestic = [
+        ("国内原油（INE SC）", ["INE", "SC", "上海原油"]),
+        ("国内天然气（LNG·管道气）", ["SHPGX", "LNG", "管道气", "门站"]),
+        ("国内煤炭（动力煤·焦煤）", ["秦港", "Q5500", "焦煤", "JM", "坑口", "港口"]),
+        ("国内电力（国内现货）", ["广东", "山东", "现货"]),
     ]
-    out = []
-    for gname, kws in groups:
-        rows = []
-        for q in quotes:
-            if not any(k in q["name"] for k in kws):
+    external_name = "外盘驱动参照"
+
+    assigned: list[int | None] = [None] * len(quotes)
+    for gi, (_, kws) in enumerate(domestic):
+        for qi, q in enumerate(quotes):
+            if assigned[qi] is not None:
                 continue
-            day_txt, day_cls = _chg_cell(q["day_chg"])
-            week_txt, week_cls = _chg_cell(q["week_chg"])
-            link = {"text": _domain(q["url"]), "url": q["url"]} if q["url"] else None
-            rows.append({
-                "contract": q["name"],
-                "price": _fmt_price(q["price"], q["unit"]),
-                "price_cls": "num",
-                "day": day_txt if q["status"] == "ok" else "N/A",
-                "day_cls": day_cls if q["status"] == "ok" else "na",
-                "week": week_txt,
-                "week_cls": week_cls,
-                "src_time": q["src_time"],
-                "link": link,
-            })
+            if any(k in q["name"] for k in kws):
+                assigned[qi] = gi
+    # 未归入国内四组的，全部落入末尾外盘参照组
+    ext_idx = len(domestic)
+
+    def _row(q: dict) -> dict:
+        day_txt, day_cls = _chg_cell(q["day_chg"])
+        week_txt, week_cls = _chg_cell(q["week_chg"])
+        link = {"text": _domain(q["url"]), "url": q["url"]} if q["url"] else None
+        return {
+            "contract": q["name"],
+            "price": _fmt_price(q["price"], q["unit"]),
+            "price_cls": "num",
+            "day": day_txt if q["status"] == "ok" else "N/A",
+            "day_cls": day_cls if q["status"] == "ok" else "na",
+            "week": week_txt,
+            "week_cls": week_cls,
+            "src_time": q["src_time"],
+            "link": link,
+        }
+
+    groups = [(gname, []) for gname, _ in domestic] + [(external_name, [])]
+    for qi, q in enumerate(quotes):
+        gi = assigned[qi] if assigned[qi] is not None else ext_idx
+        groups[gi][1].append(_row(q))
+
+    out = []
+    for gname, rows in groups:
         if not rows:
             rows.append({"contract": gname + " 代表性品种", "price": "N/A", "price_cls": "na",
                          "day": "N/A", "day_cls": "na", "week": "N/A", "week_cls": "na",
@@ -195,8 +237,10 @@ def build_price_groups(quotes: list[dict]) -> list[dict]:
 
 
 def build_chart_change(quotes: list[dict]) -> dict:
-    labels = ["Brent亚盘", "WTI亚盘", "TTF", "HH", "秦港Q5500", "纽煤Dec"]
-    want = [["布伦特", "Brent"], ["纽约原油", "WTI"], ["TTF"], ["HH", "天然气"], ["秦港", "Q5500"], ["纽卡斯尔", "纽煤"]]
+    # 国内口径优先：INE SC / SHPGX LNG / 秦港Q5500 / 广东日前；外盘项排后。
+    labels = ["INE SC", "SHPGX LNG", "秦港Q5500", "广东日前", "Brent", "TTF"]
+    want = [["INE", "SC", "上海原油"], ["SHPGX", "LNG"], ["秦港", "Q5500"], ["广东", "日前"],
+            ["布伦特", "Brent"], ["TTF"]]
     day, week = [], []
     for kws in want:
         q = _find_quote(quotes, *kws)
@@ -254,6 +298,12 @@ def build_news_categories(events: list[dict]) -> list[dict]:
 # ---------------------------------------------------------------------------
 # 快照
 # ---------------------------------------------------------------------------
+def _pick(quotes: list[dict], *keywords: str) -> dict | None:
+    """找首个命中且 price 非空的 quote（用于快照回退链）。"""
+    q = _find_quote(quotes, *keywords)
+    return q if (q and q["price"] is not None) else None
+
+
 def build_snapshot(quotes: list[dict], dt: datetime, event_line: str) -> dict:
     def chg_up(v):
         if v is None:
@@ -264,28 +314,26 @@ def build_snapshot(quotes: list[dict], dt: datetime, event_line: str) -> dict:
             return None
         return True if f > 0 else (False if f < 0 else None)
 
-    brent = _find_quote(quotes, "布伦特", "Brent")
-    ttf = _find_quote(quotes, "TTF")
-    hh = _find_quote(quotes, "HH", "天然气")
-    coal = _find_quote(quotes, "秦港", "Q5500")
-    power = _find_quote(quotes, "广东", "日前")
+    # 国内口径优先：oil 优先 INE SC（回退 Brent）；gas 优先 SHPGX（回退 TTF/HH）；
+    # coal=秦港Q5500；power=广东日前。
+    oil = _pick(quotes, "INE", "SC", "上海原油") or _pick(quotes, "布伦特", "Brent")
+    gas = (_pick(quotes, "SHPGX", "LNG") or _pick(quotes, "TTF")
+           or _pick(quotes, "HH", "天然气"))
+    coal = _pick(quotes, "秦港", "Q5500")
+    power = _pick(quotes, "广东", "日前")
 
-    oil_txt = f"${brent['price']:g}" if brent and brent["price"] is not None else "N/A"
-    gas_q = ttf if (ttf and ttf["price"] is not None) else hh
-    gas_txt = (f"{gas_q['price']:g} €/MWh" if gas_q and "TTF" in gas_q["name"]
-               else (f"${gas_q['price']:g}/MMBtu" if gas_q and gas_q["price"] is not None else "N/A"))
-    coal_txt = f"{coal['price']:g} 元/吨" if coal and coal["price"] is not None else "N/A"
-    power_txt = f"{power['price']:g} 元/MWh" if power and power["price"] is not None else "N/A"
+    def txt(q):
+        return _fmt_price(q["price"], q["unit"]) if q else "N/A"
 
     def pct(q):
         return f"{q['day_chg']:+.2f}%" if q and q["day_chg"] is not None else "N/A"
 
     return {
         "time": dt.strftime("%Y-%m-%d %H:%M"),
-        "oil": oil_txt, "oil_chg": pct(brent), "oil_up": chg_up(brent["day_chg"] if brent else None),
-        "gas": gas_txt, "gas_chg": pct(gas_q), "gas_up": chg_up(gas_q["day_chg"] if gas_q else None),
-        "coal": coal_txt, "coal_chg": pct(coal), "coal_up": chg_up(coal["day_chg"] if coal else None),
-        "power": power_txt, "power_chg": pct(power), "power_up": chg_up(power["day_chg"] if power else None),
+        "oil": txt(oil), "oil_chg": pct(oil), "oil_up": chg_up(oil["day_chg"] if oil else None),
+        "gas": txt(gas), "gas_chg": pct(gas), "gas_up": chg_up(gas["day_chg"] if gas else None),
+        "coal": txt(coal), "coal_chg": pct(coal), "coal_up": chg_up(coal["day_chg"] if coal else None),
+        "power": txt(power), "power_chg": pct(power), "power_up": chg_up(power["day_chg"] if power else None),
         "dir": "速览版：以实际涨跌为准",
         "event": event_line or "本期快照",
     }
@@ -388,7 +436,7 @@ def assemble_report(fetched: dict, llm: dict | None, history: list[dict],
         badges.append({"text": "数据速览版（无 AI 推演）", "cls": "warn"})
     meta = {
         "title": "能源电力市场监控日报",
-        "subtitle": "Energy & Power Market Daily Monitor · 事件驱动 · 覆盖 石油/天然气LNG/煤炭/电力",
+        "subtitle": "Energy & Power Market Daily Monitor · 事件驱动 · 覆盖 国内原油/国内天然气/国内煤炭/国内电力",
         "date": date_s, "cutoff": cutoff_s, "window": window_s,
         "next_update": "约每 3 小时",
         "badges": badges, "ai_note": ai_note,
@@ -400,10 +448,10 @@ def assemble_report(fetched: dict, llm: dict | None, history: list[dict],
     if has_llm and llm.get("core_points"):
         core_points = llm["core_points"]
     else:
-        brent = _find_quote(quotes, "布伦特", "Brent")
+        sc = _pick(quotes, "INE", "SC", "上海原油") or _pick(quotes, "布伦特", "Brent")
         core_points = [{
             "tag": "行情速览",
-            "text": f"Brent {_fmt_price(brent['price'], brent['unit']) if brent else 'N/A'}；"
+            "text": f"国内原油 INE SC {_fmt_price(sc['price'], sc['unit']) if sc else 'N/A'}；"
                     f"本期共抓取 {len(raw_events)} 条事件、{len(quotes)} 条行情。",
             "net": {p: {"dir": "flat", "label": "■"} for p in PROD_KEYS},
         }]
@@ -481,13 +529,18 @@ def assemble_report(fetched: dict, llm: dict | None, history: list[dict],
     if has_llm and llm.get("scenarios"):
         scenarios = llm["scenarios"]
     else:
+        def _scn(name, kws, unit, trig):
+            cur = _fmt_price((_pick(quotes, *kws) or {}).get("price"), unit)
+            return {"name": name, "current": cur,
+                    "rows": [{"label": "基准 50%", "label_cls": "n", "range": "N/A", "range_cls": "", "trigger": trig},
+                             {"label": "乐观 25%", "label_cls": "b", "range": "N/A", "range_cls": "up", "trigger": "—"},
+                             {"label": "悲观 25%", "label_cls": "s", "range": "N/A", "range_cls": "down", "trigger": "—"}]}
         scenarios = [
-            {"name": "石油 · Brent", "current": _fmt_price((_find_quote(quotes, "布伦特") or {}).get("price"), "$/桶"),
-             "rows": [{"label": "基准 50%", "label_cls": "n", "range": "N/A", "range_cls": "", "trigger": "速览版未做情景推演"},
-                      {"label": "乐观 25%", "label_cls": "b", "range": "N/A", "range_cls": "up", "trigger": "—"},
-                      {"label": "悲观 25%", "label_cls": "s", "range": "N/A", "range_cls": "down", "trigger": "—"}]},
-        ] * 4
-        scenarios = scenarios  # noqa: keep 4 cards placeholder
+            _scn("国内原油 · INE SC", ("INE", "SC", "上海原油"), "元/桶", "速览版未做情景推演"),
+            _scn("国内天然气 · SHPGX LNG", ("SHPGX", "LNG"), "元/吨", "速览版未做情景推演"),
+            _scn("国内煤炭 · 秦港Q5500", ("秦港", "Q5500"), "元/吨", "速览版未做情景推演"),
+            _scn("国内电力 · 广东日前", ("广东", "日前"), "元/MWh", "速览版未做情景推演"),
+        ]
 
     # ---- catalysts / main_risks ----
     catalysts = (llm.get("catalysts") if has_llm else None) or [
@@ -498,6 +551,9 @@ def assemble_report(fetched: dict, llm: dict | None, history: list[dict],
 
     # ---- sources_rows / appendix（静态巡检入口）----
     sources_rows = [
+        {"name": "新浪国内期货（INE / 大商所连续主力）", "monitors": "沪原油 SC、大连焦煤 JM", "freq": "实时",
+         "links": [{"text": "SC0", "url": "https://finance.sina.com.cn/futures/quotes/SC0.shtml"},
+                   {"text": "JM0", "url": "https://finance.sina.com.cn/futures/quotes/JM0.shtml"}]},
         {"name": "腾讯全球行情", "monitors": "Brent/WTI/HH/贵金属实时", "freq": "实时",
          "links": [{"text": "qt.gtimg.cn", "url": "https://qt.gtimg.cn/"}]},
         {"name": "新华社 / 路透", "monitors": "地缘与能源突发", "freq": "实时",

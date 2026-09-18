@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "time": "2026-09-18 17:13",
+    "oil": "98.1 $/桶",
+    "oil_chg": "-1.83%",
+    "oil_up": false,
+    "gas": "2.99 $/MMBtu",
+    "gas_chg": "-1.55%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "速览版：以实际涨跌为准",
+    "event": "本期行情见价格区"
+  }
+]

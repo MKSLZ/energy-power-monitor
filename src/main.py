@@ -14,8 +14,14 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
+
+try:  # 报告口径恒为北京时间（UTC+8），不受运行机/Runner 时区影响
+    from zoneinfo import ZoneInfo
+    BEIJING = ZoneInfo("Asia/Shanghai")
+except Exception:  # noqa: BLE001
+    BEIJING = timezone(timedelta(hours=8))
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))  # src/ 在 path 上
@@ -71,14 +77,16 @@ def run_online(data_dir: Path, out_dir: Path) -> Path:
     n_events, n_quotes = len(fetched["events"]), len(fetched["quotes"])
     log(f"抓取完成：事件 {n_events} 条，行情 {n_quotes} 条，源状态 {len(fetched['source_status'])} 条")
 
-    now = datetime.now()
+    now = datetime.now(BEIJING)
     history_path = data_dir / "history.json"
     history = load_history(history_path)
 
-    # 行情里挑一句重大事件摘要
-    brent = analyze._find_quote(fetched["quotes"], "布伦特", "Brent")
-    event_line = (f"Brent {brent['price']:g}（{brent['day_chg']:+.2f}%）"
-                  if brent and brent["price"] is not None else "本期行情见价格区")
+    # 行情里挑一句重大事件摘要（国内原油 INE SC 优先，回退 Brent）
+    sc = (analyze._find_quote(fetched["quotes"], "INE", "SC", "上海原油")
+          or analyze._find_quote(fetched["quotes"], "布伦特", "Brent"))
+    event_line = (f"{sc['name']} {sc['price']:g}（{sc['day_chg']:+.2f}%）"
+                  if sc and sc["price"] is not None and sc["day_chg"] is not None
+                  else "本期行情见价格区")
     snap = analyze.build_snapshot(fetched["quotes"], now, event_line)
 
     log("调用 LLM 结构化分析…")
