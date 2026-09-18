@@ -100,20 +100,157 @@ JSON 结构（与现有契约一致，仅 impacts 键固定 oil/gas/coal/power�
 }"""
 
 
-def run_llm(fetched: dict) -> dict | None:
-    """调用 OpenAI 兼容接口。无 key / 失败 / 解析失败 -> None（main 走速览版）。"""
+_RULES = """你是【国内】能源电力市场事件影响推演引擎，结论只针对国内四品种：
+- oil 国内原油 = INE 上海原油 SC 主力（Brent/WTI 仅经进口到岸平价 / USDCNY / 运费传导到 SC）；
+- gas 国内天然气 = SHPGX LNG、接收站现货、LNG 槽批、管道气门站价（JKM/TTF 仅经进口成本 / 汇率 / 海运费传导）；
+- coal 国内煤炭 = 秦皇岛 Q5500 动力煤、港口/坑口、焦煤、电厂日耗与库存、进口煤价差、保供限产安监；
+- power 国内电力 = 广东及南方现货日前/实时为主，核心“煤价→度电燃料成本→现货电价”，叠加来水/风光/气温负荷/容量电价。
+铁律：
+1. 只依据给定【抓取事实】，价格/链接/时间原样使用；缺数据写 "N/A"，禁止编造；区分事实/报道/推测。
+2. 只输出一个合法 JSON 对象，不带 markdown 或解释，括号配平。
+3. dir 只能是 "up"/"down"/"flat"；strength 只能是 "弱"/"中"/"强"；priced_in 只能是 "是"/"否"/"部分"。
+4. impacts 必须且只有 oil/gas/coal/power 四个键。
+5. 中文措辞务必精炼：logic≤40字，chain/analogy/trigger/falsify 各不超过30字。
+6. 历史类比优先：2021 全国电荒拉闸限电、2021 煤价暴涨与电价浮动、2022 俄乌推高进口能源/LNG 成本、OPEC 意外减产、极端高温限电拉动动力煤。"""
+
+
+def _llm_env():
     base = os.environ.get("LLM_BASE_URL", "").rstrip("/")
     key = os.environ.get("LLM_API_KEY", "")
     model = os.environ.get("LLM_MODEL", "")
-    if not base or not key or not model:
+    return (base, key, model) if (base and key and model) else ("", "", "")
+
+
+def _repair_truncated(s: str):
+    """best-effort 修复被 max_tokens 截断的 JSON：截到最后一个完整闭合元素再补齐外层括号。"""
+    last_complete = -1
+    instr = esc = False
+    depth = 0
+    for i, ch in enumerate(s):
+        if instr:
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                instr = False
+            continue
+        if ch == '"':
+            instr = True
+        elif ch in "{[":
+            depth += 1
+        elif ch in "}]":
+            depth -= 1
+            last_complete = i
+    if last_complete < 0:
+        return None
+    t = s[: last_complete + 1].rstrip().rstrip(",").rstrip()
+    st: list[str] = []
+    instr = esc = False
+    for ch in t:
+        if instr:
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                instr = False
+            continue
+        if ch == '"':
+            instr = True
+        elif ch in "{[":
+            st.append(ch)
+        elif ch in "}]" and st:
+            st.pop()
+    cand = t + "".join("}" if c == "{" else "]" for c in reversed(st))
+    try:
+        return json.loads(cand)
+    except Exception:  # noqa: BLE001
         return None
 
-    # 把抓取事实喂给 LLM（事件标题/来源/时间/链接，行情名与原始值）
-    facts = {
+
+def _loose_json_loads(content: str):
+    try:
+        return json.loads(content)
+    except Exception:  # noqa: BLE001
+        pass
+    m = re.search(r"\{", content)
+    if not m:
+        return None
+    s = content[m.start():]
+    try:
+        return json.loads(s)
+    except Exception:  # noqa: BLE001
+        return _repair_truncated(s)
+
+
+def _chat_json(system: str, user: str, *, max_tokens: int = 4096,
+               retries: int = 3, total_timeout: int = 240):
+    """流式分段：规避跨境长链路整体读超时，较小请求体也降低 4096 截断概率。
+    返回 (obj, finish_reason_or_err)。"""
+    base, key, model = _llm_env()
+    if not base:
+        return None, "no_key"
+    import requests
+    url = f"{base}/chat/completions"
+    headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json"}
+    payload = {"model": model,
+               "messages": [{"role": "system", "content": system},
+                            {"role": "user", "content": user}],
+               "temperature": 0.2, "max_tokens": max_tokens, "stream": True,
+               "response_format": {"type": "json_object"}}
+    last = "未知"
+    for attempt in range(retries):
+        finish = None
+        try:
+            r = requests.post(url, headers=headers, json=payload, stream=True, timeout=(15, 60))
+            if r.status_code == 429 or r.status_code >= 500:
+                last = f"HTTP {r.status_code}"
+                r.close()
+            elif r.status_code != 200:
+                print(f"[analyze] LLM 4xx 放弃：{r.status_code} {r.text[:160]}", flush=True)
+                return None, f"http_{r.status_code}"
+            else:
+                parts, deadline = [], time.time() + total_timeout
+                for raw in r.iter_lines():
+                    if time.time() > deadline:
+                        raise TimeoutError("流式接收超过总时长")
+                    if not raw:
+                        continue
+                    line = raw.decode("utf-8", "replace").strip()
+                    if not line.startswith("data:"):
+                        continue
+                    data = line[5:].strip()
+                    if data == "[DONE]":
+                        break
+                    try:
+                        ch0 = json.loads(data)["choices"][0]
+                    except Exception:  # noqa: BLE001
+                        continue
+                    if ch0.get("finish_reason"):
+                        finish = ch0["finish_reason"]
+                    piece = (ch0.get("delta") or {}).get("content")
+                    if piece:
+                        parts.append(piece)
+                r.close()
+                obj = _loose_json_loads("".join(parts))
+                if isinstance(obj, dict):
+                    return obj, (finish or "stop")
+                last = f"JSON解析失败(finish={finish})"
+        except Exception as e:  # noqa: BLE001
+            last = f"{type(e).__name__}:{str(e)[:100]}"
+        if attempt < retries - 1:
+            time.sleep(2 * (attempt + 1))
+    print(f"[analyze] LLM 段落失败：{last}", flush=True)
+    return None, last
+
+
+def _facts(fetched: dict, n: int = 30) -> dict:
+    return {
         "events": [
             {"time": e["time"], "source": e["source"], "title": e["title"],
              "url": e["url"], "category": e["category"]}
-            for e in fetched.get("events", [])[:20]
+            for e in fetched.get("events", [])[:n]
         ],
         "quotes": [
             {"name": q["name"], "price": q["price"], "unit": q["unit"],
@@ -121,69 +258,62 @@ def run_llm(fetched: dict) -> dict | None:
             for q in fetched.get("quotes", [])
         ],
     }
-    user = ("【抓取事实】如下。请只挑选对【国内油/气/煤/电】最重要的 8 个事件（按重要性排序），"
-            "严格按系统给定 JSON 结构输出；价格/链接/时间必须原样，缺则 N/A：\n"
-            + json.dumps(facts, ensure_ascii=False))
 
-    import requests
-    url = f"{base}/chat/completions"
-    headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json"}
-    payload = {"model": model,
-               "messages": [{"role": "system", "content": SYSTEM_PROMPT},
-                            {"role": "user", "content": user}],
-               "temperature": 0.2, "max_tokens": 4096, "stream": True,
-               "response_format": {"type": "json_object"}}
 
-    def _stream_once(timeout_total: int = 260) -> str | None:
-        # 流式接收：(连接15s, 两个数据块间隔60s)。只要模型在持续吐字就不会整体超时，
-        # 专门规避"跨境长链路 + 免费模型逐字生成慢"导致的整体 ReadTimeout。
-        r = requests.post(url, headers=headers, json=payload, stream=True, timeout=(15, 60))
-        if r.status_code == 429 or r.status_code >= 500:
-            raise RuntimeError(f"HTTP {r.status_code}")
-        if r.status_code != 200:
-            return None  # 4xx（除 429）多为鉴权/参数问题，重试无益
-        parts, deadline = [], time.time() + timeout_total
-        for raw in r.iter_lines():
-            if time.time() > deadline:
-                raise TimeoutError("流式接收超过总时长上限")
-            if not raw:
-                continue
-            line = raw.decode("utf-8", "replace").strip()
-            if not line.startswith("data:"):
-                continue
-            data = line[5:].strip()
-            if data == "[DONE]":
-                break
-            try:
-                delta = json.loads(data)["choices"][0].get("delta", {})
-            except Exception:  # noqa: BLE001
-                continue
-            piece = delta.get("content")
-            if piece:
-                parts.append(piece)
-        return "".join(parts)
+def run_llm(fetched: dict) -> dict | None:
+    """两段式（事件段优先、简报段尽力而为）+ 流式 + 截断修复。
+    无 key / 事件段失败 -> None（main 走速览版）；简报段失败仅该段代码兜底。"""
+    base, _, _ = _llm_env()
+    if not base:
+        return None
 
-    # 跨境链路/限流会间歇失败，退避重试；JSON 畸形也允许重抽。最多 3 次。
-    last_err = "未知"
-    for attempt in range(3):
-        try:
-            content = _stream_once()
-            if content is None:
-                return None
-            m = re.search(r"\{.*\}", content, re.S)
-            if m:
-                try:
-                    return json.loads(m.group(0))
-                except Exception:  # noqa: BLE001
-                    last_err = "JSON 解析失败（可能被 max_tokens 截断）"
-            else:
-                last_err = "响应无 JSON 片段"
-        except Exception as e:  # noqa: BLE001 - ProxyError/超时/HTTP5xx 等
-            last_err = f"{type(e).__name__}: {str(e)[:120]}"
-        if attempt < 2:
-            time.sleep(2 * (attempt + 1))
-    print(f"[analyze] LLM 3 次尝试均失败：{last_err}，降级数据速览版。", flush=True)
-    return None
+    fact_s = json.dumps(_facts(fetched), ensure_ascii=False)
+
+    # ---- 第 1 段：事件影响（核心，必须成功；只让模型输出 6 事件精简结构）----
+    ev_user = (
+        "【抓取事实】如下。请只挑选对【国内油/气/煤/电】最重要的 6 个事件（按重要性排序），且仅输出：\n"
+        '{"events":[{"title":"...","time":"...","source":"...","url":["https://..."],'
+        '"nature":"突发|确认|数据公布|预期|辟谣",'
+        '"impacts":{"oil":{"dir":"up|down|flat","strength":"弱|中|强","lag":"即时|数日|数周",'
+        '"confidence":"高|中|低","priced_in":"是|否|部分","logic":"≤40字，落到国内"},'
+        '"gas":{...},"coal":{...},"power":{...}},'
+        '"chain":"≤30字","analogy":"≤30字","trigger":"≤30字","falsify":"≤30字"}]}\n'
+        "价格/链接/时间原样，缺则 N/A。抓取事实：\n" + fact_s)
+    ev_obj, finish = _chat_json(_RULES, ev_user, max_tokens=4096)
+    events = ev_obj.get("events") if isinstance(ev_obj, dict) else None
+    if not isinstance(events, list) or not events:
+        print(f"[analyze] 事件段不可用（{finish}），整轮降级数据速览版。", flush=True)
+        return None
+    out: dict[str, Any] = {"events": events}
+
+    # ---- 第 2 段：简报（要点/因子/雷达/速查/情景/催化剂/风险；失败则代码兜底）----
+    br_user = (
+        "基于同样【抓取事实】，仅输出以下精炼 JSON（措辞简短）：\n"
+        '{"core_points":[{"tag":"国内原油|地缘|国内煤炭|国内天然气|宏观|政策","text":"一句话",'
+        '"net":{"oil":{"dir":"up|down|flat","label":"▲弱多"},"gas":{...},"coal":{...},"power":{...}}}],'
+        '"factor_board":[{"name":"地缘政治与制裁|宏观金融|供需库存|天气季节|中国政策与电力规则|替代能源与基础设施",'
+        '"chip":"偏多 · 强|偏空 · 中|中性 · 弱","pos":"left|right|center","width":"41%","desc":"≤24字"}],'
+        '"radar":[2.5,-1.3,0.2,-0.8,0.6,-0.2],'
+        '"summary_rows":[{"event":"EV简称","oil":{"txt":"▼中","cls":"down"},'
+        '"gas":{"txt":"■","cls":"flat"},"coal":{...},"power":{...},"note":"≤16字"}],'
+        '"scenarios":[{"name":"国内原油 · INE SC","current":"当前价","rows":['
+        '{"label":"基准 50%","label_cls":"n","range":"一句话","range_cls":"","trigger":"≤20字"},'
+        '{"label":"上行 25%","label_cls":"b","range":"...","range_cls":"up","trigger":"..."},'
+        '{"label":"下行 25%","label_cls":"s","range":"...","range_cls":"down","trigger":"..."}]}],'
+        '"catalysts":[{"date":"9/18-19","body":"未来1-3天数据/会议/天气","sub":"≤12字"}],'
+        '"main_risks":["一句话风险","..."]}\n'
+        "数量：4 条 core_points、6 条 factor_board、6 条 summary_rows、4 个 scenarios、3 条 catalysts、4 条 main_risks。\n"
+        "抓取事实：\n" + fact_s)
+    br_obj, _ = _chat_json(_RULES, br_user, max_tokens=4096)
+    if isinstance(br_obj, dict):
+        for k in ("core_points", "factor_board", "radar", "summary_rows", "scenarios",
+                  "catalysts", "main_risks", "source_status", "chart_brent",
+                  "heatmap_events_short"):
+            if k in br_obj:
+                out[k] = br_obj[k]
+    print(f"[analyze] 完成：事件 {len(events)} 条（事件段finish={finish}），"
+          f"简报段 {'有' if isinstance(br_obj, dict) else '无→兜底'}。", flush=True)
+    return out
 
 
 # ---------------------------------------------------------------------------
