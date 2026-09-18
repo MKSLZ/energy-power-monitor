@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-09-18 22:00",
+    "oil": "99.95 $/桶",
+    "oil_chg": "+0.02%",
+    "oil_up": true,
+    "gas": "3.04 $/MMBtu",
+    "gas_chg": "+0.20%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "沙特告知欧洲炼油商下月不供油（当日25事件/本档+12）"
+  },
+  {
     "time": "2026-09-18 21:50",
     "oil": "99.95 $/桶",
     "oil_chg": "+0.02%",
