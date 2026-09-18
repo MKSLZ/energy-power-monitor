@@ -13,10 +13,11 @@ permissions:
   pages: write
   id-token: write
 
-# 同一时刻只串行跑一个，不取消正在进行的一轮
+# 同一 ref 同一时刻只保留一个运行：新触发（手动/定时）会取消尚未完成的旧运行，
+# 从根上杜绝多个机器人同时提交同一份 site/history 造成的 non-fast-forward 竞争。
 concurrency:
-  group: energy-daily
-  cancel-in-progress: false
+  group: energy-daily-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
@@ -59,7 +60,19 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "auto update $(date -u '+%Y-%m-%d %H:%M UTC')"
-            git push
+            # 推送被抢（偶发并发/延迟的另一轮先推）时，rebase 后重试最多 3 次。
+            # site/history 是每次全新生成的快照，冲突以“本次最新产物”为准；
+            # 注意 rebase 中 theirs 指正在重放的当前提交（即本次产物）。
+            ok=0
+            for i in 1 2 3; do
+              if git push; then ok=1; break; fi
+              echo "push rejected; fetch+rebase then retry ($i)"
+              git fetch origin main
+              if ! git rebase -X theirs origin/main; then git rebase --abort; fi
+              sleep 2
+            done
+            if [ "$ok" != 1 ]; then git push && ok=1; fi
+            [ "$ok" = 1 ]
           fi
 
       - name: Setup Pages

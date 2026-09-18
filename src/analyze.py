@@ -284,26 +284,31 @@ def run_llm(fetched: dict) -> dict | None:
         '"gas":{...},"coal":{...},"power":{...}},'
         '"chain":"≤30字","analogy":"≤30字","trigger":"≤30字","falsify":"≤30字"}]}\n'
         "价格/链接/时间原样，缺则 N/A。抓取事实：\n" + fact_s)
-    # 事件段内容达标重试：glm-4-flash 偶发 finish=stop 却只给 1 条（偷懒）。
-    # 仅在“正常结束但有效事件 <4”时要求补足重试；若是 max_tokens 截断（finish!=stop），
-    # _chat_json 已做截断挽救，拿到几条算几条，不再为凑数重试浪费时长。
-    events = None
+    # 事件段内容达标策略（glm-4-flash 偶发 finish=stop 却只给 1~3 条）：
+    # 有 ≥1 条真实有效事件就走 AI 推演版（远胜整块降级速览）；取两轮中条数较多的一次。
+    # 仅当首轮 0~1 条时才追加一次“补足”请求；若为 max_tokens 截断（finish!=stop），
+    # _chat_json 已做截断挽救，有几条算几条，立即采用。
+    best = None
+    best_n = 0
     finish = None
     ev_ask = ev_user
     for _attempt in range(2):
         ev_obj, finish = _chat_json(_RULES, ev_ask, max_tokens=4096)
         cand = ev_obj.get("events") if isinstance(ev_obj, dict) else None
-        if isinstance(cand, list) and cand:
-            valid = [e for e in cand if not _is_junk_event(e)]
-            if len(valid) >= 4 or finish != "stop":
-                events = cand
-                break
-            print(f"[analyze] 事件段正常结束但仅 {len(valid)} 条有效事件，要求补足后重试一次…", flush=True)
-            ev_ask = (ev_user + f"\n注意：上一次只给出了 {len(valid)} 个事件。"
+        valid = [e for e in cand if not _is_junk_event(e)] if isinstance(cand, list) else []
+        if valid and len(valid) > best_n:
+            best, best_n = cand, len(valid)
+        if best_n >= 6 or finish != "stop" or best_n >= 2:
+            break
+        if _attempt == 0:
+            print(f"[analyze] 事件段首轮仅 {best_n} 条有效事件，要求补足后重试一次…", flush=True)
+            ev_ask = (ev_user + "\n注意：上一次给出的事件过少。"
                                 "请务必给出 6 个互不相同、对国内油/气/煤/电影响最重要的真实事件，不要只给 1 个。")
+    events = best
     if not isinstance(events, list) or not events:
         print(f"[analyze] 事件段不可用（{finish}），整轮降级数据速览版。", flush=True)
         return None
+    print(f"[analyze] 事件段采用 {best_n} 条有效事件（finish={finish}）。", flush=True)
     out: dict[str, Any] = {"events": events}
 
     # ---- 第 2 段：简报（要点/因子/雷达/速查/情景/催化剂/风险；失败则代码兜底）----
