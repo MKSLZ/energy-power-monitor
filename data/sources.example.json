@@ -1,0 +1,89 @@
+{
+  "_comment": "各行情/新闻源的候选 URL 清单，供日后维护。fetchers 抓不到即降级标 N/A，禁止编数。",
+  "quotes": {
+    "Brent": [
+      "https://qt.gtimg.cn/q=hf_OIL",
+      "https://www.ice.com/products/27996665/Dutch-TTF-Natural-Gas-Futures/data",
+      "https://www.barchart.com/futures/quooks"
+    ],
+    "WTI": [
+      "https://qt.gtimg.cn/q=hf_CL",
+      "https://www.investing.com/commodities/crude-oil"
+    ],
+    "HH_natgas": [
+      "https://qt.gtimg.cn/q=hf_NG",
+      "https://fred.stlouisfed.org/series/DHHNGSP"
+    ],
+    "TTF": [
+      "https://www.barchart.com/futures/quotes/TTFF2/overview",
+      "https://www.investing.com/commodity/dutch-ttf-gas-futures",
+      "https://www.ice.com/products/27996665/"
+    ],
+    "JKM": [
+      "https://www.spglobal.com/commodityinsights/en"
+    ],
+    "Qinhuangdao_Q5500": [
+      "https://www.cctd.com.cn/",
+      "http://www.cqcoal.com/"
+    ],
+    "SHPGX": [
+      "http://www.shpgx.com/"
+    ],
+    "Guangdong_power": [
+      "https://pm.gd.csg.cn/portal/"
+    ],
+    "EPEX_germany": [
+      "https://www.epexspot.com/en/market-data",
+      "https://www.nordpoolgroup.com/en/Market-data/"
+    ]
+  },
+  "news": {
+    "Reuters_energy": [
+      "https://www.reuters.com/business/energy/rss",
+      "https://feeds.reuters.com/reuters/businessNews"
+    ],
+    "Xinhua_energy": [
+      "http://www.xinhuanet.com/energy/",
+      "http://www.xinhuanet.com/energy/news.xml"
+    ],
+    "CLS_telegraph": [
+      "https://www.cls.cn/telegraph"
+    ],
+    "STCN": [
+      "https://www.stcn.com/"
+    ],
+    "Sina_finance": [
+      "https://finance.sina.com.cn/"
+    ],
+    "NEA": [
+      "http://www.nea.gov.cn/"
+    ],
+    "NDRC": [
+      "https://www.ndrc.gov.cn/"
+    ],
+    "CEC": [
+      "https://www.cec.org.cn/"
+    ],
+    "GIE_AGSI": [
+      "https://agsi.gie.eu/",
+      "https://agsi.gie.eu/api?country=EU"
+    ],
+    "OPEC": ["https://www.opec.org/"],
+    "IEA": ["https://www.iea.org/"],
+    "EIA": ["https://www.eia.gov/", "https://api.eia.gov/v2/ (需 EIA_API_KEY)"],
+    "Weather_typhoon": [
+      "http://www.nmc.cn/publish/typhoon/warning.html",
+      "http://www.cma.gov.cn/"
+    ],
+    "Yangtze_inflow": [
+      "http://www.cjw.gov.cn/",
+      "https://cjhy.mot.gov.cn/fw/cxfw/swgg/"
+    ]
+  },
+  "env_vars": {
+    "LLM_BASE_URL": "OpenAI 兼容接口 base，如 https://api.openai.com/v1",
+    "LLM_API_KEY": "必填，否则走数据速览版",
+    "LLM_MODEL": "如 gpt-4o-mini / qwen-plus",
+    "EIA_API_KEY": "可选，用于 EIA 官方库存/产量数据"
+  }
+}

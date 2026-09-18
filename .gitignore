@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+*.egg-info/
+
+# 本地自测截图与临时
+_shots/
+_shots_backend/
+*.log
+
+# 编辑器/系统
+.vscode/
+.idea/
+.DS_Store
+
+# 注意：site/ 与 data/history.json 必须被提交，不能忽略

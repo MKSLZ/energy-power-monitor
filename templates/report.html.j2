@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="300">
+<title>{{ meta.title }} · {{ meta.date }}</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314335A'/%3E%3Cpath d='M17 6 L8 18 h6 l-1 8 9-12 h-6 z' fill='%23F4F1EA'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700;900&display=swap">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+:root{
+  --paper:#F4F1EA; --surface:#FFFFFF; --ink:#16181D; --muted:#5C6470;
+  --line:#D9D2C3; --line-strong:#B4AB96;
+  --bull:#C0392B; --bull-bg:#FBE7E4;
+  --bear:#1F7A4D; --bear-bg:#E4F1EA;
+  --accent:#14335A; --accent-soft:#E8EDF4;
+  --amber:#9A6B12; --amber-bg:#F5EBD3;
+  --neutral-bg:#ECE8DF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:'Noto Sans SC',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:14px;line-height:1.65}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px 80px}
+h1,h2,h3,.serif{font-family:'Noto Serif SC','Songti SC',serif}
+a{color:var(--accent)}
+
+.masthead{border-bottom:3px double var(--line-strong);padding:28px 0 18px;margin-bottom:8px}
+.masthead .toprow{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px}
+.masthead h1{font-size:32px;font-weight:900;letter-spacing:1px;line-height:1.2;color:var(--accent)}
+.masthead .sub{color:var(--muted);font-size:13px;margin-top:6px}
+.dateline{text-align:right;font-size:12.5px;color:var(--muted);line-height:1.8}
+.dateline b{color:var(--ink);font-weight:600}
+.dateline .cutoff{display:inline-block;background:var(--accent);color:#fff;padding:3px 10px;font-weight:700;letter-spacing:.5px;margin-bottom:4px}
+.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.badge{font-size:12px;padding:4px 10px;border:1px solid var(--line-strong);border-radius:2px;background:var(--surface);color:var(--ink)}
+.badge.warn{background:var(--amber-bg);border-color:#D9C089;color:var(--amber)}
+.badge.neutral{background:var(--accent-soft);border-color:#B9C6DA;color:var(--accent)}
+.ai-note{margin-top:12px;background:var(--amber-bg);border:1px solid #D9C089;border-left:4px solid var(--amber);color:var(--amber);padding:8px 12px;font-size:12.5px;font-weight:600}
+
+section{margin-top:38px}
+.sec-head{display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--line-strong);padding-top:14px;margin-bottom:16px;flex-wrap:wrap}
+.sec-no{font-family:'Noto Serif SC',serif;font-size:22px;font-weight:700;color:var(--line-strong)}
+.sec-title{font-size:21px;font-weight:700;color:var(--accent)}
+.sec-note{margin-left:auto;font-size:12px;color:var(--muted)}
+.dim-tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;background:var(--ink);color:var(--paper);letter-spacing:1px;margin-left:8px;vertical-align:middle}
+.dim-tag.old{background:var(--muted)}
+
+/* 核心要点（事件→四品种净影响） */
+.keypoints{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.kp{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);padding:12px 14px}
+.kp .kptag{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;background:var(--accent);color:#fff;margin-bottom:6px;letter-spacing:1px}
+.kp p{font-size:13px;line-height:1.6}
+.kp .net{display:block;margin-top:7px;font-size:12.5px;color:var(--ink);border-top:1px dashed var(--line);padding-top:6px}
+.kp .net b{font-weight:700}
+.d-up{color:var(--bull);font-weight:700}
+.d-dn{color:var(--bear);font-weight:700}
+.d-neu{color:var(--muted);font-weight:700}
+
+/* ===== 事件驱动专区 ===== */
+.event-hero{background:var(--accent);color:#F4F1EA;padding:20px 24px;margin-top:38px}
+.event-hero .eh-kicker{font-size:12px;letter-spacing:3px;opacity:.75;margin-bottom:6px}
+.event-hero h2{font-size:26px;font-weight:900;color:#fff;letter-spacing:1px}
+.event-hero .eh-sub{font-size:12.5px;opacity:.85;margin-top:6px}
+.evcard{background:var(--surface);border:1px solid var(--line);margin-top:14px}
+.evc-head{padding:12px 14px;background:#FBF6EC;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start}
+.evc-title{font-size:14.5px;font-weight:700;color:var(--ink);line-height:1.5}
+.evc-meta{font-size:11.5px;color:var(--muted);margin-top:4px;line-height:1.7}
+.evc-meta .chip{margin-left:6px}
+.evc-table-wrap{overflow-x:auto}
+table.evc{width:100%;min-width:720px;border-collapse:collapse;table-layout:fixed;font-size:12.5px}
+table.evc th,table.evc td{padding:7px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;word-break:break-word;overflow-wrap:anywhere;white-space:normal;line-height:1.6}
+table.evc thead th{background:#EFEAE0;color:var(--accent);font-weight:700;font-size:11.5px}
+.dir{font-weight:700;white-space:normal;line-height:1.5}
+.dir.up{color:var(--bull)} .dir.down{color:var(--bear)} .dir.flat{color:var(--muted)}
+.evc-foot{padding:10px 14px;font-size:12px;color:var(--muted);line-height:1.7}
+.evc-foot div{margin-top:3px}
+.evc-foot b{color:var(--ink)}
+.evc-foot .trig{color:var(--bull)}
+.evc-foot .falsify{color:var(--bear)}
+
+.baseline-box{background:repeating-linear-gradient(45deg,#FBF9F4,#FBF9F4 12px,#F3EFE6 12px,#F3EFE6 24px);border:1px dashed var(--line-strong);padding:16px 18px;font-size:13px;color:var(--muted)}
+.baseline-box b{color:var(--ink)}
+
+.tbl-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px}
+caption{caption-side:top;text-align:left;font-size:12px;color:var(--muted);padding:8px 12px;background:#FBF9F4;border-bottom:1px solid var(--line)}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left;word-break:break-word;overflow-wrap:anywhere;white-space:normal;line-height:1.6}
+thead th{background:#14335A;color:#F4F1EA;font-weight:500;font-size:12.5px;letter-spacing:.5px}
+tbody tr:last-child td{border-bottom:none}
+.tbl-group td{background:#EFEAE0;font-weight:700;color:var(--accent);font-size:12.5px;letter-spacing:1px}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum";white-space:nowrap}
+td.num,td.num.up,td.num.down,td.num.flat,td.num.na{white-space:normal!important;word-break:break-word;overflow-wrap:anywhere;line-height:1.6}
+.src-link{color:var(--accent);text-decoration:underline;font-size:11.5px;margin-left:8px;white-space:nowrap}
+.src-link:hover{color:#0a1f3a}
+.src-links{display:block;margin-top:6px;font-size:11.5px;line-height:1.7;overflow-wrap:anywhere}
+.src-links a{display:inline-block;margin-right:10px;margin-bottom:2px;overflow-wrap:anywhere;white-space:normal}
+.ev-item .src-links a{color:var(--accent);text-decoration:underline;font-size:11px;margin-right:8px;overflow-wrap:anywhere;white-space:normal}
+.up{color:var(--bull);font-weight:600}
+.down{color:var(--bear);font-weight:600}
+.flat{color:var(--muted)}
+.na{color:#9AA0A8}
+
+.chip{display:inline-block;font-size:11px;padding:1px 7px;border-radius:2px;font-weight:600;white-space:nowrap}
+.chip.bull{background:var(--bull-bg);color:var(--bull)}
+.chip.bear{background:var(--bear-bg);color:var(--bear)}
+.chip.neu{background:var(--neutral-bg);color:#5A5648}
+.chip.amb{background:var(--amber-bg);color:var(--amber)}
+
+#rolling-tracker .rt-note{font-size:12px;color:var(--muted);margin-bottom:8px}
+#rolling-tracker table{min-width:780px}
+#rolling-tracker table td, #rolling-tracker table th{font-size:12.5px}
+
+.ev-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.ev-cat{background:var(--surface);border:1px solid var(--line)}
+.ev-cat h4{font-size:14px;font-weight:700;color:#fff;background:var(--accent);padding:8px 12px;display:flex;justify-content:space-between;align-items:center}
+.ev-cat h4 .cnt{font-weight:400;font-size:11.5px;opacity:.85}
+.ev-item{padding:10px 12px;border-bottom:1px solid var(--line);font-size:12.8px;line-height:1.55;overflow-wrap:anywhere}
+.ev-item:last-child{border-bottom:none}
+.ev-item .meta{font-size:11px;color:var(--muted);margin-bottom:3px}
+.ev-item .meta .t{font-weight:600;color:var(--ink)}
+.ev-item .tags{margin-top:5px}
+
+.factor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.factor{background:var(--surface);border:1px solid var(--line);padding:12px 14px}
+.factor .fh{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.factor .fname{font-size:13.5px;font-weight:700}
+.factor .fdesc{font-size:12px;color:var(--muted);line-height:1.55;overflow-wrap:anywhere}
+.factor .bar{height:6px;background:#E5DFD2;margin-top:9px;position:relative}
+.factor .bar .mid{position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:var(--line-strong)}
+.factor .bar .fill{position:absolute;top:0;bottom:0}
+.chart-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.chart-box{background:var(--surface);border:1px solid var(--line);padding:12px}
+.chart-box h4{font-size:13px;font-weight:700;color:var(--accent);margin-bottom:4px}
+.chart-box .cnote{font-size:11px;color:var(--muted);margin-bottom:6px}
+.echart{width:100%;height:340px}
+.echart.tall{height:420px}
+
+.scn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.scn{background:var(--surface);border:1px solid var(--line);padding:12px 14px}
+.scn h4{font-size:14px;font-weight:700;color:var(--accent);margin-bottom:8px;display:flex;justify-content:space-between;align-items:baseline}
+.scn h4 .px{font-size:11px;color:var(--muted);font-weight:400}
+.scn-row{display:grid;grid-template-columns:64px 1fr;gap:8px;padding:7px 0;border-top:1px solid var(--line);font-size:12.5px}
+.scn-row:first-of-type{border-top:none}
+.scn-row .lbl{font-weight:700;font-size:11.5px;padding-top:1px}
+.scn-row .lbl.b{color:var(--bull)}
+.scn-row .lbl.s{color:var(--bear)}
+.scn-row .lbl.n{color:var(--muted)}
+.scn-row .body .rng{font-weight:600}
+.scn-row .body .trig{color:var(--muted);font-size:11.8px;margin-top:2px;line-height:1.5}
+
+.tl-item{display:grid;grid-template-columns:120px 22px 1fr;padding:9px 0;border-bottom:1px dashed var(--line)}
+.tl-item:last-child{border-bottom:none}
+.tl-date{font-size:12px;font-weight:700;color:var(--accent);padding-right:10px;text-align:right}
+.tl-axis{position:relative;display:flex;justify-content:center}
+.tl-axis::before{content:"";position:absolute;top:4px;bottom:-9px;width:1px;background:var(--line-strong)}
+.tl-item:last-child .tl-axis::before{display:none}
+.tl-dot{width:9px;height:9px;background:var(--accent);border-radius:50%;margin-top:5px;z-index:1;border:2px solid var(--paper)}
+.tl-body{font-size:13px;padding-left:12px;overflow-wrap:anywhere}
+.tl-body .sub{font-size:11.5px;color:var(--muted)}
+
+.disc{font-size:12px;color:var(--muted);line-height:1.7;background:var(--surface);border:1px solid var(--line);padding:14px 16px}
+.src-list{columns:2;column-gap:32px;font-size:12.5px;line-height:1.9;padding-left:20px}
+.src-list li{break-inside:avoid}
+.foot{margin-top:40px;padding-top:14px;border-top:1px solid var(--line-strong);font-size:11.5px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.note-line{font-size:12px;color:var(--muted);margin:8px 2px 0;line-height:1.7}
+.empty-tip{background:var(--surface);border:1px dashed var(--line-strong);color:var(--muted);padding:18px;text-align:center;font-size:13px}
+
+@media (max-width:860px){
+  .wrap{padding:0 14px 60px}
+  .masthead h1{font-size:24px}
+  .dateline{text-align:left}
+  .keypoints,.ev-grid,.chart-row,.scn-grid{grid-template-columns:1fr}
+  .factor-grid{grid-template-columns:1fr}
+  .src-list{columns:1}
+  .tl-item{grid-template-columns:88px 18px 1fr}
+  .sec-title{font-size:18px}
+  .event-hero h2{font-size:21px}
+}
+</style>
+</head>
+<body>
+{% set dirmap = {'up':'d-up','down':'d-dn','flat':'d-neu'} %}
+{% macro ev_chip(text) -%}
+{%- set c = '' -%}
+{%- if ('看空' in text) or ('偏空' in text) or ('利空' in text) or ('强空' in text) or ('弱空' in text) or ('下行' in text) or ('压顶' in text) or ('回落' in text) -%}{% set c = 'bear' -%}
+{%- elif ('看多' in text) or ('偏多' in text) or ('利多' in text) or ('强多' in text) or ('弱多' in text) or ('托底' in text) or ('上行' in text) or ('支撑' in text) -%}{% set c = 'bull' -%}
+{%- elif '中性' in text -%}{% set c = 'neu' -%}
+{%- endif -%}
+<span class="chip {{c}}">{{text}}</span>
+{%- endmacro %}
+<div class="wrap">
+
+<!-- 1. 报头 -->
+<header class="masthead">
+  <div class="toprow">
+    <div>
+      <h1>{{ meta.title }}</h1>
+      <div class="sub">{{ meta.subtitle }}</div>
+    </div>
+    <div class="dateline">
+      <div class="cutoff">数据截止时间(UTC+8)：{{ meta.cutoff }}</div>
+      <div>监控窗口：最近 24 小时（{{ meta.window }}）</div>
+      <div>下次监控：{{ meta.next_update }}（本页每 5 分钟自动刷新）</div>
+    </div>
+  </div>
+  <div class="badge-row">
+    {% for b in meta.badges %}
+    <span class="badge {{ b.cls }}">{{ b.text }}</span>
+    {% endfor %}
+    <span class="badge">涨跌配色：<span style="color:var(--bull);font-weight:700">红 ▲ = 看多/利多</span> · <span style="color:var(--bear);font-weight:700">绿 ▼ = 看空/利空</span> · 灰 ■ = 中性</span>
+  </div>
+  {% if meta.ai_note %}
+  <div class="ai-note">⚠ AI 影响推演提示：{{ meta.ai_note }}</div>
+  {% endif %}
+</header>
+
+<!-- 2. 今日核心要点（事件→四品种净影响） -->
+<section>
+  <div class="sec-head"><span class="sec-no">02</span><span class="sec-title">今日核心要点</span><span class="dim-tag">当日最新情况</span><span class="sec-note">事件一句话 → 四品种净影响</span></div>
+  {% if core_points %}
+  <div class="keypoints">
+    {% for kp in core_points %}
+    <div class="kp"><span class="kptag">{{ kp.tag }}</span><p>{{ kp.text }}<span class="net"><b>净影响：</b>油 <span class="{{ dirmap[kp.net.oil.dir] }}">{{ kp.net.oil.label }}</span>　气 <span class="{{ dirmap[kp.net.gas.dir] }}">{{ kp.net.gas.label }}</span>　煤 <span class="{{ dirmap[kp.net.coal.dir] }}">{{ kp.net.coal.label }}</span>　电 <span class="{{ dirmap[kp.net.power.dir] }}">{{ kp.net.power.label }}</span></span></p></div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty-tip">暂无数据</div>
+  {% endif %}
+</section>
+
+<!-- 2b. 本期信息源抓取状态 -->
+<section>
+  <div class="sec-head"><span class="sec-no">2b</span><span class="sec-title">本期信息源抓取状态</span><span class="sec-note">10 类指定源 · 抓取情况</span></div>
+  <div class="tbl-wrap">
+  <table>
+    <colgroup><col style="width:22%"><col style="width:58%"><col style="width:20%"></colgroup>
+    <thead><tr><th>状态</th><th>信息源 / 内容</th><th>本期数据</th></tr></thead>
+    <tbody>
+      {% for s in source_status %}
+      <tr><td><span class="chip {{ s.chip_cls }}">{{ s.chip }}</span></td><td>{{ s.content }}</td><td>{{ s.data }}</td></tr>
+      {% else %}
+      <tr><td colspan="3" class="na">N/A</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ========== 3. 事件驱动专区 ========== -->
+<div class="event-hero">
+  <div class="eh-kicker">EVENT-DRIVEN DAILY · 事件驱动 · 逐条推演</div>
+  <h2>当日新闻事件 → 四品种影响</h2>
+  <div class="eh-sub">{{ events|length }} 个最重要事件 · 逐事件给出方向 / 强度 / 时滞 / 置信度 / 是否 price-in / 传导逻辑 · 颜色：<span style="color:#F4B8B0">红 ▲看多</span>　<span style="color:#9FD4B6">绿 ▼看空</span>　<span style="color:#C9C1AE">灰 ■中性</span></div>
+</div>
+<section>
+  <div class="sec-head"><span class="sec-no">03</span><span class="sec-title">事件影响卡</span><span class="sec-note">EV1–EV{{ events|length }} · 按重要性排序</span></div>
+
+  {% if events %}
+  {% for ev in events %}
+  <div class="evcard">
+    <div class="evc-head">
+      <div>
+        <div class="evc-title">{{ ev.title }}</div>
+        <div class="evc-meta">{{ ev.time }} · {{ ev.source }}{% for c in ev.chips %}{{ ev_chip(c) }}{% endfor %}<span class="src-links">{% if ev.links %}{% for l in ev.links %}<a href="{{ l.url }}" target="_blank" rel="noopener noreferrer">{{ l.text }}</a>{% if not loop.last %} · {% endif %}{% endfor %}{% else %}—{% endif %}</span></div>
+      </div>
+    </div>
+    <div class="evc-table-wrap"><table class="evc">
+      <colgroup><col style="width:9%"><col style="width:11%"><col style="width:8%"><col style="width:12%"><col style="width:9%"><col style="width:11%"><col style="width:40%"></colgroup>
+      <thead><tr><th>品种</th><th>方向</th><th>强度</th><th>时滞</th><th>置信度</th><th>price-in</th><th>一句传导逻辑</th></tr></thead>
+      <tbody>
+        {% for im in ev.impacts %}
+        <tr><td>{{ im.prod }}</td><td><span class="dir {{ im.dir }}">{{ im.dir_label }}</span></td><td>{{ im.strength }}</td><td>{{ im.lag }}</td><td>{{ im.confidence }}</td><td>{{ im.priced_in }}</td><td>{{ im.logic }}</td></tr>
+        {% else %}
+        <tr><td colspan="7" class="na">N/A</td></tr>
+        {% endfor %}
+      </tbody>
+    </table></div>
+    <div class="evc-foot">
+      <div><b>传导链：</b>{{ ev.chain }}</div>
+      <div><b>历史类比：</b>{{ ev.analogy }}</div>
+      <div class="trig"><b>强化触发：</b>{{ ev.trigger }}</div>
+      <div class="falsify"><b>证伪：</b>{{ ev.falsify }}</div>
+    </div>
+  </div>
+  {% endfor %}
+  {% else %}
+  <div class="empty-tip">暂无事件数据</div>
+  {% endif %}
+
+  <div class="chart-box" style="margin-top:16px">
+    <h4>图 3-1　事件 × 四品种 影响矩阵（-3 极强空 ~ +3 极强多，0=中性）</h4>
+    <div class="cnote">红=看多（越深越强），绿=看空（越深越强），灰=中性；悬停查看事件名、方向强度与一句传导逻辑。</div>
+    <div id="chart-matrix8" class="echart tall"></div>
+  </div>
+</section>
+
+<!-- ========== 4. 前一日回顾 ========== -->
+<section>
+  <div class="sec-head"><span class="sec-no">04</span><span class="sec-title">前一日回顾</span><span class="dim-tag old">前一日回顾</span><span class="sec-note">环比变化 · 首期为基线</span></div>
+  <div class="baseline-box">
+    <b>基线 / 暂无历史数据。</b>本期为监控序列首期（{{ meta.cutoff }}），无 24 小时前对照快照。本表当前价格即为<b>序列基线</b>；自下一期起，本栏将展示前一日快照的四品种价格、方向判断与重大事件的环比变化，滚动保留近 30 天。
+  </div>
+</section>
+
+<!-- ========== 5. 价格行情速览 ========== -->
+<section>
+  <div class="sec-head"><span class="sec-no">05</span><span class="sec-title">价格行情速览</span><span class="sec-note">缺失项标 N/A</span></div>
+  <div class="tbl-wrap">
+  <table>
+    <colgroup><col style="width:19%"><col style="width:15%"><col style="width:24%"><col style="width:19%"><col style="width:23%"></colgroup>
+    <caption>表 5-1　四品种最新价 / 日涨跌 / 周涨跌（单位各异，不跨品种直接比价；来源与时间见末列）</caption>
+    <thead><tr><th>品种 / 合约</th><th>最新价</th><th>日涨跌</th><th>周涨跌</th><th>数据时间 / 来源</th></tr></thead>
+    <tbody>
+      {% if price_groups %}
+      {% for g in price_groups %}
+      <tr class="tbl-group"><td colspan="5">{{ g.name }}</td></tr>
+        {% for r in g.rows %}
+        <tr><td>{{ r.contract }}</td><td class="{{ r.price_cls or 'num' }}">{{ r.price }}</td><td class="num {{ r.day_cls or '' }}">{{ r.day }}</td><td class="num {{ r.week_cls or '' }}">{{ r.week }}</td><td>{{ r.src_time }}{% if r.link %} <a href="{{ r.link.url }}" target="_blank" rel="noopener noreferrer">{{ r.link.text }}</a>{% endif %}</td></tr>
+        {% endfor %}
+      {% endfor %}
+      {% else %}
+      <tr><td colspan="5" class="na">N/A</td></tr>
+      {% endif %}
+    </tbody>
+  </table>
+  </div>
+  <div class="chart-row" style="margin-top:14px">
+    <div class="chart-box">
+      <h4>图 5-1　四品种日度 vs 周度涨跌幅（%）</h4>
+      <div class="cnote">单位不可比，本图仅比较涨跌方向与幅度；绝对值见表 5-1。</div>
+      <div id="chart-change" class="echart"></div>
+    </div>
+    <div class="chart-box">
+      <h4>图 5-2　Brent 近期关键节点走势示意</h4>
+      <div class="cnote">基于公开报道的关键点位标注，非连续行情序列；周中曾冲 $109 四个月高位。</div>
+      <div id="chart-brent" class="echart"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 6. 近期滚动追踪 ========== -->
+<section id="rolling-tracker">
+  <div class="sec-head"><span class="sec-no">06</span><span class="sec-title">近期滚动追踪</span><span class="sec-note">滚动保留近 30 天 · 新快照追加于表首</span></div>
+  <div class="rt-note">每期末尾追加一行快照，<code>SNAPSHOTS</code> 数组（见文末脚本）为数据源；下期由监控脚本读取本文件、向数组头部 unshift 新快照后重写。</div>
+  <div class="tbl-wrap">
+  <table>
+    <colgroup><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:15%"><col style="width:20%"></colgroup>
+    <caption>表 6-1　滚动快照序列（本期为首条基线）</caption>
+    <thead><tr><th>快照时间(UTC+8)</th><th>石油 Brent</th><th>天然气 TTF</th><th>煤炭 秦Q5500</th><th>电力 广东日前</th><th>方向判断</th><th>重大事件一句话</th></tr></thead>
+    <tbody id="rt-body"></tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ========== 7. 关键事件与新闻（分类清单） ========== -->
+<section>
+  <div class="sec-head"><span class="sec-no">07</span><span class="sec-title">关键事件与新闻 · 分类清单</span><span class="sec-note">最近 24 小时 · 六类分组（重点事件详见 03 区）</span></div>
+  <div class="ev-grid">
+    {% if news_categories %}
+    {% for cat in news_categories %}
+    <div class="ev-cat">
+      <h4>{{ cat.name }} <span class="cnt">{{ cat.count }} 条</span></h4>
+      {% for it in cat['items'] %}
+      <div class="ev-item"><div class="meta"><span class="t">{{ it.time }}</span> · {{ it.source }}</div>{{ it.text }}{% if it.links %}<div class="src-links">{% for l in it.links %}<a href="{{ l.url }}" target="_blank" rel="noopener noreferrer">{{ l.text }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</div>{% endif %}{% if it.tags %}<div class="tags">{% for t in it.tags %}<span class="chip {{ t.cls }}">{{ t.label }}</span> {% endfor %}</div>{% endif %}</div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+    {% else %}
+    <div class="empty-tip">暂无数据</div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- ========== 8. 影响因子监测看板 ========== -->
+<section>
+  <div class="sec-head"><span class="sec-no">08</span><span class="sec-title">影响因子监测看板</span><span class="sec-note">六类因子 · 偏多 / 偏空 / 中性 + 强度</span></div>
+  <div class="factor-grid">
+    {% for f in factors %}
+    <div class="factor"><div class="fh"><span class="fname">{{ f.name }}</span><span class="chip {{ f.chip_cls }}">{{ f.chip }}</span></div><div class="fdesc">{{ f.desc }}</div><div class="bar"><span class="mid"></span>{% if f.pos == 'left' %}<span class="fill" style="left:50%;width:{{ f.width }};background:{{ f.color }}"></span>{% elif f.pos == 'right' %}<span class="fill" style="right:50%;width:{{ f.width }};background:{{ f.color }}"></span>{% else %}<span class="fill" style="left:50%;width:{{ f.width }};background:{{ f.color }}"></span>{% endif %}</div></div>
+    {% endfor %}
+  </div>
+  <div class="chart-row">
+    <div class="chart-box"><h4>图 8-1　六因子多空强度雷达（-3 至 +3）</h4><div class="cnote">外圈=强利多，内圈=强利空。</div><div id="chart-radar" class="echart"></div></div>
+    <div class="chart-box"><h4>图 8-2　六因子净多空评分</h4><div class="cnote">红=偏多，绿=偏空，宽度示意强度。</div><div id="chart-gauge" class="echart"></div></div>
+  </div>
+</section>
+
+<!-- ========== 9. 补充推演（摘要表） ========== -->
+<section>
+  <div class="sec-head"><span class="sec-no">09</span><span class="sec-title">补充推演 · 跨事件横向对照</span><span class="sec-note">详细逐事件卡片见 03 区 · 本表为速查</span></div>
+  <div class="tbl-wrap">
+  <table>
+    <colgroup><col style="width:22%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:26%"></colgroup>
+    <caption>表 9-1　事件 × 四品种方向速查（▲多 / ▼空 / ■中性）</caption>
+    <thead><tr><th>事件</th><th>石油</th><th>天然气</th><th>煤炭</th><th>电力</th><th>历史类比 / 关键证伪点</th></tr></thead>
+    <tbody>
+      {% if summary_rows %}
+      {% for r in summary_rows %}
+      <tr><td>{{ r.event }}</td><td class="{{ r.oil.cls }}">{{ r.oil.txt }}</td><td class="{{ r.gas.cls }}">{{ r.gas.txt }}</td><td class="{{ r.coal.cls }}">{{ r.coal.txt }}</td><td class="{{ r.power.cls }}">{{ r.power.txt }}</td><td>{{ r.note }}</td></tr>
+      {% endfor %}
+      {% else %}
+      <tr><td colspan="6" class="na">N/A</td></tr>
+      {% endif %}
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ========== 10. 四品种短期展望 ========== -->
+<section>
+  <div class="sec-head"><span class="sec-no">10</span><span class="sec-title">四品种短期展望（1–3 日三情景）</span><span class="sec-note">基准 / 乐观 / 悲观 + 触发点</span></div>
+  <div class="scn-grid">
+    {% for s in scenarios %}
+    <div class="scn"><h4>{{ s.name }} <span class="px">当前 {{ s.current }}</span></h4>
+      {% for row in s.rows %}
+      <div class="scn-row"><span class="lbl {{ row.label_cls }}">{{ row.label }}</span><span class="body"><span class="rng {{ row.range_cls }}">{{ row.range }}</span><div class="trig">{{ row.trigger }}</div></span></div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ========== 11. 风险提示与下一催化剂 ========== -->
+<section>
+  <div class="sec-head"><span class="sec-no">11</span><span class="sec-title">风险提示与下一催化剂</span><span class="sec-note">未来 1–3 天 · 数据 / 会议 / 天气</span></div>
+  <div>
+    {% for c in catalysts %}
+    <div class="tl-item"><div class="tl-date">{{ c.date }}</div><div class="tl-axis"><span class="tl-dot"></span></div><div class="tl-body">{{ c.body }}{% if c.sub %}<div class="sub">{{ c.sub }}</div>{% endif %}</div></div>
+    {% endfor %}
+  </div>
+  {% if main_risks %}
+  <p class="note-line"><b>主要风险：</b>{{ main_risks | join('；') }}</p>
+  {% endif %}
+</section>
+
+<!-- ========== 监控网站与信息源 ========== -->
+<section>
+  <div class="sec-head"><span class="sec-no">11b</span><span class="sec-title">监控网站与信息源</span><span class="sec-note">日常巡检入口 · 10+ 源</span></div>
+  <div class="tbl-wrap">
+  <table>
+    <colgroup><col style="width:24%"><col style="width:34%"><col style="width:14%"><col style="width:28%"></colgroup>
+    <caption>表 11b-1　信息源清单与更新频率</caption>
+    <thead><tr><th>信息源</th><th>监控内容</th><th>更新频率</th><th>链接</th></tr></thead>
+    <tbody>
+      {% for s in sources_rows %}
+      <tr><td>{{ s.name }}</td><td>{{ s.monitors }}</td><td>{{ s.freq }}</td><td>{% for l in s.links %}<a href="{{ l.url }}" target="_blank" rel="noopener noreferrer">{{ l.text }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ========== 12. 免责声明 ========== -->
+<section>
+  <div class="sec-head"><span class="sec-no">12</span><span class="sec-title">免责声明</span></div>
+  <div class="disc">本报告由监控系统自动汇总公开市场信息生成，仅供能源电力市场研究与内部参考，<b>不构成任何投资建议、交易要约或收益承诺</b>。价格、库存、政策与事件信息来自公开渠道，编制方力求但不保证其准确、完整与时效；盘中不同数据源可能存在口径差异。情景概率、方向与强度评分为基于当前信息的主观研判，实际走势可能因突发事件显著偏离。市场有风险，据此操作风险自担。</div>
+</section>
+
+<!-- ========== 13. 附录参考来源 ========== -->
+<section>
+  <div class="sec-head"><span class="sec-no">13</span><span class="sec-title">附录 · 参考来源</span><span class="sec-note">按类整理 · 均为公开渠道</span></div>
+  <ul class="src-list">
+    {% for a in appendix %}
+    <li>{{ a | safe }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<div class="foot">
+  <span>{{ meta.title }} · {{ meta.cutoff }} (UTC+8) · 事件驱动 · 滚动监控</span>
+  <span>下一次快照：{{ meta.next_update }} · 页面 5 分钟自动刷新</span>
+</div>
+
+<script>
+/* ===== 滚动快照数据源：监控脚本向数组头部 unshift 新快照即可 ===== */
+const SNAPSHOTS = [
+{% for s in snapshots %}
+  {
+    time: {{ s.time | tojson }},
+    oil: {{ s.oil | tojson }}, oilChg: {{ s.oil_chg | tojson }}, oilUp: {{ s.oil_up | tojson }},
+    gas: {{ s.gas | tojson }}, gasChg: {{ s.gas_chg | tojson }}, gasUp: {{ s.gas_up | tojson }},
+    coal: {{ s.coal | tojson }}, coalChg: {{ s.coal_chg | tojson }}, coalUp: {{ s.coal_up | tojson }},
+    power: {{ s.power | tojson }}, powerChg: {{ s.power_chg | tojson }}, powerUp: {{ s.power_up | tojson }},
+    dir: {{ s.dir | tojson }},
+    event: {{ s.event | tojson }}
+  }{% if not loop.last %},{% endif %}
+{% endfor %}
+];
+function renderTracker(){
+  const body = document.getElementById('rt-body');
+  if(!body) return;
+  body.innerHTML = SNAPSHOTS.map(s => {
+    const cls = v => v===true ? 'up' : (v===false ? 'down' : 'flat');
+    const chip = (t,c) => `<span class="chip ${c}">${t}</span>`;
+    return `<tr>
+      <td class="num">${s.time.replace(' ','<br>')}</td>
+      <td class="num">${s.oil}<br><span class="${cls(s.oilUp)}">${s.oilChg}</span></td>
+      <td class="num">${s.gas}<br><span class="${cls(s.gasUp)}">${s.gasChg}</span></td>
+      <td class="num">${s.coal}<br><span class="${cls(s.coalUp)}">${s.coalChg}</span></td>
+      <td class="num">${s.power}<br><span class="na">${s.powerChg}</span></td>
+      <td>${chip('油 偏空','bear')} ${chip('气 偏多','bull')}<br>${chip('煤 中性偏空','neu')} ${chip('电 中性偏多','amb')}</td>
+      <td>${s.event}</td>
+    </tr>`;
+  }).join('');
+}
+renderTracker();
+
+/* ===== ECharts ===== */
+const BULL='#C0392B', BEAR='#1F7A4D', ACCENT='#14335A', MUTED='#8A8375';
+const AXIS={axisLine:{lineStyle:{color:'#C9C1AE'}},axisLabel:{color:'#5C6470',fontSize:11},splitLine:{lineStyle:{color:'#E7E1D3'}}};
+const charts=[];
+function mk(id,opt){const el=document.getElementById(id);if(!el)return;const c=echarts.init(el);c.setOption(opt);charts.push(c);}
+window.addEventListener('resize',()=>charts.forEach(c=>c.resize()));
+
+const CHANGE = {{ chart_change | tojson }};
+mk('chart-change',{
+  grid:{left:44,right:16,top:42,bottom:38},
+  legend:{top:6,textStyle:{fontSize:11,color:'#5C6470'}},
+  tooltip:{trigger:'axis',valueFormatter:v=>v==null?'N/A':v+'%'},
+  xAxis:{type:'category',data:CHANGE.labels,...AXIS},
+  yAxis:{type:'value',name:'%',nameTextStyle:{color:MUTED,fontSize:10},...AXIS},
+  series:[
+    {name:'日涨跌%',type:'bar',barWidth:14,data:CHANGE.day.map(v=>v==null?{value:0,itemStyle:{color:'transparent'}}:{value:v,itemStyle:{color:v>=0?BULL:BEAR}})},
+    {name:'周涨跌%',type:'bar',barWidth:14,data:CHANGE.week.map(v=>v==null?{value:0,itemStyle:{color:'transparent'}}:{value:v,itemStyle:{color:v>=0?BULL:BEAR,opacity:.45}})}
+  ]
+});
+
+const BRENT = {{ chart_brent | tojson }};
+(function(){
+  const markData = (BRENT.marks||[]).map(m=>{
+    const idx = BRENT.labels.indexOf(m.coord);
+    const y = idx>=0 ? BRENT.data[idx] : 0;
+    return {coord:[m.coord,y], value:m.value, itemStyle:{color:m.color==='bull'?BULL:BEAR}, label:{fontSize:10,color:'#fff'}};
+  });
+  mk('chart-brent',{
+    grid:{left:48,right:24,top:30,bottom:44},
+    tooltip:{trigger:'axis',valueFormatter:v=>'$'+Number(v).toFixed(2)},
+    xAxis:{type:'category',data:BRENT.labels,...AXIS},
+    yAxis:{type:'value',min:BRENT.ymin,max:BRENT.ymax,...AXIS},
+    series:[{type:'line',data:BRENT.data,smooth:true,
+      lineStyle:{color:ACCENT,width:2.5},itemStyle:{color:ACCENT},
+      areaStyle:{color:'rgba(20,51,90,0.08)'},
+      markPoint:{data:markData}}]
+  });
+})();
+
+const RADAR = {{ radar | tojson }};
+mk('chart-radar',{
+  radar:{indicator:RADAR.names.map(n=>({name:n,max:3,min:-3})),
+    radius:'62%',center:['50%','54%'],axisName:{color:'#16181D',fontSize:11.5},
+    splitLine:{lineStyle:{color:'#D9D2C3'}}},
+  series:[{type:'radar',data:[{value:RADAR.values,name:'本期净多空分',
+    areaStyle:{color:'rgba(20,51,90,0.25)'},lineStyle:{color:ACCENT,width:2},itemStyle:{color:ACCENT}}]}]
+});
+
+(function(){
+  const vals = RADAR.values.slice().reverse();
+  const names = RADAR.names.slice().reverse();
+  mk('chart-gauge',{
+    grid:{left:90,right:40,top:14,bottom:24},
+    tooltip:{valueFormatter:v=>v>0?('偏多 +'+v):('偏空 '+v)},
+    xAxis:{type:'value',min:-3,max:3,...AXIS},
+    yAxis:{type:'category',data:names,...AXIS},
+    series:[{type:'bar',barWidth:14,
+      data:vals.map(v=>({value:v,itemStyle:{color:v>=0?BULL:BEAR}})),
+      label:{show:true,position:'right',fontSize:10,color:'#5C6470',formatter:p=>p.value>0?('+'+p.value):p.value}}]
+  });
+})();
+
+/* 图 3-1：事件 × 四品种 影响矩阵 */
+const HEAT = {{ heatmap | tojson }};
+(function(){
+  const events = HEAT.events;
+  const prods = HEAT.prods;
+  const raw = HEAT.matrix;
+  const logic = HEAT.logic;
+  const data=[];
+  raw.forEach((row,y)=>row.forEach((v,x)=>data.push([x,y,v,logic[y][x]])));
+  const fmt=v=>v===0?'■ 中性':(v>0?('▲ 看多 +'+v):('▼ 看空 '+v));
+  mk('chart-matrix8',{
+    grid:{left:110,right:30,top:26,bottom:60},
+    tooltip:{formatter:p=>`<b>${events[p.value[1]]}</b> × ${prods[p.value[0]]}<br/>${fmt(p.value[2])}<br/>传导：${p.value[3]}`},
+    xAxis:{type:'category',data:prods,...AXIS,splitArea:{show:true}},
+    yAxis:{type:'category',data:events,...AXIS,splitArea:{show:true},axisLabel:{color:'#16181D',fontSize:11}},
+    visualMap:{min:-3,max:3,calculable:false,show:false,inRange:{color:[BEAR,'#E9E4D6',BULL]}},
+    series:[{type:'heatmap',data:data,
+      label:{show:true,fontSize:10,color:'#16181D',formatter:p=>fmt(p.value[2])},
+      itemStyle:{borderColor:'#F4F1EA',borderWidth:2}}]
+  });
+})();
+</script>
+</div>
+</body>
+</html>

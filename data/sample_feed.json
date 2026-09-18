@@ -1,0 +1,372 @@
+{
+  "meta": {
+    "title": "能源电力市场监控日报",
+    "subtitle": "Energy & Power Market Daily Monitor · 事件驱动 · 覆盖 石油/天然气LNG/煤炭/电力",
+    "date": "2026-09-18",
+    "cutoff": "2026-09-18 15:30",
+    "window": "09-17 15:30 — 09-18 15:30",
+    "next_update": "约 18:13",
+    "badges": [
+      {"text": "本期为离线演示数据 / demo（--mock）", "cls": "warn"},
+      {"text": "国际原油亚盘交易中", "cls": "neutral"},
+      {"text": "涨跌配色：红 ▲ 看多 / 绿 ▼ 看空 / 灰 ■ 中性", "cls": ""}
+    ],
+    "ai_note": null
+  },
+  "core_points": [
+    {"tag": "石油", "text": "Brent 续跌破 $98 至 $97.92（-2.0%），SC 收 754.4（-9.57%）；“战争接近尾声”+管道修复持续挤出地缘溢价。",
+     "net": {"oil": {"dir": "down", "label": "▼强空"}, "gas": {"dir": "down", "label": "▼"}, "coal": {"dir": "down", "label": "▼弱空"}, "power": {"dir": "flat", "label": "■"}}},
+    {"tag": "地缘", "text": "霍尔木兹 9/15 零 VLCC/LNG 通过（大宗船仅 4 艘 vs 日均 18 艘），伊朗革命卫队再警告“非法”穿越将被摧毁。",
+     "net": {"oil": {"dir": "up", "label": "▲弱多"}, "gas": {"dir": "up", "label": "▲弱多"}, "coal": {"dir": "flat", "label": "■"}, "power": {"dir": "flat", "label": "■"}}},
+    {"tag": "煤炭", "text": "焦煤 JM2701 早盘暴跌超 6.5% 失守 60 日线；煤炭股 7 连跌（陕煤 -5.05%）、秦港库存回升至 625 万吨。",
+     "net": {"oil": {"dir": "flat", "label": "■"}, "gas": {"dir": "flat", "label": "■"}, "coal": {"dir": "down", "label": "▼强空"}, "power": {"dir": "down", "label": "▼弱空"}}},
+    {"tag": "天然气", "text": "欧洲储气 68.66% 低五年 16pct，补库逻辑仍支撑 TTF 77.25；但油价暴跌拖累、欧洲盘 15:00 刚开。",
+     "net": {"oil": {"dir": "flat", "label": "■"}, "gas": {"dir": "up", "label": "▲偏多"}, "coal": {"dir": "flat", "label": "■"}, "power": {"dir": "flat", "label": "■"}}},
+    {"tag": "制裁", "text": "众议院 262:159 通过对俄伊制裁法案，白宫证实特朗普将签（对购俄油国征 100% 关税）。",
+     "net": {"oil": {"dir": "up", "label": "▲中"}, "gas": {"dir": "up", "label": "▲弱多"}, "coal": {"dir": "flat", "label": "■"}, "power": {"dir": "flat", "label": "■"}}}
+  ],
+  "source_status": [
+    {"chip": "已更新", "chip_cls": "bull",
+     "content": "Brent/SC 续跌；JKM/HH 新报价；中国 LNG 基准价；焦煤暴跌；秦港库存 625 万吨；台风杜鹃路径；对俄伊制裁进展。",
+     "data": "Brent $97.92（-2.0%）；SC -9.57%；JKM $25.21（+0.59%）；HH $2.92（+0.80%）；生意社 LNG 6402 元/吨；焦煤 -6.5%。"},
+    {"chip": "沿用上期", "chip_cls": "neu",
+     "content": "TTF 15:00 盘中价（盘刚开未出）；广东 9/18 现货（门户滞后）；EPEX 德国 9/19（约 18:00 出清）；OPEC/IEA 月报；中电联。",
+     "data": "TTF 沿用 77.25；广东沿用 442.18；德国沿用 €120.53。"},
+    {"chip": "未抓到", "chip_cls": "amb",
+     "content": "WTI 独立盘中价；EU ETS 9/18 实时价；AGSI 9/16 逐日值。",
+     "data": "WTI 按 Brent 走弱推算 $94–95；EU ETS 沿用 9/16 €84.83。"}
+  ],
+  "events": [
+    {
+      "id": "EV1", "title": "EV1 · 沙特东西管道绕开受损段修复：数日内恢复约一半运力，全面修复约 6 周",
+      "time": "9/17 美东表态 → 9/18 更新", "source": "沙特阿美",
+      "chips": ["确认", "净影响 偏空（强化）"],
+      "links": [{"text": "财联社 9/18", "url": "https://www.cls.cn/detail/2485683"},
+                {"text": "上观新闻", "url": "https://www.shobserver.cn/wx/detail.do?id=1179272"}],
+      "impacts": [
+        {"prod": "石油", "dir": "down", "dir_label": "▼ 看空", "strength": "中–强", "lag": "即时–数日", "confidence": "中高", "priced_in": "部分", "logic": "正常运力约 400 万桶/日，数日内恢复约半量 → 中断溢价加速回吐。"},
+        {"prod": "天然气", "dir": "down", "dir_label": "▼ 中性偏空", "strength": "弱", "lag": "数日", "confidence": "中", "priced_in": "未", "logic": "油价回落降低油气替代需求；卡塔尔 LNG 损失为独立变量。"},
+        {"prod": "煤炭", "dir": "flat", "dir_label": "■ 中性", "strength": "弱", "lag": "—", "confidence": "中", "priced_in": "—", "logic": "能源板块整体风险溢价回落。"},
+        {"prod": "电力", "dir": "flat", "dir_label": "■ 中性", "strength": "弱", "lag": "—", "confidence": "中", "priced_in": "—", "logic": "国际油价对中国煤电为主的现货电价传导有限。"}
+      ],
+      "chain": "传导链：绕开受损段修复 → 数日恢复约半量 → 供应中断溢价加速回吐 → Brent 亚盘走弱。",
+      "analogy": "历史类比：2019 年 Abqaiq 遇袭油价飙升，随后随恢复预期快速回落。",
+      "trigger": "强化触发：修复慢于预期 / 再遭袭击。",
+      "falsify": "证伪：数日内半量恢复兑现、全面修复 6 周内完成。"
+    },
+    {
+      "id": "EV2", "title": "EV2 · 特朗普称伊朗战争“接近尾声”、已与德黑兰“直接”沟通",
+      "time": "9/18 13:49", "source": "金融界 / Gulf News",
+      "chips": ["突发", "净影响 偏空（升级）"],
+      "links": [{"text": "Gulf News", "url": "https://gulfnews.com/world/mena/us-iran-conflict-oil-prices-ease-as-trump-signals-possible-path-to-talks-1.500678971"}],
+      "impacts": [
+        {"prod": "石油", "dir": "down", "dir_label": "▼ 看空", "strength": "强", "lag": "即时", "confidence": "中高", "priced_in": "部分", "logic": "战争结束预期 → 霍尔木兹通航恢复 → 供应中断溢价快速回吐。"},
+        {"prod": "天然气", "dir": "down", "dir_label": "▼ 看空", "strength": "中", "lag": "即时–数日", "confidence": "中", "priced_in": "部分", "logic": "中东 LNG 外运恢复预期 → JKM/TTF 承压；欧洲低库存对冲。"},
+        {"prod": "煤炭", "dir": "down", "dir_label": "▼ 中性偏空", "strength": "弱–中", "lag": "数日", "confidence": "中", "priced_in": "部分", "logic": "能源风险溢价整体回落。"},
+        {"prod": "电力", "dir": "flat", "dir_label": "■ 中性", "strength": "—", "lag": "—", "confidence": "中", "priced_in": "—", "logic": "对中国电价间接传导。"}
+      ],
+      "chain": "传导链：“战争接近尾声 + 直接沟通” → 霍尔木兹通航恢复预期 → 中断溢价快速回吐。",
+      "analogy": "历史类比：2024 年加沙停火协议达成后油价单日 -3%。",
+      "trigger": "强化触发：正式停火协议签署 / 霍尔木兹全面通航。",
+      "falsify": "证伪：谈判破裂 / 军事行动重启。"
+    },
+    {
+      "id": "EV3", "title": "EV3 · 美联储加息 25bp + 日本央行加息 25bp 至 1.25%（31 年新高）",
+      "time": "9/16 FOMC / 9/18", "source": "央视 / 财联社",
+      "chips": ["确认", "净影响 偏空"],
+      "links": [{"text": "央视新闻 9/18", "url": "https://news.cctv.com/2026/09/18/ARTItlgNdkGQR1MHqxgPdsJV260918.shtml"}],
+      "impacts": [
+        {"prod": "石油", "dir": "down", "dir_label": "▼ 看空", "strength": "中", "lag": "即时–数周", "confidence": "高", "priced_in": "大部分已", "logic": "全球紧缩扩散 → 流动性收紧 → 商品承压。"},
+        {"prod": "天然气", "dir": "down", "dir_label": "▼ 看空", "strength": "中", "lag": "数日–数周", "confidence": "中高", "priced_in": "部分", "logic": "需求预期承压；欧洲供应危机形成对冲。"},
+        {"prod": "煤炭", "dir": "down", "dir_label": "▼ 看空", "strength": "弱–中", "lag": "数周", "confidence": "中", "priced_in": "未", "logic": "大宗商品整体承压；国内煤价仍由政策与供需主导。"},
+        {"prod": "电力", "dir": "down", "dir_label": "▼ 中性偏空", "strength": "弱", "lag": "数周", "confidence": "中", "priced_in": "—", "logic": "宏观紧缩间接影响用电需求预期。"}
+      ],
+      "chain": "传导链：美联储鹰派 + 日央行加息 → 全球流动性预期收紧 → 美元计价能源承压。",
+      "analogy": "历史类比：2022 年加息周期美元走强、大宗承压。",
+      "trigger": "强化触发：10 月加息概率升至 70%+ / 日央行继续加息。",
+      "falsify": "证伪：通胀快速回落 / 美联储或日央行转鸽。"
+    },
+    {
+      "id": "EV4", "title": "EV4 · 欧洲储气率 68.84%（2013 年来最低）+ 卡塔尔边际复产但外运仍堵",
+      "time": "持续结构性 · GIE 9/18", "source": "GIE / IEA",
+      "chips": ["确认", "净影响 强多"],
+      "links": [{"text": "GIE 储气", "url": "https://www.gie.eu/"}],
+      "impacts": [
+        {"prod": "石油", "dir": "up", "dir_label": "▲ 中性偏多", "strength": "弱–中", "lag": "数周–数月", "confidence": "中", "priced_in": "部分", "logic": "气价高企 → 气转油发电。"},
+        {"prod": "天然气", "dir": "up", "dir_label": "▲ 看多", "strength": "强", "lag": "即时–数月", "confidence": "高", "priced_in": "部分", "logic": "库存较五年低约 15pct；卡塔尔装载回升但外运短期几乎不可能。"},
+        {"prod": "煤炭", "dir": "up", "dir_label": "▲ 看多", "strength": "中", "lag": "数日–数周", "confidence": "中高", "priced_in": "部分", "logic": "欧洲气价高企 → 气转煤发电 → 国际煤价上行。"},
+        {"prod": "电力", "dir": "up", "dir_label": "▲ 看多(欧)", "strength": "强", "lag": "即时", "confidence": "高", "priced_in": "部分", "logic": "欧洲电价与气价联动；中国以煤电为主传导有限。"}
+      ],
+      "chain": "传导链：GIE 储气 68.66%、距 12/1 法定 90% 目标约 10 周 → TTF 逆势反弹。",
+      "analogy": "历史类比：2022 年俄乌冲突推升 TTF 至 300+ 欧元/MWh。",
+      "trigger": "强化触发：注气停滞 / 挪威管道故障 / 中东升级。",
+      "falsify": "证伪：暖冬 + LNG 到港激增 + 卡塔尔持续复产。"
+    },
+    {
+      "id": "EV5", "title": "EV5 · 8 月原煤产量同比 -7.7% + 进口转负，但港口库存由去转累",
+      "time": "9 月中旬数据", "source": "国家统计局 / 海关",
+      "chips": ["数据公布", "净影响 偏多（但见顶信号增强）"],
+      "links": [{"text": "统计局 9/16", "url": "https://finance.sina.com.cn/"}],
+      "impacts": [
+        {"prod": "石油", "dir": "flat", "dir_label": "■ 中性", "strength": "—", "lag": "—", "confidence": "—", "priced_in": "—", "logic": "与国内油气联动弱。"},
+        {"prod": "天然气", "dir": "flat", "dir_label": "■ 中性", "strength": "弱", "lag": "—", "confidence": "中", "priced_in": "—", "logic": "煤改气空间受工业用气淡季需求压制。"},
+        {"prod": "煤炭", "dir": "up", "dir_label": "▲ 看多", "strength": "中", "lag": "数日–数周", "confidence": "中高", "priced_in": "部分", "logic": "供给收缩仍支撑；但港口库存由去转累，见顶信号增强。"},
+        {"prod": "电力", "dir": "up", "dir_label": "▲ 看多", "strength": "中", "lag": "数日–数周", "confidence": "中", "priced_in": "部分", "logic": "煤电燃料成本支撑现货电价底部。"}
+      ],
+      "chain": "传导链：产量+进口双收缩 → 但日耗季节性回落、环渤海港口开始累库 → 秦港高位震荡。",
+      "analogy": "历史类比：2021 年煤炭限产致秦港煤价飙升至 2500 元/吨；本轮有稳产稳供政策对冲。",
+      "trigger": "强化触发：安监限产加码 / 大秦线检修 / 冷冬预期。",
+      "falsify": "证伪：稳产稳供政策见效、产量快速回升 + 进口放量。"
+    },
+    {
+      "id": "EV6", "title": "EV6 · 三部门稳供通知：允许已超产煤矿按月度核定能力满负荷生产",
+      "time": "9/18", "source": "三部门 / 国家能源局",
+      "chips": ["确认", "短期偏空 · 中期托底"],
+      "links": [{"text": "国家能源局 9/18", "url": "http://www.nea.gov.cn/20260918/4b76982ceaba46e7bb364f64b90ee48e/c.html"},
+                {"text": "新华网 9/18", "url": "http://www.xinhuanet.com/energy/20260918/81de474fdd4f4a2fb299d4cd907a4439/c.html"}],
+      "impacts": [
+        {"prod": "石油", "dir": "flat", "dir_label": "■ 中性", "strength": "—", "lag": "—", "confidence": "—", "priced_in": "—", "logic": "无直接传导。"},
+        {"prod": "天然气", "dir": "flat", "dir_label": "■ 中性", "strength": "—", "lag": "—", "confidence": "—", "priced_in": "—", "logic": "无直接传导。"},
+        {"prod": "煤炭", "dir": "down", "dir_label": "▼ 看空(短期)", "strength": "中", "lag": "数日", "confidence": "中高", "priced_in": "已部分", "logic": "政策重心从安全优先转向保供稳价 → 主产地增产预期 → 秦港承压。"},
+        {"prod": "电力", "dir": "down", "dir_label": "▼ 中性偏空", "strength": "弱", "lag": "数日", "confidence": "中", "priced_in": "部分", "logic": "煤价回落预期 → 发电成本下行。"}
+      ],
+      "chain": "传导链：官方原文“推动煤炭产量平稳回升” → 主产地增产预期 → 秦港平仓价承压；保供底线同时封杀深跌空间。",
+      "analogy": "历史类比：2022 年保供政策出台后煤价自高位逐步回落。",
+      "trigger": "强化触发：核增产能快速落地 / 日耗继续下降。",
+      "falsify": "证伪：安监事故致停产 / 主产地恶劣天气。"
+    },
+    {
+      "id": "EV7", "title": "EV7 · 三峡入库流量降至 9500 m³/s（枯水格局坐实），上游来水偏少近 3 成",
+      "time": "9/15 数据", "source": "长江水利委 / 新华社",
+      "chips": ["确认", "净影响 偏多火电燃料"],
+      "links": [{"text": "长江水利委 9/11", "url": "http://www.cjw.gov.cn/"}],
+      "impacts": [
+        {"prod": "石油", "dir": "flat", "dir_label": "■ 中性", "strength": "—", "lag": "—", "confidence": "—", "priced_in": "—", "logic": "无直接传导。"},
+        {"prod": "天然气", "dir": "up", "dir_label": "▲ 中性偏多", "strength": "弱", "lag": "数日–数周", "confidence": "中", "priced_in": "未", "logic": "气电作为调峰电源需求边际增加。"},
+        {"prod": "煤炭", "dir": "up", "dir_label": "▲ 看多", "strength": "中", "lag": "数日–数周", "confidence": "中", "priced_in": "部分", "logic": "水电出力下降 → 火电日耗增加。"},
+        {"prod": "电力", "dir": "up", "dir_label": "▲ 看多", "strength": "中", "lag": "数日–数周", "confidence": "中", "priced_in": "部分", "logic": "水电替代减弱 → 火电增发 → 南方电价上行。"}
+      ],
+      "chain": "传导链：入库降至 9500 m³/s → 水电出力下降 → 火电机组利用小时提升 → 南方现货电价底部抬升。",
+      "analogy": "历史类比：2022 年四川干旱致水电锐减、限电，动力煤与现货电价同步飙升。",
+      "trigger": "强化触发：9–10 月来水持续偏枯 2 成 + 秋季高温。",
+      "falsify": "证伪：9 月下旬流域集中降雨、来水恢复。"
+    },
+    {
+      "id": "EV8", "title": "EV8 · 广东 9/17 实际日前均价 442.18 元/MWh（+3.09%），晚峰顶价 1330.48",
+      "time": "9/17 数据", "source": "广东电力交易中心",
+      "chips": ["数据公布", "净影响 偏多（上调）"],
+      "links": [{"text": "广东电力交易中心", "url": "https://pm.gd.csg.cn/portal/"}],
+      "impacts": [
+        {"prod": "石油", "dir": "flat", "dir_label": "■ 中性", "strength": "—", "lag": "—", "confidence": "—", "priced_in": "—", "logic": "无直接传导。"},
+        {"prod": "天然气", "dir": "flat", "dir_label": "■ 中性", "strength": "—", "lag": "—", "confidence": "—", "priced_in": "—", "logic": "广东气电报价随现货边际影响有限。"},
+        {"prod": "煤炭", "dir": "up", "dir_label": "▲ 中性偏多", "strength": "弱", "lag": "数日", "confidence": "中", "priced_in": "部分", "logic": "广东火电日耗支撑沿海煤价。"},
+        {"prod": "电力", "dir": "up", "dir_label": "▲ 看多", "strength": "中–强", "lag": "即时", "confidence": "中", "priced_in": "部分", "logic": "风电退去 + 秋老虎 + 来水偏枯 → 峰谷差拉大、均价中枢上移。"}
+      ],
+      "chain": "传导链：风电出力波动是短期定价主驱动 → 风电退去 + 秋老虎气温 + 来水偏枯 → 日前均价中枢上移。",
+      "analogy": "历史类比：2024 年 4 月广东日前均价由 310 飙至 678 元/MWh。",
+      "trigger": "强化触发：秋老虎 35℃+ 高温 / 台风登陆致新能源骤降。",
+      "falsify": "证伪：风光持续大发 + 工业用电下滑 + 煤价跌破 900。"
+    }
+  ],
+  "heatmap": {
+    "events": ["EV1 管道半量恢复", "EV2 战争接近尾声", "EV3 美日双加息", "EV4 储气68.66%", "EV5 原煤-7.7%", "EV6 稳供转向", "EV7 三峡9500", "EV8 广东442"],
+    "prods": ["石油", "天然气", "煤炭", "电力"],
+    "matrix": [[-2.5, -1, 0, 0], [-2, -2, -1, 0], [-2, -2, -1, -1], [1, 3, 2, 2], [0, 0, 2, 2], [0, 0, -2, -1], [0, 1, 2, 2], [0, 0, 1.5, 2.5]],
+    "logic": [
+      ["半量恢复、溢价加速回吐", "油气替代需求小降", "板块风险溢价回落", "对煤电电价传导弱"],
+      ["口头>实质、溢价不升反降", "通道风险仍在", "能源风险溢价回落", "间接"],
+      ["全球紧缩扩散", "需求预期下修", "大宗承压", "用电需求预期弱压"],
+      ["气转油", "冬季供应危机", "气转煤发电", "欧洲电价联动(中弱)"],
+      ["—", "淡季需求压制", "供给收缩支撑补库", "燃料成本抬电价"],
+      ["—", "—", "短期增供压制煤价", "发电成本弱降"],
+      ["—", "气电调峰小增", "火电日耗增加", "南方电价上行"],
+      ["—", "—", "广东日耗支撑沿海煤价", "风电退去、中枢上移"]
+    ]
+  },
+  "price_groups": [
+    {"name": "石油", "rows": [
+      {"contract": "Brent（11月合约）", "price": "$97.92/桶", "price_cls": "num", "day": "9/18 15:23（-2.0%）", "day_cls": "down", "week": "周跌约 -6.4%", "week_cls": "down", "src_time": "9/18 15:23 ICE 电子盘", "link": {"text": "ICE", "url": "https://www.ice.com/"}},
+      {"contract": "WTI（10月合约）", "price": "$96.13/桶", "price_cls": "num", "day": "-1.13%", "day_cls": "down", "week": "周跌约 -3.9%", "week_cls": "down", "src_time": "9/17 结算", "link": null},
+      {"contract": "上海原油 SC 主力", "price": "754.4 元/桶", "price_cls": "num", "day": "-9.57%（收盘）", "day_cls": "down", "week": "N/A", "week_cls": "na", "src_time": "9/18 INE 收盘", "link": null}
+    ]},
+    {"name": "天然气·LNG", "rows": [
+      {"contract": "欧洲 TTF（Oct26）", "price": "77.25 欧元/MWh", "price_cls": "num", "day": "+1.54%", "day_cls": "up", "week": "本周累计跌约 4–5%", "week_cls": "down", "src_time": "9/18 14:43 ICE", "link": {"text": "ICE", "url": "https://www.ice.com/"}},
+      {"contract": "美国 HH（现货）", "price": "$2.92/MMBtu", "price_cls": "num", "day": "+0.80%", "day_cls": "up", "week": "EIA 滞后至 9/23", "week_cls": "na", "src_time": "9/16 EIA", "link": {"text": "FRED", "url": "https://fred.stlouisfed.org/series/DHHNGSP"}},
+      {"contract": "亚洲 JKM", "price": "$25.21/MMBtu", "price_cls": "num", "day": "+0.59%", "day_cls": "up", "week": "JKM-HH 价差约 $22.3", "week_cls": "na", "src_time": "9/16 Platts", "link": null},
+      {"contract": "中国 LNG 出厂指数 SHPGX", "price": "6192 元/吨", "price_cls": "num", "day": "生意社基准 6402（+0.69%）", "day_cls": "flat", "week": "全国均价 5957", "week_cls": "na", "src_time": "9/17 上海石油天然气交易中心", "link": {"text": "SHPGX", "url": "http://www.shpgx.com/"}}
+    ]},
+    {"name": "煤炭", "rows": [
+      {"contract": "秦港 Q5500 平仓价", "price": "977 元/吨", "price_cls": "num", "day": "-1 元", "day_cls": "flat", "week": "约 -5 元（-0.5%）", "week_cls": "down", "src_time": "9/17 沿海环渤海", "link": {"text": "CCTD", "url": "https://www.cctd.com.cn/"}},
+      {"contract": "纽卡斯尔动力煤期货", "price": "$143.20/吨（Dec）", "price_cls": "num", "day": "-0.21%", "day_cls": "down", "week": "较上期回落 $1.45", "week_cls": "down", "src_time": "9/18 ICE", "link": {"text": "Barchart", "url": "https://www.barchart.com/"}},
+      {"contract": "焦煤主力 JM2701", "price": "早盘跌超 6.5%", "price_cls": "num", "day": "失守 60 日均线", "day_cls": "down", "week": "N/A", "week_cls": "na", "src_time": "9/18 大商所", "link": null}
+    ]},
+    {"name": "电力（中国现货）", "rows": [
+      {"contract": "广东日前现货均价", "price": "442.18 元/MWh", "price_cls": "num", "day": "+3.09%", "day_cls": "up", "week": "晚峰顶价 1330.48", "week_cls": "up", "src_time": "9/17 实际现货（门户滞后）", "link": {"text": "广东电力交易中心", "url": "https://pm.gd.csg.cn/portal/"}},
+      {"contract": "欧洲 EPEX 德国日前", "price": "€120.53/MWh", "price_cls": "num", "day": "-15.6%", "day_cls": "down", "week": "晚高峰 €180–195", "week_cls": "flat", "src_time": "9/18 交付", "link": {"text": "EPEX", "url": "https://www.epexspot.com/"}}
+    ]}
+  ],
+  "chart_change": {
+    "labels": ["Brent亚盘", "WTI亚盘", "TTF", "HH", "秦港Q5500", "纽煤Dec"],
+    "day": [-4.2, -4.46, 0.94, null, -0.1, -0.21],
+    "week": [-5.0, -3.5, null, null, -0.5, -1.28]
+  },
+  "chart_brent": {
+    "labels": ["上周结算\n9/12", "周中高点", "FOMC后\n9/16", "结算\n9/17", "亚盘\n9/18"],
+    "data": [104.61, 109.0, 105.83, 104.82, 99.31],
+    "ymin": 98, "ymax": 112,
+    "marks": [{"coord": "周中高点", "value": "$109 四个月高位", "color": "bull"},
+              {"coord": "亚盘\n9/18", "value": "跌破$100", "color": "bear"}]
+  },
+  "snapshots": [
+    {"time": "2026-09-18 15:30", "oil": "$97.92", "oil_chg": "-2.0%", "oil_up": false,
+     "gas": "77.25 €/MWh", "gas_chg": "+1.54%", "gas_up": true,
+     "coal": "977 元/吨", "coal_chg": "焦煤 -6.5%", "coal_up": false,
+     "power": "442.18 元/MWh", "power_chg": "+3.09%", "power_up": true,
+     "dir": "油 ▼偏空 / 气 ▲偏多 / 煤 ▼偏空 / 电 ▲偏多",
+     "event": "Brent 续破 $98；焦煤暴跌 6.5%；霍尔木兹零 VLCC 通过；对俄伊制裁法案待签。"},
+    {"time": "2026-09-18 14:48", "oil": "$98.78", "oil_chg": "-1.15%", "oil_up": false,
+     "gas": "77.25 €/MWh", "gas_chg": "+1.54%", "gas_up": true,
+     "coal": "977 元/吨", "coal_chg": "-1 元", "coal_up": null,
+     "power": "442.18 元/MWh", "power_chg": "+3.09%", "power_up": true,
+     "dir": "油 ▼偏空 / 气 ▲偏多 / 煤 ▼中性偏空 / 电 ▲偏多",
+     "event": "特朗普称伊朗战争接近尾声；SC 暴跌 9.49%；TTF 逆势反弹。"},
+    {"time": "2026-09-18 12:20", "oil": "$99.31", "oil_chg": "亚盘 -4.2%", "oil_up": false,
+     "gas": "78.60 €/MWh", "gas_chg": "+0.94%", "gas_up": true,
+     "coal": "977 元/吨", "coal_chg": "-1 元", "coal_up": null,
+     "power": "442.18 元/MWh", "power_chg": "+3.09%", "power_up": true,
+     "dir": "油 偏空 / 气 偏多 / 煤 中性偏空 / 电 偏多",
+     "event": "Brent 跌破 $100；日本央行加息至 1.25%；广东电价升至 442。"},
+    {"time": "2026-09-18 11:51", "oil": "$104.82", "oil_chg": "-0.95%", "oil_up": false,
+     "gas": "≈77.0 €/MWh", "gas_chg": "-1.2%", "gas_up": false,
+     "coal": "977 元/吨", "coal_chg": "-1 元", "coal_up": null,
+     "power": "377.95 元/MWh", "power_chg": "N/A", "power_up": null,
+     "dir": "油 高位偏空 / 气 偏多 / 煤 中性偏空 / 电 中性偏多",
+     "event": "沙特管道恢复预期 vs 对伊“重大决定”；美联储重启加息。"}
+  ],
+  "news_categories": [
+    {"name": "地缘政治", "count": 4, "items": [
+      {"time": "9/18 凌晨", "source": "公开讲话", "text": "特朗普称“美伊战争逼近关键节点”，下周联大拟与海湾国家会晤。", "links": [{"text": "界面", "url": "https://www.jiemian.com/"}], "tags": [{"label": "石油", "cls": "bull"}, {"label": "天然气", "cls": "bull"}]},
+      {"time": "9/17 美东", "source": "美能源部", "text": "能源部长称沙特东西输油管道将“相对较快”恢复。", "links": [], "tags": [{"label": "石油", "cls": "bear"}]},
+      {"time": "9/17", "source": "联合国", "text": "中俄否决美国起草的伊朗制裁专家小组授权延期决议。", "links": [], "tags": [{"label": "石油", "cls": "neu"}]},
+      {"time": "9/17", "source": "俄乌战场", "text": "乌克兰无人机袭击俄第五大 Slavneft-YANOS 炼油厂。", "links": [], "tags": [{"label": "石油", "cls": "bull"}]}
+    ]},
+    {"name": "宏观金融", "count": 6, "items": [
+      {"time": "9/16", "source": "美联储 FOMC", "text": "加息 25bp，点阵图暗示年内再加息一次。", "links": [{"text": "央视", "url": "https://news.cctv.com/"}], "tags": [{"label": "全品种", "cls": "bear"}]},
+      {"time": "9/16", "source": "美国 CPI/PPI", "text": "8 月 CPI 同比 +3.4%；PPI 同比 +5.4% 超预期。", "links": [], "tags": [{"label": "宏观", "cls": "bear"}]},
+      {"time": "9/16", "source": "美众议院", "text": "通过对俄伊制裁法案，授权对购俄油气国征最高 100% 关税。", "links": [], "tags": [{"label": "石油", "cls": "bull"}]}
+    ]},
+    {"name": "供需库存", "count": 5, "items": [
+      {"time": "9/17", "source": "EIA", "text": "原油库存（9/11 当周）-64 万桶，连续三周去库但小于预期。", "links": [], "tags": [{"label": "石油", "cls": "neu"}]},
+      {"time": "9/17", "source": "API", "text": "截至 9/12 当周原油意外大增 907.2 万桶。", "links": [], "tags": [{"label": "石油", "cls": "bear"}]},
+      {"time": "9/17", "source": "煤炭", "text": "环渤海港库存 2385.6 万吨（周 +18.1 万吨，开始累库）。", "links": [], "tags": [{"label": "煤炭", "cls": "bear"}]}
+    ]},
+    {"name": "天气季节", "count": 3, "items": [
+      {"time": "9 月下旬", "source": "欧洲", "text": "大部分地区气温高于正常，南欧可能晚热浪；El Niño 增强。", "links": [], "tags": [{"label": "气", "cls": "bear"}]},
+      {"time": "9/16–18", "source": "西北太平洋", "text": "台风“杜鹃”趋向日本以南，对我国近海无影响。", "links": [], "tags": [{"label": "电力", "cls": "amb"}]}
+    ]},
+    {"name": "中国政策", "count": 4, "items": [
+      {"time": "9/18", "source": "三部门", "text": "煤炭稳产稳供通知：晋陕蒙新提产，杜绝“一刀切”停产限产。", "links": [{"text": "国家能源局", "url": "http://www.nea.gov.cn/"}], "tags": [{"label": "煤", "cls": "bear"}, {"label": "托底", "cls": "bull"}]},
+      {"time": "发改价格〔2026〕114号", "source": "发改委", "text": "煤电固定成本回收比例提至不低于 50%；首次明确独立储能容量电价。", "links": [], "tags": [{"label": "煤电盈利", "cls": "bull"}]}
+    ]},
+    {"name": "替代能源", "count": 4, "items": [
+      {"time": "9–10 月", "source": "水电", "text": "长江主汛期来水偏少 1 成、上游偏少近 3 成；三峡 9/10 启动蓄水。", "links": [{"text": "长江水利委", "url": "http://www.cjw.gov.cn/"}], "tags": [{"label": "火电燃料", "cls": "bull"}]},
+      {"time": "9/17", "source": "核电", "text": "华能昌江二期 3 号“华龙一号”商运。", "links": [], "tags": [{"label": "火电需求", "cls": "bear"}]}
+    ]}
+  ],
+  "factors": [
+    {"name": "地缘政治与制裁", "chip": "偏多 · 强", "chip_cls": "bull",
+     "desc": "霍尔木兹实质受阻、卡塔尔产能损失、俄乌炼厂遇袭、美对俄伊 100% 关税法案；管道恢复预期带来偏空扰动。",
+     "pos": "left", "width": "41%", "color": "var(--bull)"},
+    {"name": "宏观金融", "chip": "偏空 · 中强", "chip_cls": "bear",
+     "desc": "美联储重启加息 + 日央行至 1.25%；DXY 回落至 99.955 边际略缓和。",
+     "pos": "right", "width": "25%", "color": "var(--bear)"},
+    {"name": "供需库存", "chip": "分化 · 中性", "chip_cls": "neu",
+     "desc": "石油去库但需求下修；天然气欧洲库存历史同期最低；煤炭产量 -7.7% 但淡季累库。",
+     "pos": "center", "width": "3%", "color": "var(--muted)"},
+    {"name": "天气季节", "chip": "中性偏空", "chip_cls": "bear",
+     "desc": "欧洲偏暖、NOAA 预测飓风季低于正常、台风不影响华南；负荷季节性回落。",
+     "pos": "right", "width": "13%", "color": "var(--bear)"},
+    {"name": "中国政策与电力规则", "chip": "中性偏多", "chip_cls": "bull",
+     "desc": "煤炭稳产稳供（短期增供偏空、保供托底）；容量电价回收 ≥50%；新能源市场化改革。",
+     "pos": "left", "width": "10%", "color": "var(--bull)"},
+    {"name": "替代能源与基础设施", "chip": "分化 · 中性", "chip_cls": "neu",
+     "desc": "水电偏枯利多火电燃料；核电投产 + 风光高装机利空火电需求；特高压检修影响区域平衡。",
+     "pos": "right", "width": "3%", "color": "var(--muted)"}
+  ],
+  "radar": {
+    "names": ["地缘政治", "宏观金融", "供需库存", "天气季节", "中国政策", "替代能源"],
+    "values": [2.5, -1.3, 0.2, -0.8, 0.6, -0.2]
+  },
+  "summary_rows": [
+    {"event": "EV1 管道数日内恢复半量", "oil": {"txt": "▼中强", "cls": "down"}, "gas": {"txt": "■弱空", "cls": "flat"}, "coal": {"txt": "■", "cls": "flat"}, "power": {"txt": "■", "cls": "flat"}, "note": "2019 Abqaiq；证伪：半量恢复兑现"},
+    {"event": "EV2 特朗普“战争接近尾声”", "oil": {"txt": "▼强", "cls": "down"}, "gas": {"txt": "▼中", "cls": "down"}, "coal": {"txt": "■弱空", "cls": "flat"}, "power": {"txt": "■", "cls": "flat"}, "note": "2024 加沙停火油价 -3%；证伪：谈判破裂"},
+    {"event": "EV3 美联储+日央行双加息", "oil": {"txt": "▼中", "cls": "down"}, "gas": {"txt": "▼中", "cls": "down"}, "coal": {"txt": "▼弱中", "cls": "down"}, "power": {"txt": "■弱空", "cls": "flat"}, "note": "2022 加息周期；DXY 回落 99.95"},
+    {"event": "EV4 储气 68.84%+卡边复产", "oil": {"txt": "▲弱中", "cls": "up"}, "gas": {"txt": "▲强", "cls": "up"}, "coal": {"txt": "▲中", "cls": "up"}, "power": {"txt": "▲多(欧)", "cls": "up"}, "note": "2022 TTF 300+；外运仍堵"},
+    {"event": "EV5 原煤 -7.7% + 进口转负", "oil": {"txt": "■", "cls": "flat"}, "gas": {"txt": "■", "cls": "flat"}, "coal": {"txt": "▲中", "cls": "up"}, "power": {"txt": "▲中", "cls": "up"}, "note": "2021 煤限产 2500 元；证伪：产量回升"},
+    {"event": "EV6 稳产稳供通知", "oil": {"txt": "■", "cls": "flat"}, "gas": {"txt": "■", "cls": "flat"}, "coal": {"txt": "▼中(短)", "cls": "down"}, "power": {"txt": "■弱空", "cls": "flat"}, "note": "2022 保供后煤价回落；证伪：安监事故"},
+    {"event": "EV7 长江来水偏枯+蓄水", "oil": {"txt": "■", "cls": "flat"}, "gas": {"txt": "■弱多", "cls": "flat"}, "coal": {"txt": "▲中", "cls": "up"}, "power": {"txt": "▲中", "cls": "up"}, "note": "2022 四川干旱限电；证伪：下旬降雨"},
+    {"event": "EV8 广东 442.18 / 峰 1330", "oil": {"txt": "■", "cls": "flat"}, "gas": {"txt": "■", "cls": "flat"}, "coal": {"txt": "■弱多", "cls": "flat"}, "power": {"txt": "▲中强", "cls": "up"}, "note": "2024/4 广东 310→678；证伪：风光大发"}
+  ],
+  "scenarios": [
+    {"name": "石油 · Brent", "current": "当前 $97.92", "rows": [
+      {"label": "基准 50%", "label_cls": "n", "range": "$96–105 震荡", "range_cls": "", "trigger": "触发：半量复产兑现。证伪：实质军事行动或管道再遇袭。"},
+      {"label": "乐观 25%", "label_cls": "b", "range": "突破 $110", "range_cls": "up", "trigger": "触发：军事行动、霍尔木兹进一步受阻。"},
+      {"label": "悲观 25%", "label_cls": "s", "range": "跌破 $94", "range_cls": "down", "trigger": "触发：管道全面复产、紧缩强化、API 累库兑现。"}
+    ]},
+    {"name": "天然气 · TTF", "current": "当前 ≈77 欧元/MWh", "rows": [
+      {"label": "基准 50%", "label_cls": "n", "range": "72–82 高位震荡", "range_cls": "", "trigger": "触发：注气持续、无新供应中断。"},
+      {"label": "乐观 25%", "label_cls": "b", "range": "突破 85 欧元", "range_cls": "up", "trigger": "触发：补库失败、挪威管道故障。"},
+      {"label": "悲观 25%", "label_cls": "s", "range": "跌破 70 欧元", "range_cls": "down", "trigger": "触发：持续偏暖、LNG 到港增。"}
+    ]},
+    {"name": "煤炭 · 秦港Q5500", "current": "当前 977 元/吨", "rows": [
+      {"label": "基准 50%", "label_cls": "n", "range": "950–1000 高位震荡偏弱", "range_cls": "", "trigger": "触发：日耗回落、港口累库，政策托底。"},
+      {"label": "乐观 25%", "label_cls": "b", "range": "突破 1020 元", "range_cls": "up", "trigger": "触发：冬储提前、安监限产、冷冬。"},
+      {"label": "悲观 25%", "label_cls": "s", "range": "跌破 930 元", "range_cls": "down", "trigger": "触发：稳产稳供见效、进口放量。"}
+    ]},
+    {"name": "电力 · 广东日前", "current": "当前 442.18 元/MWh", "rows": [
+      {"label": "基准 50%", "label_cls": "n", "range": "400–470 区间（中枢上移）", "range_cls": "", "trigger": "触发：风电波动+秋老虎+来水偏枯。"},
+      {"label": "乐观 25%", "label_cls": "b", "range": "突破 450 元", "range_cls": "up", "trigger": "触发：35℃+ 高温、台风致新能源骤降。"},
+      {"label": "悲观 25%", "label_cls": "s", "range": "跌破 320 元", "range_cls": "down", "trigger": "触发：风光大发、工业用电大降。"}
+    ]}
+  ],
+  "catalysts": [
+    {"date": "9/18–19", "body": "特朗普对伊“重大决定”后续；联大周边外交。", "sub": "双向风险，油价波动放大"},
+    {"date": "9/18–20", "body": "沙特东西管道实际复产进度。", "sub": ""},
+    {"date": "9/19–21", "body": "美联储官员加息后讲话。", "sub": "关注 10 月加息概率"},
+    {"date": "9/20", "body": "中国 9 月 LPR 报价（预期持平）。", "sub": ""},
+    {"date": "9/20 前后", "body": "欧洲 AGSI 储气率周度更新。", "sub": "当前 68.66%"},
+    {"date": "9/24 前后", "body": "EIA 原油库存周报（API 907 万桶累库是否延续）。", "sub": ""}
+  ],
+  "main_risks": [
+    "军事升级致海峡封锁、油价脉冲；",
+    "口头威胁后无跟进、溢价继续回吐（Brent 已破 $100）；",
+    "欧洲补库失败触发冬季气价危机；",
+    "国内稳煤政策加码、港口累库加速；",
+    "广东现货实际价与交易中心官网公示存在时滞，注意口径。"
+  ],
+  "sources_rows": [
+    {"name": "新华社 / 路透", "monitors": "地缘与能源突发", "freq": "实时", "links": [{"text": "xinhuanet", "url": "http://www.xinhuanet.com/"}, {"text": "reuters", "url": "https://www.reuters.com/"}]},
+    {"name": "财联社 / 证券时报", "monitors": "油气煤电快讯研报", "freq": "实时", "links": [{"text": "cls.cn", "url": "https://www.cls.cn/"}, {"text": "stcn", "url": "https://www.stcn.com/"}]},
+    {"name": "CCTD / 秦皇岛煤炭网", "monitors": "煤价 / 港口库存 / 日耗", "freq": "日度", "links": [{"text": "cctd", "url": "https://www.cctd.com.cn/"}, {"text": "cqcoal", "url": "http://www.cqcoal.com/"}]},
+    {"name": "GIE AGSI", "monitors": "欧洲储气库充填率", "freq": "日度", "links": [{"text": "agsi.gie.eu", "url": "https://agsi.gie.eu/"}]},
+    {"name": "EPEX SPOT / Nord Pool", "monitors": "欧洲电力现货", "freq": "日度", "links": [{"text": "epexspot", "url": "https://www.epexspot.com/"}, {"text": "nordpool", "url": "https://www.nordpoolgroup.com/"}]},
+    {"name": "OPEC / IEA", "monitors": "产量政策 / 月报", "freq": "月度", "links": [{"text": "opec", "url": "https://www.opec.org/"}, {"text": "iea", "url": "https://www.iea.org/"}]},
+    {"name": "EIA", "monitors": "原油 / 天然气库存产量", "freq": "周度", "links": [{"text": "eia.gov", "url": "https://www.eia.gov/"}]},
+    {"name": "国家能源局 / 发改委", "monitors": "电力政策 / 装机 / 用电量", "freq": "月度 / 临时", "links": [{"text": "nea", "url": "http://www.nea.gov.cn/"}, {"text": "ndrc", "url": "https://www.ndrc.gov.cn/"}]},
+    {"name": "中电联", "monitors": "电力供需 / 用电数据", "freq": "季度 / 月度", "links": [{"text": "cec.org.cn", "url": "https://www.cec.org.cn/"}]},
+    {"name": "广东电力交易中心", "monitors": "广东现货出清价", "freq": "日度", "links": [{"text": "pm.gd.csg.cn", "url": "https://pm.gd.csg.cn/portal/"}]},
+    {"name": "上海石油天然气交易中心", "monitors": "SHPGX 出厂价", "freq": "日度", "links": [{"text": "shpgx.com", "url": "http://www.shpgx.com/"}]},
+    {"name": "ICE", "monitors": "Brent / TTF / 纽煤", "freq": "实时", "links": [{"text": "ice.com", "url": "https://www.ice.com/"}]}
+  ],
+  "appendix": [
+    "<b>交易所行情：</b>ICE Brent/TTF/纽煤、NYMEX WTI/HH、INE SC、EEX 德国电力、广东/山东电力交易中心",
+    "<b>库存产量：</b>EIA 周度原油与天然气库存、API、IEA/OPEC 月报",
+    "<b>欧洲气：</b>AGSI、ICIS/S&P 普氏 JKM、ARA 煤价",
+    "<b>宏观央行：</b>美联储 FOMC、BLS CPI/PPI、DXY、VIX",
+    "<b>地缘制裁：</b>联合国安理会记录、美众议院立法、俄乌战场公开报道、霍尔木兹通航动态",
+    "<b>中国政策数据：</b>国家统计局、海关总署、发改委、能源局、三部门稳煤通知、全国碳市场",
+    "<b>国内能源价：</b>秦港 Q5500、BSPI、上海石油天然气交易中心 SHPGX",
+    "<b>天气水文：</b>NOAA、中央气象台、长江水利委、三峡集团",
+    "<b>免责声明：</b>本报告由监控系统自动汇总公开信息生成，仅供研究参考，不构成投资建议。"
+  ]
+}
