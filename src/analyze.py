@@ -592,6 +592,39 @@ def _is_junk_event(ev: dict) -> bool:
     return not has_dir
 
 
+KP_TAGS = ["国内原油", "国内天然气", "国内煤炭", "国内电力",
+           "地缘", "宏观", "政策", "天气", "供需", "综合"]
+
+
+def _clean_kp_tag(t) -> str:
+    """模型偶发把枚举用 | 整串照抄成 tag；这里强制归一为单个合法标签。"""
+    t = str(t or "").strip()
+    if not t:
+        return "综合"
+    for part in re.split(r"[|｜/,，、 ]+", t):
+        p = part.strip()
+        if p in KP_TAGS:
+            return p
+    for kw in ("原油", "天然气", "煤炭", "电力", "地缘", "宏观", "政策", "天气", "供需"):
+        if kw in t:
+            return kw
+    return "综合"
+
+
+def _clean_core_point(kp: dict) -> dict:
+    net_raw = kp.get("net") or {}
+    net = {}
+    for k in PROD_KEYS:
+        cell = net_raw.get(k) if isinstance(net_raw, dict) else None
+        d = _norm_dir(cell.get("dir")) if isinstance(cell, dict) else "flat"
+        label = (cell.get("label") if isinstance(cell, dict) and cell.get("label")
+                 else DIR_ARROW.get(d, "■"))
+        net[k] = {"dir": d, "label": label}
+    return {"tag": _clean_kp_tag(kp.get("tag")),
+            "text": str(kp.get("text", "")).strip(),
+            "net": net}
+
+
 def _llm_events_to_contract(llm_events: list[dict]) -> list[dict]:
     # 先剔除指令残留/占位伪事件，过滤后重新连续编号 EV1..EVn
     cleaned = [e for e in llm_events if not _is_junk_event(e)]
@@ -701,8 +734,11 @@ def assemble_report(fetched: dict, llm: dict | None, history: list[dict],
 
     # ---- core_points ----
     if has_llm and llm.get("core_points"):
-        core_points = llm["core_points"]
-    else:
+        core_points = [_clean_core_point(kp) for kp in llm["core_points"]
+                       if isinstance(kp, dict) and str(kp.get("text", "")).strip()]
+        if not core_points:
+            has_llm = False
+    if not (has_llm and core_points):
         sc = _pick(quotes, "INE", "SC", "上海原油") or _pick(quotes, "布伦特", "Brent")
         core_points = [{
             "tag": "行情速览",
