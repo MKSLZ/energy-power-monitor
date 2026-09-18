@@ -246,11 +246,16 @@ def _chat_json(system: str, user: str, *, max_tokens: int = 4096,
 
 
 def _facts(fetched: dict, n: int = 30) -> dict:
+    try:
+        from fetchers.base import select_events
+        ev_sel = select_events(fetched.get("events", []), cap=n)
+    except Exception:  # noqa: BLE001 - 极端情况下退回简单截断
+        ev_sel = fetched.get("events", [])[:n]
     return {
         "events": [
             {"time": e["time"], "source": e["source"], "title": e["title"],
              "url": e["url"], "category": e["category"]}
-            for e in fetched.get("events", [])[:n]
+            for e in ev_sel
         ],
         "quotes": [
             {"name": q["name"], "price": q["price"], "unit": q["unit"],
@@ -485,9 +490,13 @@ def build_news_categories(events: list[dict]) -> list[dict]:
 # 快照
 # ---------------------------------------------------------------------------
 def _pick(quotes: list[dict], *keywords: str) -> dict | None:
-    """找首个命中且 price 非空的 quote（用于快照回退链）。"""
-    q = _find_quote(quotes, *keywords)
-    return q if (q and q["price"] is not None) else None
+    """首个“命中关键词且 price 非空”的 quote（跳过无值的同名外盘/占位行）。"""
+    for q in quotes:
+        if q.get("price") is None:
+            continue
+        if any(k in q["name"] for k in keywords):
+            return q
+    return None
 
 
 def build_snapshot(quotes: list[dict], dt: datetime, event_line: str) -> dict:
