@@ -508,7 +508,21 @@ def _pick(quotes: list[dict], *keywords: str) -> dict | None:
     return None
 
 
-def build_snapshot(quotes: list[dict], dt: datetime, event_line: str) -> dict:
+def snapshot_direction(events: list[dict]) -> str:
+    """由契约事件（已过滤）按强度汇总四品种净方向，输出如「油▲ 气▼ 煤■ 电▲」。"""
+    names = ["油", "气", "煤", "电"]
+    magmap = {"强": 3, "中": 2, "弱": 1}
+    scores = [0, 0, 0, 0]
+    for e in events:
+        for i, imp in enumerate(e["impacts"][:4]):
+            mag = magmap.get(str(imp.get("strength")), 2)
+            scores[i] += {"up": mag, "down": -mag, "flat": 0}.get(imp["dir"], 0)
+    return " ".join(
+        f"{names[i]}{'▲' if scores[i] > 0 else ('▼' if scores[i] < 0 else '■')}"
+        for i in range(4))
+
+
+def build_snapshot(quotes: list[dict], dt: datetime, event_line: str, ai_dir: str | None = None) -> dict:
     def chg_up(v):
         if v is None:
             return None
@@ -538,7 +552,7 @@ def build_snapshot(quotes: list[dict], dt: datetime, event_line: str) -> dict:
         "gas": txt(gas), "gas_chg": pct(gas), "gas_up": chg_up(gas["day_chg"] if gas else None),
         "coal": txt(coal), "coal_chg": pct(coal), "coal_up": chg_up(coal["day_chg"] if coal else None),
         "power": txt(power), "power_chg": pct(power), "power_up": chg_up(power["day_chg"] if power else None),
-        "dir": "速览版：以实际涨跌为准",
+        "dir": ai_dir or "速览版：以实际涨跌为准",
         "event": event_line or "本期快照",
     }
 

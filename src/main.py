@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -81,13 +82,12 @@ def run_online(data_dir: Path, out_dir: Path) -> Path:
     history_path = data_dir / "history.json"
     history = load_history(history_path)
 
-    # 行情里挑一句重大事件摘要（国内原油 INE SC 优先，回退 Brent）
+    # 行情兜底摘要（国内原油 INE SC 优先，回退 Brent），仅在没有 AI 事件时用于快照
     sc = (analyze._find_quote(fetched["quotes"], "INE", "SC", "上海原油")
           or analyze._find_quote(fetched["quotes"], "布伦特", "Brent"))
-    event_line = (f"{sc['name']} {sc['price']:g}（{sc['day_chg']:+.2f}%）"
+    price_line = (f"{sc['name']} {sc['price']:g}（{sc['day_chg']:+.2f}%）"
                   if sc and sc["price"] is not None and sc["day_chg"] is not None
                   else "本期行情见价格区")
-    snap = analyze.build_snapshot(fetched["quotes"], now, event_line)
 
     log("调用 LLM 结构化分析…")
     llm = analyze.run_llm(fetched)
@@ -97,6 +97,15 @@ def run_online(data_dir: Path, out_dir: Path) -> Path:
     else:
         ai_note = "本期AI影响推演不可用/未配置Key"
         log("无 LLM_API_KEY 或 LLM 失败，走【数据速览版】。")
+
+    # 快照在拿到 LLM 后构建：AI 版写入四品种净方向与头号事件，速览版退回行情一句话
+    if llm and llm.get("events"):
+        cev = analyze._llm_events_to_contract(llm["events"])
+        ai_dir = analyze.snapshot_direction(cev)
+        top_event = re.sub(r"^EV\d+ · ", "", cev[0]["title"]) if cev else price_line
+        snap = analyze.build_snapshot(fetched["quotes"], now, top_event[:42], ai_dir=ai_dir)
+    else:
+        snap = analyze.build_snapshot(fetched["quotes"], now, price_line)
 
     # 新快照 unshift 到历史头，保留近 30 条
     snapshots = [snap] + [s for s in history if s.get("time") != snap["time"]]
