@@ -192,6 +192,18 @@ _REL_KWS = (
     "预警", "预报", "落区", "汛",
     # 英文气链补充
     "methane", "storage", "injection", "pipeline", "refinery", "opec+",
+    # 地缘政治 / 制裁 / 海峡通道 / 冲突（即便标题不含能源词也要保留，由分析层推演）
+    "中东", "伊朗", "伊拉克", "沙特", "以色列", "也门", "胡塞", "叙利亚", "卡塔尔",
+    "阿联酋", "科威特", "委内瑞拉", "俄罗斯", "乌克兰", "俄乌", "俄白", "欧盟",
+    "红海", "霍尔木兹", "苏伊士", "海峡", "波斯湾", "加沙", "黎巴嫩", "停火", "停战",
+    "袭击", "空袭", "导弹", "无人机", "冲突", "局势", "地缘", "制裁", "禁运",
+    "出口管制", "断供", "封锁", "护航", "油轮", "巨轮", "海运", "运费", "关税战",
+    "加征关税", "世贸", "wto", "imf", "世界银行",
+    "israel", "iran", "iraq", "saudi", "yemen", "houthi", "syria", "qatar",
+    "russia", "ukraine", "gaza", "lebanon", "ceasefire", "airstrike", "missile",
+    "drone", "sanction", "embargo", "hormuz", "suez", "strait", "persian gulf",
+    "tanker", "vessel", "shipping", "red sea", "middle east", "opec", "export",
+    "tariff", "fed ", "powell", "rate cut", "rate hike", "dollar index",
 )
 # 标题里常自带来源机构名（含“天然气/煤/电”等字），判相关性前先剥除，避免假阳性
 _SOURCE_NAMES = (
@@ -217,8 +229,6 @@ def energy_relevant(title: str) -> bool:
     """剥掉来源机构名后走白名单：必须命中油/气/煤/电/天气水文等强相关词；
     高确定性无关词（个股/诈骗/声明/氦气等）即便含相关词也剔除。"""
     t = title or ""
-    if t.startswith(("习近平", "李强")):
-        return False
     tl = t.lower()
     if any(k in t for k in _HARD_DROP) or any(k in tl for k in _HARD_DROP_EN):
         return False
@@ -228,7 +238,16 @@ def energy_relevant(title: str) -> bool:
     b = body.lower()
     if any(k in body for k in _IRREL_KWS) or any(k in b for k in _IRREL_KWS):
         return False
-    return any(k in b for k in _REL_KWS)
+    relevant = any(k in b for k in _REL_KWS)
+    if not relevant:
+        return False
+    # 领导人活动标题多为礼宾/外交噪音；但若明确涉及能源/地缘强词（会谈涉能源、出访产油国等）仍保留
+    if t.startswith(("习近平", "李强")):
+        strong = ("油", "气", "煤", "电", "能源", "opec", "伊朗", "俄", "沙特",
+                  "中东", "关税", "制裁", "管道", "核", "碳", "气候")
+        if not any(k in b for k in [s.lower() for s in strong]):
+            return False
+    return True
 
 
 def event_relevance_score(title: str) -> int:
@@ -238,7 +257,13 @@ def event_relevance_score(title: str) -> int:
     strong = ("原油", "石油", "天然气", "lng", "煤", "焦煤", "电价", "电力", "现货",
               "opec", "brent", "wti", "ttf", "油价", "气价", "保供", "库存", "减产",
               "日耗", "管道气", "接收站", "门站", "广东", "南方区域", "来水", "高温",
-              "伊朗", "制裁", "霍尔木兹", "红海", "油船", "储气", "采暖")
+              "伊朗", "制裁", "霍尔木兹", "红海", "油船", "储气", "采暖",
+              # 地缘政治突发事件加权，确保政治事件排到喂 LLM 的前列
+              "中东", "沙特", "以色列", "胡塞", "也门", "叙利亚", "伊拉克", "卡塔尔",
+              "俄乌", "俄罗斯", "乌克兰", "停火", "袭击", "空袭", "海峡", "油轮",
+              "断供", "禁运", "出口管制", "苏伊士", "波斯湾", "加沙",
+              "hormuz", "red sea", "strait", "tanker", "saudi", "iran", "israel",
+              "houthi", "russia", "ukraine", "opec+", "sanction", "embargo")
     for k in strong:
         if k in tl:
             score += 2
