@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-09-18 17:55",
+    "oil": "727.9 元/桶",
+    "oil_chg": "-3.51%",
+    "oil_up": false,
+    "gas": "3 $/MMBtu",
+    "gas_chg": "-1.38%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "速览版：以实际涨跌为准",
+    "event": "INE SC 主力 727.9（-3.51%）"
+  },
+  {
     "time": "2026-09-18 17:21",
     "oil": "727.9 元/桶",
     "oil_chg": "-3.51%",
