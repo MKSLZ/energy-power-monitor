@@ -9,6 +9,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import time
 from datetime import datetime
 from typing import Any
 
@@ -112,7 +113,7 @@ def run_llm(fetched: dict) -> dict | None:
         "events": [
             {"time": e["time"], "source": e["source"], "title": e["title"],
              "url": e["url"], "category": e["category"]}
-            for e in fetched.get("events", [])[:60]
+            for e in fetched.get("events", [])[:20]
         ],
         "quotes": [
             {"name": q["name"], "price": q["price"], "unit": q["unit"],
@@ -120,28 +121,68 @@ def run_llm(fetched: dict) -> dict | None:
             for q in fetched.get("quotes", [])
         ],
     }
-    user = "【抓取事实】如下，请按系统给定 JSON 结构输出（价格/链接/时间必须原样，缺则 N/A）：\n" + json.dumps(facts, ensure_ascii=False)
+    user = ("【抓取事实】如下。请只挑选对【国内油/气/煤/电】最重要的 8 个事件（按重要性排序），"
+            "严格按系统给定 JSON 结构输出；价格/链接/时间必须原样，缺则 N/A：\n"
+            + json.dumps(facts, ensure_ascii=False))
 
     import requests
     url = f"{base}/chat/completions"
     headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json"}
-    payload = {"model": model, "messages": [{"role": "system", "content": SYSTEM_PROMPT},
-                                            {"role": "user", "content": user}],
-               "temperature": 0.2, "response_format": {"type": "json_object"}}
+    payload = {"model": model,
+               "messages": [{"role": "system", "content": SYSTEM_PROMPT},
+                            {"role": "user", "content": user}],
+               "temperature": 0.2, "max_tokens": 4096, "stream": True,
+               "response_format": {"type": "json_object"}}
 
-    for attempt in range(2):  # 解析失败重试 1 次
-        try:
-            r = requests.post(url, headers=headers, json=payload, timeout=60)
-            if r.status_code != 200:
-                return None
-            content = r.json()["choices"][0]["message"]["content"]
-            m = re.search(r"\{.*\}", content, re.S)
-            if not m:
+    def _stream_once(timeout_total: int = 260) -> str | None:
+        # 流式接收：(连接15s, 两个数据块间隔60s)。只要模型在持续吐字就不会整体超时，
+        # 专门规避"跨境长链路 + 免费模型逐字生成慢"导致的整体 ReadTimeout。
+        r = requests.post(url, headers=headers, json=payload, stream=True, timeout=(15, 60))
+        if r.status_code == 429 or r.status_code >= 500:
+            raise RuntimeError(f"HTTP {r.status_code}")
+        if r.status_code != 200:
+            return None  # 4xx（除 429）多为鉴权/参数问题，重试无益
+        parts, deadline = [], time.time() + timeout_total
+        for raw in r.iter_lines():
+            if time.time() > deadline:
+                raise TimeoutError("流式接收超过总时长上限")
+            if not raw:
                 continue
-            return json.loads(m.group(0))
-        except Exception:  # noqa: BLE001
-            if attempt == 1:
+            line = raw.decode("utf-8", "replace").strip()
+            if not line.startswith("data:"):
+                continue
+            data = line[5:].strip()
+            if data == "[DONE]":
+                break
+            try:
+                delta = json.loads(data)["choices"][0].get("delta", {})
+            except Exception:  # noqa: BLE001
+                continue
+            piece = delta.get("content")
+            if piece:
+                parts.append(piece)
+        return "".join(parts)
+
+    # 跨境链路/限流会间歇失败，退避重试；JSON 畸形也允许重抽。最多 3 次。
+    last_err = "未知"
+    for attempt in range(3):
+        try:
+            content = _stream_once()
+            if content is None:
                 return None
+            m = re.search(r"\{.*\}", content, re.S)
+            if m:
+                try:
+                    return json.loads(m.group(0))
+                except Exception:  # noqa: BLE001
+                    last_err = "JSON 解析失败（可能被 max_tokens 截断）"
+            else:
+                last_err = "响应无 JSON 片段"
+        except Exception as e:  # noqa: BLE001 - ProxyError/超时/HTTP5xx 等
+            last_err = f"{type(e).__name__}: {str(e)[:120]}"
+        if attempt < 2:
+            time.sleep(2 * (attempt + 1))
+    print(f"[analyze] LLM 3 次尝试均失败：{last_err}，降级数据速览版。", flush=True)
     return None
 
 
