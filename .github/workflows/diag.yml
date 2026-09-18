@@ -1,0 +1,42 @@
+name: diag-llm-net
+on:
+  workflow_dispatch:
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+      LLM_MODEL: ${{ secrets.LLM_MODEL }}
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Probe
+        run: |
+          python -m pip install -q requests
+          python3 - <<'PY'
+          import os,socket,requests
+          base=os.environ.get('LLM_BASE_URL','').rstrip('/')
+          key=os.environ.get('LLM_API_KEY','')
+          model=os.environ.get('LLM_MODEL','')
+          print('base=',base,'model=',model,'keyset=',bool(key),'keylen=',len(key))
+          for host in ['open.bigmodel.cn','api.deepseek.com','generativelanguage.googleapis.com','api.openai.com']:
+              try: print('DNS_OK',host,socket.gethostbyname(host))
+              except Exception as e: print('DNS_FAIL',host,type(e).__name__,str(e)[:120])
+          def probe(tag,url,payload):
+              try:
+                  r=requests.post(url,headers={'Authorization':'Bearer '+key,'Content-Type':'application/json'},json=payload,timeout=25)
+                  print('POST_'+tag,'status',r.status_code,'body',r.text[:220].replace('\n',' '))
+              except Exception as e:
+                  print('POSTFAIL_'+tag,type(e).__name__,str(e)[:200])
+          if base and key:
+              probe('ZM',base+'/chat/completions',{'model':model,'messages':[{'role':'user','content':'hi'}],'max_tokens':5})
+          # 纯TLS连通（不带鉴权）
+          for u in ['https://open.bigmodel.cn/','https://api.deepseek.com/','https://generativelanguage.googleapis.com/']:
+              try:
+                  rr=requests.get(u,timeout=15); print('GET_OK',u,rr.status_code)
+              except Exception as e:
+                  print('GET_FAIL',u,type(e).__name__,str(e)[:140])
+          PY
