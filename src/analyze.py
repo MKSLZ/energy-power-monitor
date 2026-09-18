@@ -408,7 +408,8 @@ def _degraded_events(raw_events: list[dict]) -> list[dict]:
 
 
 def _degraded_heatmap(events: list[dict]) -> dict:
-    names = [f"{e['id']} {re.sub(r'^EV\\d+ · ', '', e['title'])[:12]}" for e in events]
+    _strip_ev = re.compile(r'^EV\d+ · ')
+    names = [f"{e['id']} {_strip_ev.sub('', e['title'])[:12]}" for e in events]
     n = len(events)
     return {
         "events": names, "prods": PRODS,
