@@ -1,20 +1,35 @@
 {
   "date": "2026-09-20",
-  "updated_at": "2026-09-20 00:27",
+  "updated_at": "2026-09-20 05:30",
   "seen_raw_keys": [
+    "corpuschristilngexpansionmakesfacilitythesecondlargestintheunitedstates",
     "flamesreportednearsaudicapitalairportaspakistanpressesiranoverenergysupplies",
+    "globalshippingcostsexplodeashormuzdisruptionshitkeytraderoutes",
+    "kazakhstanturnstorussiangasasdomesticdemandsurges",
     "russias$118billionarcticoilbetpushesaheaddespitesanctions",
+    "saudiarabiacutseuropeofffromoctobercrudeasgulfexportssurge",
     "saudiexportpivotsendsbrentbelow$105",
+    "uslngexportsrose23%inthefirsthalfof2026becauseofhighercapacity",
+    "伊朗最高国家安全委员会秘书穆赫辛雷扎伊周六表示伊朗已通过卡塔尔和巴基斯坦调解人向美方提出谈判条件全面结束所有战线的战事释放遭扣押的伊朗资产解除海上封锁",
+    "伊朗最高国家安全委员会秘书雷扎伊美国和以色列的行动可能迫使伊朗退出不扩散核武器条约伊朗尚未决定退出该条约这一决定将取决于华盛顿后续的行动伊朗仍恪守已",
+    "伊朗最高安全官员与调解方卡塔尔和巴基斯坦的会谈仍在继续谈判条件已传达",
+    "伊朗最高安全官员卡塔尔已向华盛顿转达德黑兰方面结束战争的条件目前正等待特朗普回应",
     "伊朗最高安全官员德黑兰希望沙特阿拉伯与也门之间的战争能够结束",
     "关于公开征集淮河能源燃气集团贸易有限责任公司管道气液化代加工采购交易意向交易单位的公告",
+    "关于开展安平管道天然气竞价交易的公告",
     "关于开展浙江沃憬能源有限公司管道天然气竞价交易的公告",
     "北港库存止降趋稳秋检前煤市如何演绎",
     "国家能源局等部门部署煤炭安全稳产保供工作",
+    "布伦特原油暗盘跌破99美元日内跌超1%",
+    "欧盟官员dombrovskis债台高筑的那些成员国必须实现财政目标乌克兰面临更加庞大的资金需求",
+    "沙特拦截弹即将耗尽紧急求援",
     "沙特罕见地向首都利雅得发布空袭警报",
     "熊力天然气是新型能源体系建设的关键支撑力量",
     "熊维中东冲突冲击全球天然气供需格局高气价与区域溢价或将持续",
+    "生物天然气迈入产业化快车道统一价格指数破解行业痛点",
     "美军称已清除霍尔木兹海峡主要通航航道水雷",
     "美国中央司令部指挥官库珀由于封锁伊朗原油出口量为零过去数月超过10亿桶石油通过霍尔木兹海峡对外输送过去两周的石油货物液化天然气lng",
+    "美国能源部发布紧急命令要求在卡罗来纳地区降低停电风险",
     "美国能源部长wright下令维持印第安纳州两座燃煤电厂的运营要求nipscocenterpointenergymiso采取行动",
     "郑洪弢2026年非采暖季国内天然气供需整体偏紧全行业应增强应变能力"
   ],
@@ -783,6 +798,312 @@
       "analogy": "历史类比：2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 全国电荒、煤价向电价的成本传导",
       "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
       "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "布伦特原油暗盘跌破99美元，日内跌超1%",
+      "time": "2026-09-20 00:14:57",
+      "source": "新浪7×24",
+      "url": [
+        "https://finance.sina.cn/7x24/2026-09-20/detail-inisktzs9650642.d.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "外盘原油价格下跌，传导至进口到岸平价，降低国内原油成本；数日内影响，国内原油价格",
+          "detail": "外盘原油价格下跌，传导至进口到岸平价，降低国内原油成本；数日内影响，国内原油价格预期下降，长协保供缓冲作用强"
+        },
+        "gas": {
+          "dir": "down",
+          "strength": "强",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "外盘原油价格下跌，传导至进口LNG到岸成本，降低国内天然气成本；数日内影响，国内",
+          "detail": "外盘原油价格下跌，传导至进口LNG到岸成本，降低国内天然气成本；数日内影响，国内天然气价格预期下降，长协保供缓冲作用强"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "强",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "外盘原油价格下跌，降低能源替代成本，预期进口煤价差缩小；数日内影响，国内煤炭价格",
+          "detail": "外盘原油价格下跌，降低能源替代成本，预期进口煤价差缩小；数日内影响，国内煤炭价格预期下降，长协保供缓冲作用强"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "外盘原油价格下跌，降低煤电燃料成本，但广东现货电价对成本敏感，影响中等；数日内影",
+          "detail": "外盘原油价格下跌，降低煤电燃料成本，但广东现货电价对成本敏感，影响中等；数日内影响，电价预期下降，长协保供缓冲作用中"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "伊朗最高国家安全委员会秘书雷扎伊：美国和以色列的行动可能迫使伊朗退出《不扩散核武器条约》。伊朗尚未决定退出该条约，这一决定将取决于华盛顿后续的行动。伊朗仍恪守已",
+      "time": "2026-09-19 23:46:04",
+      "source": "新浪7×24",
+      "url": [
+        "https://finance.sina.cn/7x24/2026-09-19/detail-inisktzs9638717.d.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "地缘政治紧张，可能影响中东原油供应，提高进口到岸平价；数日内影响，国内原油价格预",
+          "detail": "地缘政治紧张，可能影响中东原油供应，提高进口到岸平价；数日内影响，国内原油价格预期上升，长协保供缓冲作用中"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "地缘政治紧张，可能影响中东天然气供应，提高进口到岸平价；数日内影响，国内天然气价",
+          "detail": "地缘政治紧张，可能影响中东天然气供应，提高进口到岸平价；数日内影响，国内天然气价格预期上升，长协保供缓冲作用中"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "地缘政治紧张，可能影响中东煤炭供应，提高进口煤价差；数日内影响，国内煤炭价格预期",
+          "detail": "地缘政治紧张，可能影响中东煤炭供应，提高进口煤价差；数日内影响，国内煤炭价格预期上升，长协保供缓冲作用中"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "地缘政治紧张，可能影响中东能源供应，提高煤电燃料成本；数日内影响，广东现货电价预",
+          "detail": "地缘政治紧张，可能影响中东能源供应，提高煤电燃料成本；数日内影响，广东现货电价预期上升，长协保供缓冲作用中"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "全球航运成本飙升，霍尔木兹海峡中断影响关键贸易路线",
+      "time": "Fri, 18 Sep 2026 16:00:00 -0500",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Energy/Crude-Oil/Global-Shipping-Costs-Explode-as-Hormuz-Disruptions-Hit-Key-Trade-Routes.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "霍尔木兹海峡中断导致航运成本飙升，即时影响原油进口到岸平价，数日内传导至国内原油",
+          "detail": "霍尔木兹海峡中断导致航运成本飙升，即时影响原油进口到岸平价，数日内传导至国内原油价格"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "霍尔木兹海峡中断导致航运成本飙升，数日内影响LNG进口成本，传导至国内天然气价格",
+          "detail": "霍尔木兹海峡中断导致航运成本飙升，数日内影响LNG进口成本，传导至国内天然气价格"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "霍尔木兹海峡中断导致航运成本飙升，数日内影响进口煤价，间接传导至国内煤炭价格",
+          "detail": "霍尔木兹海峡中断导致航运成本飙升，数日内影响进口煤价，间接传导至国内煤炭价格"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "霍尔木兹海峡中断导致航运成本飙升，数日内影响进口燃料成本，传导至国内电力现货价格",
+          "detail": "霍尔木兹海峡中断导致航运成本飙升，数日内影响进口燃料成本，传导至国内电力现货价格"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "哈萨克斯坦转向俄罗斯天然气，国内需求激增",
+      "time": "Fri, 18 Sep 2026 13:00:00 -0500",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Energy/Energy-General/Kazakhstan-Turns-to-Russian-Gas-as-Domestic-Demand-Surges.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "哈萨克斯坦转向俄罗斯天然气，减少对霍尔木兹海峡原油依赖，数周内降低原油进口成本，",
+          "detail": "哈萨克斯坦转向俄罗斯天然气，减少对霍尔木兹海峡原油依赖，数周内降低原油进口成本，传导至国内原油价格"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "哈萨克斯坦转向俄罗斯天然气，增加俄罗斯天然气出口，数周内提高LNG进口成本，传导",
+          "detail": "哈萨克斯坦转向俄罗斯天然气，增加俄罗斯天然气出口，数周内提高LNG进口成本，传导至国内天然气价格"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "哈萨克斯坦转向俄罗斯天然气，减少对霍尔木兹海峡原油依赖，数周内降低进口煤价，间接",
+          "detail": "哈萨克斯坦转向俄罗斯天然气，减少对霍尔木兹海峡原油依赖，数周内降低进口煤价，间接传导至国内煤炭价格"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "哈萨克斯坦转向俄罗斯天然气，减少对霍尔木兹海峡原油依赖，数周内降低进口燃料成本，",
+          "detail": "哈萨克斯坦转向俄罗斯天然气，减少对霍尔木兹海峡原油依赖，数周内降低进口燃料成本，传导至国内电力现货价格"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "沙特阿拉伯切断欧洲原油供应，海湾出口激增",
+      "time": "Fri, 18 Sep 2026 12:30:00 -0500",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Latest-Energy-News/World-News/Saudi-Arabia-Cuts-Europe-Off-From-October-Crude-as-Gulf-Exports-Surge.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "沙特阿拉伯切断欧洲原油供应，增加海湾出口，即时影响原油出口价格，数日内传导至国内",
+          "detail": "沙特阿拉伯切断欧洲原油供应，增加海湾出口，即时影响原油出口价格，数日内传导至国内原油价格"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "沙特阿拉伯切断欧洲原油供应，增加海湾出口，数日内影响LNG进口成本，传导至国内天",
+          "detail": "沙特阿拉伯切断欧洲原油供应，增加海湾出口，数日内影响LNG进口成本，传导至国内天然气价格"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "沙特阿拉伯切断欧洲原油供应，增加海湾出口，数日内影响进口煤价，间接传导至国内煤炭",
+          "detail": "沙特阿拉伯切断欧洲原油供应，增加海湾出口，数日内影响进口煤价，间接传导至国内煤炭价格"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "沙特阿拉伯切断欧洲原油供应，增加海湾出口，数日内影响进口燃料成本，传导至国内电力",
+          "detail": "沙特阿拉伯切断欧洲原油供应，增加海湾出口，数日内影响进口燃料成本，传导至国内电力现货价格"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "沙特拦截弹即将耗尽，紧急求援",
+      "time": "2026-09-19 21:35",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3167722"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "沙特紧急求援可能引发地缘政治紧张，间接推高国际油价，进而影响国内原油价格",
+          "detail": "沙特紧急求援可能引发地缘政治紧张，间接推高国际油价，进而影响国内原油价格"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "沙特紧急求援可能引发地缘政治紧张，间接推高国际油价，进而影响国内天然气价格",
+          "detail": "沙特紧急求援可能引发地缘政治紧张，间接推高国际油价，进而影响国内天然气价格"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "沙特紧急求援可能引发地缘政治紧张，间接推高国际油价，进而影响国内煤炭价格",
+          "detail": "沙特紧急求援可能引发地缘政治紧张，间接推高国际油价，进而影响国内煤炭价格"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "沙特紧急求援可能引发地缘政治紧张，间接推高国际油价，进而影响国内电力价格",
+          "detail": "沙特紧急求援可能引发地缘政治紧张，间接推高国际油价，进而影响国内电力价格"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
     }
   ],
   "brief": {
@@ -1177,216 +1498,6 @@
   },
   "pending": [
     {
-      "key": "布伦特原油暗盘跌破99美元日内跌超1%",
-      "item": {
-        "id": "FL01",
-        "time": "2026-09-20 00:14:57",
-        "source": "新浪7×24",
-        "title": "布伦特原油暗盘跌破99美元，日内跌超1%。",
-        "summary": "布伦特原油暗盘跌破99美元，日内跌超1%。",
-        "url": "https://finance.sina.cn/7x24/2026-09-20/detail-inisktzs9650642.d.html",
-        "category": "国内快讯/地缘宏观",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "伊朗最高国家安全委员会秘书穆赫辛雷扎伊周六表示伊朗已通过卡塔尔和巴基斯坦调解人向美方提出谈判条件全面结束所有战线的战事释放遭扣押的伊朗资产解除海上封锁",
-      "item": {
-        "id": "FL03",
-        "time": "2026-09-19 23:52:35",
-        "source": "新浪7×24",
-        "title": "伊朗最高国家安全委员会秘书穆赫辛·雷扎伊周六表示，伊朗已通过卡塔尔和巴基斯坦调解人向美方提出谈判条件：全面结束所有战线的战事、释放遭扣押的伊朗资产、解除海上封锁",
-        "summary": "【伊朗提出对美谈判三大前提，等待特朗普答复】伊朗最高国家安全委员会秘书穆赫辛·雷扎伊周六表示，伊朗已通过卡塔尔和巴基斯坦调解人向美方提出谈判条件：全面结束所有战线的战事、释放遭扣押的伊朗资产、解除海上封锁。雷扎伊称，德黑兰仍与卡塔尔调解人保持沟通，这名调解人已将伊朗的谈判条件转达给美方，以求结束战争，目前正在等待美国总统的答复。雷扎伊表示，接受伊朗的条件符合美方利益。他称特朗普误判了伊朗，其发出的威胁不会有任何结果。他说，伊朗已经为一场他所说的“决定性战争”做好准备，并且清楚",
-        "url": "https://finance.sina.cn/7x24/2026-09-19/detail-inisktzr2868566.d.html",
-        "category": "国内快讯/地缘宏观",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "伊朗最高国家安全委员会秘书雷扎伊美国和以色列的行动可能迫使伊朗退出不扩散核武器条约伊朗尚未决定退出该条约这一决定将取决于华盛顿后续的行动伊朗仍恪守已",
-      "item": {
-        "id": "FL05",
-        "time": "2026-09-19 23:46:04",
-        "source": "新浪7×24",
-        "title": "伊朗最高国家安全委员会秘书雷扎伊：美国和以色列的行动可能迫使伊朗退出《不扩散核武器条约》。伊朗尚未决定退出该条约，这一决定将取决于华盛顿后续的行动。伊朗仍恪守已",
-        "summary": "伊朗最高国家安全委员会秘书雷扎伊：美国和以色列的行动可能迫使伊朗退出《不扩散核武器条约》。伊朗尚未决定退出该条约，这一决定将取决于华盛顿后续的行动。伊朗仍恪守已故最高领袖禁止研发核武器的宗教裁决，核立场没有发生改变，但我们不知道未来会发生什么。",
-        "url": "https://finance.sina.cn/7x24/2026-09-19/detail-inisktzs9638717.d.html",
-        "category": "国内快讯/地缘宏观",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "伊朗最高安全官员与调解方卡塔尔和巴基斯坦的会谈仍在继续谈判条件已传达",
-      "item": {
-        "id": "FL08",
-        "time": "2026-09-19 23:28:59",
-        "source": "新浪7×24",
-        "title": "伊朗最高安全官员：与调解方卡塔尔和巴基斯坦的会谈仍在继续，谈判条件已传达。",
-        "summary": "伊朗最高安全官员：与调解方卡塔尔和巴基斯坦的会谈仍在继续，谈判条件已传达。",
-        "url": "https://finance.sina.cn/7x24/2026-09-19/detail-inisktzr2859122.d.html",
-        "category": "国内快讯/地缘宏观",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "伊朗最高安全官员卡塔尔已向华盛顿转达德黑兰方面结束战争的条件目前正等待特朗普回应",
-      "item": {
-        "id": "FL09",
-        "time": "2026-09-19 23:28:13",
-        "source": "新浪7×24",
-        "title": "伊朗最高安全官员：卡塔尔已向华盛顿转达德黑兰方面结束战争的条件，目前正等待特朗普回应。",
-        "summary": "伊朗最高安全官员：卡塔尔已向华盛顿转达德黑兰方面结束战争的条件，目前正等待特朗普回应。",
-        "url": "https://finance.sina.cn/7x24/2026-09-19/detail-inisktzs9631396.d.html",
-        "category": "国内快讯/地缘宏观",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "生物天然气迈入产业化快车道统一价格指数破解行业痛点",
-      "item": {
-        "id": "CNC15",
-        "time": "—",
-        "source": "上海石油天然气交易中心",
-        "title": "生物天然气迈入产业化快车道 统一价格指数破解行业痛点",
-        "summary": "",
-        "url": "http://www.shpgx.com/html/gsxw/20260623/9378.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "关于开展安平管道天然气竞价交易的公告",
-      "item": {
-        "id": "CNC21",
-        "time": "—",
-        "source": "上海石油天然气交易中心",
-        "title": "关于开展安平管道天然气竞价交易的公告",
-        "summary": "",
-        "url": "http://www.shpgx.com/html/jygg/20260917/9917.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "globalshippingcostsexplodeashormuzdisruptionshitkeytraderoutes",
-      "item": {
-        "id": "INTL01",
-        "time": "Fri, 18 Sep 2026 16:00:00 -0500",
-        "source": "OilPrice",
-        "title": "Global Shipping Costs Explode as Hormuz Disruptions Hit Key Trade Routes",
-        "summary": "The Middle East crisis has reverberated through key global shipping chokepoints thousands of miles away from the Strait of Hormuz. Following the crippled tanker traffic through the Middle East’s main oil and LNG export outlet, the Panama Ca",
-        "url": "https://oilprice.com/Energy/Crude-Oil/Global-Shipping-Costs-Explode-as-Hormuz-Disruptions-Hit-Key-Trade-Routes.html",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "kazakhstanturnstorussiangasasdomesticdemandsurges",
-      "item": {
-        "id": "INTL04",
-        "time": "Fri, 18 Sep 2026 13:00:00 -0500",
-        "source": "OilPrice",
-        "title": "Kazakhstan Turns to Russian Gas as Domestic Demand Surges",
-        "summary": "Kazakhstan intends to increase natural gas imports from Russia. The purchase price may be low, but the overall cost could turn out to be steep because of pending new US sanctions on Russia. Under a supplementary agreement signed with the Ru",
-        "url": "https://oilprice.com/Energy/Energy-General/Kazakhstan-Turns-to-Russian-Gas-as-Domestic-Demand-Surges.html",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "saudiarabiacutseuropeofffromoctobercrudeasgulfexportssurge",
-      "item": {
-        "id": "INTL05",
-        "time": "Fri, 18 Sep 2026 12:30:00 -0500",
-        "source": "OilPrice",
-        "title": "Saudi Arabia Cuts Europe Off From October Crude as Gulf Exports Surge",
-        "summary": "Saudi Aramco has told European term customers they will receive no Saudi crude in October, even as the kingdom pushes roughly 60 million barrels back through the Persian Gulf after damage to its East-West pipeline. At least two European ref",
-        "url": "https://oilprice.com/Latest-Energy-News/World-News/Saudi-Arabia-Cuts-Europe-Off-From-October-Crude-as-Gulf-Exports-Surge.html",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "corpuschristilngexpansionmakesfacilitythesecondlargestintheunitedstates",
-      "item": {
-        "id": "INTL18",
-        "time": "Tue, 15 Sep 2026  09:00:00 EST",
-        "source": "EIA 官方",
-        "title": "Corpus Christi LNG expansion makes facility the second-largest in the United States",
-        "summary": "On August 28, 2026, Cheniere Energy, Inc., completed its Corpus Christi Liquefaction Stage 3 Project (CCL Stage 3) in Texas, taking custody and control of the seventh and last liquefied natural gas (LNG) train in the project.",
-        "url": "https://www.eia.gov/todayinenergy/detail.php?id=68144",
-        "category": "供需库存",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "uslngexportsrose23%inthefirsthalfof2026becauseofhighercapacity",
-      "item": {
-        "id": "INTL23",
-        "time": "Tue, 01 Sep 2026 09:00:00 EST",
-        "source": "EIA 官方",
-        "title": "U.S. LNG exports rose 23% in the first half of 2026 because of higher capacity",
-        "summary": "U.S. liquefied natural gas (LNG) exports averaged 17.4 billion cubic feet per day (Bcf/d) in the first six months of the year, 23% more than the same period in 2025, according to our Natural Gas Monthly. In our latest Short-Term Energy Outl",
-        "url": "https://www.eia.gov/todayinenergy/detail.php?id=68064",
-        "category": "供需库存",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "沙特拦截弹即将耗尽紧急求援",
-      "item": {
-        "id": "INTL31",
-        "time": "2026-09-19 21:35",
-        "source": "华尔街见闻",
-        "title": "沙特拦截弹即将耗尽，紧急求援",
-        "summary": "也门与沙特的紧张对峙升级。19日，沙特阿拉伯首都利雅得首次发布防空警报。英媒透露，沙特的拦截弹即将耗尽。沙特正在想方设法向盟友寻求防空援助。美联社援引当地官员的话称，沙特已与法国、英国、巴基斯坦和埃及取得联系，请求他们提供防空支持。但除巴基斯坦外，其盟友提供更多的是同情而非武力支持。",
-        "url": "https://wallstreetcn.com/livenews/3167722",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "美国能源部发布紧急命令要求在卡罗来纳地区降低停电风险",
-      "item": {
-        "id": "INTL35",
-        "time": "2026-09-19 20:51",
-        "source": "华尔街见闻",
-        "title": "美国能源部发布紧急命令，要求在卡罗来纳地区降低停电风险。",
-        "summary": "美国能源部发布紧急命令，要求在卡罗来纳地区降低停电风险。",
-        "url": "https://wallstreetcn.com/livenews/3167712",
-        "category": "供需库存",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "欧盟官员dombrovskis债台高筑的那些成员国必须实现财政目标乌克兰面临更加庞大的资金需求",
-      "item": {
-        "id": "INTL38",
-        "time": "2026-09-19 20:17",
-        "source": "华尔街见闻",
-        "title": "欧盟官员Dombrovskis：债台高筑的那些成员国必须实现财政目标。\n\n乌克兰面临更加庞大的资金需求。",
-        "summary": "欧盟官员Dombrovskis：债台高筑的那些成员国必须实现财政目标。\n\n乌克兰面临更加庞大的资金需求。",
-        "url": "https://wallstreetcn.com/livenews/3167703",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
       "key": "scalingbiolngandelngformaritimesectordecarbonisationineurope",
       "item": {
         "id": "EU04",
@@ -1522,6 +1633,160 @@
         "summary": "",
         "url": "http://www.shpgx.com/html/gsxw/20260629/9423.html",
         "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "当地时间9月19日晚也门胡塞武装发言人叶海亚萨雷亚发布视频声明称为回应沙特对也门的空袭胡塞武装当天发动两次军事行动发射大量导弹和无人机袭击了沙特首都",
+      "item": {
+        "id": "FL05",
+        "time": "2026-09-20 04:44:04",
+        "source": "新浪7×24",
+        "title": "当地时间9月19日晚，也门胡塞武装发言人叶海亚·萨雷亚发布视频声明称，为回应沙特对也门的空袭，胡塞武装当天发动两次军事行动，发射大量导弹和无人机，袭击了沙特首都",
+        "summary": "【胡塞武装称袭击沙特首都敏感目标】当地时间9月19日晚，也门胡塞武装发言人叶海亚·萨雷亚发布视频声明称，为回应沙特对也门的空袭，胡塞武装当天发动两次军事行动，发射大量导弹和无人机，袭击了沙特首都利雅得的“敏感目标”以及沙特阿美石油公司位于延布的设施。（CCTV国际时讯）",
+        "url": "https://finance.sina.cn/7x24/2026-09-20/detail-inismerm2738673.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "也门胡塞武装袭击沙特敏感目标和阿美公司设施回应沙特指责也门袭击麦加等行为",
+      "item": {
+        "id": "INTL33",
+        "time": "2026-09-20 03:55",
+        "source": "华尔街见闻",
+        "title": "也门胡塞武装袭击沙特“敏感目标”和阿美公司设施，回应沙特“指责也门袭击麦加”等行为",
+        "summary": "也门胡塞武装19日晚宣布，该组织发动两次军事行动，分别袭击了沙特阿拉伯首都利雅得的“敏感目标”以及沙特阿美石油公司位于延布的设施。\n\n胡塞武装发言人叶海亚·萨雷亚当日在该组织控制的马西拉电视台发表声明说，该组织武装部队在上述军事行动中使用“大量弹道导弹、有翼导弹和无人机”。",
+        "url": "https://wallstreetcn.com/livenews/3167728",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "沙特阿拉伯证实胡塞武装企图袭击首都",
+      "item": {
+        "id": "FL06",
+        "time": "2026-09-20 04:18:08",
+        "source": "新浪7×24",
+        "title": "沙特阿拉伯证实胡塞武装企图袭击首都。",
+        "summary": "沙特阿拉伯证实胡塞武装企图袭击首都。",
+        "url": "https://finance.sina.cn/7x24/2026-09-20/detail-inismern9500474.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "沙特领导的联军称挫败了胡塞武装对沙特城市比什塔伊夫法拉桑和延布平民的袭击",
+      "item": {
+        "id": "FL08",
+        "time": "2026-09-20 03:39:49",
+        "source": "新浪7×24",
+        "title": "沙特领导的联军称挫败了胡塞武装对沙特城市比什、塔伊夫、法拉桑和延布平民的袭击。",
+        "summary": "沙特领导的联军称挫败了胡塞武装对沙特城市比什、塔伊夫、法拉桑和延布平民的袭击。",
+        "url": "https://finance.sina.cn/7x24/2026-09-20/detail-inismern9488559.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "沙特领导的联军表示周六拦截并摧毁了也门胡塞武装向利雅得发射的一枚弹道导弹",
+      "item": {
+        "id": "FL09",
+        "time": "2026-09-20 03:38:46",
+        "source": "新浪7×24",
+        "title": "沙特领导的联军表示，周六拦截并摧毁了也门胡塞武装向利雅得发射的一枚弹道导弹。",
+        "summary": "沙特领导的联军表示，周六拦截并摧毁了也门胡塞武装向利雅得发射的一枚弹道导弹。",
+        "url": "https://finance.sina.cn/7x24/2026-09-20/detail-inismerm2715532.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "土耳其外长费丹19日表示针对沙特阿拉伯近期遭受袭击土耳其将信守麦加共同防务协议承诺并可能给予沙特军事技术方面的援助费丹在参加土耳其ntv电视台节目",
+      "item": {
+        "id": "FL02",
+        "time": "2026-09-20 05:04:57",
+        "source": "新浪7×24",
+        "title": "土耳其外长费丹19日表示，针对沙特阿拉伯近期遭受袭击，土耳其将信守《麦加共同防务协议》承诺，并可能给予沙特军事技术方面的援助。 费丹在参加土耳其NTV电视台节目",
+        "summary": "【土外长称土耳其或给予沙特军事技术援助】土耳其外长费丹19日表示，针对沙特阿拉伯近期遭受袭击，土耳其将信守《麦加共同防务协议》承诺，并可能给予沙特军事技术方面的援助。 费丹在参加土耳其NTV电视台节目时表示，协议签署国正在密切关注也门胡塞武装对沙特的袭击。他说：“我们在这个问题上团结一致。协议中包含相关条款，我们将信守承诺。”他特别谴责针对石油基础设施的袭击。（新华社）",
+        "url": "https://finance.sina.cn/7x24/2026-09-20/detail-inismerm2747078.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "沙特主导联军称拦截胡塞武装射向利雅得的弹道导弹",
+      "item": {
+        "id": "INTL30",
+        "time": "2026-09-20 04:46",
+        "source": "华尔街见闻",
+        "title": "沙特主导联军称拦截胡塞武装射向利雅得的弹道导弹",
+        "summary": "9月19日，沙特主导的多国联军发言人图尔基·马利基发表声明称，沙特皇家防空部队当天凌晨成功拦截并摧毁一枚由也门胡塞武装向沙特首都利雅得发射的弹道导弹。\n\n马利基表示，胡塞武装持续企图袭击利雅得的平民和民用设施。此外，胡塞武装还企图袭击比什、塔伊夫、费尔桑和延布的平民及民用设施，相关袭击均被防空部队挫败。（央视）",
+        "url": "https://wallstreetcn.com/livenews/3167736",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "土外长称土耳其或给予沙特军事技术援助",
+      "item": {
+        "id": "INTL31",
+        "time": "2026-09-20 04:43",
+        "source": "华尔街见闻",
+        "title": "土外长称土耳其或给予沙特军事技术援助",
+        "summary": "土耳其外长费丹19日表示，针对沙特阿拉伯近期遭受袭击，土耳其将信守《麦加共同防务协议》承诺，并可能给予沙特军事技术方面的援助。\n\n费丹在参加土耳其NTV电视台节目时表示，协议签署国正在密切关注也门胡塞武装对沙特的袭击。他说：“我们在这个问题上团结一致。协议中包含相关条款，我们将信守承诺。”他特别谴责针对石油基础设施的袭击。",
+        "url": "https://wallstreetcn.com/livenews/3167735",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "土耳其外长不接受沙特被卷入美伊冲突",
+      "item": {
+        "id": "INTL32",
+        "time": "2026-09-20 03:58",
+        "source": "华尔街见闻",
+        "title": "土耳其外长：不接受沙特被卷入美伊冲突",
+        "summary": "9月19日，土耳其外交部长费丹接受采访。在被问及沙特阿拉伯与也门胡塞武装之间的冲突时，费丹表示，土方不接受沙特被卷入当前美国与伊朗之间的冲突，沙特自身也无意卷入冲突。他表示，近期针对沙特领土完整、主权和基础设施的袭击十分严重。费丹称，旨在结束战斗的有关方案已转达各方。\n\n费丹还表示，作为土耳其、沙特和巴基斯坦三国防务机制成员，土耳其正密切关注沙特局势。沙特可能存在一些军事需求，特别是在技术领域，土方将在三边防务机制框架内对此进行评估，并愿为满足相关需求提供帮助。（央视）",
+        "url": "https://wallstreetcn.com/livenews/3167730",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "俄罗斯进步ms35货运飞船与国际空间站对接",
+      "item": {
+        "id": "INTL34",
+        "time": "2026-09-20 03:01",
+        "source": "华尔街见闻",
+        "title": "俄罗斯“进步MS-35”货运飞船与国际空间站对接",
+        "summary": "俄罗斯国家航天集团19日在官网通报说，俄“进步MS-35”货运飞船当天与国际空间站俄罗斯舱段“探索”号实验舱完成手动对接。\n\n莫斯科时间9月16日，“进步MS-35”货运飞船搭乘“联盟-2.1b”运载火箭从哈萨克斯坦境内的拜科努尔航天发射场发射升空，随后成功进入预定轨道。\n\n据介绍，“进步MS-35”货运飞船此次为国际空间站送去超过2.4吨货物，包括用于补充和维修空间站的设备和消耗品、空间站所需燃料、饮用水和食品等。（央视）",
+        "url": "https://wallstreetcn.com/livenews/3167731",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "伊朗称仍在通过调解方向美方传递谈判条件正等待特朗普的回应",
+      "item": {
+        "id": "INTL35",
+        "time": "2026-09-20 01:05",
+        "source": "华尔街见闻",
+        "title": "伊朗称仍在通过调解方向美方传递谈判条件，正等待特朗普的回应",
+        "summary": "伊朗最高国家安全委员会秘书穆赫辛·雷扎伊19日表示，卡塔尔作为调解方已向美国方面转达伊朗的谈判条件，正等待美国总统特朗普的回应。\n\n雷扎伊接受卡塔尔半岛电视台采访时表示，伊朗提出的谈判条件是美国结束所有针对伊朗的战事、解冻被冻结的伊朗资产并结束海上封锁。他表示，伊朗继续同调解方卡塔尔和巴基斯坦磋商，卡塔尔已将谈判条件转达给美方。",
+        "url": "https://wallstreetcn.com/livenews/3167726",
+        "category": "地缘政治与制裁",
         "raw_price": null
       },
       "attempts": 0
