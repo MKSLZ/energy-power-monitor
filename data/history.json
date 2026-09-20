@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-09-20 20:19",
+    "oil": "98.73 $/桶",
+    "oil_chg": "-1.20%",
+    "oil_up": false,
+    "gas": "3.04 $/MMBtu",
+    "gas_chg": "-0.13%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "美国中央司令部指挥官库珀：由于封锁，伊朗原油出口量为零。（当日65事件/本档+12）"
+  },
+  {
     "time": "2026-09-20 14:12",
     "oil": "98.73 $/桶",
     "oil_chg": "-1.20%",
