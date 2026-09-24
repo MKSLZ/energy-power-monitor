@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-09-24 20:44",
+    "oil": "743.5 元/桶",
+    "oil_chg": "+2.58%",
+    "oil_up": true,
+    "gas": "3.14 $/MMBtu",
+    "gas_chg": "-0.29%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日34事件/本档+12）"
+  },
+  {
     "time": "2026-09-24 14:10",
     "oil": "98.19 $/桶",
     "oil_chg": "+0.08%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "沙特告知欧洲炼油商下月不供油（当日34事件/本档+9）"
-  },
-  {
-    "time": "2026-09-18 22:00",
-    "oil": "99.95 $/桶",
-    "oil_chg": "+0.02%",
-    "oil_up": true,
-    "gas": "3.04 $/MMBtu",
-    "gas_chg": "+0.20%",
-    "gas_up": true,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "沙特告知欧洲炼油商下月不供油（当日25事件/本档+12）"
   }
 ]
