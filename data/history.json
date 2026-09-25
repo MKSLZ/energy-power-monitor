@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-09-25 20:46",
+    "oil": "743.5 元/桶",
+    "oil_chg": "+2.58%",
+    "oil_up": true,
+    "gas": "3.26 $/MMBtu",
+    "gas_chg": "-3.32%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "沙特外交大臣呼吁以色列巩固加沙停火（当日43事件/本档+11）"
+  },
+  {
     "time": "2026-09-25 14:11",
     "oil": "743.5 元/桶",
     "oil_chg": "+2.58%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "WTI 10月原油期货收报100.30美元/桶。NYMEX （当日42事件/本档+12）"
-  },
-  {
-    "time": "2026-09-19 08:18",
-    "oil": "98.73 $/桶",
-    "oil_chg": "-1.20%",
-    "oil_up": false,
-    "gas": "3.04 $/MMBtu",
-    "gas_chg": "-0.13%",
-    "gas_up": false,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "WTI 10月原油期货收报100.30美元/桶。NYMEX （当日30事件/本档+7）"
   }
 ]
