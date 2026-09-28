@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-09-28 08:42",
+    "oil": "743.5 元/桶",
+    "oil_chg": "+2.58%",
+    "oil_up": true,
+    "gas": "3.11 $/MMBtu",
+    "gas_chg": "-3.63%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "美国总统特朗普：伊朗战争很快就会结束，届时油价将下跌。（当日26事件/本档+8）"
+  },
+  {
     "time": "2026-09-28 06:08",
     "oil": "743.5 元/桶",
     "oil_chg": "+2.58%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日59事件/本档+12）"
-  },
-  {
-    "time": "2026-09-21 14:18",
-    "oil": "97.63 $/桶",
-    "oil_chg": "-1.67%",
-    "oil_up": false,
-    "gas": "3.02 $/MMBtu",
-    "gas_chg": "-0.79%",
-    "gas_up": false,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日47事件/本档+12）"
   }
 ]
