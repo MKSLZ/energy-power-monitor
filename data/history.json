@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-09-29 09:55",
+    "oil": "99.31 $/桶",
+    "oil_chg": "+1.52%",
+    "oil_up": true,
+    "gas": "3.14 $/MMBtu",
+    "gas_chg": "+0.97%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日25事件/本档+14）"
+  },
+  {
     "time": "2026-09-29 05:58",
     "oil": "98.41 $/桶",
     "oil_chg": "+0.99%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日48事件/本档+13）"
-  },
-  {
-    "time": "2026-09-22 14:11",
-    "oil": "97.81 $/桶",
-    "oil_chg": "+1.63%",
-    "oil_up": true,
-    "gas": "3.01 $/MMBtu",
-    "gas_chg": "+0.53%",
-    "gas_up": true,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日35事件/本档+13）"
   }
 ]
