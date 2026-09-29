@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-09-30 06:58",
+    "oil": "95.7 $/桶",
+    "oil_chg": "-2.18%",
+    "oil_up": false,
+    "gas": "3.02 $/MMBtu",
+    "gas_chg": "+0.43%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "WTI原油期货收报89.38美元/桶，天然气期货收报3.01（当日24事件/本档+14）"
+  },
+  {
     "time": "2026-09-30 02:38",
     "oil": "96.11 $/桶",
     "oil_chg": "-1.76%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "伊朗议会审议霍尔木兹海峡安全法案（当日36事件/本档+10）"
-  },
-  {
-    "time": "2026-09-23 06:06",
-    "oil": "94.62 $/桶",
-    "oil_chg": "-1.69%",
-    "oil_up": false,
-    "gas": "3.16 $/MMBtu",
-    "gas_chg": "+1.41%",
-    "gas_up": true,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "伊朗议会审议霍尔木兹海峡安全法案（当日26事件/本档+11）"
   }
 ]
