@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-01 04:49",
+    "oil": "711.5 元/桶",
+    "oil_chg": "+2.21%",
+    "oil_up": true,
+    "gas": "3 $/MMBtu",
+    "gas_chg": "-0.20%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日9事件/本档+9）"
+  },
+  {
     "time": "2026-09-30 21:40",
     "oil": "711.5 元/桶",
     "oil_chg": "+2.21%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日7事件/本档+7）"
-  },
-  {
-    "time": "2026-09-23 20:46",
-    "oil": "688.2 元/桶",
-    "oil_chg": "-0.99%",
-    "oil_up": false,
-    "gas": "3.19 $/MMBtu",
-    "gas_chg": "+2.47%",
-    "gas_up": true,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "伊朗议会审议霍尔木兹海峡安全法案（当日57事件/本档+11）"
   }
 ]
