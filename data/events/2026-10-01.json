@@ -1,21 +1,36 @@
 {
   "date": "2026-10-01",
-  "updated_at": "2026-10-01 04:49",
+  "updated_at": "2026-10-01 09:18",
   "seen_raw_keys": [
+    "corpuschristilngexpansionmakesfacilitythesecondlargestintheunitedstates",
     "crudeoilexportsthroughthestraitofhormuzhitprewarlevelsbutfuelshipmentsremainconstrained",
+    "iranwarnsnoenergyinfrastructurewillbesafeifitcantselloil",
+    "lng船货跨境通首轮交易在沪完成贸易及人民币结算模式进一步丰富",
     "oilpriceforecastsjumpashormuzdisruptiondragson",
     "opec+expectedtokeepoilproductionquotasunchanged",
+    "passengersovercamepilotwhotriedtocrashflydubaiflightisraelsays",
+    "scalingbiolngandelngformaritimesectordecarbonisationineurope",
     "theworldsdieselproblemrunsdeeperthantheiranwar",
+    "uslngexportsrose23%inthefirsthalfof2026becauseofhighercapacity",
+    "全国首单迎峰度夏气电日交易试点上线",
     "关于开展2026年11月2027年3月安平管道天然气竞价交易的公告",
     "关于开展中海石油气电集团有限责任公司华北分公司零散气井台竞价交易公告",
     "关于开展安平管道天然气竞价采购交易的公告",
     "关于开展王场管道天然气竞价采购交易的公告",
+    "哥伦比亚财长gomez支持央行加息25个基点",
+    "富国银行随着美国中期选举日益临近未来数月看跌美元",
+    "新思科技synopsys预计全年营收110亿112亿美元公司原本预计969亿974亿美元预计2027财年营收将较之前一年增长大约15%",
     "核电股constellationenergy美股盘后涨35%该公司与亚马逊达成20年期电力采购协议",
     "熊力天然气是新型能源体系建设的关键支撑力量",
     "熊维中东冲突冲击全球天然气供需格局高气价与区域溢价或将持续",
+    "特朗普鲍威尔应该被迫辞去美联储理事职务",
     "生物天然气迈入产业化快车道统一价格指数破解行业痛点",
     "美国商务部长卢特尼克南亚将倾向于通过美国获得天然气供应",
     "美国商务部长卢特尼克受管道因素影响东南亚将依赖美国天然气",
+    "美国地产etf新兴市场etf收跌超09%领跌美股大类资产类etf布油基金今年已涨112%",
+    "美国总统特朗普韩国通过投资美国来换取美方降低对其商品加征的关税",
+    "美联储理事库克致力于将通胀拉回2%目标",
+    "芝加哥玉米期货跌约4%三季度豆粕累涨约178%原糖涨约26%油菜籽涨约10%",
     "郑洪弢2026年非采暖季国内天然气供需整体偏紧全行业应增强应变能力"
   ],
   "events": [
@@ -477,6 +492,465 @@
       "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
       "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
       "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "伊朗警告，如果不能出售石油，其能源基础设施将不再安全",
+      "time": "Wed, 30 Sep 2026 09:00:00 -0500",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Energy/Energy-General/Iran-Warns-No-Energy-Infrastructure-Will-Be-Safe-If-It-Cant-Sell-Oil.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "伊朗威胁出口中断，外盘油价上涨，进口到岸平价上升，国内原油价格跟涨；数日内，长协",
+          "detail": "伊朗威胁出口中断，外盘油价上涨，进口到岸平价上升，国内原油价格跟涨；数日内，长协保供缓冲有限"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "伊朗出口受限，全球LNG供应紧张，JKM/TTF价格上升，进口成本传导至国内，S",
+          "detail": "伊朗出口受限，全球LNG供应紧张，JKM/TTF价格上升，进口成本传导至国内，SHPGX LNG价格上涨；数日内，长协保供缓冲有限"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "伊朗出口受限，全球能源紧张，进口煤价差预期上升，国内动力煤价格跟涨；数日内，长协",
+          "detail": "伊朗出口受限，全球能源紧张，进口煤价差预期上升，国内动力煤价格跟涨；数日内，长协保供缓冲有限"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "油气价格上涨，煤电度电燃料成本上升，广东等现货电价跟涨；数日内，长协保供缓冲有限",
+          "detail": "油气价格上涨，煤电度电燃料成本上升，广东等现货电价跟涨；数日内，长协保供缓冲有限"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "Corpus Christi LNG扩建使设施成为美国第二大液化天然气设施",
+      "time": "Tue, 15 Sep 2026  09:00:00 EST",
+      "source": "EIA 官方",
+      "url": [
+        "https://www.eia.gov/todayinenergy/detail.php?id=68144"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美国LNG设施扩建，增加供应，外盘油价承压，进口到岸平价下降，国内原油价格跟跌；",
+          "detail": "美国LNG设施扩建，增加供应，外盘油价承压，进口到岸平价下降，国内原油价格跟跌；数周内，长协保供缓冲有限"
+        },
+        "gas": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美国LNG供应增加，全球LNG市场供应紧张缓解，JKM/TTF价格下降，进口成本",
+          "detail": "美国LNG供应增加，全球LNG市场供应紧张缓解，JKM/TTF价格下降，进口成本传导至国内，SHPGX LNG价格下降；数周内，长协保供缓冲"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美国LNG供应增加，全球能源紧张缓解，进口煤价差预期下降，国内动力煤价格跟跌；数",
+          "detail": "美国LNG供应增加，全球能源紧张缓解，进口煤价差预期下降，国内动力煤价格跟跌；数周内，长协保供缓冲有限"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "LNG供应增加，气电成本下降，替代发电增加，广东等现货电价跟跌；数周内，长协保供",
+          "detail": "LNG供应增加，气电成本下降，替代发电增加，广东等现货电价跟跌；数周内，长协保供缓冲有限"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "由于产能提高，2026年上半年美国LNG出口增长了23%",
+      "time": "Tue, 01 Sep 2026 09:00:00 EST",
+      "source": "EIA 官方",
+      "url": [
+        "https://www.eia.gov/todayinenergy/detail.php?id=68064"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美国LNG出口增加，全球供应增加，外盘油价承压，进口到岸平价下降，国内原油价格跟",
+          "detail": "美国LNG出口增加，全球供应增加，外盘油价承压，进口到岸平价下降，国内原油价格跟跌；数周内，长协保供缓冲有限"
+        },
+        "gas": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美国LNG出口增加，全球供应增加，JKM/TTF价格下降，进口成本传导至国内，S",
+          "detail": "美国LNG出口增加，全球供应增加，JKM/TTF价格下降，进口成本传导至国内，SHPGX LNG价格下降；数周内，长协保供缓冲有限"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美国LNG出口增加，全球能源紧张缓解，进口煤价差预期下降，国内动力煤价格跟跌；数",
+          "detail": "美国LNG出口增加，全球能源紧张缓解，进口煤价差预期下降，国内动力煤价格跟跌；数周内，长协保供缓冲有限"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "LNG供应增加，气电成本下降，替代发电增加，广东等现货电价跟跌；数周内，长协保供",
+          "detail": "LNG供应增加，气电成本下降，替代发电增加，广东等现货电价跟跌；数周内，长协保供缓冲有限"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "全国首单迎峰度夏气电日交易试点上线",
+      "time": "—",
+      "source": "上海石油天然气交易中心",
+      "url": [
+        "http://www.shpgx.com/html/gsxw/20260730/9574.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "即时",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "试点上线对原油影响有限，未直接影响供需和价格",
+          "detail": "试点上线对原油影响有限，未直接影响供需和价格"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "气电交易试点上线，短期提升天然气需求，数日内对现货价格有支撑",
+          "detail": "气电交易试点上线，短期提升天然气需求，数日内对现货价格有支撑"
+        },
+        "coal": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "试点上线对煤炭需求影响有限，未直接影响供需和价格",
+          "detail": "试点上线对煤炭需求影响有限，未直接影响供需和价格"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "气电交易增加电力供应，短期提升现货电价，数日内对广东等地区电价有支撑",
+          "detail": "气电交易增加电力供应，短期提升现货电价，数日内对广东等地区电价有支撑"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "LNG船货“跨境通”首轮交易在沪完成 贸易及人民币结算模式进一步丰富",
+      "time": "—",
+      "source": "上海石油天然气交易中心",
+      "url": [
+        "http://www.shpgx.com/html/gsxw/20260629/9423.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "即时",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "跨境通交易对原油影响有限，未直接影响供需和价格",
+          "detail": "跨境通交易对原油影响有限，未直接影响供需和价格"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "跨境通交易丰富LNG贸易模式，提升LNG现货需求，数日内对天然气价格有支撑",
+          "detail": "跨境通交易丰富LNG贸易模式，提升LNG现货需求，数日内对天然气价格有支撑"
+        },
+        "coal": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "跨境通交易对煤炭需求影响有限，未直接影响供需和价格",
+          "detail": "跨境通交易对煤炭需求影响有限，未直接影响供需和价格"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "LNG贸易模式丰富，提升天然气供应，短期提升现货电价，数日内对广东等地区电价有支",
+          "detail": "LNG贸易模式丰富，提升天然气供应，短期提升现货电价，数日内对广东等地区电价有支撑"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "美国地产ETF、新兴市场ETF收跌超0.9%，领跌美股大类资产类ETF，布油基金今年已涨112%",
+      "time": "2026-10-01 04:24",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3173151"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美股下跌，布油基金上涨，暗示市场对原油需求预期乐观，数周内对原油价格有支撑",
+          "detail": "美股下跌，布油基金上涨，暗示市场对原油需求预期乐观，数周内对原油价格有支撑"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美股下跌，布油基金上涨，暗示市场对天然气需求预期乐观，数周内对天然气价格有支撑",
+          "detail": "美股下跌，布油基金上涨，暗示市场对天然气需求预期乐观，数周内对天然气价格有支撑"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美股下跌，布油基金上涨，暗示市场对煤炭需求预期乐观，数周内对煤炭价格有支撑",
+          "detail": "美股下跌，布油基金上涨，暗示市场对煤炭需求预期乐观，数周内对煤炭价格有支撑"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美股下跌，布油基金上涨，暗示市场对电力需求预期乐观，数周内对现货电价有支撑",
+          "detail": "美股下跌，布油基金上涨，暗示市场对电力需求预期乐观，数周内对现货电价有支撑"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "富国银行：随着美国中期选举日益临近，未来数月看跌美元。",
+      "time": "2026-10-01 04:21",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3173150"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美元看跌预期，原油价格可能承压，数周内对原油价格有压力",
+          "detail": "美元看跌预期，原油价格可能承压，数周内对原油价格有压力"
+        },
+        "gas": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美元看跌预期，天然气价格可能承压，数周内对天然气价格有压力",
+          "detail": "美元看跌预期，天然气价格可能承压，数周内对天然气价格有压力"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美元看跌预期，煤炭价格可能承压，数周内对煤炭价格有压力",
+          "detail": "美元看跌预期，煤炭价格可能承压，数周内对煤炭价格有压力"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美元看跌预期，电力价格可能承压，数周内对现货电价有压力",
+          "detail": "美元看跌预期，电力价格可能承压，数周内对现货电价有压力"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "哥伦比亚财长支持加息",
+      "time": "2026-10-01 03:27",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3173137"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "加息预期导致美元走强，原油等金融属性商品价格下行，影响国内油气进口成本；数日；中",
+          "detail": "加息预期导致美元走强，原油等金融属性商品价格下行，影响国内油气进口成本；数日；中"
+        },
+        "gas": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "加息预期导致美元走强，原油等金融属性商品价格下行，影响国内油气进口成本；数日；中",
+          "detail": "加息预期导致美元走强，原油等金融属性商品价格下行，影响国内油气进口成本；数日；中"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "加息预期导致美元走强，但国内长协保供缓冲，影响有限；数日；弱",
+          "detail": "加息预期导致美元走强，但国内长协保供缓冲，影响有限；数日；弱"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "加息预期导致美元走强，但国内长协保供缓冲，影响有限；数日；弱",
+          "detail": "加息预期导致美元走强，但国内长协保供缓冲，影响有限；数日；弱"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "美联储理事库克致力于通胀目标",
+      "time": "2026-10-01 03:25",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3173135"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "通胀目标强调，暗示加息可能性，美元走强，原油等金融属性商品价格下行，影响国内油气",
+          "detail": "通胀目标强调，暗示加息可能性，美元走强，原油等金融属性商品价格下行，影响国内油气进口成本；数日；中"
+        },
+        "gas": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "通胀目标强调，暗示加息可能性，美元走强，原油等金融属性商品价格下行，影响国内油气",
+          "detail": "通胀目标强调，暗示加息可能性，美元走强，原油等金融属性商品价格下行，影响国内油气进口成本；数日；中"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "通胀目标强调，暗示加息可能性，但国内长协保供缓冲，影响有限；数日；弱",
+          "detail": "通胀目标强调，暗示加息可能性，但国内长协保供缓冲，影响有限；数日；弱"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "通胀目标强调，暗示加息可能性，但国内长协保供缓冲，影响有限；数日；弱",
+          "detail": "通胀目标强调，暗示加息可能性，但国内长协保供缓冲，影响有限；数日；弱"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
     }
   ],
   "brief": {
@@ -926,216 +1400,6 @@
   },
   "pending": [
     {
-      "key": "iranwarnsnoenergyinfrastructurewillbesafeifitcantselloil",
-      "item": {
-        "id": "INTL10",
-        "time": "Wed, 30 Sep 2026 09:00:00 -0500",
-        "source": "OilPrice",
-        "title": "Iran Warns No Energy Infrastructure Will Be Safe If It Can't Sell Oil",
-        "summary": "Iran threatened to attack energy infrastructure across the Middle East if its security isn't guaranteed as it ratcheted up its rhetoric while waiting for the United States to officially respond to a plan Tehran says would reopen the Strait ",
-        "url": "https://oilprice.com/Energy/Energy-General/Iran-Warns-No-Energy-Infrastructure-Will-Be-Safe-If-It-Cant-Sell-Oil.html",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "passengersovercamepilotwhotriedtocrashflydubaiflightisraelsays",
-      "item": {
-        "id": "INTL17",
-        "time": "Wed, 30 Sep 2026 16:36:43 GMT",
-        "source": "CNBC 能源",
-        "title": "Passengers overcame pilot who tried to crash Flydubai flight, Israel says",
-        "summary": "The co-pilot of a Flydubai plane has been arrested after he tried to crash a flight from Dubai to Tel Aviv before being subdued by passengers.",
-        "url": "https://www.cnbc.com/2026/09/30/israel-flight-diverted-saudi-arabia-brawl-pilots-flydubai.html",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "corpuschristilngexpansionmakesfacilitythesecondlargestintheunitedstates",
-      "item": {
-        "id": "INTL22",
-        "time": "Tue, 15 Sep 2026  09:00:00 EST",
-        "source": "EIA 官方",
-        "title": "Corpus Christi LNG expansion makes facility the second-largest in the United States",
-        "summary": "On August 28, 2026, Cheniere Energy, Inc., completed its Corpus Christi Liquefaction Stage 3 Project (CCL Stage 3) in Texas, taking custody and control of the seventh and last liquefied natural gas (LNG) train in the project.",
-        "url": "https://www.eia.gov/todayinenergy/detail.php?id=68144",
-        "category": "供需库存",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "uslngexportsrose23%inthefirsthalfof2026becauseofhighercapacity",
-      "item": {
-        "id": "INTL27",
-        "time": "Tue, 01 Sep 2026 09:00:00 EST",
-        "source": "EIA 官方",
-        "title": "U.S. LNG exports rose 23% in the first half of 2026 because of higher capacity",
-        "summary": "U.S. liquefied natural gas (LNG) exports averaged 17.4 billion cubic feet per day (Bcf/d) in the first six months of the year, 23% more than the same period in 2025, according to our Natural Gas Monthly. In our latest Short-Term Energy Outl",
-        "url": "https://www.eia.gov/todayinenergy/detail.php?id=68064",
-        "category": "供需库存",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "scalingbiolngandelngformaritimesectordecarbonisationineurope",
-      "item": {
-        "id": "EU04",
-        "time": "—",
-        "source": "GIE",
-        "title": "Scaling BioLNG and eLNG for Maritime Sector Decarbonisation in Europe",
-        "summary": "",
-        "url": "https://www.gie.eu/scaling-biolng-and-elng-for-maritime-sector-decarbonisation-in-europe/",
-        "category": "欧洲气与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "全国首单迎峰度夏气电日交易试点上线",
-      "item": {
-        "id": "CNC01",
-        "time": "—",
-        "source": "上海石油天然气交易中心",
-        "title": "全国首单迎峰度夏气电日交易试点上线",
-        "summary": "",
-        "url": "http://www.shpgx.com/html/gsxw/20260730/9574.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "lng船货跨境通首轮交易在沪完成贸易及人民币结算模式进一步丰富",
-      "item": {
-        "id": "CNC02",
-        "time": "—",
-        "source": "上海石油天然气交易中心",
-        "title": "LNG船货“跨境通”首轮交易在沪完成 贸易及人民币结算模式进一步丰富",
-        "summary": "",
-        "url": "http://www.shpgx.com/html/gsxw/20260629/9423.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "美国总统特朗普韩国通过投资美国来换取美方降低对其商品加征的关税",
-      "item": {
-        "id": "INTL33",
-        "time": "2026-10-01 04:34",
-        "source": "华尔街见闻",
-        "title": "美国总统特朗普：韩国通过投资美国来换取美方降低对其商品加征的关税。",
-        "summary": "美国总统特朗普：韩国通过投资美国来换取美方降低对其商品加征的关税。",
-        "url": "https://wallstreetcn.com/livenews/3173154",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "美国地产etf新兴市场etf收跌超09%领跌美股大类资产类etf布油基金今年已涨112%",
-      "item": {
-        "id": "INTL34",
-        "time": "2026-10-01 04:24",
-        "source": "华尔街见闻",
-        "title": "美国地产ETF、新兴市场ETF收跌超0.9%，领跌美股大类资产类ETF，布油基金今年已涨112%",
-        "summary": "周三（9月30日），美国房地产ETF收跌0.99%，新兴市场ETF跌0.91%，道指ETF跌0.84%，美国国债20+年ETF跌0.58%，黄金ETF、罗素2000指数ETF、农产品基金、大豆基金、标普500 ETF、巴克莱美国可转债ETF、欧元做多至多跌0.54%，做多美元指数则涨0.07%，纳斯达克100 ETF涨0.25%，美国布伦特油价基金涨2.28%。\n\n1-9月，布油基金累计上涨112.18%，大豆基金、新兴市场ETF、纳指100 ETF累涨25.85%-20.8",
-        "url": "https://wallstreetcn.com/livenews/3173151",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "富国银行随着美国中期选举日益临近未来数月看跌美元",
-      "item": {
-        "id": "INTL35",
-        "time": "2026-10-01 04:21",
-        "source": "华尔街见闻",
-        "title": "富国银行：随着美国中期选举日益临近，未来数月看跌美元。",
-        "summary": "富国银行：随着美国中期选举日益临近，未来数月看跌美元。",
-        "url": "https://wallstreetcn.com/livenews/3173150",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "新思科技synopsys预计全年营收110亿112亿美元公司原本预计969亿974亿美元预计2027财年营收将较之前一年增长大约15%",
-      "item": {
-        "id": "INTL36",
-        "time": "2026-10-01 04:18",
-        "source": "华尔街见闻",
-        "title": "新思科技（Synopsys）预计全年营收110亿-112亿美元，公司原本预计96.9亿-97.4亿美元。\n\n预计2027财年营收将较之前一年增长大约15%。",
-        "summary": "新思科技（Synopsys）预计全年营收110亿-112亿美元，公司原本预计96.9亿-97.4亿美元。\n\n预计2027财年营收将较之前一年增长大约15%。\n\n预计全年调整后每股收益（EPS）为19.04-19.12美元，公司原本预计15.04-15.10美元。\n\n预计通过回购恢复高达50%的自由现金流（FCF）。\n\n未来数月将回购大约10亿美元股票。",
-        "url": "https://wallstreetcn.com/livenews/3173149",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "特朗普鲍威尔应该被迫辞去美联储理事职务",
-      "item": {
-        "id": "INTL40",
-        "time": "2026-10-01 03:49",
-        "source": "华尔街见闻",
-        "title": "特朗普：鲍威尔应该被迫辞去美联储理事职务",
-        "summary": "美国总统特朗普声称，鲍威尔（已经卸任美联储主席）应该被迫辞去美联储理事职务，否则就应该被起诉。\n\n已要求司法部长研究美联储的相关报告。",
-        "url": "https://wallstreetcn.com/livenews/3173140",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "哥伦比亚财长gomez支持央行加息25个基点",
-      "item": {
-        "id": "INTL42",
-        "time": "2026-10-01 03:27",
-        "source": "华尔街见闻",
-        "title": "哥伦比亚财长Gomez：支持央行加息25个基点。",
-        "summary": "哥伦比亚财长Gomez：支持央行加息25个基点。",
-        "url": "https://wallstreetcn.com/livenews/3173137",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "美联储理事库克致力于将通胀拉回2%目标",
-      "item": {
-        "id": "INTL43",
-        "time": "2026-10-01 03:25",
-        "source": "华尔街见闻",
-        "title": "美联储理事库克：致力于将通胀拉回2%目标",
-        "summary": "美联储理事丽莎·库克表示，通胀仍处于不合理的偏高位置，她重申致力于实现价格稳定。\n\n库克在周三为美国北卡罗来纳州阿什维尔一场活动准备的讲话中表示：“无论你身处乡村还是城市，事实依然是，通胀过高且持续时间过长。”\n\n她表示：“我致力于在保持劳动力市场强劲的同时，将通胀拉回我们的目标水平。”\n\n她指出，美国通胀率已超过美联储2%的目标水平超过五年。\n\n库克在由里士满联储主办、聚焦投资美国乡村的一场会议上表示：“能源成本对乡村社区的负担可能更重，部分原因是当地居民为就业和获取服务所",
-        "url": "https://wallstreetcn.com/livenews/3173135",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "芝加哥玉米期货跌约4%三季度豆粕累涨约178%原糖涨约26%油菜籽涨约10%",
-      "item": {
-        "id": "INTL45",
-        "time": "2026-10-01 03:20",
-        "source": "华尔街见闻",
-        "title": "芝加哥玉米期货跌约4%，三季度豆粕累涨约17.8%、原糖涨约26%、油菜籽涨约10%",
-        "summary": "周三（9月30日）纽约尾盘，彭博谷物分类指数跌2.14%，报33.0376点，北京时间00:00披露美国农业部（USDA）农产品库存报告时短线跳水，9月份累计下跌6.78%、整体持续下挫，三季度累涨12.53%，整体震荡上行、9月2日曾达到36.1689点。\n\nCBOT玉米期货跌3.98%，报5.0125美元/蒲式耳，三季度累涨13.53%。\n\nCBOT小麦期货跌2.56%，报6.7525美元/蒲式耳，三季度累涨11.11%。\n\nCBOT大豆期货跌0.21%，报12.94美元",
-        "url": "https://wallstreetcn.com/livenews/3173132",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
       "key": "特朗普韩国付出代价才换得美国降低对韩商品关税",
       "item": {
         "id": "FL02",
@@ -1270,6 +1534,342 @@
         "title": "国庆天气服务专报",
         "summary": "",
         "url": "http://www.nmc.cn/publish/app/world/guoq/index.htm",
+        "category": "天气季节",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "马来西亚国有能源企业马来西亚国家石油公司petronas周四表示其与泰国ptt公司的合资企业泰马跨境公司transthaimalaysia在例",
+      "item": {
+        "id": "FL04",
+        "time": "2026-10-01 09:07:27",
+        "source": "新浪7×24",
+        "title": "马来西亚国有能源企业马来西亚国家石油公司（PETRONAS）周四表示，其与泰国PTT公司的合资企业“泰马跨境公司”（Trans Thai-Malaysia）在例",
+        "summary": "【马来西亚国家石油公司称宋卡出口管道暂时关闭】马来西亚国有能源企业马来西亚国家石油公司（PETRONAS）周四表示，其与泰国PTT公司的合资企业“泰马跨境公司”（Trans Thai-Malaysia）在例行检查中发现一处问题后，已暂时关闭宋卡出口管道（Songkhla Export Pipeline）。宋卡出口管道是“泰马跨境天然气系统”的一部分，该系统将泰国湾的海上天然气生产与泰国和马来西亚的天然气加工及市场相连。马来西亚国家石油公司表示，将采取积极措施确保客户服务的连续",
+        "url": "https://finance.sina.cn/7x24/2026-10-01/detail-initspnm5398594.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "美国国务院证实在迪拜飞往特拉维夫的航班因驾驶舱内发生袭击被迫改道至沙特阿拉伯时机上有四名美国乘客美国官员表示他们正在与当地当局合作并准备在调查事件的过",
+      "item": {
+        "id": "FL09",
+        "time": "2026-10-01 08:50:17",
+        "source": "新浪7×24",
+        "title": "美国国务院证实，在迪拜飞往特拉维夫的航班因驾驶舱内发生袭击被迫改道至沙特阿拉伯时，机上有四名美国乘客。美国官员表示，他们正在与当地当局合作，并准备在调查事件的过",
+        "summary": "美国国务院证实，在迪拜飞往特拉维夫的航班因驾驶舱内发生袭击被迫改道至沙特阿拉伯时，机上有四名美国乘客。美国官员表示，他们正在与当地当局合作，并准备在调查事件的过程中向机上的美国乘客提供领事协助。该航班最终在沙特阿拉伯紧急降落，随后乘客继续前往以色列。",
+        "url": "https://finance.sina.cn/7x24/2026-10-01/detail-initspnp2160563.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "ls电气lselectric赢得1812亿韩元的美国数据中心电力设备订单",
+      "item": {
+        "id": "FL10",
+        "time": "2026-10-01 08:49:14",
+        "source": "新浪7×24",
+        "title": "LS电气（LS ELECTRIC）赢得1812亿韩元的美国数据中心电力设备订单。",
+        "summary": "LS电气（LS ELECTRIC）赢得1812亿韩元的美国数据中心电力设备订单。",
+        "url": "https://finance.sina.cn/7x24/2026-10-01/detail-initspnm5387425.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "韩国海关周四公布的数据显示半导体行业依然是经济繁荣的引擎芯片出口额较上年同期飙升263%达到创纪录的603亿美元计算机出货量激增435%石油制品出口增",
+      "item": {
+        "id": "FL11",
+        "time": "2026-10-01 08:46:58",
+        "source": "新浪7×24",
+        "title": "韩国海关周四公布的数据显示，半导体行业依然是经济繁荣的引擎，芯片出口额较上年同期飙升263%，达到创纪录的603亿美元。计算机出货量激增435%，石油制品出口增",
+        "summary": "韩国海关周四公布的数据显示，半导体行业依然是经济繁荣的引擎，芯片出口额较上年同期飙升263%，达到创纪录的603亿美元。计算机出货量激增435%，石油制品出口增长72%。汽车出口则下降了5%。",
+        "url": "https://finance.sina.cn/7x24/2026-10-01/detail-initspnm5386180.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "现货白银回落至60美元盎司下方为8月5日来首次现货黄金失守4150美元盎司",
+      "item": {
+        "id": "INTL36",
+        "time": "2026-10-01 08:24",
+        "source": "华尔街见闻",
+        "title": "现货白银回落至60美元/盎司下方，为8月5日来首次；现货黄金失守4150美元/盎司。",
+        "summary": "现货白银回落至60美元/盎司下方，为8月5日来首次；现货黄金失守4150美元/盎司。",
+        "url": "https://wallstreetcn.com/livenews/3173223",
+        "category": "宏观金融",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "美联储kashkari伊朗战争所造成的干扰的持续时间超过之前预料我已经缓慢地修正自己对中性利率的预期希望美联储能通过适度调整来压低通胀",
+      "item": {
+        "id": "INTL47",
+        "time": "2026-10-01 06:23",
+        "source": "华尔街见闻",
+        "title": "美联储Kashkari：伊朗战争所造成的干扰的持续时间超过之前预料。\n\n我已经缓慢地修正自己对中性利率的预期。\n\n希望美联储能通过适度调整来压低通胀。",
+        "summary": "美联储Kashkari：伊朗战争所造成的干扰的持续时间超过之前预料。\n\n我已经缓慢地修正自己对中性利率的预期。\n\n希望美联储能通过适度调整来压低通胀。",
+        "url": "https://wallstreetcn.com/livenews/3173196",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "iransdisappearingoilisbecomingeveryonesproblem",
+      "item": {
+        "id": "INTL01",
+        "time": "Wed, 30 Sep 2026 19:00:00 -0500",
+        "source": "OilPrice",
+        "title": "Iran’s Disappearing Oil Is Becoming Everyone’s Problem",
+        "summary": "Iranian oil is disappearing from the market just as its biggest buyer returns for more. China’s recovering crude demand is colliding with the loss of a supplier that sustained its independent refiners through the crisis, forcing them to com",
+        "url": "https://oilprice.com/Energy/Crude-Oil/Irans-Disappearing-Oil-Is-Becoming-Everyones-Problem.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "passengersandcrewfoilcopilotsapparentattempttocrashflydubaiflighttoisrael",
+      "item": {
+        "id": "INTL16",
+        "time": "Thu, 01 Oct 2026 01:09:18 GMT",
+        "source": "CNBC 能源",
+        "title": "Passengers and crew foil co-pilot's apparent attempt to crash FlyDubai flight to Israel",
+        "summary": "One of the pilots on a FlyDubai flight headed for Israel stabbed the second pilot, according to Israeli Prime Minister Benjamin Netanyahu.",
+        "url": "https://www.cnbc.com/2026/10/01/dubai-israel-flight-pilot-crash-indian.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "标普500指数的11个板块普遍收跌日用消费品保健工业房地产金融板块跌168%119%电信能源板块至多跌004%可选消费板块涨013%",
+      "item": {
+        "id": "INTL52",
+        "time": "2026-10-01 05:46",
+        "source": "华尔街见闻",
+        "title": "标普500指数的11个板块普遍收跌，日用消费品、保健、工业、房地产、金融板块跌1.68%-1.19%，电信、能源板块至多跌0.04%，可选消费板块涨0.13%，",
+        "summary": "标普500指数的11个板块普遍收跌，日用消费品、保健、工业、房地产、金融板块跌1.68%-1.19%，电信、能源板块至多跌0.04%，可选消费板块涨0.13%，信息技术/科技板块涨0.61%。",
+        "url": "https://wallstreetcn.com/livenews/3173186",
+        "category": "供需库存",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "内塔尼亚胡接受福克斯采访当被问及伊朗是否可能参与该事件时表示我们尚不清楚",
+      "item": {
+        "id": "FL02",
+        "time": "2026-10-01 09:15:20",
+        "source": "新浪7×24",
+        "title": "内塔尼亚胡接受福克斯采访，当被问及伊朗是否可能参与该事件时表示：“我们尚不清楚”。",
+        "summary": "内塔尼亚胡接受福克斯采访，当被问及伊朗是否可能参与该事件时表示：“我们尚不清楚”。",
+        "url": "https://finance.sina.cn/7x24/2026-10-01/detail-initspnp2176410.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "内塔尼亚胡就迪拜特拉维夫航班事件表态以色列将参与调查",
+      "item": {
+        "id": "FL03",
+        "time": "2026-10-01 09:14:07",
+        "source": "新浪7×24",
+        "title": "内塔尼亚胡就迪拜-特拉维夫航班事件表态：以色列将参与调查。",
+        "summary": "内塔尼亚胡就迪拜-特拉维夫航班事件表态：以色列将参与调查。",
+        "url": "https://finance.sina.cn/7x24/2026-10-01/detail-initspnm5403079.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "白宫就柴油出口禁令问题展开磋商",
+      "item": {
+        "id": "INTL38",
+        "time": "2026-10-01 08:06",
+        "source": "华尔街见闻",
+        "title": "白宫就柴油出口禁令问题展开磋商",
+        "summary": "据英国方面9月30日消息，美国总统特朗普与其顾问就平抑油价措施进行紧急讨论，顾问提出的多种方案中包括实施柴油出口禁令。\n\n据悉，美国政府官员已向包括英国在内的外国盟友通报了有关其燃料供应可能受到干扰的情况。一名白宫官员表示，特朗普正在评估能够降低国内燃料价格的“所有可行选项”。不过，特朗普政府目前尚未就是否暂停出口作出决定。（央视新闻）",
+        "url": "https://wallstreetcn.com/livenews/3173220",
+        "category": "供需库存",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "日本央行9月会议纪要一位委员表示如果出现通胀超出预期的迹象日本央行必须加快加息步伐一位委员表示日本央行必须灵活应对向市场展示其防止通胀过度的决心",
+      "item": {
+        "id": "INTL39",
+        "time": "2026-10-01 07:57",
+        "source": "华尔街见闻",
+        "title": "日本央行9月会议纪要：一位委员表示，如果出现通胀超出预期的迹象，日本央行必须加快加息步伐。\n\n一位委员表示，日本央行必须灵活应对，向市场展示其防止通胀过度的决心",
+        "summary": "日本央行9月会议纪要：一位委员表示，如果出现通胀超出预期的迹象，日本央行必须加快加息步伐。\n\n一位委员表示，日本央行必须灵活应对，向市场展示其防止通胀过度的决心，同时关注对外汇市场的影响。\n\n一位委员表示政策阶段已发生变化，必须关注将基础通胀稳定在2%左右。\n\n一位委员表示，依据经济、物价和金融发展，适宜继续加息。\n\n一位委员表示，终端利率有可能超出日本央行的预估区间，市场预期将取决于海外发展情况。\n\n一位委员表示，考虑到通胀存在显著上行风险，日本央行不应在加息方面过于谨慎。",
+        "url": "https://wallstreetcn.com/livenews/3173216",
+        "category": "宏观金融",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "lgenergy与indigotech围绕美国厢车电池供应构建合作伙伴关系",
+      "item": {
+        "id": "INTL41",
+        "time": "2026-10-01 07:14",
+        "source": "华尔街见闻",
+        "title": "LG Energy与Indigotech围绕美国厢车电池供应构建合作伙伴关系。",
+        "summary": "LG Energy与Indigotech围绕美国厢车电池供应构建合作伙伴关系。",
+        "url": "https://wallstreetcn.com/livenews/3173204",
+        "category": "供需库存",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "美联储kashkari美联储互换额度属于货币政策执行工具并未获悉美联储正在重新考量货币互换额度",
+      "item": {
+        "id": "INTL43",
+        "time": "2026-10-01 06:43",
+        "source": "华尔街见闻",
+        "title": "美联储Kashkari：美联储互换额度属于货币政策执行工具。\n\n并未获悉美联储正在重新考量货币互换额度。",
+        "summary": "美联储Kashkari：美联储互换额度属于货币政策执行工具。\n\n并未获悉美联储正在重新考量货币互换额度。",
+        "url": "https://wallstreetcn.com/livenews/3173200",
+        "category": "宏观金融",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "美联储卡什卡利即使pce数据低于预期通胀仍然过高",
+      "item": {
+        "id": "INTL45",
+        "time": "2026-10-01 06:29",
+        "source": "华尔街见闻",
+        "title": "美联储卡什卡利：即使PCE数据低于预期，通胀“仍然过高”",
+        "summary": "美国明尼阿波利斯联储主席尼尔·卡什卡利表示，尽管最新数据低于经济学家预期，但物价上涨仍是令人担忧的问题。“通胀仍然过高。……通胀有多种衡量口径，但目前仍运行在约3%的水平。它已经处于高位超过五年。我认为今天的通胀数据并没有在多大程度上改变我对这一问题的判断。”",
+        "url": "https://wallstreetcn.com/livenews/3173198",
+        "category": "宏观金融",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "报道派拉蒙天舞发行投资级债券筹资300亿美元用于收购华纳兄弟探索",
+      "item": {
+        "id": "INTL48",
+        "time": "2026-10-01 06:07",
+        "source": "华尔街见闻",
+        "title": "报道：派拉蒙天舞发行投资级债券筹资300亿美元，用于收购华纳兄弟探索",
+        "summary": "派拉蒙天舞出售了300亿美元的美元投资级债券，完成了收购华纳兄弟探索融资中规模最大的一部分。\n\n据一位知情人士透露，这家美国媒体巨头此次发行的八部分债券最终定价利差均低于最初讨论的水平。期限最长、2066年到期的债券相对美国国债的收益率溢价收窄约0.35个百分点，至较基准高3.3个百分点。（彭博）",
+        "url": "https://wallstreetcn.com/livenews/3173191",
+        "category": "宏观金融",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "韩国向美国投资项目拨付24亿美元首期资金",
+      "item": {
+        "id": "FL01",
+        "time": "2026-10-01 09:15:33",
+        "source": "新浪7×24",
+        "title": "韩国向美国投资项目拨付 24 亿美元首期资金。",
+        "summary": "  韩国向美国投资项目拨付 24 亿美元首期资金。",
+        "url": "https://finance.sina.cn/7x24/2026-10-01/detail-initspnp2176617.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "9月29日印度股市遭遇全球投资者四个月以来的最大规模净抛售根据印度证券交易委员会sebi的数据9月29日全球基金净卖出2612亿美元的印度债券已连",
+      "item": {
+        "id": "FL05",
+        "time": "2026-10-01 08:58:09",
+        "source": "新浪7×24",
+        "title": "9月29日，印度股市遭遇全球投资者四个月以来的最大规模净抛售。根据印度证券交易委员会（SEBI）的数据，9月29日全球基金净卖出2.612亿美元的印度债券，已连",
+        "summary": "【全球基金抛售印度股票规模创四个月新高】9月29日，印度股市遭遇全球投资者四个月以来的最大规模净抛售。根据印度证券交易委员会（SEBI）的数据，9月29日全球基金净卖出2.612亿美元的印度债券，已连续第四个交易日呈现净卖出态势。根据交易所数据，9月29日全球基金净卖出10.6亿美元的印度股票，为5月29日以来的最高单日抛售额，且已连续第四个交易日净卖出。",
+        "url": "https://finance.sina.cn/7x24/2026-10-01/detail-initspnm5392549.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "钯金期货日内跌1%现报119868美元盎司",
+      "item": {
+        "id": "FL06",
+        "time": "2026-10-01 08:54:46",
+        "source": "新浪7×24",
+        "title": "钯金期货日内跌1%，现报1198.68美元/盎司。",
+        "summary": "钯金期货日内跌1%，现报1198.68美元/盎司。",
+        "url": "https://finance.sina.cn/7x24/2026-10-01/detail-initspnp2163265.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "据知情人士透露openai联合创始人兼总裁格雷格布罗克曼gregbrockman向员工表示他将不再兑现此前承诺向一个政治团体的数百万美元捐款该政治",
+      "item": {
+        "id": "FL08",
+        "time": "2026-10-01 08:53:38",
+        "source": "新浪7×24",
+        "title": "据知情人士透露，OpenAI联合创始人兼总裁格雷格·布罗克曼（Greg Brockman）向员工表示，他将不再兑现此前承诺向一个政治团体的数百万美元捐款。该政治",
+        "summary": "【OpenAI总裁取消向人工智能超级政治行动委员会承诺捐赠的2500万美元】据知情人士透露，OpenAI联合创始人兼总裁格雷格·布罗克曼（Greg Brockman）向员工表示，他将不再兑现此前承诺向一个政治团体的数百万美元捐款。该政治团体的主要工作是推动支持人工智能政策的国会议员当选。去年9月，布罗克曼及其妻子向名为“Leading the Future”的组织捐赠了2500万美元，并承诺在2026年再追加捐赠2500万美元。布罗克曼当时表示，这笔捐款完全是以个人名义进行的",
+        "url": "https://finance.sina.cn/7x24/2026-10-01/detail-initspnm5390088.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "春运气象服务专报",
+      "item": {
+        "id": "WX02",
+        "time": "—",
+        "source": "中央气象台·台风",
+        "title": "春运气象服务专报",
+        "summary": "",
+        "url": "http://www.nmc.cn/publish/weather_forecast/swssr.htm",
+        "category": "天气季节",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "全球灾害性天气监测月报",
+      "item": {
+        "id": "WX03",
+        "time": "—",
+        "source": "中央气象台·台风",
+        "title": "全球灾害性天气监测月报",
+        "summary": "",
+        "url": "http://www.nmc.cn/publish/tianqiyubao/quanqiuzaihaixingtianqijianceyuebao/index.html",
+        "category": "天气季节",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "山洪灾害气象预警",
+      "item": {
+        "id": "WX04",
+        "time": "—",
+        "source": "中央气象台·台风",
+        "title": "山洪灾害气象预警",
+        "summary": "",
+        "url": "http://www.nmc.cn/publish/mountainflood.html",
         "category": "天气季节",
         "raw_price": null
       },
