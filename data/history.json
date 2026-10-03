@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-03 09:11",
+    "oil": "711.5 元/桶",
+    "oil_chg": "+2.21%",
+    "oil_up": true,
+    "gas": "3.04 $/MMBtu",
+    "gas_chg": "+2.46%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日26事件/本档+13）"
+  },
+  {
     "time": "2026-10-03 04:43",
     "oil": "711.5 元/桶",
     "oil_chg": "+2.21%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "胡塞武装：沙特政权不实指控也门穆斯林民众企图袭击麦加（当日12事件/本档+12）"
-  },
-  {
-    "time": "2026-09-25 20:46",
-    "oil": "743.5 元/桶",
-    "oil_chg": "+2.58%",
-    "oil_up": true,
-    "gas": "3.26 $/MMBtu",
-    "gas_chg": "-3.32%",
-    "gas_up": false,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "沙特外交大臣呼吁以色列巩固加沙停火（当日43事件/本档+11）"
   }
 ]
