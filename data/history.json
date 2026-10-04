@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-04 21:13",
+    "oil": "711.5 元/桶",
+    "oil_chg": "+2.21%",
+    "oil_up": true,
+    "gas": "3.04 $/MMBtu",
+    "gas_chg": "+2.46%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "也门首都萨那遭沙特空袭（当日53事件/本档+13）"
+  },
+  {
     "time": "2026-10-04 14:51",
     "oil": "711.5 元/桶",
     "oil_chg": "+2.21%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "俄罗斯外长拉夫罗夫表示波斯湾集体安全框架有助于稳定霍尔木兹海（当日47事件/本档+12）"
-  },
-  {
-    "time": "2026-09-27 08:33",
-    "oil": "743.5 元/桶",
-    "oil_chg": "+2.58%",
-    "oil_up": true,
-    "gas": "3.25 $/MMBtu",
-    "gas_chg": "-3.41%",
-    "gas_up": false,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "俄罗斯外长拉夫罗夫表示波斯湾集体安全框架有助于稳定霍尔木兹海（当日35事件/本档+11）"
   }
 ]
