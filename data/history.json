@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-06 06:37",
+    "oil": "711.5 元/桶",
+    "oil_chg": "+2.21%",
+    "oil_up": true,
+    "gas": "3.08 $/MMBtu",
+    "gas_chg": "+0.39%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "也门胡塞武装袭击沙特机场和石油设施（当日13事件/本档+13）"
+  },
+  {
     "time": "2026-10-05 23:59",
     "oil": "711.5 元/桶",
     "oil_chg": "+2.21%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "美国总统特朗普：伊朗战争很快就会结束，届时油价将下跌。（当日40事件/本档+14）"
-  },
-  {
-    "time": "2026-09-28 08:42",
-    "oil": "743.5 元/桶",
-    "oil_chg": "+2.58%",
-    "oil_up": true,
-    "gas": "3.11 $/MMBtu",
-    "gas_chg": "-3.63%",
-    "gas_up": false,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "美国总统特朗普：伊朗战争很快就会结束，届时油价将下跌。（当日26事件/本档+8）"
   }
 ]
