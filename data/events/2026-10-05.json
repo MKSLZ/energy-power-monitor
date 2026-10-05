@@ -1,7 +1,8 @@
 {
   "date": "2026-10-05",
-  "updated_at": "2026-10-05 15:00",
+  "updated_at": "2026-10-05 23:59",
   "seen_raw_keys": [
+    "allusbombersleaveukairbaseonconcernsofsuspectedterrorplotsmoretankersstruckneariraninthemiddleeast",
     "corpuschristilngexpansionmakesfacilitythesecondlargestintheunitedstates",
     "datedbrentabove$120signalsaseriousoilsqueeze",
     "iranianoilstartsflowingtotajikistandespiteussanctionsrisk",
@@ -24,6 +25,7 @@
     "伊拉克纳杰夫与伊朗间航班复航",
     "伊朗军方称将提升导弹射程",
     "伊朗国家电视台伊朗总统任命hamidbovard为代理石油部长",
+    "伊朗石油部长辞职伊朗国家石油公司ceo任代理部长",
     "伊朗表示愿推动也门胡塞武装与沙特对话",
     "俄罗斯副总理诺瓦克全球石油市场形势依然剧烈波动",
     "全国首单迎峰度夏气电日交易试点上线",
@@ -31,10 +33,18 @@
     "关于开展中海石油气电集团有限责任公司华北分公司零散气井台竞价交易公告",
     "关于开展安平管道天然气竞价采购交易的公告",
     "关于开展王场管道天然气竞价采购交易的公告",
+    "周一悉尼盘初美元兑g10货币报价持稳当前日元欧元英镑瑞郎澳元纽元加元大致持平上周五发布了美国非农就业报告",
     "市场消息以色列总理内塔尼亚胡下令国家安全委员会针对迪拜航空劫机未遂事件评估外国民航安全状况",
     "市场消息沙特阿拉伯与阿联酋将协助扩充亚洲石油储备沙特与阿联酋政府将出席周四的亚洲零排放共同体azec会议",
+    "布伦特原油日内涨1%现报10328美元桶",
     "当地时间10月4日晚间以色列总理办公室通过社交账号发布声明称以总理内塔尼亚胡已指示该国国家安全委员会主席什穆埃尔本埃兹拉要求其任命一名专门审查员针对",
+    "德国承诺向乌克兰再提供10亿欧元军援",
+    "德国联邦政府4日称德国总理默茨当天访问乌克兰首都基辅承诺对乌追加约10亿欧元军事援助新一批军援重在提升乌克兰防空能力包括联合生产远程武器和用于防御喷气式",
+    "据cme美联储观察美联储到10月维持利率不变的概率为779%累计加息25个基点的概率为221%美联储到12月维持利率不变的概率为128%累计加",
     "据伊朗塔斯尼姆通讯社伊朗石油部长辞职",
+    "据日经新闻报道沙特与阿联酋价格帮助亚洲推高石油储备亚洲零排放委员会azec周四将在菲律宾举行一场部长级会议沙特与阿联酋的高级官员们将参与特",
+    "施耐德电气洽谈按大约200亿美元收购美国上市的工程软件开发公司ptcinc预计最快将于周一宣布这笔交易英国金融时报",
+    "春运气象服务专报",
     "沙特cma外资持股上限变更谈判仍处于推进阶段",
     "沙特主导联军称将继续向也门政府提供支持应对胡塞武装袭击",
     "沙特阿拉伯主导的多国联军司令部发表声明称联军将继续向也门政府及其武装部队提供全面作战支持以恢复国家多国联军发言人图尔基马利基指责胡塞武装蓄意系统性",
@@ -42,8 +52,13 @@
     "沙特阿美将11月销往亚洲的阿拉伯轻质原油官方售价定为较阿曼迪拜原油均价贴水5美元桶将11月销往西北欧的阿拉伯轻质原油官方售价定为较ice布伦特原油升水0",
     "熊力天然气是新型能源体系建设的关键支撑力量",
     "熊维中东冲突冲击全球天然气供需格局高气价与区域溢价或将持续",
+    "现货白银突破61美元盎司日内涨013%",
+    "现货黄金突破4140美元盎司日内涨008%",
     "生物天然气迈入产业化快车道统一价格指数破解行业痛点",
     "白宫国家经济委员会主任哈塞特鲍威尔应该离开美联储理事会",
+    "纽约期金突破4170美元盎司日内涨019%",
+    "纽约期银日内涨1%现报6103美元盎司",
+    "纽约期银突破61美元盎司日内涨097%",
     "美国总统唐纳德特朗普的首席经济顾问呼吁美联储前主席杰罗姆鲍威尔离开美联储理事会此前美联储一份内部报告指出其总部翻修工程存在管理失误白宫国家经济委员会主任",
     "胡塞武装称对沙特阿美设施发动袭击",
     "郑洪弢2026年非采暖季国内天然气供需整体偏紧全行业应增强应变能力"
@@ -1833,6 +1848,516 @@
       "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
       "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
       "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "伊朗石油部长辞职，伊朗国家石油公司CEO任代理部长",
+      "time": "2026-10-05 02:50",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3173983"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "伊朗石油部长辞职引发市场担忧，可能导致原油供应中断，外盘油价上涨，传导至国内原油",
+          "detail": "伊朗石油部长辞职引发市场担忧，可能导致原油供应中断，外盘油价上涨，传导至国内原油价格，数日内国内原油价格上行；国内长协保供较强，对冲部分风险"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "伊朗石油部长辞职可能影响中东地区原油供应，外盘油气价格上涨，进口成本上升，传导至",
+          "detail": "伊朗石油部长辞职可能影响中东地区原油供应，外盘油气价格上涨，进口成本上升，传导至国内天然气价格，数日内国内天然气价格上行；国内长协保供较强，"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "伊朗石油部长辞职可能影响中东地区原油供应，外盘油价上涨，预期国内煤炭替代需求增加",
+          "detail": "伊朗石油部长辞职可能影响中东地区原油供应，外盘油价上涨，预期国内煤炭替代需求增加，数日内国内煤炭价格上行；国内长协保供较强，对冲部分风险"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "伊朗石油部长辞职可能影响中东地区原油供应，外盘油价上涨，传导至国内电力燃料成本，",
+          "detail": "伊朗石油部长辞职可能影响中东地区原油供应，外盘油价上涨，传导至国内电力燃料成本，数日内国内电力现货价格上行；广东等地区对成本敏感，影响较大"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "沙特与阿联酋帮助亚洲推高石油储备，亚洲零排放委员会会议",
+      "time": "2026-10-05 02:04",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3173974"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "沙特与阿联酋推高石油储备，外盘油价上涨，传导至国内原油价格，即时国内原油价格上行",
+          "detail": "沙特与阿联酋推高石油储备，外盘油价上涨，传导至国内原油价格，即时国内原油价格上行；国内长协保供较强，对冲部分风险"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "沙特与阿联酋推高石油储备，外盘油气价格上涨，进口成本上升，传导至国内天然气价格，",
+          "detail": "沙特与阿联酋推高石油储备，外盘油气价格上涨，进口成本上升，传导至国内天然气价格，即时国内天然气价格上行；国内长协保供较强，对冲部分风险"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "沙特与阿联酋推高石油储备，外盘油价上涨，预期国内煤炭替代需求增加，数日内国内煤炭",
+          "detail": "沙特与阿联酋推高石油储备，外盘油价上涨，预期国内煤炭替代需求增加，数日内国内煤炭价格上行；国内长协保供较强，对冲部分风险"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "沙特与阿联酋推高石油储备，外盘油价上涨，传导至国内电力燃料成本，数日内国内电力现",
+          "detail": "沙特与阿联酋推高石油储备，外盘油价上涨，传导至国内电力燃料成本，数日内国内电力现货价格上行；广东等地区对成本敏感，影响较大"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "美国轰炸机离开英国基地，中东地区油轮遭袭击",
+      "time": "Sun, 04 Oct 2026 21:46:15 GMT",
+      "source": "CNBC 能源",
+      "url": [
+        "https://www.cnbc.com/2026/10/04/more-tankers-struck-in-gulf-waters-as-iran-reiterates-conditions.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "中东地区油轮遭袭击，引发市场对原油供应中断的担忧，外盘油价上涨，传导至国内原油价",
+          "detail": "中东地区油轮遭袭击，引发市场对原油供应中断的担忧，外盘油价上涨，传导至国内原油价格，即时国内原油价格上行；国内长协保供较强，对冲部分风险"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "中东地区油轮遭袭击，引发市场对原油供应中断的担忧，外盘油气价格上涨，进口成本上升",
+          "detail": "中东地区油轮遭袭击，引发市场对原油供应中断的担忧，外盘油气价格上涨，进口成本上升，传导至国内天然气价格，即时国内天然气价格上行；国内长协保供"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "中东地区油轮遭袭击，引发市场对原油供应中断的担忧，外盘油价上涨，预期国内煤炭替代",
+          "detail": "中东地区油轮遭袭击，引发市场对原油供应中断的担忧，外盘油价上涨，预期国内煤炭替代需求增加，数日内国内煤炭价格上行；国内长协保供较强，对冲部分"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "中东地区油轮遭袭击，引发市场对原油供应中断的担忧，外盘油价上涨，传导至国内电力燃",
+          "detail": "中东地区油轮遭袭击，引发市场对原油供应中断的担忧，外盘油价上涨，传导至国内电力燃料成本，数日内国内电力现货价格上行；广东等地区对成本敏感，影"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "布伦特原油日内涨1%，现报103.28美元/桶",
+      "time": "2026-10-05 06:00:01",
+      "source": "新浪7×24",
+      "url": [
+        "https://finance.sina.cn/7x24/2026-10-05/detail-iniuciqt6653059.d.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "布伦特原油价格上涨，外盘油价上涨，传导至国内原油价格，即时国内原油价格上行；国内",
+          "detail": "布伦特原油价格上涨，外盘油价上涨，传导至国内原油价格，即时国内原油价格上行；国内长协保供较强，对冲部分风险"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "布伦特原油价格上涨，外盘油气价格上涨，进口成本上升，传导至国内天然气价格，即时国",
+          "detail": "布伦特原油价格上涨，外盘油气价格上涨，进口成本上升，传导至国内天然气价格，即时国内天然气价格上行；国内长协保供较强，对冲部分风险"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "布伦特原油价格上涨，外盘油价上涨，预期国内煤炭替代需求增加，数日内国内煤炭价格上",
+          "detail": "布伦特原油价格上涨，外盘油价上涨，预期国内煤炭替代需求增加，数日内国内煤炭价格上行；国内长协保供较强，对冲部分风险"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "布伦特原油价格上涨，外盘油价上涨，传导至国内电力燃料成本，数日内国内电力现货价格",
+          "detail": "布伦特原油价格上涨，外盘油价上涨，传导至国内电力燃料成本，数日内国内电力现货价格上行；广东等地区对成本敏感，影响较大"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "德国承诺对乌追加约10亿欧元军事援助",
+      "time": "2026-10-05 06:17:18",
+      "source": "新浪7×24",
+      "url": [
+        "https://finance.sina.cn/7x24/2026-10-05/detail-iniuciqt6660295.d.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "地缘政治紧张，油价受支撑；进口成本上升，传导至国内原油；数日；国内缓冲有限",
+          "detail": "地缘政治紧张，油价受支撑；进口成本上升，传导至国内原油；数日；国内缓冲有限"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "地缘政治紧张，LNG进口成本上升；传导至国内天然气；数日；国内缓冲有限",
+          "detail": "地缘政治紧张，LNG进口成本上升；传导至国内天然气；数日；国内缓冲有限"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "地缘政治紧张，能源替代预期增强；进口煤价差扩大；数日；国内长协保供缓冲",
+          "detail": "地缘政治紧张，能源替代预期增强；进口煤价差扩大；数日；国内长协保供缓冲"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "能源替代预期增强，煤电成本上升；广东现货电价受影响；数日；国内缓冲有限",
+          "detail": "能源替代预期增强，煤电成本上升；广东现货电价受影响；数日；国内缓冲有限"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "德国承诺向乌克兰再提供10亿欧元军援",
+      "time": "2026-10-05 06:17",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3173998"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "地缘政治紧张，油价受支撑；进口成本上升，传导至国内原油；数日；国内缓冲有限",
+          "detail": "地缘政治紧张，油价受支撑；进口成本上升，传导至国内原油；数日；国内缓冲有限"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "地缘政治紧张，LNG进口成本上升；传导至国内天然气；数日；国内缓冲有限",
+          "detail": "地缘政治紧张，LNG进口成本上升；传导至国内天然气；数日；国内缓冲有限"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "地缘政治紧张，能源替代预期增强；进口煤价差扩大；数日；国内长协保供缓冲",
+          "detail": "地缘政治紧张，能源替代预期增强；进口煤价差扩大；数日；国内长协保供缓冲"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "能源替代预期增强，煤电成本上升；广东现货电价受影响；数日；国内缓冲有限",
+          "detail": "能源替代预期增强，煤电成本上升；广东现货电价受影响；数日；国内缓冲有限"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "美联储到10月维持利率不变的概率为77.9%，累计加息25个基点的概率为22.1%",
+      "time": "2026-10-05 06:00:07",
+      "source": "新浪7×24",
+      "url": [
+        "https://finance.sina.cn/7x24/2026-10-05/detail-iniuciqt6653076.d.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美联储加息预期，美元走强，油价承压；传导至国内原油；数日；国内缓冲有限",
+          "detail": "美联储加息预期，美元走强，油价承压；传导至国内原油；数日；国内缓冲有限"
+        },
+        "gas": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美联储加息预期，美元走强，LNG进口成本上升；传导至国内天然气；数日；国内缓冲有",
+          "detail": "美联储加息预期，美元走强，LNG进口成本上升；传导至国内天然气；数日；国内缓冲有限"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美联储加息预期，美元走强，进口煤价差扩大；数日；国内长协保供缓冲",
+          "detail": "美联储加息预期，美元走强，进口煤价差扩大；数日；国内长协保供缓冲"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美联储加息预期，美元走强，煤电成本上升；广东现货电价受影响；数日；国内缓冲有限",
+          "detail": "美联储加息预期，美元走强，煤电成本上升；广东现货电价受影响；数日；国内缓冲有限"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "纽约期金突破4170美元/盎司，日内涨0.19%",
+      "time": "2026-10-05 06:02:19",
+      "source": "新浪7×24",
+      "url": [
+        "https://finance.sina.cn/7x24/2026-10-05/detail-iniuciqr9881235.d.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "金价上涨，增强金融属性，传导至国内原油价格，数周内可能影响",
+          "detail": "金价上涨，增强金融属性，传导至国内原油价格，数周内可能影响"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "金价上涨，增强金融属性，传导至国内天然气价格，数周内可能影响",
+          "detail": "金价上涨，增强金融属性，传导至国内天然气价格，数周内可能影响"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "金价上涨，增强金融属性，传导至国内煤炭价格，数周内可能影响",
+          "detail": "金价上涨，增强金融属性，传导至国内煤炭价格，数周内可能影响"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "金价上涨，增强金融属性，传导至国内电力价格，数周内可能影响",
+          "detail": "金价上涨，增强金融属性，传导至国内电力价格，数周内可能影响"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "纽约期银日内涨1%，现报61.03美元/盎司",
+      "time": "2026-10-05 06:02:18",
+      "source": "新浪7×24",
+      "url": [
+        "https://finance.sina.cn/7x24/2026-10-05/detail-iniuciqt6653756.d.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "银价上涨，增强金融属性，传导至国内原油价格，数周内可能影响",
+          "detail": "银价上涨，增强金融属性，传导至国内原油价格，数周内可能影响"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "银价上涨，增强金融属性，传导至国内天然气价格，数周内可能影响",
+          "detail": "银价上涨，增强金融属性，传导至国内天然气价格，数周内可能影响"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "银价上涨，增强金融属性，传导至国内煤炭价格，数周内可能影响",
+          "detail": "银价上涨，增强金融属性，传导至国内煤炭价格，数周内可能影响"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "银价上涨，增强金融属性，传导至国内电力价格，数周内可能影响",
+          "detail": "银价上涨，增强金融属性，传导至国内电力价格，数周内可能影响"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "纽约期银突破61美元/盎司，日内涨0.97%",
+      "time": "2026-10-05 06:02:15",
+      "source": "新浪7×24",
+      "url": [
+        "https://finance.sina.cn/7x24/2026-10-05/detail-iniuciqr9881215.d.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "银价上涨，增强金融属性，传导至国内原油价格，数周内可能影响",
+          "detail": "银价上涨，增强金融属性，传导至国内原油价格，数周内可能影响"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "银价上涨，增强金融属性，传导至国内天然气价格，数周内可能影响",
+          "detail": "银价上涨，增强金融属性，传导至国内天然气价格，数周内可能影响"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "银价上涨，增强金融属性，传导至国内煤炭价格，数周内可能影响",
+          "detail": "银价上涨，增强金融属性，传导至国内煤炭价格，数周内可能影响"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "银价上涨，增强金融属性，传导至国内电力价格，数周内可能影响",
+          "detail": "银价上涨，增强金融属性，传导至国内电力价格，数周内可能影响"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
     }
   ],
   "brief": {
@@ -2248,216 +2773,6 @@
   },
   "pending": [
     {
-      "key": "伊朗石油部长辞职伊朗国家石油公司ceo任代理部长",
-      "item": {
-        "id": "INTL37",
-        "time": "2026-10-05 02:50",
-        "source": "华尔街见闻",
-        "title": "伊朗石油部长辞职，伊朗国家石油公司CEO任代理部长",
-        "summary": "当地时间4日，伊朗总统办公室官员表示，在接受石油部长帕克内贾德的辞呈后，伊朗总统佩泽希齐扬已任命伊朗国家石油公司首席执行官哈米德·博尔德为伊朗石油部代理部长。（央视）",
-        "url": "https://wallstreetcn.com/livenews/3173983",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "据日经新闻报道沙特与阿联酋价格帮助亚洲推高石油储备亚洲零排放委员会azec周四将在菲律宾举行一场部长级会议沙特与阿联酋的高级官员们将参与特",
-      "item": {
-        "id": "INTL42",
-        "time": "2026-10-05 02:04",
-        "source": "华尔街见闻",
-        "title": "据日经新闻报道，沙特与阿联酋价格帮助亚洲推高石油储备。\n\n“亚洲零排放委员会”（AZEC）周四将在菲律宾举行一场部长级会议。\n\n沙特与阿联酋的高级官员们将参与特",
-        "summary": "据日经新闻报道，沙特与阿联酋价格帮助亚洲推高石油储备。\n\n“亚洲零排放委员会”（AZEC）周四将在菲律宾举行一场部长级会议。\n\n沙特与阿联酋的高级官员们将参与特别咨询，预计将表达在石油储备方面合作的意图。",
-        "url": "https://wallstreetcn.com/livenews/3173974",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "allusbombersleaveukairbaseonconcernsofsuspectedterrorplotsmoretankersstruckneariraninthemiddleeast",
-      "item": {
-        "id": "INTL14",
-        "time": "Sun, 04 Oct 2026 21:46:15 GMT",
-        "source": "CNBC 能源",
-        "title": "All U.S. bombers leave UK air base on concerns of suspected terror plots; more tankers struck near Iran in the Middle East",
-        "summary": "Tehran's conditions include a halt to U.S. \"acts of aggression,\" an end to the naval blockade  and economic warfare, and the release of Iranian assets.",
-        "url": "https://www.cnbc.com/2026/10/04/more-tankers-struck-in-gulf-waters-as-iran-reiterates-conditions.html",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "布伦特原油日内涨1%现报10328美元桶",
-      "item": {
-        "id": "FL09",
-        "time": "2026-10-05 06:00:01",
-        "source": "新浪7×24",
-        "title": "布伦特原油日内涨1%，现报103.28美元/桶。",
-        "summary": "布伦特原油日内涨1%，现报103.28美元/桶。",
-        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuciqt6653059.d.html",
-        "category": "国内快讯/地缘宏观",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "施耐德电气洽谈按大约200亿美元收购美国上市的工程软件开发公司ptcinc预计最快将于周一宣布这笔交易英国金融时报",
-      "item": {
-        "id": "INTL36",
-        "time": "2026-10-05 03:37",
-        "source": "华尔街见闻",
-        "title": "施耐德电气洽谈按大约200亿美元收购美国上市的工程软件开发公司PTC Inc.。\n\n预计最快将于周一宣布这笔交易。（英国金融时报）",
-        "summary": "施耐德电气洽谈按大约200亿美元收购美国上市的工程软件开发公司PTC Inc.。\n\n预计最快将于周一宣布这笔交易。（英国金融时报）",
-        "url": "https://wallstreetcn.com/livenews/3173988",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "德国联邦政府4日称德国总理默茨当天访问乌克兰首都基辅承诺对乌追加约10亿欧元军事援助新一批军援重在提升乌克兰防空能力包括联合生产远程武器和用于防御喷气式",
-      "item": {
-        "id": "FL01",
-        "time": "2026-10-05 06:17:18",
-        "source": "新浪7×24",
-        "title": "德国联邦政府4日称，德国总理默茨当天访问乌克兰首都基辅，承诺对乌追加约10亿欧元军事援助。新一批军援重在提升乌克兰防空能力，包括联合生产远程武器和用于防御喷气式",
-        "summary": "【德国承诺向乌克兰再提供10亿欧元军援】德国联邦政府4日称，德国总理默茨当天访问乌克兰首都基辅，承诺对乌追加约10亿欧元军事援助。新一批军援重在提升乌克兰防空能力，包括联合生产远程武器和用于防御喷气式无人机的拦截系统。此外，德国将在冬季来临前向乌方提供约3.5亿欧元，用于修复乌克兰的能源基础设施。（新华社）",
-        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuciqt6660295.d.html",
-        "category": "国内快讯/地缘宏观",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "现货黄金突破4140美元盎司日内涨008%",
-      "item": {
-        "id": "FL02",
-        "time": "2026-10-05 06:02:24",
-        "source": "新浪7×24",
-        "title": "现货黄金突破4140美元/盎司，日内涨0.08%。",
-        "summary": "现货黄金突破4140美元/盎司，日内涨0.08%。",
-        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuciqt6653808.d.html",
-        "category": "国内快讯/地缘宏观",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "现货白银突破61美元盎司日内涨013%",
-      "item": {
-        "id": "FL07",
-        "time": "2026-10-05 06:00:28",
-        "source": "新浪7×24",
-        "title": "现货白银突破61美元/盎司，日内涨0.13%。",
-        "summary": "现货白银突破61美元/盎司，日内涨0.13%。",
-        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuciqr9880681.d.html",
-        "category": "国内快讯/地缘宏观",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "德国承诺向乌克兰再提供10亿欧元军援",
-      "item": {
-        "id": "INTL30",
-        "time": "2026-10-05 06:17",
-        "source": "华尔街见闻",
-        "title": "德国承诺向乌克兰再提供10亿欧元军援",
-        "summary": "德国联邦政府4日称，德国总理默茨当天访问乌克兰首都基辅，承诺对乌追加约10亿欧元军事援助。新一批军援重在提升乌克兰防空能力，包括联合生产远程武器和用于防御喷气式无人机的拦截系统。此外，德国将在冬季来临前向乌方提供约3.5亿欧元，用于修复乌克兰的能源基础设施。（新华社）",
-        "url": "https://wallstreetcn.com/livenews/3173998",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "据cme美联储观察美联储到10月维持利率不变的概率为779%累计加息25个基点的概率为221%美联储到12月维持利率不变的概率为128%累计加",
-      "item": {
-        "id": "FL08",
-        "time": "2026-10-05 06:00:07",
-        "source": "新浪7×24",
-        "title": "据CME“美联储观察”：美联储到10月维持利率不变的概率为77.9%，累计加息25个基点的概率为22.1%。美联储到12月维持利率不变的概率为12.8%，累计加",
-        "summary": "【美联储10月维持利率不变的概率升至77.9%】据CME“美联储观察”：美联储到10月维持利率不变的概率为77.9%，累计加息25个基点的概率为22.1%。美联储到12月维持利率不变的概率为12.8%，累计加息25个基点的概率68.7%，累计加息50个基点的概率为18.5%。",
-        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuciqt6653076.d.html",
-        "category": "国内快讯/地缘宏观",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "周一悉尼盘初美元兑g10货币报价持稳当前日元欧元英镑瑞郎澳元纽元加元大致持平上周五发布了美国非农就业报告",
-      "item": {
-        "id": "INTL40",
-        "time": "2026-10-05 02:28",
-        "source": "华尔街见闻",
-        "title": "周一悉尼盘初，美元兑G10货币报价持稳。\n\n当前，日元、欧元、英镑、瑞郎、澳元、纽元、加元大致持平。\n\n上周五发布了美国非农就业报告。",
-        "summary": "周一悉尼盘初，美元兑G10货币报价持稳。\n\n当前，日元、欧元、英镑、瑞郎、澳元、纽元、加元大致持平。\n\n上周五发布了美国非农就业报告。",
-        "url": "https://wallstreetcn.com/livenews/3173977",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "纽约期金突破4170美元盎司日内涨019%",
-      "item": {
-        "id": "FL03",
-        "time": "2026-10-05 06:02:19",
-        "source": "新浪7×24",
-        "title": "纽约期金突破4170美元/盎司，日内涨0.19%。",
-        "summary": "纽约期金突破4170美元/盎司，日内涨0.19%。",
-        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuciqr9881235.d.html",
-        "category": "国内快讯/地缘宏观",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "纽约期银日内涨1%现报6103美元盎司",
-      "item": {
-        "id": "FL04",
-        "time": "2026-10-05 06:02:18",
-        "source": "新浪7×24",
-        "title": "纽约期银日内涨1%，现报61.03美元/盎司。",
-        "summary": "纽约期银日内涨1%，现报61.03美元/盎司。",
-        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuciqt6653756.d.html",
-        "category": "国内快讯/地缘宏观",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "纽约期银突破61美元盎司日内涨097%",
-      "item": {
-        "id": "FL05",
-        "time": "2026-10-05 06:02:15",
-        "source": "新浪7×24",
-        "title": "纽约期银突破61美元/盎司，日内涨0.97%。",
-        "summary": "纽约期银突破61美元/盎司，日内涨0.97%。",
-        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuciqr9881215.d.html",
-        "category": "国内快讯/地缘宏观",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "春运气象服务专报",
-      "item": {
-        "id": "WX01",
-        "time": "—",
-        "source": "中央气象台·台风",
-        "title": "春运气象服务专报",
-        "summary": "",
-        "url": "http://www.nmc.cn/publish/weather_forecast/swssr.htm",
-        "category": "天气季节",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
       "key": "克普勒9月末中东原油出口量超过伊朗战事前水平",
       "item": {
         "id": "INTL30",
@@ -2761,6 +3076,328 @@
         "summary": "",
         "url": "http://www.nmc.cn/publish/geohazard.html",
         "category": "天气季节",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "周一10月5日欧市尾盘ice英国天然气期货跌273%ttf基准荷兰天然气期货跌396%ice欧盟碳排放交易许可期货价格跌059%",
+      "item": {
+        "id": "INTL35",
+        "time": "2026-10-05 23:45",
+        "source": "华尔街见闻",
+        "title": "周一（10月5日）欧市尾盘，ICE英国天然气期货跌2.73%，TTF基准荷兰天然气期货跌3.96%，ICE欧盟碳排放交易许可（期货价格）跌0.59%。",
+        "summary": "周一（10月5日）欧市尾盘，ICE英国天然气期货跌2.73%，TTF基准荷兰天然气期货跌3.96%，ICE欧盟碳排放交易许可（期货价格）跌0.59%。",
+        "url": "https://wallstreetcn.com/livenews/3174158",
+        "category": "供需库存",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "乌克兰空军发言人尤里伊格纳特5日接受媒体采访时说乌克兰配备人工智能的炮塔已成功拦截俄罗斯新型喷气式无人机伊格纳特说人工智能等创新技术的运用能有效避免人",
+      "item": {
+        "id": "FL08",
+        "time": "2026-10-05 23:43:51",
+        "source": "新浪7×24",
+        "title": "乌克兰空军发言人尤里·伊格纳特5日接受媒体采访时说，乌克兰配备人工智能的炮塔已成功拦截俄罗斯新型喷气式无人机。伊格纳特说：“人工智能等创新技术的运用能有效避免人",
+        "summary": "【乌称人工智能炮塔首次成功拦截俄无人机】乌克兰空军发言人尤里·伊格纳特5日接受媒体采访时说，乌克兰配备人工智能的炮塔已成功拦截俄罗斯新型喷气式无人机。伊格纳特说：“人工智能等创新技术的运用能有效避免人为失误。机器视觉被用于击落无人机，人工智能甚至可以锁定喷气式无人机。”（新华社）",
+        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuezxx6145101.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "hormuzlngflowsstilldownmorethan75%despiterebound",
+      "item": {
+        "id": "INTL09",
+        "time": "Mon, 05 Oct 2026 05:30:00 -0500",
+        "source": "OilPrice",
+        "title": "Hormuz LNG Flows Still Down More Than 75% Despite Rebound",
+        "summary": "LNG traffic at the Strait of Hormuz appears to be ticking up despite increased threats to shipments in the chokepoint in recent days. At least three LNG carriers have transited the Strait of Hormuz outbound since the end of last week, tanke",
+        "url": "https://oilprice.com/Latest-Energy-News/World-News/Hormuz-LNG-Flows-Still-Down-More-Than-75-Despite-Rebound.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "opec+holdsnovemberquotaat3101millionbarrelsdaily",
+      "item": {
+        "id": "INTL12",
+        "time": "Mon, 05 Oct 2026 02:00:00 -0500",
+        "source": "OilPrice",
+        "title": "OPEC+ Holds November Quota at 31.01 Million Barrels Daily",
+        "summary": "OPEC+ agreed on Sunday to keep its oil production quota for next month unchanged from this one, in line with expectations, after it unwound its production cuts earlier this year in a bid to offset the deepening supply shortage from the Midd",
+        "url": "https://oilprice.com/Latest-Energy-News/World-News/OPEC-Holds-November-Quota-at-3101-Million-Barrels-Daily.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "花旗货币策略师们看跌欧元兑美元称美联储货币政策立场更加鹰派美国与伊朗紧张局势升级都将支持这样的展望",
+      "item": {
+        "id": "INTL34",
+        "time": "2026-10-05 23:50",
+        "source": "华尔街见闻",
+        "title": "花旗货币策略师们看跌欧元兑美元，称美联储货币政策立场更加鹰派、美国与伊朗紧张局势升级都将支持这样的展望。",
+        "summary": "花旗货币策略师们看跌欧元兑美元，称美联储货币政策立场更加鹰派、美国与伊朗紧张局势升级都将支持这样的展望。",
+        "url": "https://wallstreetcn.com/livenews/3174162",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "俄罗斯国防部称俄军击中了乌克兰皮夫登内港内的一艘货船俄新社",
+      "item": {
+        "id": "INTL37",
+        "time": "2026-10-05 23:38",
+        "source": "华尔街见闻",
+        "title": "俄罗斯国防部称，俄军击中了乌克兰皮夫登内港内的一艘货船。（俄新社）",
+        "summary": "俄罗斯国防部称，俄军击中了乌克兰皮夫登内港内的一艘货船。（俄新社）",
+        "url": "https://wallstreetcn.com/livenews/3174154",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "也门政府军称收复红海港口城市穆哈",
+      "item": {
+        "id": "INTL42",
+        "time": "2026-10-05 23:24",
+        "source": "华尔街见闻",
+        "title": "也门政府军称收复红海港口城市穆哈",
+        "summary": "也门政府军5日称，在激烈战斗后，政府军已从胡塞武装手中收复塔伊兹省的红海港口城市穆哈。（新华社）",
+        "url": "https://wallstreetcn.com/livenews/3174146",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "道达尔能源ceo莫桑比克液化天然气项目新增两条液化生产线的实施难度较低",
+      "item": {
+        "id": "FL02",
+        "time": "2026-10-05 23:58:17",
+        "source": "新浪7×24",
+        "title": "道达尔能源CEO：莫桑比克液化天然气项目新增两条液化生产线的实施难度较低。",
+        "summary": "道达尔能源CEO：莫桑比克液化天然气项目新增两条液化生产线的实施难度较低。",
+        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuezxx6151024.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "俄新社援引俄罗斯国防部称俄军击中了乌克兰皮夫登内港内的一艘货船",
+      "item": {
+        "id": "FL11",
+        "time": "2026-10-05 23:36:41",
+        "source": "新浪7×24",
+        "title": "俄新社援引俄罗斯国防部称，俄军击中了乌克兰皮夫登内港内的一艘货船。",
+        "summary": "  俄新社援引俄罗斯国防部称，俄军击中了乌克兰皮夫登内港内的一艘货船。",
+        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuezxv9369351.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "道达尔能源ceo我们比以往任何时候都致力于中东地区同时更加聚焦出口通道",
+      "item": {
+        "id": "FL09",
+        "time": "2026-10-05 23:43:34",
+        "source": "新浪7×24",
+        "title": "道达尔能源CEO：我们比以往任何时候都致力于中东地区，同时更加聚焦出口通道。",
+        "summary": "  道达尔能源CEO：我们比以往任何时候都致力于中东地区，同时更加聚焦出口通道。",
+        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuezxv9372468.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "possiblefirereportedatsaudirefineryasattackclaimscirculate",
+      "item": {
+        "id": "INTL01",
+        "time": "Mon, 05 Oct 2026 10:31:00 -0500",
+        "source": "OilPrice",
+        "title": "Possible Fire Reported at Saudi Refinery as Attack Claims Circulate",
+        "summary": "Reports of a possible attack on Saudi Arabia's Petro Rabigh refining and petrochemical complex north of Jeddah emerged on Monday, although Saudi authorities have so far not confirmed that an attack took place. Iran's Tasnim news agency, cit",
+        "url": "https://oilprice.com/Latest-Energy-News/World-News/Possible-Fire-Reported-at-Saudi-Refinery-as-Attack-Claims-Circulate.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "houthisclaimstrikeonaramcofacilityinriyadhasyemenfightingescalates",
+      "item": {
+        "id": "INTL06",
+        "time": "Mon, 05 Oct 2026 08:30:00 -0500",
+        "source": "OilPrice",
+        "title": "Houthis Claim Strike on Aramco Facility in Riyadh as Yemen Fighting Escalates",
+        "summary": "Despite reports of surging oil flows out of the Strait of Hormuz, tensions in the Middle East remain high as the fresh Saudi-Houthi escalation threatens to unravel recent success in restoring oil exports. This weekend, the Iran-aligned Hout",
+        "url": "https://oilprice.com/Latest-Energy-News/World-News/Houthis-Claim-Strike-on-Aramco-Facility-in-Riyadh-as-Yemen-Fighting-Escalates.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "southkoreaplanstotriplecanadiancrudeimportsassaudishareslips",
+      "item": {
+        "id": "INTL07",
+        "time": "Mon, 05 Oct 2026 07:30:00 -0500",
+        "source": "OilPrice",
+        "title": "South Korea Plans to Triple Canadian Crude Imports as Saudi Share Slips",
+        "summary": "The share of Saudi crude in South Korea’s oil imports dipped below 30% for the first time since 2021, as the resource-poor G7 economy moved to diversify supplies amid the Middle East crisis. In the period January to August, Saudi crude oil ",
+        "url": "https://oilprice.com/Latest-Energy-News/World-News/South-Korea-Plans-to-Triple-Canadian-Crude-Imports-as-Saudi-Share-Slips.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "russiaplaguewhatweknowaboutthesuspectedcasereportedlylinkedtoalabworkersdeath",
+      "item": {
+        "id": "INTL17",
+        "time": "Mon, 05 Oct 2026 15:56:42 GMT",
+        "source": "CNBC 能源",
+        "title": "Russia plague: What we know about the suspected case reportedly linked to a lab worker’s death",
+        "summary": "According to local media reports, as many as 189 people have also been placed under medical observation in Irkutsk in eastern Russia.",
+        "url": "https://www.cnbc.com/2026/10/05/russia-plague-suspected-case-irkutsk.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "城堡证券欧洲中东和非洲固定收益销售主管nohshadshah认为美国国债实际利率上升也可能考验ai热潮据其估算今年超大规模云服务商约三分之一的",
+      "item": {
+        "id": "INTL32",
+        "time": "2026-10-05 23:52",
+        "source": "华尔街见闻",
+        "title": "城堡证券欧洲、中东和非洲固定收益销售主管Nohshad Shah认为，（美国国债）实际利率上升也可能考验AI热潮。\n\n据其估算，今年超大规模云服务商约三分之一的",
+        "summary": "城堡证券欧洲、中东和非洲固定收益销售主管Nohshad Shah认为，（美国国债）实际利率上升也可能考验AI热潮。\n\n据其估算，今年超大规模云服务商约三分之一的资本支出依靠债务融资，因此随着融资成本上升，未来产生现金流的能力将变得更加重要。\n\n他重申看好微软和谷歌等超大规模云服务商，因为这些公司的商业模式并不只是出售AI模型使用权。",
+        "url": "https://wallstreetcn.com/livenews/3174164",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "俄罗斯总统普京批准裕信银行拆分其俄罗斯业务",
+      "item": {
+        "id": "INTL38",
+        "time": "2026-10-05 23:36",
+        "source": "华尔街见闻",
+        "title": "俄罗斯总统普京批准裕信银行拆分其俄罗斯业务。",
+        "summary": "俄罗斯总统普京批准裕信银行拆分其俄罗斯业务。",
+        "url": "https://wallstreetcn.com/livenews/3174152",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "伊朗敌人的下一次误判将引发新的战线和更大的意外",
+      "item": {
+        "id": "INTL39",
+        "time": "2026-10-05 23:35",
+        "source": "华尔街见闻",
+        "title": "伊朗：敌人的下一次误判将引发新的战线和更大的意外",
+        "summary": "伊朗最高国家安全委员会秘书穆赫辛·雷扎伊在X平台发文称，敌方针对伊朗的下一次“错误行动”将带来“新的战线和更大的意外”。雷扎伊重申，敌方此前对伊朗的每一次误判都导致了“惨败”。",
+        "url": "https://wallstreetcn.com/livenews/3174151",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "对于近期美债收益率升至数十年高位城堡证券认为背后的原因是美国经济增长强劲且资本争夺加剧并非市场对通胀的担忧上升城堡证券欧洲中东和非洲固定收益销售主管n",
+      "item": {
+        "id": "FL04",
+        "time": "2026-10-05 23:51:07",
+        "source": "新浪7×24",
+        "title": "对于近期美债收益率升至数十年高位，城堡证券认为，背后的原因是美国经济增长强劲且资本争夺加剧，并非市场对通胀的担忧上升。城堡证券欧洲、中东和非洲固定收益销售主管N",
+        "summary": "【城堡证券：美债收益率上升源于经济走强 并非通胀担忧加剧所致】对于近期美债收益率升至数十年高位，城堡证券认为，背后的原因是美国经济增长强劲且资本争夺加剧，并非市场对通胀的担忧上升。城堡证券欧洲、中东和非洲固定收益销售主管Nohshad Shah周一在给客户的报告中写道，9月10年期美债收益率的升幅几乎全部来自实际收益率，而通胀预期相对稳定。实际收益率（即经通胀调整后的收益率上升）反映出美国经济受到财政宽松、金融环境宽松以及人工智能领域巨额投资的支撑。他写道，市场正在“评估经济",
+        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuezxv9375722.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "俄罗斯总统普京签署命令对裕信银行俄罗斯子公司实施重组",
+      "item": {
+        "id": "FL10",
+        "time": "2026-10-05 23:39:12",
+        "source": "新浪7×24",
+        "title": "俄罗斯总统普京签署命令，对裕信银行俄罗斯子公司实施重组。",
+        "summary": "俄罗斯总统普京签署命令，对裕信银行俄罗斯子公司实施重组。",
+        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuezxx6143057.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "伊朗最高国家安全委员会秘书穆赫辛雷扎伊在x平台发文称敌方针对伊朗的下一次错误行动将带来新的战线和更大的意外雷扎伊重申敌方此前对伊朗的每一次误判都",
+      "item": {
+        "id": "FL12",
+        "time": "2026-10-05 23:36:01",
+        "source": "新浪7×24",
+        "title": "伊朗最高国家安全委员会秘书穆赫辛·雷扎伊在X平台发文称，敌方针对伊朗的下一次“错误行动”将带来“新的战线和更大的意外”。雷扎伊重申，敌方此前对伊朗的每一次误判都",
+        "summary": "【伊朗：敌人的下一次误判将引发新的战线和更大的意外】伊朗最高国家安全委员会秘书穆赫辛·雷扎伊在X平台发文称，敌方针对伊朗的下一次“错误行动”将带来“新的战线和更大的意外”。雷扎伊重申，敌方此前对伊朗的每一次误判都导致了“惨败”。",
+        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuezxx6141556.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "市场消息俄罗斯总统普京批准裕信银行拆分其俄罗斯业务",
+      "item": {
+        "id": "FL13",
+        "time": "2026-10-05 23:35:50",
+        "source": "新浪7×24",
+        "title": "市场消息：俄罗斯总统普京批准裕信银行拆分其俄罗斯业务。",
+        "summary": "市场消息：俄罗斯总统普京批准裕信银行拆分其俄罗斯业务。",
+        "url": "—",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "以色列外交部发言人领事馆仍将按原计划于10月8日周四关闭",
+      "item": {
+        "id": "FL16",
+        "time": "2026-10-05 23:27:41",
+        "source": "新浪7×24",
+        "title": "以色列外交部发言人：领事馆仍将按原计划于 10 月 8 日周四关闭。",
+        "summary": "  以色列外交部发言人：领事馆仍将按原计划于 10 月 8 日周四关闭。",
+        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuezxx6138363.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "随着市场对法国财政和政治局势的担忧蔓延至信贷市场法国银行债券的违约保险成本超过了其他欧洲银行债券彭博汇编数据显示周一1000万欧元1120万美元法国兴",
+      "item": {
+        "id": "FL14",
+        "time": "2026-10-05 23:35:04",
+        "source": "新浪7×24",
+        "title": "随着市场对法国财政和政治局势的担忧蔓延至信贷市场，法国银行债券的违约保险成本超过了其他欧洲银行债券。彭博汇编数据显示，周一1000万欧元（1120万美元）法国兴",
+        "summary": "【财政担忧外溢，法国银行债券信用违约保护成本超过其他欧洲大型银行】随着市场对法国财政和政治局势的担忧蔓延至信贷市场，法国银行债券的违约保险成本超过了其他欧洲银行债券。彭博汇编数据显示，周一1000万欧元（1120万美元）法国兴业银行优先债5年期违约保护合约的年成本达到10.3万欧元，比德意志银行类似债券的违约保护成本高出约1.65万欧元。而8月底时两者的成本还完全相同。数据显示，法国巴黎银行和法国农业信贷银行的信用违约掉期(CDS)利差也远高于英国、德国、瑞士和西班牙主要银行",
+        "url": "https://finance.sina.cn/7x24/2026-10-05/detail-iniuezxv9368584.d.html",
+        "category": "国内快讯/地缘宏观",
         "raw_price": null
       },
       "attempts": 0
