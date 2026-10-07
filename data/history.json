@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-07 15:13",
+    "oil": "711.5 元/桶",
+    "oil_chg": "+2.21%",
+    "oil_up": true,
+    "gas": "3.16 $/MMBtu",
+    "gas_chg": "+1.48%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "霍尔木兹海峡原油出口反弹易受伊朗油轮袭击（当日37事件/本档+12）"
+  },
+  {
     "time": "2026-10-07 07:02",
     "oil": "711.5 元/桶",
     "oil_chg": "+2.21%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日35事件/本档+10）"
-  },
-  {
-    "time": "2026-09-29 09:55",
-    "oil": "99.31 $/桶",
-    "oil_chg": "+1.52%",
-    "oil_up": true,
-    "gas": "3.14 $/MMBtu",
-    "gas_chg": "+0.97%",
-    "gas_up": true,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日25事件/本档+14）"
   }
 ]
