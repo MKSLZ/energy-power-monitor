@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-09 03:17",
+    "oil": "104.41 $/桶",
+    "oil_chg": "+4.20%",
+    "oil_up": true,
+    "gas": "3.15 $/MMBtu",
+    "gas_chg": "-1.72%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日13事件/本档+13）"
+  },
+  {
     "time": "2026-10-08 19:21",
     "oil": "758.1 元/桶",
     "oil_chg": "+2.81%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日9事件/本档+9）"
-  },
-  {
-    "time": "2026-09-30 21:40",
-    "oil": "711.5 元/桶",
-    "oil_chg": "+2.21%",
-    "oil_up": true,
-    "gas": "2.99 $/MMBtu",
-    "gas_chg": "-0.73%",
-    "gas_up": false,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "WTI原油期货收报89.38美元/桶，天然气期货收报3.01（当日42事件/本档+9）"
   }
 ]
