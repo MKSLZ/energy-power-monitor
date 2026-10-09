@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-10 07:15",
+    "oil": "104.59 $/桶",
+    "oil_chg": "+0.30%",
+    "oil_up": true,
+    "gas": "3.21 $/MMBtu",
+    "gas_chg": "+1.20%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "霍尔木兹海峡油轮袭击事件升级（当日21事件/本档+11）"
+  },
+  {
     "time": "2026-10-10 02:49",
     "oil": "104.05 $/桶",
     "oil_chg": "-0.22%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "WTI 11月原油期货收报92.87美元/桶。\n\nNYMEX（当日20事件/本档+11）"
-  },
-  {
-    "time": "2026-10-02 02:53",
-    "oil": "711.5 元/桶",
-    "oil_chg": "+2.21%",
-    "oil_up": true,
-    "gas": "2.95 $/MMBtu",
-    "gas_chg": "-2.38%",
-    "gas_up": false,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "WTI 11月原油期货收报92.87美元/桶。\n\nNYMEX（当日9事件/本档+9）"
   }
 ]
