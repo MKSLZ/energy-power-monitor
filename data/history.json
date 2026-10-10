@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-11 04:04",
+    "oil": "104.59 $/桶",
+    "oil_chg": "+0.30%",
+    "oil_up": true,
+    "gas": "3.21 $/MMBtu",
+    "gas_chg": "+1.20%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "胡塞武装称沙特空袭也门萨那机场（当日13事件/本档+13）"
+  },
+  {
     "time": "2026-10-10 21:38",
     "oil": "104.59 $/桶",
     "oil_chg": "+0.30%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日13事件/本档+13）"
-  },
-  {
-    "time": "2026-10-02 21:51",
-    "oil": "711.5 元/桶",
-    "oil_chg": "+2.21%",
-    "oil_up": true,
-    "gas": "2.98 $/MMBtu",
-    "gas_chg": "+0.40%",
-    "gas_up": true,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "WTI 11月原油期货收报92.87美元/桶。\n\nNYMEX（当日32事件/本档+5）"
   }
 ]
