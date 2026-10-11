@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-12 04:15",
+    "oil": "104.59 $/桶",
+    "oil_chg": "+0.30%",
+    "oil_up": true,
+    "gas": "3.21 $/MMBtu",
+    "gas_chg": "+1.20%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "沙特与卡塔尔签署谅解备忘录（当日14事件/本档+14）"
+  },
+  {
     "time": "2026-10-11 22:01",
     "oil": "104.59 $/桶",
     "oil_chg": "+0.30%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "也门首都萨那遭沙特空袭（当日11事件/本档+11）"
-  },
-  {
-    "time": "2026-10-03 20:31",
-    "oil": "711.5 元/桶",
-    "oil_chg": "+2.21%",
-    "oil_up": true,
-    "gas": "3.04 $/MMBtu",
-    "gas_chg": "+2.46%",
-    "gas_up": true,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日45事件/本档+8）"
   }
 ]
