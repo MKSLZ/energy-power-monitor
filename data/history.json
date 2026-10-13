@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-14 03:53",
+    "oil": "106.05 $/桶",
+    "oil_chg": "-0.57%",
+    "oil_up": false,
+    "gas": "3.32 $/MMBtu",
+    "gas_chg": "+4.77%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "特朗普指责也门胡塞武装推高油价（当日9事件/本档+9）"
+  },
+  {
     "time": "2026-10-13 19:44",
     "oil": "727.9 元/桶",
     "oil_chg": "-0.56%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "也门胡塞武装发言人称沙特发动多轮空袭（当日24事件/本档+12）"
-  },
-  {
-    "time": "2026-10-05 01:36",
-    "oil": "711.5 元/桶",
-    "oil_chg": "+2.21%",
-    "oil_up": true,
-    "gas": "3.04 $/MMBtu",
-    "gas_chg": "+2.46%",
-    "gas_up": true,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "也门胡塞武装发言人称沙特发动多轮空袭（当日12事件/本档+12）"
   }
 ]
