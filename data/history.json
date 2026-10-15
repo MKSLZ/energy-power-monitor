@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-16 01:47",
+    "oil": "106.01 $/桶",
+    "oil_chg": "-0.05%",
+    "oil_up": false,
+    "gas": "3.91 $/MMBtu",
+    "gas_chg": "-1.49%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "伊朗海军：一艘油轮在霍尔木兹海峡东部海域起火（当日13事件/本档+13）"
+  },
+  {
     "time": "2026-10-15 20:40",
     "oil": "712.6 元/桶",
     "oil_chg": "-1.74%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "霍尔木兹海峡原油出口反弹易受伊朗油轮袭击（当日50事件/本档+13）"
-  },
-  {
-    "time": "2026-10-07 15:13",
-    "oil": "711.5 元/桶",
-    "oil_chg": "+2.21%",
-    "oil_up": true,
-    "gas": "3.16 $/MMBtu",
-    "gas_chg": "+1.48%",
-    "gas_up": true,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "霍尔木兹海峡原油出口反弹易受伊朗油轮袭击（当日37事件/本档+12）"
   }
 ]
