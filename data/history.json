@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-18 20:04",
+    "oil": "109.93 $/桶",
+    "oil_chg": "+3.78%",
+    "oil_up": true,
+    "gas": "3.75 $/MMBtu",
+    "gas_chg": "-4.39%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "伊朗革命卫队：又一超级油轮在霍尔木兹海峡触雷起火（当日56事件/本档+11）"
+  },
+  {
     "time": "2026-10-18 13:53",
     "oil": "109.93 $/桶",
     "oil_chg": "+3.78%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "胡塞武装称沙特空袭也门萨那机场（当日49事件/本档+11）"
-  },
-  {
-    "time": "2026-10-11 15:10",
-    "oil": "104.59 $/桶",
-    "oil_chg": "+0.30%",
-    "oil_up": true,
-    "gas": "3.21 $/MMBtu",
-    "gas_chg": "+1.20%",
-    "gas_up": true,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "胡塞武装称沙特空袭也门萨那机场（当日38事件/本档+13）"
   }
 ]
