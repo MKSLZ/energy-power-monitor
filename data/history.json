@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-19 22:40",
+    "oil": "108.56 $/桶",
+    "oil_chg": "-1.19%",
+    "oil_up": false,
+    "gas": "3.73 $/MMBtu",
+    "gas_chg": "-0.82%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "美国能源部长Wright：俄罗斯帮助世界的唯一方式就是（与乌（当日53事件/本档+10）"
+  },
+  {
     "time": "2026-10-19 14:10",
     "oil": "107.48 $/桶",
     "oil_chg": "-2.17%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "伊朗革命卫队总司令艾哈迈德·瓦希迪：任何域外大国都无权威胁、（当日23事件/本档+9）"
-  },
-  {
-    "time": "2026-10-13 05:45",
-    "oil": "106.31 $/桶",
-    "oil_chg": "+1.52%",
-    "oil_up": true,
-    "gas": "3.18 $/MMBtu",
-    "gas_chg": "-1.27%",
-    "gas_up": false,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "伊朗革命卫队总司令艾哈迈德·瓦希迪：任何域外大国都无权威胁、（当日14事件/本档+14）"
   }
 ]
