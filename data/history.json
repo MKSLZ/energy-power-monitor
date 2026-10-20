@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-20 14:00",
+    "oil": "110.58 $/桶",
+    "oil_chg": "+0.94%",
+    "oil_up": true,
+    "gas": "3.71 $/MMBtu",
+    "gas_chg": "-0.94%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日33事件/本档+10）"
+  },
+  {
     "time": "2026-10-20 09:07",
     "oil": "109.72 $/桶",
     "oil_chg": "+0.15%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "特朗普指责也门胡塞武装推高油价（当日23事件/本档+14）"
-  },
-  {
-    "time": "2026-10-14 03:53",
-    "oil": "106.05 $/桶",
-    "oil_chg": "-0.57%",
-    "oil_up": false,
-    "gas": "3.32 $/MMBtu",
-    "gas_chg": "+4.77%",
-    "gas_up": true,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "特朗普指责也门胡塞武装推高油价（当日9事件/本档+9）"
   }
 ]
