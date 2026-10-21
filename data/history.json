@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-21 14:01",
+    "oil": "110.39 $/桶",
+    "oil_chg": "+1.47%",
+    "oil_up": true,
+    "gas": "3.69 $/MMBtu",
+    "gas_chg": "+0.03%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "胡塞武装称沙特战机对多省发动空袭和导弹袭击（当日36事件/本档+13）"
+  },
+  {
     "time": "2026-10-21 06:18",
     "oil": "109.47 $/桶",
     "oil_chg": "-0.07%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日22事件/本档+11）"
-  },
-  {
-    "time": "2026-10-15 02:00",
-    "oil": "106.71 $/桶",
-    "oil_chg": "+0.96%",
-    "oil_up": true,
-    "gas": "3.55 $/MMBtu",
-    "gas_chg": "-1.39%",
-    "gas_up": false,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日11事件/本档+11）"
   }
 ]
