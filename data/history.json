@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-28 09:18",
+    "oil": "110.66 $/桶",
+    "oil_chg": "+1.14%",
+    "oil_up": true,
+    "gas": "3.5 $/MMBtu",
+    "gas_chg": "+1.24%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "美国石油协会（API）将发布原油库存周报（当日20事件/本档+8）"
+  },
+  {
     "time": "2026-10-28 04:41",
     "oil": "109.69 $/桶",
     "oil_chg": "-0.95%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "胡塞武装称沙特战机对多省发动空袭和导弹袭击（当日46事件/本档+10）"
-  },
-  {
-    "time": "2026-10-21 14:01",
-    "oil": "110.39 $/桶",
-    "oil_chg": "+1.47%",
-    "oil_up": true,
-    "gas": "3.69 $/MMBtu",
-    "gas_chg": "+0.03%",
-    "gas_up": true,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "胡塞武装称沙特战机对多省发动空袭和导弹袭击（当日36事件/本档+13）"
   }
 ]
