@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-29 07:12",
+    "oil": "110.62 $/桶",
+    "oil_chg": "+1.10%",
+    "oil_up": true,
+    "gas": "3.46 $/MMBtu",
+    "gas_chg": "-0.32%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "中东冲突冲击全球天然气供需格局（当日22事件/本档+13）"
+  },
+  {
     "time": "2026-10-29 02:51",
     "oil": "111.62 $/桶",
     "oil_chg": "+2.02%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "中俄总理第三十一次定期会晤联合公报：支持两国企业深化和拓展石（当日30事件/本档+8）"
-  },
-  {
-    "time": "2026-10-22 06:20",
-    "oil": "110.16 $/桶",
-    "oil_chg": "+1.26%",
-    "oil_up": true,
-    "gas": "3.6 $/MMBtu",
-    "gas_chg": "+0.00%",
-    "gas_up": null,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "中俄总理第三十一次定期会晤联合公报：支持两国企业深化和拓展石（当日22事件/本档+10）"
   }
 ]
