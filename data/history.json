@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-11-04 04:06",
+    "oil": "104.55 $/桶",
+    "oil_chg": "-0.21%",
+    "oil_up": false,
+    "gas": "3.41 $/MMBtu",
+    "gas_chg": "+1.73%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "WTI 12月原油期货收报96.09美元/桶。NYMEX 1（当日11事件/本档+11）"
+  },
+  {
     "time": "2026-11-03 19:54",
     "oil": "698.5 元/桶",
     "oil_chg": "+0.52%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "美军中央司令部司令走访霍尔木兹海峡，美助力海湾伙伴原油出口超（当日45事件/本档+12）"
-  },
-  {
-    "time": "2026-10-26 08:19",
-    "oil": "110.21 $/桶",
-    "oil_chg": "-1.33%",
-    "oil_up": false,
-    "gas": "3.46 $/MMBtu",
-    "gas_chg": "-1.34%",
-    "gas_up": false,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "美军中央司令部司令走访霍尔木兹海峡，美助力海湾伙伴原油出口超（当日33事件/本档+10）"
   }
 ]
