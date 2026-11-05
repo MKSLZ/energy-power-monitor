@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-11-06 04:40",
+    "oil": "98.41 $/桶",
+    "oil_chg": "+4.00%",
+    "oil_up": true,
+    "gas": "3.41 $/MMBtu",
+    "gas_chg": "-0.73%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "布伦特原油期货上涨逾4美元，投资者评估伊朗战争走向及油轮遇袭（当日11事件/本档+11）"
+  },
+  {
     "time": "2026-11-05 20:16",
     "oil": "624.4 元/桶",
     "oil_chg": "-2.19%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "美国石油协会（API）将发布原油库存周报（当日12事件/本档+12）"
-  },
-  {
-    "time": "2026-10-27 23:53",
-    "oil": "109.38 $/桶",
-    "oil_chg": "-1.23%",
-    "oil_up": false,
-    "gas": "3.49 $/MMBtu",
-    "gas_chg": "-0.65%",
-    "gas_up": false,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日44事件/本档+10）"
   }
 ]
