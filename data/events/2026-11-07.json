@@ -1,9 +1,21 @@
 {
   "date": "2026-11-07",
-  "updated_at": "2026-11-07 03:58",
+  "updated_at": "2026-11-07 09:54",
   "seen_raw_keys": [
+    "fgenexantecaseesslimchanceofusirandeal",
+    "gielauncheselsabringingeuropeangasstorageandlngdatatoyourphone",
+    "israelselectiondisputeescalatesamidclaimsofforeigninterference",
+    "lngimportsmakeupincreasingshareofcolombiasnaturalgassupply",
+    "oilpricesplungeasuselectionsshakeuptheiranwar",
+    "pressreleaseupdatesstorageandlngmaps",
+    "theiranwarisntoverbutoiltradersarealreadypricinginpeace",
+    "trumpsiranstrategyreachesacriticalcrossroadsaftermidtermdefeat",
     "wti12月原油期货收涨031美元涨幅034%报9083美元桶本周累跌超1276%nymex12月天然气期货收报29980美元百万",
     "会谈对象包括托克维多摩科瑞和阿布扎比国家石油公司此举旨在缓解运费和油价压力",
+    "关于开展2026年12月2027年3月面向江浙赣皖市场姜家湾阀室管道天然气竞价交易的公告",
+    "关于开展安平管道天然气竞价交易的公告",
+    "关于开展靖边管道天然气竞价交易的公告",
+    "卡拉斯任何俄乌和平协议的落实都需要欧盟参与",
     "布伦特原油期货结算价为每桶9832美元上涨3美分涨幅003%",
     "当地时间11月6日美国宣布新一轮与伊朗相关的制裁措施央视新闻",
     "泽连斯基称将继续打击俄炼油厂以回应俄军袭击",
@@ -11,11 +23,14 @@
     "炼油商称美国消费者正艰难扛过油价冲击",
     "熊力天然气是新型能源体系建设的关键支撑力量",
     "熊维中东冲突冲击全球天然气供需格局高气价与区域溢价或将持续",
+    "生物天然气迈入产业化快车道统一价格指数破解行业痛点",
     "石油交易商正与美方磋商使用受制裁油轮事宜",
     "纽约商品交易所12月柴油期货结算价为每加仑43317美元12月天然气期货结算价为每百万英热单位29980美元12月交割的wti原油期货结算价为每桶90",
+    "美国总统特朗普谈伊朗我们正在与伊朗对话",
     "美国财政部制裁nianationscurrencyltd和bgalaxy公司皆为位于加拿大的涉伊朗实体",
     "美国财政部网站显示美国对伊朗实施的新制裁针对总部位于加拿大的8家实体",
     "美国财政部美国对伊朗实施新制裁",
+    "美媒担心电荒印度要求煤炭储备增加两倍",
     "郑洪弢2026年非采暖季国内天然气供需整体偏紧全行业应增强应变能力"
   ],
   "events": [
@@ -783,6 +798,465 @@
       "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
       "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
       "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "美媒：担心电荒，印度要求煤炭储备增加两倍",
+      "time": "—",
+      "source": "CCTD",
+      "url": [
+        "https://www.cctd.com.cn/show-113-257835-1.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "即时",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "印度电荒增加煤炭储备需求，但对国内原油影响有限，无直接传导路径",
+          "detail": "印度电荒增加煤炭储备需求，但对国内原油影响有限，无直接传导路径"
+        },
+        "gas": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "印度电荒增加煤炭储备需求，但对国内天然气影响有限，无直接传导路径",
+          "detail": "印度电荒增加煤炭储备需求，但对国内天然气影响有限，无直接传导路径"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "印度电荒增加煤炭需求，可能提升国际煤价，间接影响国内动力煤价格，数周内显现",
+          "detail": "印度电荒增加煤炭需求，可能提升国际煤价，间接影响国内动力煤价格，数周内显现"
+        },
+        "power": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "印度电荒增加煤炭需求，但对国内电力市场影响有限，无直接传导路径",
+          "detail": "印度电荒增加煤炭需求，但对国内电力市场影响有限，无直接传导路径"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2021 动力煤暴涨与保供限价",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "生物天然气迈入产业化快车道 统一价格指数破解行业痛点",
+      "time": "—",
+      "source": "上海石油天然气交易中心",
+      "url": [
+        "http://www.shpgx.com/html/gsxw/20260623/9378.html"
+      ],
+      "nature": "数据公布",
+      "impacts": {
+        "oil": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "即时",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "生物天然气产业化对原油市场影响有限，无直接传导路径",
+          "detail": "生物天然气产业化对原油市场影响有限，无直接传导路径"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "生物天然气产业化推进，可能增加国内天然气供应，但统一价格指数对市场影响有限，数周",
+          "detail": "生物天然气产业化推进，可能增加国内天然气供应，但统一价格指数对市场影响有限，数周内显现"
+        },
+        "coal": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "生物天然气产业化对煤炭市场影响有限，无直接传导路径",
+          "detail": "生物天然气产业化对煤炭市场影响有限，无直接传导路径"
+        },
+        "power": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "生物天然气产业化对电力市场影响有限，无直接传导路径",
+          "detail": "生物天然气产业化对电力市场影响有限，无直接传导路径"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2022 俄乌冲突推升 TTF 与进口 LNG 成本",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "伊朗战争尚未结束，但石油交易员已经开始为和平定价",
+      "time": "Fri, 06 Nov 2026 09:28:00 -0600",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Energy/Energy-General/The-Iran-War-Isnt-Over-but-Oil-Traders-Are-Already-Pricing-In-Peace.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "中东地缘政治紧张，原油供应风险增加，进口到岸平价上升，国内原油价格跟涨，数日内；",
+          "detail": "中东地缘政治紧张，原油供应风险增加，进口到岸平价上升，国内原油价格跟涨，数日内；长协保供缓冲强，但现货价格受影响较大"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "中东地缘政治紧张导致LNG进口成本上升，国内天然气价格跟涨，数日内；长协保供缓冲",
+          "detail": "中东地缘政治紧张导致LNG进口成本上升，国内天然气价格跟涨，数日内；长协保供缓冲强，但现货价格受影响较大"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "中东地缘政治紧张，能源替代预期增强，进口煤价差预期上升，国内煤炭价格跟涨，数日内",
+          "detail": "中东地缘政治紧张，能源替代预期增强，进口煤价差预期上升，国内煤炭价格跟涨，数日内；长协保供缓冲强，但现货价格受影响较小"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "油气价格上涨导致煤电度电燃料成本上升，广东等国内现货电价跟涨，数日内；长协保供缓",
+          "detail": "油气价格上涨导致煤电度电燃料成本上升，广东等国内现货电价跟涨，数日内；长协保供缓冲强，但现货价格受影响较大"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "特朗普的伊朗战略在中期选举失败后达到关键十字路口",
+      "time": "Fri, 06 Nov 2026 09:00:00 -0600",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Geopolitics/Middle-East/Trumps-Iran-Strategy-Reaches-a-Critical-Crossroads-After-Midterm-Defeat.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美国伊朗关系紧张，原油供应风险增加，进口到岸平价上升，国内原油价格跟涨，数日内；",
+          "detail": "美国伊朗关系紧张，原油供应风险增加，进口到岸平价上升，国内原油价格跟涨，数日内；长协保供缓冲强，但现货价格受影响较大"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美国伊朗关系紧张导致LNG进口成本上升，国内天然气价格跟涨，数日内；长协保供缓冲",
+          "detail": "美国伊朗关系紧张导致LNG进口成本上升，国内天然气价格跟涨，数日内；长协保供缓冲强，但现货价格受影响较大"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美国伊朗关系紧张，能源替代预期增强，进口煤价差预期上升，国内煤炭价格跟涨，数日内",
+          "detail": "美国伊朗关系紧张，能源替代预期增强，进口煤价差预期上升，国内煤炭价格跟涨，数日内；长协保供缓冲强，但现货价格受影响较小"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "油气价格上涨导致煤电度电燃料成本上升，广东等国内现货电价跟涨，数日内；长协保供缓",
+          "detail": "油气价格上涨导致煤电度电燃料成本上升，广东等国内现货电价跟涨，数日内；长协保供缓冲强，但现货价格受影响较大"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "FGE NexantECA认为美伊协议的可能性很小",
+      "time": "Fri, 06 Nov 2026 07:30:00 -0600",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Latest-Energy-News/World-News/FGE-NexantECA-Sees-Slim-Chance-of-US-Iran-Deal.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美伊协议可能性小，中东地缘政治紧张，原油供应风险增加，进口到岸平价上升，国内原油",
+          "detail": "美伊协议可能性小，中东地缘政治紧张，原油供应风险增加，进口到岸平价上升，国内原油价格跟涨，数日内；长协保供缓冲强，但现货价格受影响较大"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美伊协议可能性小，中东地缘政治紧张导致LNG进口成本上升，国内天然气价格跟涨，数",
+          "detail": "美伊协议可能性小，中东地缘政治紧张导致LNG进口成本上升，国内天然气价格跟涨，数日内；长协保供缓冲强，但现货价格受影响较大"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美伊协议可能性小，中东地缘政治紧张，能源替代预期增强，进口煤价差预期上升，国内煤",
+          "detail": "美伊协议可能性小，中东地缘政治紧张，能源替代预期增强，进口煤价差预期上升，国内煤炭价格跟涨，数日内；长协保供缓冲强，但现货价格受影响较小"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "油气价格上涨导致煤电度电燃料成本上升，广东等国内现货电价跟涨，数日内；长协保供缓",
+          "detail": "油气价格上涨导致煤电度电燃料成本上升，广东等国内现货电价跟涨，数日内；长协保供缓冲强，但现货价格受影响较大"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "美国选举动荡，油价暴跌",
+      "time": "Fri, 06 Nov 2026 06:30:00 -0600",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Energy/Energy-General/Oil-Prices-Plunge-as-US-Elections-Shake-Up-the-Iran-War.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美国选举动荡导致市场不确定性增加，原油需求预期下降，进口到岸平价下降，国内原油价",
+          "detail": "美国选举动荡导致市场不确定性增加，原油需求预期下降，进口到岸平价下降，国内原油价格跟跌，即时；长协保供缓冲强，但现货价格受影响较大"
+        },
+        "gas": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美国选举动荡导致市场不确定性增加，LNG进口需求预期下降，国内天然气价格跟跌，即",
+          "detail": "美国选举动荡导致市场不确定性增加，LNG进口需求预期下降，国内天然气价格跟跌，即时；长协保供缓冲强，但现货价格受影响较大"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美国选举动荡导致市场不确定性增加，能源替代预期下降，进口煤价差预期下降，国内煤炭",
+          "detail": "美国选举动荡导致市场不确定性增加，能源替代预期下降，进口煤价差预期下降，国内煤炭价格跟跌，即时；长协保供缓冲强，但现货价格受影响较小"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "油气价格下跌导致煤电度电燃料成本下降，广东等国内现货电价跟跌，即时；长协保供缓冲",
+          "detail": "油气价格下跌导致煤电度电燃料成本下降，广东等国内现货电价跟跌，即时；长协保供缓冲强，但现货价格受影响较大"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "以色列选举争议升级，外国干预指控加剧",
+      "time": "Fri, 06 Nov 2026 06:30:00 -0600",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Energy/Energy-General/Israels-Election-Dispute-Escalates-Amid-Claims-of-Foreign-Interference.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "以色列选举争议加剧，中东地缘政治紧张，原油供应风险增加，进口到岸平价上升，国内原",
+          "detail": "以色列选举争议加剧，中东地缘政治紧张，原油供应风险增加，进口到岸平价上升，国内原油价格跟涨，数日内；长协保供缓冲强，但现货价格受影响较大"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "以色列选举争议加剧，中东地缘政治紧张导致LNG进口成本上升，国内天然气价格跟涨，",
+          "detail": "以色列选举争议加剧，中东地缘政治紧张导致LNG进口成本上升，国内天然气价格跟涨，数日内；长协保供缓冲强，但现货价格受影响较大"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "以色列选举争议加剧，中东地缘政治紧张，能源替代预期增强，进口煤价差预期上升，国内",
+          "detail": "以色列选举争议加剧，中东地缘政治紧张，能源替代预期增强，进口煤价差预期上升，国内煤炭价格跟涨，数日内；长协保供缓冲强，但现货价格受影响较小"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "油气价格上涨导致煤电度电燃料成本上升，广东等国内现货电价跟涨，数日内；长协保供缓",
+          "detail": "油气价格上涨导致煤电度电燃料成本上升，广东等国内现货电价跟涨，数日内；长协保供缓冲强，但现货价格受影响较大"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "美国总统特朗普谈伊朗：我们正在与伊朗对话",
+      "time": "2026-11-07 03:54",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3196201"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "伊朗核问题对话可能影响中东地区原油供应，进而影响国际原油价格，国内原油价格可能跟",
+          "detail": "伊朗核问题对话可能影响中东地区原油供应，进而影响国际原油价格，国内原油价格可能跟随上涨"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "伊朗核问题对话可能影响中东地区天然气供应，进而影响国际天然气价格，国内天然气价格",
+          "detail": "伊朗核问题对话可能影响中东地区天然气供应，进而影响国际天然气价格，国内天然气价格可能跟随上涨"
+        },
+        "coal": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "事件与煤炭市场无直接关联，影响有限",
+          "detail": "事件与煤炭市场无直接关联，影响有限"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "油气价格上涨将推高煤电燃料成本，进而影响广东等国内现货电价",
+          "detail": "油气价格上涨将推高煤电燃料成本，进而影响广东等国内现货电价"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "卡拉斯：任何俄乌和平协议的落实都需要欧盟参与",
+      "time": "2026-11-07 02:51",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3196184"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "俄乌和平协议可能缓解中东地区地缘政治紧张，降低原油供应中断风险，国际原油价格可能",
+          "detail": "俄乌和平协议可能缓解中东地区地缘政治紧张，降低原油供应中断风险，国际原油价格可能上涨"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "俄乌和平协议可能缓解中东地区地缘政治紧张，降低天然气供应中断风险，国际天然气价格",
+          "detail": "俄乌和平协议可能缓解中东地区地缘政治紧张，降低天然气供应中断风险，国际天然气价格可能上涨"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "俄乌和平协议可能缓解中东地区地缘政治紧张，降低煤炭供应中断风险，国际煤炭价格可能",
+          "detail": "俄乌和平协议可能缓解中东地区地缘政治紧张，降低煤炭供应中断风险，国际煤炭价格可能上涨"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "油气和煤炭价格上涨将推高煤电燃料成本，进而影响广东等国内现货电价",
+          "detail": "油气和煤炭价格上涨将推高煤电燃料成本，进而影响广东等国内现货电价"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
     }
   ],
   "brief": {
@@ -1097,216 +1571,6 @@
   },
   "pending": [
     {
-      "key": "美媒担心电荒印度要求煤炭储备增加两倍",
-      "item": {
-        "id": "CNC10",
-        "time": "—",
-        "source": "CCTD",
-        "title": "美媒：担心电荒，印度要求煤炭储备增加两倍",
-        "summary": "",
-        "url": "https://www.cctd.com.cn/show-113-257835-1.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "生物天然气迈入产业化快车道统一价格指数破解行业痛点",
-      "item": {
-        "id": "CNC15",
-        "time": "—",
-        "source": "上海石油天然气交易中心",
-        "title": "生物天然气迈入产业化快车道 统一价格指数破解行业痛点",
-        "summary": "",
-        "url": "http://www.shpgx.com/html/gsxw/20260623/9378.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "关于开展靖边管道天然气竞价交易的公告",
-      "item": {
-        "id": "CNC19",
-        "time": "—",
-        "source": "上海石油天然气交易中心",
-        "title": "关于开展靖边管道天然气竞价交易的公告",
-        "summary": "",
-        "url": "http://www.shpgx.com/html/jygg/20261106/10287.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "关于开展2026年12月2027年3月面向江浙赣皖市场姜家湾阀室管道天然气竞价交易的公告",
-      "item": {
-        "id": "CNC21",
-        "time": "—",
-        "source": "上海石油天然气交易中心",
-        "title": "关于开展2026年12月-2027年3月面向江浙赣皖市场姜家湾阀室管道天然气竞价交易的公告",
-        "summary": "",
-        "url": "http://www.shpgx.com/html/jygg/20261105/10285.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "关于开展安平管道天然气竞价交易的公告",
-      "item": {
-        "id": "CNC22",
-        "time": "—",
-        "source": "上海石油天然气交易中心",
-        "title": "关于开展安平管道天然气竞价交易的公告",
-        "summary": "",
-        "url": "http://www.shpgx.com/html/jygg/20261105/10284.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "theiranwarisntoverbutoiltradersarealreadypricinginpeace",
-      "item": {
-        "id": "INTL07",
-        "time": "Fri, 06 Nov 2026 09:28:00 -0600",
-        "source": "OilPrice",
-        "title": "The Iran War Isn't Over, but Oil Traders Are Already Pricing In Peace",
-        "summary": "Oil prices plunged 15% this week as hopes of a U.S.-Iran peace deal fueled bearish sentiment, despite continued attacks in the Strait of Hormuz.   Friday, November 06, 2026 Oil prices are set to record one of the steepest weekly losses in r",
-        "url": "https://oilprice.com/Energy/Energy-General/The-Iran-War-Isnt-Over-but-Oil-Traders-Are-Already-Pricing-In-Peace.html",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "trumpsiranstrategyreachesacriticalcrossroadsaftermidtermdefeat",
-      "item": {
-        "id": "INTL08",
-        "time": "Fri, 06 Nov 2026 09:00:00 -0600",
-        "source": "OilPrice",
-        "title": "Trump’s Iran Strategy Reaches a Critical Crossroads After Midterm Defeat",
-        "summary": "President Donald Trump spent the final weeks of the US midterm campaign predicting that the war with Iran would end \"right after the election.\" With the votes now in, his Republican Party is reeling from losing both chambers of Congress in ",
-        "url": "https://oilprice.com/Geopolitics/Middle-East/Trumps-Iran-Strategy-Reaches-a-Critical-Crossroads-After-Midterm-Defeat.html",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "fgenexantecaseesslimchanceofusirandeal",
-      "item": {
-        "id": "INTL10",
-        "time": "Fri, 06 Nov 2026 07:30:00 -0600",
-        "source": "OilPrice",
-        "title": "FGE NexantECA Sees Slim Chance of U.S.-Iran Deal",
-        "summary": "The chances of a U.S.-Iran deal are low and the next two months carry the greatest escalation risks that could derail the recovery of oil flows through the Strait of Hormuz, energy consultancy FGE NexantECA says after the U.S. midterm elect",
-        "url": "https://oilprice.com/Latest-Energy-News/World-News/FGE-NexantECA-Sees-Slim-Chance-of-US-Iran-Deal.html",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "oilpricesplungeasuselectionsshakeuptheiranwar",
-      "item": {
-        "id": "INTL11",
-        "time": "Fri, 06 Nov 2026 06:30:00 -0600",
-        "source": "OilPrice",
-        "title": "Oil Prices Plunge as U.S. Elections Shake Up the Iran War",
-        "summary": "December WTI crude oil is headed for one of its roughest weekly losses in months after the market shed $11.37, or 11.10%, from its opening price of $102.39. Prices posted a weekly high at $102.75 before breaking sharply to $86.65. Early Fri",
-        "url": "https://oilprice.com/Energy/Energy-General/Oil-Prices-Plunge-as-US-Elections-Shake-Up-the-Iran-War.html",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "israelselectiondisputeescalatesamidclaimsofforeigninterference",
-      "item": {
-        "id": "INTL12",
-        "time": "Fri, 06 Nov 2026 06:30:00 -0600",
-        "source": "OilPrice",
-        "title": "Israel’s Election Dispute Escalates Amid Claims of Foreign Interference",
-        "summary": "Politics, Geopolitics & Conflict Benjamin Netanyahu is using the Shin Bet to challenge an election his bloc lost. Shin Bet chief David Zini, whom Netanyahu appointed, is seeking to question four Arab party leaders, including Ra’am’s Mansour",
-        "url": "https://oilprice.com/Energy/Energy-General/Israels-Election-Dispute-Escalates-Amid-Claims-of-Foreign-Interference.html",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "lngimportsmakeupincreasingshareofcolombiasnaturalgassupply",
-      "item": {
-        "id": "INTL24",
-        "time": "Thu, 29 Oct 2026 09:00:00 EST",
-        "source": "EIA 官方",
-        "title": "LNG imports make up increasing share of Colombia's natural gas supply",
-        "summary": "Colombia is importing more liquefied natural gas (LNG) as domestic production continues to fall. A potential drought this fall and winter could limit the availability of hydroelectric generation and boost the country's demand for natural ga",
-        "url": "https://www.eia.gov/todayinenergy/detail.php?id=68364",
-        "category": "供需库存",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "美国总统特朗普谈伊朗我们正在与伊朗对话",
-      "item": {
-        "id": "INTL31",
-        "time": "2026-11-07 03:54",
-        "source": "华尔街见闻",
-        "title": "美国总统特朗普谈伊朗：我们正在与伊朗对话。",
-        "summary": "美国总统特朗普谈伊朗：我们正在与伊朗对话。",
-        "url": "https://wallstreetcn.com/livenews/3196201",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "卡拉斯任何俄乌和平协议的落实都需要欧盟参与",
-      "item": {
-        "id": "INTL39",
-        "time": "2026-11-07 02:51",
-        "source": "华尔街见闻",
-        "title": "卡拉斯：任何俄乌和平协议的落实都需要欧盟参与",
-        "summary": "欧盟外交与安全政策高级代表卡拉斯6日表示，目前无法确定乌克兰与俄罗斯何时以及如何达成和平协议，但任何相关协议的落实都需要欧盟的参与。卡拉斯在波兰首都华沙出席波罗的海国家理事会外长非正式会议后对记者说：“无论是乌克兰的安全保障、战后重建和入盟等问题，还是对俄制裁，都绕不开欧盟。”",
-        "url": "https://wallstreetcn.com/livenews/3196184",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "gielauncheselsabringingeuropeangasstorageandlngdatatoyourphone",
-      "item": {
-        "id": "EU04",
-        "time": "—",
-        "source": "GIE",
-        "title": "GIE launches ELSA, bringing European gas storage and LNG data to your phone",
-        "summary": "",
-        "url": "https://www.gie.eu/gie-launches-elsa-bringing-european-gas-storage-and-lng-data-to-your-phone/",
-        "category": "欧洲气与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "pressreleaseupdatesstorageandlngmaps",
-      "item": {
-        "id": "EU05",
-        "time": "—",
-        "source": "GIE",
-        "title": "Pressrelease: updates Storage and LNG Maps",
-        "summary": "",
-        "url": "https://www.gie.eu/pressrelease-updates-storage-and-lng-maps/",
-        "category": "欧洲气与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
       "key": "关于召开2027年度全国煤炭交易会的通知",
       "item": {
         "id": "CNC01",
@@ -1441,6 +1705,230 @@
         "title": "LNG船货“跨境通”首轮交易在沪完成 贸易及人民币结算模式进一步丰富",
         "summary": "",
         "url": "http://www.shpgx.com/html/gsxw/20260629/9423.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "伊朗军队发言人美接受伊朗条件是霍尔木兹海峡重开关键",
+      "item": {
+        "id": "INTL46",
+        "time": "2026-11-07 06:49",
+        "source": "华尔街见闻",
+        "title": "伊朗军队发言人：美接受伊朗条件是霍尔木兹海峡重开关键",
+        "summary": "据伊朗方面6日消息，伊朗军队发言人阿克拉米尼亚表示，美国接受伊朗提出的七项条件，是重新开放霍尔木兹海峡的唯一途径，再次侵略或进一步挑衅都不会促使该海峡重新开放。\n\n阿克拉米尼亚表示，伊朗最高领袖穆杰塔巴近日在与伊朗武装力量高级指挥官会晤时下令，针对任何可能来自美国和以色列的威胁作出迅速、有力且不受地理限制的回应。伊朗武装部队将把美国等敌方的所有有形和无形资产视为潜在军事目标。阿克拉米尼亚还表示，穆杰塔巴呼吁加强军事情报、提升本土防御能力、利用新兴技术并全面更新军事目标数据库，",
+        "url": "https://wallstreetcn.com/livenews/3196259",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "oiltraderswantustoreleasesanctionedtankersasfreightcostssoar",
+      "item": {
+        "id": "INTL03",
+        "time": "Fri, 06 Nov 2026 14:30:00 -0600",
+        "source": "OilPrice",
+        "title": "Oil Traders Want U.S. to Release Sanctioned Tankers as Freight Costs Soar",
+        "summary": "Some of the world's biggest oil traders are asking Washington for permission to put sanctioned tankers back to work, as a global vessel shortage pushes oil transportation costs to extraordinary levels. Trafigura, Vitol, Mercuria and Abu Dha",
+        "url": "https://oilprice.com/Latest-Energy-News/World-News/Oil-Traders-Want-US-to-Release-Sanctioned-Tankers-as-Freight-Costs-Soar.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "伊朗媒体格什姆岛遭导弹袭击一架美无人机被击落",
+      "item": {
+        "id": "INTL36",
+        "time": "2026-11-07 08:36",
+        "source": "华尔街见闻",
+        "title": "伊朗媒体：格什姆岛遭导弹袭击 一架美无人机被击落",
+        "summary": "据伊朗塔斯尼姆通讯社7日报道，根据初步报告，两枚导弹击中了伊朗格什姆岛。伊朗军方向媒体证实，一架美军MQ－9无人机在格什姆岛上空被伊朗防空系统击落。",
+        "url": "https://wallstreetcn.com/livenews/3196280",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "特朗普安排了很多与俄罗斯有关的会议在与俄罗斯乌克兰方面取得很大进展可能在移民和税收问题上与民主党合作米勒忠诚聪明预计未来几个月内离",
+      "item": {
+        "id": "INTL37",
+        "time": "2026-11-07 08:31",
+        "source": "华尔街见闻",
+        "title": "特朗普：安排了很多与俄罗斯有关的会议。\n\n在与俄罗斯、乌克兰方面取得很大进展。\n\n可能在移民和税收问题上与民主党合作。\n\n米勒忠诚、聪明。\n\n预计未来几个月内离",
+        "summary": "特朗普：安排了很多与俄罗斯有关的会议。\n\n在与俄罗斯、乌克兰方面取得很大进展。\n\n可能在移民和税收问题上与民主党合作。\n\n米勒忠诚、聪明。\n\n预计未来几个月内离职的人会很少。\n\n希望Thune能让参议院采取行动。\n\n（谈伊朗）我们进行了小规模打击。\n\n（谈俄罗斯、乌克兰）今天已经通了电话，周一、周二有会议。",
+        "url": "https://wallstreetcn.com/livenews/3196276",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "美国总统特朗普我认为俄罗斯和乌克兰首次希望解决问题……我认为这将是一项规模很大的解决方案我认为这将涉及整个欧洲",
+      "item": {
+        "id": "FL01",
+        "time": "2026-11-07 09:50:48",
+        "source": "新浪7×24",
+        "title": "美国总统特朗普：我认为，俄罗斯和乌克兰首次希望解决问题……我认为这将是一项规模很大的解决方案。我认为这将涉及整个欧洲。",
+        "summary": "美国总统特朗普：我认为，俄罗斯和乌克兰首次希望解决问题……我认为这将是一项规模很大的解决方案。我认为这将涉及整个欧洲。",
+        "url": "https://finance.sina.cn/7x24/2026-11-07/detail-inixwnyk5114779.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "据美国阿克西奥斯新闻网站6日报道美国副总统万斯过去两周直接参与了与伊朗的间接会谈寻求与伊朗达成新的停火协议和重启核谈判报道援引知情人士的话说万斯几乎每天",
+      "item": {
+        "id": "FL08",
+        "time": "2026-11-07 09:33:58",
+        "source": "新浪7×24",
+        "title": "据美国阿克西奥斯新闻网站6日报道，美国副总统万斯过去两周直接参与了与伊朗的间接会谈，寻求与伊朗达成新的停火协议和重启核谈判。报道援引知情人士的话说，万斯几乎每天",
+        "summary": "【美媒：万斯在幕后推动与伊朗达成新协议】据美国阿克西奥斯新闻网站6日报道，美国副总统万斯过去两周直接参与了与伊朗的间接会谈，寻求与伊朗达成新的停火协议和重启核谈判。报道援引知情人士的话说，万斯几乎每天都在与卡塔尔首相兼外交大臣穆罕默德、巴基斯坦陆军参谋长穆尼尔以及其他调解方进行沟通，美国总统特朗普的特使威特科夫和特朗普的女婿库什纳也参与其中。万斯同调解方一直在讨论美伊在未来几天内举行工作级别技术会议的可能性，但目前尚未落实。（新华社）",
+        "url": "https://finance.sina.cn/7x24/2026-11-07/detail-inixwnyk5107175.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "加拿大财长不应存在协助伊朗规避制裁的实体",
+      "item": {
+        "id": "FL09",
+        "time": "2026-11-07 09:22:16",
+        "source": "新浪7×24",
+        "title": "加拿大财长：不应存在协助伊朗规避制裁的实体。",
+        "summary": "加拿大财长：不应存在协助伊朗规避制裁的实体。",
+        "url": "https://finance.sina.cn/7x24/2026-11-07/detail-inixwhsn5231468.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "美国就伊朗核计划悬赏2000万美元",
+      "item": {
+        "id": "INTL38",
+        "time": "2026-11-07 08:19",
+        "source": "华尔街见闻",
+        "title": "美国就伊朗核计划悬赏2000万美元",
+        "summary": "今天（11月7日），美国中央司令部在社交媒体发布消息称，美国所谓“正义奖励计划（美国国务院旗下的悬赏项目）”正悬赏最高2000万美元，征集有关伊朗核计划的信息，包括其核设施、设备及相关人员（如科学界人士）的情况，以及上述任一目标的动向。提供线索者还可能获得搬迁转移、异地安置的机会。（CCTV国际时讯）",
+        "url": "https://wallstreetcn.com/livenews/3196273",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "第九届中国国际进口博览会以下简称进博会于11月5日至10日在上海举办阿布扎比国家石油公司adnoc携旗下adnoclogistics&ser",
+      "item": {
+        "id": "FL05",
+        "time": "2026-11-07 09:40:21",
+        "source": "新浪7×24",
+        "title": "第九届中国国际进口博览会（以下简称“进博会”）于11月5日至10日在上海举办。阿布扎比国家石油公司（ADNOC）携旗下ADNOC Logistics & Ser",
+        "summary": "【直击进博会|ADNOC推介163亿美元制造业机遇 简化国际企业入驻流程】第九届中国国际进口博览会（以下简称“进博会”）于11月5日至10日在上海举办。阿布扎比国家石油公司（ADNOC）携旗下ADNOC Logistics & Services、TA'ZIZ、Masdar、博禄国际和科思创参会，集中展示能源、化工、先进材料及物流领域的能源产品、项目和投资机遇。",
+        "url": "https://finance.sina.cn/7x24/2026-11-07/detail-inixwnyk5110901.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "美国总统特朗普民主党在选举中表现不错的消息传出后我们损失了约3万亿美元这相当出人意料但生活就是这样这与我们不允许伊朗拥有核武器有关所以必须始终把这一",
+      "item": {
+        "id": "FL07",
+        "time": "2026-11-07 09:34:52",
+        "source": "新浪7×24",
+        "title": "美国总统特朗普：民主党在选举中表现不错的消息传出后，我们损失了约3万亿美元，这相当出人意料，但生活就是这样。这与我们不允许伊朗拥有核武器有关，所以必须始终把这一",
+        "summary": "美国总统特朗普：民主党在选举中表现不错的消息传出后，我们损失了约3万亿美元，这相当出人意料，但生活就是这样。这与我们不允许伊朗拥有核武器有关，所以必须始终把这一点放在首位。",
+        "url": "https://finance.sina.cn/7x24/2026-11-07/detail-inixwnya8192562.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "美媒万斯在幕后推动与伊朗达成新协议",
+      "item": {
+        "id": "INTL29",
+        "time": "2026-11-07 09:35",
+        "source": "华尔街见闻",
+        "title": "美媒：万斯在幕后推动与伊朗达成新协议",
+        "summary": "据美国阿克西奥斯新闻网站6日报道，美国副总统万斯过去两周直接参与了与伊朗的间接会谈，寻求与伊朗达成新的停火协议和重启核谈判。",
+        "url": "https://wallstreetcn.com/livenews/3196298",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "商务部回应美首次以涉古巴为由制裁中企敦促美方尽快纠正错误做法",
+      "item": {
+        "id": "INTL30",
+        "time": "2026-11-07 09:20",
+        "source": "华尔街见闻",
+        "title": "商务部回应“美首次以涉古巴为由制裁中企”：敦促美方尽快纠正错误做法",
+        "summary": "商务部新闻发言人就美制裁中国企业答记者问。\n\n问：美东时间11月5日，美国务院宣布制裁两家中国企业。有消息称，这是美首次以涉古巴为由对中国企业实施制裁。请问中方对此有何评论？\n\n答：我们注意到有关情况。美方以涉及第三方为由，对中国企业采取单边制裁，违反国际法和国际关系基本准则，中方对此坚决反对。\n\n近期，美方升级对中方制裁打压，密集出台多项歧视性限制措施，严重损害中国企业权益，背离两国元首达成的重要共识，破坏中美经贸关系稳定。中方敦促美方尽快纠正错误做法，并保留采取必要措施、",
+        "url": "https://wallstreetcn.com/livenews/3196294",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "特朗普称美方对伊朗实施小型打击",
+      "item": {
+        "id": "INTL32",
+        "time": "2026-11-07 08:50",
+        "source": "华尔街见闻",
+        "title": "特朗普称美方对伊朗实施“小型打击”",
+        "summary": "美国总统特朗普6日对媒体说，美方对伊朗实施了“小型打击”，摧毁伊朗制造的“一个小型防空装置”。\n\n据伊朗塔斯尼姆通讯社早前报道，根据初步报告，两枚导弹击中了伊朗格什姆岛。（新华社）",
+        "url": "https://wallstreetcn.com/livenews/3196288",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "特朗普被告知再袭伊朗时间窗口有限",
+      "item": {
+        "id": "INTL34",
+        "time": "2026-11-07 08:44",
+        "source": "华尔街见闻",
+        "title": "特朗普被告知再袭伊朗时间窗口有限",
+        "summary": "当地时间11月6日，据美国方面消息，两名美国官员透露，特朗普政府部分顾问已告知特朗普，重新对伊朗展开大规模军事行动的“时间窗口正在缩小”，建议其在明年1月民主党控制的新一届国会就职前采取行动。这意味着特朗普需要在未来数周内作出决定。",
+        "url": "https://wallstreetcn.com/livenews/3196283",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "2枚导弹击中伊朗格什姆岛",
+      "item": {
+        "id": "INTL41",
+        "time": "2026-11-07 07:24",
+        "source": "华尔街见闻",
+        "title": "2枚导弹击中伊朗格什姆岛",
+        "summary": "据伊朗塔斯尼姆通讯社报道，初步信息显示，今天（11月7日）凌晨，2枚导弹击中了伊朗南部格什姆岛，目前尚无关于受损情况的官方信息。伊朗官方通讯社伊通社早些时候援引当地目击者的话报道说，“在听到岛上空有飞机声响后，2枚飞行物击中了格什姆岛的苏扎地区。”对相关报道，美国方面暂无回应。 (CCTV国际时讯)",
+        "url": "https://wallstreetcn.com/livenews/3196266",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "关于开展中海油能源发展股份有限公司销售服务分公司凝析油竞价交易的公告",
+      "item": {
+        "id": "CNC20",
+        "time": "—",
+        "source": "上海石油天然气交易中心",
+        "title": "关于开展中海油能源发展股份有限公司销售服务分公司凝析油竞价交易的公告",
+        "summary": "",
+        "url": "http://www.shpgx.com/html/jygg/20261106/10288.html",
         "category": "中国煤与电",
         "raw_price": null
       },
