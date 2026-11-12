@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-11-12 20:38",
+    "oil": "599.9 元/桶",
+    "oil_chg": "+0.67%",
+    "oil_up": true,
+    "gas": "3.7 $/MMBtu",
+    "gas_chg": "+1.48%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "WTI 12月原油期货收报86.53美元/桶。NYMEX 1（当日40事件/本档+14）"
+  },
+  {
     "time": "2026-11-12 10:58",
     "oil": "91.98 $/桶",
     "oil_chg": "-0.84%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日12事件/本档+12）"
-  },
-  {
-    "time": "2026-11-02 15:39",
-    "oil": "729.8 元/桶",
-    "oil_chg": "-2.07%",
-    "oil_up": false,
-    "gas": "3.39 $/MMBtu",
-    "gas_chg": "+0.50%",
-    "gas_up": true,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "巴基斯坦液化天然气运输船遭袭（当日30事件/本档+11）"
   }
 ]
