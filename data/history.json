@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-11-13 10:38",
+    "oil": "96.03 $/桶",
+    "oil_chg": "+0.22%",
+    "oil_up": true,
+    "gas": "3.74 $/MMBtu",
+    "gas_chg": "-0.08%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "也门胡塞武装袭击沙特输油管道泵站（当日25事件/本档+11）"
+  },
+  {
     "time": "2026-11-13 04:48",
     "oil": "96.12 $/桶",
     "oil_chg": "+3.63%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日35事件/本档+10）"
-  },
-  {
-    "time": "2026-11-03 11:28",
-    "oil": "104.75 $/桶",
-    "oil_chg": "-0.02%",
-    "oil_up": false,
-    "gas": "3.38 $/MMBtu",
-    "gas_chg": "+0.87%",
-    "gas_up": true,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日25事件/本档+13）"
   }
 ]
