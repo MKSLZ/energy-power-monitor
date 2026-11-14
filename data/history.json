@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-11-14 10:23",
+    "oil": "96.29 $/桶",
+    "oil_chg": "+0.49%",
+    "oil_up": true,
+    "gas": "3.62 $/MMBtu",
+    "gas_chg": "-3.44%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "伊朗称油轮在霍尔木兹海峡遭水雷袭击（当日21事件/本档+10）"
+  },
+  {
     "time": "2026-11-14 04:29",
     "oil": "95.92 $/桶",
     "oil_chg": "+0.10%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "WTI 12月原油期货收报96.09美元/桶。NYMEX 1（当日37事件/本档+14）"
-  },
-  {
-    "time": "2026-11-04 10:18",
-    "oil": "103.15 $/桶",
-    "oil_chg": "-0.43%",
-    "oil_up": false,
-    "gas": "3.35 $/MMBtu",
-    "gas_chg": "-1.24%",
-    "gas_up": false,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "WTI 12月原油期货收报96.09美元/桶。NYMEX 1（当日23事件/本档+12）"
   }
 ]
