@@ -1,22 +1,37 @@
 {
   "date": "2026-11-17",
-  "updated_at": "2026-11-17 04:24",
+  "updated_at": "2026-11-17 12:29",
   "seen_raw_keys": [
+    "2026年夏季全国煤炭交易会",
+    "europeangasslumpsonmilderweatherandrecorduslngflows",
+    "gielauncheselsabringingeuropeangasstorageandlngdatatoyourphone",
     "houthiadvanceputssaudicrudeexportsatrisk",
+    "lngimportsmakeupincreasingshareofcolombiasnaturalgassupply",
+    "pressreleaseupdatesstorageandlngmaps",
     "ukrainebracesforpivotalweekofdefensetalksamidfreshrussianattacks",
+    "万斯不会让伊朗战争演变为长达两年的军事投入",
+    "中央气象台中东部将有大范围大风降温和雨雪天气",
     "伊朗方面表示24小时内在霍尔木兹海峡发生第四起油轮触雷事件",
     "伊朗议长卡利巴夫不结束以色列对黎巴嫩的战争就不会有地区和平",
+    "关于华港集团山西燃气有限公司开展合格lng采购商入围工作的公告",
+    "关于召开2027年度全国煤炭交易会的通知",
+    "关于开展安平管道天然气竞价交易的公告",
     "关于开展靖边管道天然气竞价交易的公告",
     "哈铁全力推进煤炭保供服务民众温暖过冬",
     "截至当天收盘纽约商品交易所12月交货的轻质原油期货价格下跌284美元收于每桶8572美元跌幅为321%1月交货的伦敦布伦特原油期货价格下跌340",
+    "换不起停不得煤炭运销老系统有第三条路",
+    "旺季预期支撑煤价调整空间有限",
     "根据美国能源信息署eia的数据第三季度经霍尔木兹海峡运输的原油和燃料量较第二季度增加400万桶日eia在11月16日发布的全球能源安全数据显示第三季",
+    "煤炭进口连降两月全年增长难度抬升",
     "熊力天然气是新型能源体系建设的关键支撑力量",
     "熊维中东冲突冲击全球天然气供需格局高气价与区域溢价或将持续",
     "特朗普女婿库什纳我和美国中东问题特使威特科夫周一与俄罗斯总统助理乌沙科夫通话讨论了我们在和平进程中所取得的进展以及下一步行动我们正在取得进展并与俄罗",
     "生物天然气迈入产业化快车道统一价格指数破解行业痛点",
     "美国称霍尔木兹海峡石油运输量第三季度增长78%",
+    "道明证券料美元保持韧性美联储鹰派前景提供支撑",
     "郑洪弢2026年非采暖季国内天然气供需整体偏紧全行业应增强应变能力",
-    "雪佛龙接近以约50亿美元收购黑石支持的美国墨西哥湾石油生产商"
+    "雪佛龙接近以约50亿美元收购黑石支持的美国墨西哥湾石油生产商",
+    "高盛预计由于各国央行持续购金到2027年底金价将逐步攀升至每盎司4650美元一旦美联储开始降息预计西方黄金etf需求将复苏支撑金价在2028年底前"
   ],
   "events": [
     {
@@ -732,6 +747,312 @@
       "analogy": "历史类比：2022 俄乌冲突推升 TTF 与进口 LNG 成本",
       "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
       "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "中国气象局中央气象台：中东部将有大范围大风降温和雨雪天气",
+      "time": "—",
+      "source": "中国气象局",
+      "url": [
+        "https://www.cma.gov.cn/2011xwzx/2011xqxxw/2011xzytq/202611/t20261116_8143263.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "即时",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "天气变化对国内原油影响有限，未涉及具体价格变动或供应变化",
+          "detail": "天气变化对国内原油影响有限，未涉及具体价格变动或供应变化"
+        },
+        "gas": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "天气变化对国内天然气市场影响有限，未涉及具体价格变动或供应变化",
+          "detail": "天气变化对国内天然气市场影响有限，未涉及具体价格变动或供应变化"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "大风降温和雨雪天气可能导致煤炭运输受阻，短期内煤炭价格可能上涨，进而影响电厂日耗",
+          "detail": "大风降温和雨雪天气可能导致煤炭运输受阻，短期内煤炭价格可能上涨，进而影响电厂日耗和库存"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "大风降温和雨雪天气可能导致电力需求增加，进而影响广东及南方现货电价",
+          "detail": "大风降温和雨雪天气可能导致电力需求增加，进而影响广东及南方现货电价"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "European Gas Slumps on Milder Weather and Record U.S. LNG Flows",
+      "time": "Mon, 16 Nov 2026 08:30:00 -0600",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Latest-Energy-News/World-News/European-Gas-Slumps-on-Milder-Weather-and-Record-US-LNG-Flows.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "即时",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "欧洲天然气价格下跌，美国LNG出口增加，可能导致国内天然气进口成本下降，进而影响",
+          "detail": "欧洲天然气价格下跌，美国LNG出口增加，可能导致国内天然气进口成本下降，进而影响国内天然气价格"
+        },
+        "gas": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "欧洲天然气价格下跌，美国LNG出口增加，可能导致国内天然气进口成本下降，进而影响",
+          "detail": "欧洲天然气价格下跌，美国LNG出口增加，可能导致国内天然气进口成本下降，进而影响国内天然气价格"
+        },
+        "coal": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "欧洲天然气价格下跌对国内煤炭市场影响有限，未涉及具体价格变动或供应变化",
+          "detail": "欧洲天然气价格下跌对国内煤炭市场影响有限，未涉及具体价格变动或供应变化"
+        },
+        "power": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "欧洲天然气价格下跌对国内电力市场影响有限，未涉及具体价格变动或供应变化",
+          "detail": "欧洲天然气价格下跌对国内电力市场影响有限，未涉及具体价格变动或供应变化"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "万斯：不会让伊朗战争演变为长达两年的军事投入",
+      "time": "2026-11-17 03:45",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3200818"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "中东地缘政治风险降低，原油供应预期稳定，进口到岸平价上升；数日内，国内原油价格跟",
+          "detail": "中东地缘政治风险降低，原油供应预期稳定，进口到岸平价上升；数日内，国内原油价格跟涨，长协保供缓冲强"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "中东地缘政治风险降低，进口LNG成本下降，国内天然气价格跟跌；数日内，国内天然气",
+          "detail": "中东地缘政治风险降低，进口LNG成本下降，国内天然气价格跟跌；数日内，国内天然气价格跟跌，长协保供缓冲强"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "中东地缘政治风险降低，能源替代需求减少，进口煤价差预期下降；数日内，国内煤炭价格",
+          "detail": "中东地缘政治风险降低，能源替代需求减少，进口煤价差预期下降；数日内，国内煤炭价格跟跌，长协保供缓冲中"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "中东地缘政治风险降低，能源替代需求减少，煤电燃料成本下降；数日内，广东等国内现货",
+          "detail": "中东地缘政治风险降低，能源替代需求减少，煤电燃料成本下降；数日内，广东等国内现货电价跟跌，长协保供缓冲中"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "道明证券料美元保持韧性，美联储鹰派前景提供支撑",
+      "time": "2026-11-17 02:50",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3200799"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美元走强，原油需求预期下降，进口到岸平价下降；数日内，国内原油价格跟跌，长协保供",
+          "detail": "美元走强，原油需求预期下降，进口到岸平价下降；数日内，国内原油价格跟跌，长协保供缓冲中"
+        },
+        "gas": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美元走强，天然气需求预期下降，进口LNG成本下降；数日内，国内天然气价格跟跌，长",
+          "detail": "美元走强，天然气需求预期下降，进口LNG成本下降；数日内，国内天然气价格跟跌，长协保供缓冲中"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美元走强，煤炭需求预期下降，进口煤价差预期下降；数日内，国内煤炭价格跟跌，长协保",
+          "detail": "美元走强，煤炭需求预期下降，进口煤价差预期下降；数日内，国内煤炭价格跟跌，长协保供缓冲弱"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美元走强，电力需求预期下降，煤电燃料成本下降；数日内，广东等国内现货电价跟跌，长",
+          "detail": "美元走强，电力需求预期下降，煤电燃料成本下降；数日内，广东等国内现货电价跟跌，长协保供缓冲弱"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "GIE推出ELSAPP，将欧洲天然气存储和LNG数据带到您的手机",
+      "time": "—",
+      "source": "GIE",
+      "url": [
+        "https://www.gie.eu/gie-launches-elsa-bringing-european-gas-storage-and-lng-data-to-your-phone/"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "即时",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "欧洲天然气数据对国内油气市场影响有限",
+          "detail": "欧洲天然气数据对国内油气市场影响有限"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "欧洲天然气数据提升市场透明度，国内天然气价格预期稳定",
+          "detail": "欧洲天然气数据提升市场透明度，国内天然气价格预期稳定"
+        },
+        "coal": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "欧洲天然气数据对国内煤炭市场影响有限",
+          "detail": "欧洲天然气数据对国内煤炭市场影响有限"
+        },
+        "power": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "欧洲天然气数据对国内电力市场影响有限",
+          "detail": "欧洲天然气数据对国内电力市场影响有限"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2022 俄乌冲突推升 TTF 与进口 LNG 成本",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "煤炭进口连降两月，全年增长难度抬升",
+      "time": "—",
+      "source": "CCTD",
+      "url": [
+        "https://www.cctd.com.cn/show-42-257962-1.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "即时",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "煤炭进口下降，对原油价格影响有限，无直接传导至国内原油市场",
+          "detail": "煤炭进口下降，对原油价格影响有限，无直接传导至国内原油市场"
+        },
+        "gas": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "煤炭进口下降，对天然气价格影响有限，无直接传导至国内天然气市场",
+          "detail": "煤炭进口下降，对天然气价格影响有限，无直接传导至国内天然气市场"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "煤炭进口下降，国内煤炭供应趋紧，秦皇岛动力煤价格可能上涨，数周内影响",
+          "detail": "煤炭进口下降，国内煤炭供应趋紧，秦皇岛动力煤价格可能上涨，数周内影响"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "煤炭进口下降，电厂日耗与库存可能受影响，广东及南方现货电价可能上涨，数周内影响",
+          "detail": "煤炭进口下降，电厂日耗与库存可能受影响，广东及南方现货电价可能上涨，数周内影响"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
     }
   ],
   "brief": {
@@ -1167,216 +1488,6 @@
   },
   "pending": [
     {
-      "key": "关于开展安平管道天然气竞价交易的公告",
-      "item": {
-        "id": "CNC20",
-        "time": "—",
-        "source": "上海石油天然气交易中心",
-        "title": "关于开展安平管道天然气竞价交易的公告",
-        "summary": "",
-        "url": "http://www.shpgx.com/html/jygg/20261116/10330.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "关于华港集团山西燃气有限公司开展合格lng采购商入围工作的公告",
-      "item": {
-        "id": "CNC22",
-        "time": "—",
-        "source": "上海石油天然气交易中心",
-        "title": "关于华港集团山西燃气有限公司开展合格LNG采购商入围工作的公告",
-        "summary": "",
-        "url": "http://www.shpgx.com/html/jygg/20261116/10325.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "中央气象台中东部将有大范围大风降温和雨雪天气",
-      "item": {
-        "id": "WX12",
-        "time": "—",
-        "source": "中国气象局",
-        "title": "中央气象台：中东部将有大范围大风降温和雨雪天气",
-        "summary": "",
-        "url": "https://www.cma.gov.cn/2011xwzx/2011xqxxw/2011xzytq/202611/t20261116_8143263.html",
-        "category": "天气季节",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "europeangasslumpsonmilderweatherandrecorduslngflows",
-      "item": {
-        "id": "INTL11",
-        "time": "Mon, 16 Nov 2026 08:30:00 -0600",
-        "source": "OilPrice",
-        "title": "European Gas Slumps on Milder Weather and Record U.S. LNG Flows",
-        "summary": "European benchmark natural gas prices slumped in Amsterdam trade early on Monday as immediate supply concerns eased with forecasters expecting milder weather in the coming days and U.S. LNG flows hitting a record high this weekend. The fron",
-        "url": "https://oilprice.com/Latest-Energy-News/World-News/European-Gas-Slumps-on-Milder-Weather-and-Record-US-LNG-Flows.html",
-        "category": "供需库存",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "lngimportsmakeupincreasingshareofcolombiasnaturalgassupply",
-      "item": {
-        "id": "INTL21",
-        "time": "Thu, 29 Oct 2026 09:00:00 EST",
-        "source": "EIA 官方",
-        "title": "LNG imports make up increasing share of Colombia's natural gas supply",
-        "summary": "Colombia is importing more liquefied natural gas (LNG) as domestic production continues to fall. A potential drought this fall and winter could limit the availability of hydroelectric generation and boost the country's demand for natural ga",
-        "url": "https://www.eia.gov/todayinenergy/detail.php?id=68364",
-        "category": "供需库存",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "万斯不会让伊朗战争演变为长达两年的军事投入",
-      "item": {
-        "id": "INTL27",
-        "time": "2026-11-17 03:45",
-        "source": "华尔街见闻",
-        "title": "万斯：不会让伊朗战争演变为长达两年的军事投入",
-        "summary": "美国副总统JD·万斯谈及伊朗战事时表示：“我们不会让这场战争变成一场持续十年、十五年的行动，坦白说，甚至两年都不行。”“我们不会永久驻扎在当地。”“我完全相信总统会带领我们以理想结果结束这场冲突。”",
-        "url": "https://wallstreetcn.com/livenews/3200818",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "高盛预计由于各国央行持续购金到2027年底金价将逐步攀升至每盎司4650美元一旦美联储开始降息预计西方黄金etf需求将复苏支撑金价在2028年底前",
-      "item": {
-        "id": "INTL33",
-        "time": "2026-11-17 03:04",
-        "source": "华尔街见闻",
-        "title": "高盛预计，由于各国央行持续购金，到2027年底金价将逐步攀升至每盎司4650美元。\n\n一旦美联储开始降息，预计西方黄金ETF需求将复苏，支撑金价在2028年底前",
-        "summary": "高盛预计，由于各国央行持续购金，到2027年底金价将逐步攀升至每盎司4650美元。\n\n一旦美联储开始降息，预计西方黄金ETF需求将复苏，支撑金价在2028年底前强劲反弹至每盎司5600美元。\n\n除非再次出现白银流动性挤压，否则2027年黄金表现将优于白银。\n\n美国关税不确定性可能导致铂金和钯金价格波动，供应分散，但并不意味着2027年价格会上涨。",
-        "url": "https://wallstreetcn.com/livenews/3200805",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "道明证券料美元保持韧性美联储鹰派前景提供支撑",
-      "item": {
-        "id": "INTL36",
-        "time": "2026-11-17 02:50",
-        "source": "华尔街见闻",
-        "title": "道明证券料美元保持韧性，美联储鹰派前景提供支撑",
-        "summary": "道明证券策略师预计，在市场预期美联储将加息的背景下，美元将保持韧性，同时美国国债收益率上升继续为美元提供上行动力。策略师Jayati Bharadwaj、Howard Du和Linda Cheng周一在报告中表示，美国国债收益率上升应会继续支撑美元，“尤其是在未来几个月美联储加息幅度可能超过其他主要央行的情况下。”",
-        "url": "https://wallstreetcn.com/livenews/3200799",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "gielauncheselsabringingeuropeangasstorageandlngdatatoyourphone",
-      "item": {
-        "id": "EU04",
-        "time": "—",
-        "source": "GIE",
-        "title": "GIE launches ELSA, bringing European gas storage and LNG data to your phone",
-        "summary": "",
-        "url": "https://www.gie.eu/gie-launches-elsa-bringing-european-gas-storage-and-lng-data-to-your-phone/",
-        "category": "欧洲气与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "pressreleaseupdatesstorageandlngmaps",
-      "item": {
-        "id": "EU05",
-        "time": "—",
-        "source": "GIE",
-        "title": "Pressrelease: updates Storage and LNG Maps",
-        "summary": "",
-        "url": "https://www.gie.eu/pressrelease-updates-storage-and-lng-maps/",
-        "category": "欧洲气与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "旺季预期支撑煤价调整空间有限",
-      "item": {
-        "id": "CNC01",
-        "time": "—",
-        "source": "CCTD",
-        "title": "旺季预期支撑，煤价调整空间有限",
-        "summary": "",
-        "url": "https://www.cctd.com.cn/show-42-257983-1.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "煤炭进口连降两月全年增长难度抬升",
-      "item": {
-        "id": "CNC02",
-        "time": "—",
-        "source": "CCTD",
-        "title": "[煤炭进口连降两月，全年增长难度抬升]",
-        "summary": "",
-        "url": "https://www.cctd.com.cn/show-42-257962-1.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "换不起停不得煤炭运销老系统有第三条路",
-      "item": {
-        "id": "CNC03",
-        "time": "—",
-        "source": "CCTD",
-        "title": "换不起、停不得：煤炭运销老系统有第三条路！",
-        "summary": "",
-        "url": "https://www.cctd.com.cn/show-176-257984-1.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "关于召开2027年度全国煤炭交易会的通知",
-      "item": {
-        "id": "CNC04",
-        "time": "—",
-        "source": "CCTD",
-        "title": "关于召开2027年度全国煤炭交易会的通知",
-        "summary": "",
-        "url": "https://www.cctd.com.cn/show-69-257850-1.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "2026年夏季全国煤炭交易会",
-      "item": {
-        "id": "CNC05",
-        "time": "—",
-        "source": "CCTD",
-        "title": "2026年夏季全国煤炭交易会",
-        "summary": "",
-        "url": "https://www.cctd.com.cn/index.php?m=content&c=index&a=lists&catid=837",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
       "key": "110月份全国规上工业原煤产量383亿吨同比下",
       "item": {
         "id": "CNC06",
@@ -1512,6 +1623,314 @@
         "summary": "在岸人民币兑美元（CNY）北京时间03:00收报6.6642元，较上周五夜盘收盘涨84点。成交量338.00亿美元。",
         "url": "https://wallstreetcn.com/livenews/3200802",
         "category": "宏观金融",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "关于开展中国石油天然气股份有限公司天然气销售分公司管道气公开市场交易的通知2026年12月场次",
+      "item": {
+        "id": "CNC22",
+        "time": "—",
+        "source": "上海石油天然气交易中心",
+        "title": "关于开展中国石油天然气股份有限公司天然气销售分公司管道气公开市场交易的通知（2026年12月场次）",
+        "summary": "",
+        "url": "http://www.shpgx.com/html/jygg/20261113/10324.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "中央气象台中东部将有大范围雨雪和寒潮天气",
+      "item": {
+        "id": "WX12",
+        "time": "—",
+        "source": "中国气象局",
+        "title": "中央气象台：中东部将有大范围雨雪和寒潮天气",
+        "summary": "",
+        "url": "https://www.cma.gov.cn/2011xwzx/2011xqxxw/2011xzytq/202611/t20261117_8145461.html",
+        "category": "天气季节",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "煤层气矿业权出让管理权限调整",
+      "item": {
+        "id": "CNC08",
+        "time": "—",
+        "source": "CCTD",
+        "title": "煤层气矿业权出让管理权限调整",
+        "summary": "",
+        "url": "https://www.cctd.com.cn/show-110-258025-1.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "ugandapushesfirstoiltomid2027asiranwarholdsupequipment",
+      "item": {
+        "id": "INTL03",
+        "time": "Mon, 16 Nov 2026 17:00:00 -0600",
+        "source": "OilPrice",
+        "title": "Uganda Pushes First Oil to Mid-2027 as Iran War Holds Up Equipment",
+        "summary": "Uganda’s dream to achieve its first commercial oil production and crude exports has been delayed yet again, extending the country’s wait to more than two decades since commercial oil reserves were first discovered in the country in 2006. Of",
+        "url": "https://oilprice.com/Energy/Crude-Oil/Uganda-Pushes-First-Oil-to-Mid-2027-as-Iran-War-Holds-Up-Equipment.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "新加坡海峡时报指数下跌1%",
+      "item": {
+        "id": "INTL33",
+        "time": "2026-11-17 10:36",
+        "source": "华尔街见闻",
+        "title": "新加坡海峡时报指数下跌1%。",
+        "summary": "新加坡海峡时报指数下跌1%。",
+        "url": "https://wallstreetcn.com/livenews/3200973",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "勒庞称若当选总统将不再为乌克兰提供财政援助",
+      "item": {
+        "id": "INTL35",
+        "time": "2026-11-17 10:29",
+        "source": "华尔街见闻",
+        "title": "勒庞称若当选总统将不再为乌克兰提供财政援助",
+        "summary": "法国2027年总统选举国民联盟候选人玛丽娜·勒庞16日发表声明说，如果她明年当选总统，法国将不再向乌克兰提供进一步财政援助。",
+        "url": "https://wallstreetcn.com/livenews/3200965",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "煤价回调高低卡价差为何仍在扩大",
+      "item": {
+        "id": "CNC01",
+        "time": "—",
+        "source": "CCTD",
+        "title": "煤价回调，高低卡价差为何仍在扩大？",
+        "summary": "",
+        "url": "https://www.cctd.com.cn/show-42-258012-1.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "控量提质下如何深化煤炭清洁高效利用",
+      "item": {
+        "id": "CNC07",
+        "time": "—",
+        "source": "CCTD",
+        "title": "控量提质下，如何深化煤炭清洁高效利用？",
+        "summary": "",
+        "url": "https://www.cctd.com.cn/show-176-258027-1.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "我国牵头提出的煤矿区甲烷逸散排放监测国际标准",
+      "item": {
+        "id": "CNC09",
+        "time": "—",
+        "source": "CCTD",
+        "title": "我国牵头提出的煤矿区甲烷逸散排放监测国际标准",
+        "summary": "",
+        "url": "https://www.cctd.com.cn/show-176-258022-1.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "宁德时代曾毓群将电动化应用从陆地拓展至海洋和天空赋能亚太地区发展",
+      "item": {
+        "id": "INTL31",
+        "time": "2026-11-17 11:01",
+        "source": "华尔街见闻",
+        "title": "宁德时代曾毓群：将电动化应用从陆地拓展至海洋和天空 赋能亚太地区发展",
+        "summary": "11月17日—18日，2026年APEC工商领导人峰会在深圳举行。在“亚太经济新图景与合作新机遇”工商对话上，宁德时代董事长曾毓群表示，技术创新是企业发展的主要动力。宁德时代始终聚焦技术创新，关注新能源汽车如何提升电池能量密度与安全性、如何将电动化应用从陆地拓展至海洋和天空等问题。曾毓群指出，亚太地区岛屿众多，更先进的技术能大幅缩短不同城市间的交通时间，更好赋能亚太地区的发展。",
+        "url": "https://wallstreetcn.com/livenews/3200988",
+        "category": "供需库存",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "纽元兑美元跌至2020年以来新低",
+      "item": {
+        "id": "INTL32",
+        "time": "2026-11-17 10:42",
+        "source": "华尔街见闻",
+        "title": "纽元兑美元跌至2020年以来新低。",
+        "summary": "纽元兑美元跌至2020年以来新低。",
+        "url": "https://wallstreetcn.com/livenews/3200977",
+        "category": "宏观金融",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "国家矿山安全监察局湖南局与湖南省气象局签约",
+      "item": {
+        "id": "CNC10",
+        "time": "—",
+        "source": "CCTD",
+        "title": "国家矿山安全监察局湖南局与湖南省气象局签约",
+        "summary": "",
+        "url": "https://www.cctd.com.cn/show-176-258021-1.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "商务部国家发展改革委工业和信息化部等9部门近日印发的关于深入推进再生资源回收体系建设促进回收行业高质量发展的意见加强废旧动力电池回收处理修订实施",
+      "item": {
+        "id": "FL09",
+        "time": "2026-11-17 12:00:16",
+        "source": "新浪7×24",
+        "title": "商务部、国家发展改革委、工业和信息化部等9部门近日印发的《关于深入推进再生资源回收体系建设 促进回收行业高质量发展的意见》。加强废旧动力电池回收处理。修订实施《",
+        "summary": "【商务部等9部门：加强废旧动力电池回收处理】商务部、国家发展改革委、工业和信息化部等9部门近日印发的《关于深入推进再生资源回收体系建设 促进回收行业高质量发展的意见》。加强废旧动力电池回收处理。修订实施《报废机动车回收管理办法实施细则》，推动新能源汽车“车电一体报废”回收拆解。研究制定新能源汽车动力电池数字身份证管理制度及相关行政法规。加强关键技术标准供给，积极推动国内成熟标准转化为国际标准。",
+        "url": "https://finance.sina.cn/7x24/2026-11-17/detail-iniyzhhm7713245.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "春运气象服务专报",
+      "item": {
+        "id": "WX01",
+        "time": "—",
+        "source": "中央气象台·台风",
+        "title": "春运气象服务专报",
+        "summary": "",
+        "url": "http://www.nmc.cn/publish/weather_forecast/swssr.htm",
+        "category": "天气季节",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "全球灾害性天气监测月报",
+      "item": {
+        "id": "WX02",
+        "time": "—",
+        "source": "中央气象台·台风",
+        "title": "全球灾害性天气监测月报",
+        "summary": "",
+        "url": "http://www.nmc.cn/publish/tianqiyubao/quanqiuzaihaixingtianqijianceyuebao/index.html",
+        "category": "天气季节",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "山洪灾害气象预警",
+      "item": {
+        "id": "WX03",
+        "time": "—",
+        "source": "中央气象台·台风",
+        "title": "山洪灾害气象预警",
+        "summary": "",
+        "url": "http://www.nmc.cn/publish/mountainflood.html",
+        "category": "天气季节",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "地质灾害气象风险预警",
+      "item": {
+        "id": "WX04",
+        "time": "—",
+        "source": "中央气象台·台风",
+        "title": "地质灾害气象风险预警",
+        "summary": "",
+        "url": "http://www.nmc.cn/publish/geohazard.html",
+        "category": "天气季节",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "中小河流洪水气象风险预警",
+      "item": {
+        "id": "WX05",
+        "time": "—",
+        "source": "中央气象台·台风",
+        "title": "中小河流洪水气象风险预警",
+        "summary": "",
+        "url": "http://www.nmc.cn/publish/swdz/zxhlhsqxyj.html",
+        "category": "天气季节",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "渍涝风险气象预警",
+      "item": {
+        "id": "WX06",
+        "time": "—",
+        "source": "中央气象台·台风",
+        "title": "渍涝风险气象预警",
+        "summary": "",
+        "url": "http://www.nmc.cn/publish/waterlogging.html",
+        "category": "天气季节",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "全球热带气旋监测公报",
+      "item": {
+        "id": "WX08",
+        "time": "—",
+        "source": "中央气象台·台风",
+        "title": "全球热带气旋监测公报",
+        "summary": "",
+        "url": "http://www.nmc.cn/publish/typhoon/totalcyclone.htm",
+        "category": "天气季节",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "wmo第xi海区海事天气公报",
+      "item": {
+        "id": "WX09",
+        "time": "—",
+        "source": "中央气象台·台风",
+        "title": "WMO第XI海区海事天气公报",
+        "summary": "",
+        "url": "http://www.nmc.cn/publish/quanqiuyubao/WMOdiXIhaiquhaishitianqigongbao/index.html",
+        "category": "天气季节",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "气象信息服务企业备案",
+      "item": {
+        "id": "WX11",
+        "time": "—",
+        "source": "中国气象局",
+        "title": "气象信息服务企业备案",
+        "summary": "",
+        "url": "https://zwfw.cma.gov.cn/bei_an/beian/beian/BAindex/index.html",
+        "category": "天气季节",
         "raw_price": null
       },
       "attempts": 0
