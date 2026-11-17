@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-11-18 00:53",
+    "oil": "93.12 $/桶",
+    "oil_chg": "+0.74%",
+    "oil_up": true,
+    "gas": "3.54 $/MMBtu",
+    "gas_chg": "+1.26%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "伊朗和也门就霍尔木兹海峡安全问题进行会谈，油轮袭击事件激增（当日12事件/本档+12）"
+  },
+  {
     "time": "2026-11-17 12:29",
     "oil": "91.52 $/桶",
     "oil_chg": "-1.00%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "也门胡塞武装袭击沙特石油和军事目标（当日13事件/本档+13）"
-  },
-  {
-    "time": "2026-11-07 19:02",
-    "oil": "97.97 $/桶",
-    "oil_chg": "-0.33%",
-    "oil_up": false,
-    "gas": "3.46 $/MMBtu",
-    "gas_chg": "+1.38%",
-    "gas_up": true,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "WTI 12月原油期货收涨（当日38事件/本档+14）"
   }
 ]
