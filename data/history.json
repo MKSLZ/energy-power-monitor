@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-11-19 11:21",
+    "oil": "91.66 $/桶",
+    "oil_chg": "-0.32%",
+    "oil_up": false,
+    "gas": "3.79 $/MMBtu",
+    "gas_chg": "+0.61%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "也门胡塞武装袭击沙特（当日18事件/本档+7）"
+  },
+  {
     "time": "2026-11-19 05:24",
     "oil": "91.56 $/桶",
     "oil_chg": "-1.70%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "伊朗海军称一艘油轮在霍尔木兹海峡以东触雷起火（当日24事件/本档+9）"
-  },
-  {
-    "time": "2026-11-09 00:40",
-    "oil": "97.97 $/桶",
-    "oil_chg": "-0.33%",
-    "oil_up": false,
-    "gas": "3.46 $/MMBtu",
-    "gas_chg": "+1.38%",
-    "gas_up": true,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "伊朗海军称一艘油轮在霍尔木兹海峡以东触雷起火（当日15事件/本档+15）"
   }
 ]

@@ -1,22 +1,37 @@
 {
   "date": "2026-11-19",
-  "updated_at": "2026-11-19 05:24",
+  "updated_at": "2026-11-19 11:21",
   "seen_raw_keys": [
+    "10月份内蒙古煤炭价格环比上涨86%",
+    "2026年110月重点企业原煤产量完成情况",
+    "2026年夏季全国煤炭交易会",
+    "chinagasupsizeslongtermlngsupplywithusventureglobal",
+    "gielauncheselsabringingeuropeangasstorageandlngdatatoyourphone",
+    "iranwarsettohike2027ukenergybillstofouryearhigh",
     "iraqsbordershutdownwithiranthreatensamuchbiggereconomiccrisis",
+    "lngimportsmakeupincreasingshareofcolombiasnaturalgassupply",
     "mozambiqueapprovesexxonsredesigned$30billionrovumalngplan",
+    "pressreleaseupdatesstorageandlngmaps",
     "smallvesseltradethrivesinhormuzasirantargetssupertankers",
+    "usiranconflictflaresagainasgulfnationsbraceforattacks",
+    "中国平煤神马集团2026年度煤焦战略客户座谈会暨",
     "中央气象台寒潮继续影响中东部地区",
     "也门胡塞武装军事发言人对沙特阿拉伯多个地点发动了导弹和无人机袭击",
     "伊朗外交部重申要求邻国阻止美国从其领土发动袭击",
     "伊朗外交部重申要求邻国阻止美国从其领土发动袭击在防御性打击中已保持最大限度克制",
     "全面履约监管升级重时间任务2027年电煤保",
+    "关于召开2027年度全国煤炭交易会的通知",
     "关于开展中国石油化工股份有限公司天然气分公司华北天然气销售中心2026年11月易气无忧服务竞拍交易的通知",
     "关于开展中海石油气电集团有限责任公司华北分公司2026年12月份lng运力竞价交易公告",
     "关于开展安平管道天然气竞价交易的公告",
     "关于开展安平管道天然气竞价采购交易的公告",
     "关于开展靖边管道天然气竞价交易的公告",
+    "换不起停不得煤炭运销老系统有第三条路",
+    "旺季预期支撑煤价调整空间有限",
+    "煤价回调高低卡价差为何仍在扩大",
     "熊维中东冲突冲击全球天然气供需格局高气价与区域溢价或将持续",
-    "生物天然气迈入产业化快车道统一价格指数破解行业痛点"
+    "生物天然气迈入产业化快车道统一价格指数破解行业痛点",
+    "辽宁煤矿安全生产工作会议召开"
   ],
   "events": [
     {
@@ -579,6 +594,363 @@
       "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本",
       "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
       "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "伊朗战争将使2027年英国能源账单达到四年高点",
+      "time": "Wed, 18 Nov 2026 10:30:00 -0600",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Latest-Energy-News/World-News/Iran-War-Set-to-Hike-2027-UK-Energy-Bills-to-Four-Year-High.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "中东冲突升级，原油供应中断风险增加，进口到岸平价上行，国内原油价格跟涨，数日内；",
+          "detail": "中东冲突升级，原油供应中断风险增加，进口到岸平价上行，国内原油价格跟涨，数日内；长协保供缓冲强，但现货价格受冲击大"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "中东冲突导致LNG进口成本上升，国内天然气价格跟涨，数日内；长协保供缓冲强，但现",
+          "detail": "中东冲突导致LNG进口成本上升，国内天然气价格跟涨，数日内；长协保供缓冲强，但现货价格受冲击大"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "能源替代预期增强，进口煤价差预期上行，国内煤炭价格跟涨，数日内；长协保供缓冲中，",
+          "detail": "能源替代预期增强，进口煤价差预期上行，国内煤炭价格跟涨，数日内；长协保供缓冲中，但现货价格受冲击较大"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "煤电与气电度电燃料成本上行，广东等国内现货电价跟涨，数日内；长协保供缓冲中，但现",
+          "detail": "煤电与气电度电燃料成本上行，广东等国内现货电价跟涨，数日内；长协保供缓冲中，但现货价格受冲击较大"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "中国与美国Venture Global合作增加长期LNG供应",
+      "time": "Wed, 18 Nov 2026 09:30:00 -0600",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Latest-Energy-News/World-News/China-Gas-Upsizes-Long-Term-LNG-Supply-with-US-Venture-Global.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "即时",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "合作增加LNG供应，对国内原油价格影响有限",
+          "detail": "合作增加LNG供应，对国内原油价格影响有限"
+        },
+        "gas": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "长期供应增加，国内天然气价格预期下行，数周内；长协保供缓冲强，但现货价格受影响",
+          "detail": "长期供应增加，国内天然气价格预期下行，数周内；长协保供缓冲强，但现货价格受影响"
+        },
+        "coal": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "LNG供应增加，对国内煤炭价格影响有限",
+          "detail": "LNG供应增加，对国内煤炭价格影响有限"
+        },
+        "power": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "LNG供应增加，对国内电力价格影响有限",
+          "detail": "LNG供应增加，对国内电力价格影响有限"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2022 俄乌冲突推升 TTF 与进口 LNG 成本",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "美伊冲突再次升级，海湾国家备战袭击",
+      "time": "Wed, 18 Nov 2026 08:30:00 -0600",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Geopolitics/Middle-East/US-Iran-Conflict-Flares-Again-as-Gulf-Nations-Brace-for-Attacks.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美伊冲突升级，原油供应中断风险增加，进口到岸平价上行，国内原油价格跟涨，数日内；",
+          "detail": "美伊冲突升级，原油供应中断风险增加，进口到岸平价上行，国内原油价格跟涨，数日内；长协保供缓冲强，但现货价格受冲击大"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美伊冲突升级，LNG进口成本上升，国内天然气价格跟涨，数日内；长协保供缓冲强，但",
+          "detail": "美伊冲突升级，LNG进口成本上升，国内天然气价格跟涨，数日内；长协保供缓冲强，但现货价格受冲击大"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "能源替代预期增强，进口煤价差预期上行，国内煤炭价格跟涨，数日内；长协保供缓冲中，",
+          "detail": "能源替代预期增强，进口煤价差预期上行，国内煤炭价格跟涨，数日内；长协保供缓冲中，但现货价格受冲击较大"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "煤电与气电度电燃料成本上行，广东等国内现货电价跟涨，数日内；长协保供缓冲中，但现",
+          "detail": "煤电与气电度电燃料成本上行，广东等国内现货电价跟涨，数日内；长协保供缓冲中，但现货价格受冲击较大"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "EIA官方：LNG进口占哥伦比亚天然气供应比例增加",
+      "time": "Thu, 29 Oct 2026 09:00:00 EST",
+      "source": "EIA 官方",
+      "url": [
+        "https://www.eia.gov/todayinenergy/detail.php?id=68364"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "即时",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "LNG进口增加，对国内原油价格影响有限",
+          "detail": "LNG进口增加，对国内原油价格影响有限"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "LNG进口增加，国内天然气供应增加，价格预期下行，数周内；长协保供缓冲强，但现货",
+          "detail": "LNG进口增加，国内天然气供应增加，价格预期下行，数周内；长协保供缓冲强，但现货价格受影响"
+        },
+        "coal": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "LNG进口增加，对国内煤炭价格影响有限",
+          "detail": "LNG进口增加，对国内煤炭价格影响有限"
+        },
+        "power": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "LNG进口增加，对国内电力价格影响有限",
+          "detail": "LNG进口增加，对国内电力价格影响有限"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2022 俄乌冲突推升 TTF 与进口 LNG 成本",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "煤价回调，高低卡价差为何仍在扩大？",
+      "time": "—",
+      "source": "CCTD",
+      "url": [
+        "https://www.cctd.com.cn/show-42-258012-1.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "即时",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "煤价回调，对国内原油影响有限，因煤价与原油价格关联性较弱",
+          "detail": "煤价回调，对国内原油影响有限，因煤价与原油价格关联性较弱"
+        },
+        "gas": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "煤价回调，对国内天然气影响有限，因煤价与天然气价格关联性较弱",
+          "detail": "煤价回调，对国内天然气影响有限，因煤价与天然气价格关联性较弱"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "煤价回调，秦皇岛Q5500动力煤价格下降，数周内降低电厂燃料成本",
+          "detail": "煤价回调，秦皇岛Q5500动力煤价格下降，数周内降低电厂燃料成本"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "煤价回调，降低广东及南方现货电价，数周内降低电厂燃料成本",
+          "detail": "煤价回调，降低广东及南方现货电价，数周内降低电厂燃料成本"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "旺季预期支撑，煤价调整空间有限",
+      "time": "—",
+      "source": "CCTD",
+      "url": [
+        "https://www.cctd.com.cn/show-42-257983-1.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "即时",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "旺季预期支撑煤价，对国内原油影响有限，因煤价与原油价格关联性较弱",
+          "detail": "旺季预期支撑煤价，对国内原油影响有限，因煤价与原油价格关联性较弱"
+        },
+        "gas": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "旺季预期支撑煤价，对国内天然气影响有限，因煤价与天然气价格关联性较弱",
+          "detail": "旺季预期支撑煤价，对国内天然气影响有限，因煤价与天然气价格关联性较弱"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "旺季预期支撑煤价，秦皇岛Q5500动力煤价格上升，数周内提高电厂燃料成本",
+          "detail": "旺季预期支撑煤价，秦皇岛Q5500动力煤价格上升，数周内提高电厂燃料成本"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "旺季预期支撑煤价，提高广东及南方现货电价，数周内提高电厂燃料成本",
+          "detail": "旺季预期支撑煤价，提高广东及南方现货电价，数周内提高电厂燃料成本"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "10月份内蒙古煤炭价格环比上涨8.6%",
+      "time": "—",
+      "source": "CCTD",
+      "url": [
+        "https://www.cctd.com.cn/show-361-258036-1.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "即时",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "内蒙古煤炭价格上涨对原油价格影响有限，未涉及地缘或政策变动",
+          "detail": "内蒙古煤炭价格上涨对原油价格影响有限，未涉及地缘或政策变动"
+        },
+        "gas": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "内蒙古煤炭价格上涨对天然气价格影响有限，未涉及地缘或政策变动",
+          "detail": "内蒙古煤炭价格上涨对天然气价格影响有限，未涉及地缘或政策变动"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "内蒙古煤炭价格上涨，影响国内煤炭价格，数周内可能传导至电厂燃料成本，进而影响电力",
+          "detail": "内蒙古煤炭价格上涨，影响国内煤炭价格，数周内可能传导至电厂燃料成本，进而影响电力价格"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "内蒙古煤炭价格上涨，影响国内煤炭价格，数周内可能传导至电厂燃料成本，进而影响电力",
+          "detail": "内蒙古煤炭价格上涨，影响国内煤炭价格，数周内可能传导至电厂燃料成本，进而影响电力价格"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
     }
   ],
   "brief": {
@@ -974,216 +1346,6 @@
   },
   "pending": [
     {
-      "key": "iranwarsettohike2027ukenergybillstofouryearhigh",
-      "item": {
-        "id": "INTL06",
-        "time": "Wed, 18 Nov 2026 10:30:00 -0600",
-        "source": "OilPrice",
-        "title": "Iran War Set to Hike 2027 UK Energy Bills to Four-Year High",
-        "summary": "The UK’s household energy bills are set to jump by another 26% from January 2027, to the highest since 2023, as the Iran war keeps pushing up wholesale gas and electricity prices, energy consultancy Cornwall Insight said on Wednesday.     C",
-        "url": "https://oilprice.com/Latest-Energy-News/World-News/Iran-War-Set-to-Hike-2027-UK-Energy-Bills-to-Four-Year-High.html",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "chinagasupsizeslongtermlngsupplywithusventureglobal",
-      "item": {
-        "id": "INTL08",
-        "time": "Wed, 18 Nov 2026 09:30:00 -0600",
-        "source": "OilPrice",
-        "title": "China Gas Upsizes Long-Term LNG Supply with U.S. Venture Global",
-        "summary": "China Gas Holdings Limited, a major Chinese natural gas distributor and operator, has doubled the LNG volumes it will receive from U.S. exporter Venture Global under a recent 20-year deal. China Gas and Venture Global on Wednesday announced",
-        "url": "https://oilprice.com/Latest-Energy-News/World-News/China-Gas-Upsizes-Long-Term-LNG-Supply-with-US-Venture-Global.html",
-        "category": "供需库存",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "usiranconflictflaresagainasgulfnationsbraceforattacks",
-      "item": {
-        "id": "INTL09",
-        "time": "Wed, 18 Nov 2026 08:30:00 -0600",
-        "source": "OilPrice",
-        "title": "U.S.-Iran Conflict Flares Again as Gulf Nations Brace for Attacks",
-        "summary": "US and Iranian forces exchanged tit-for-tat air strikes in the Middle East, while Gulf nations issued fresh warnings to residents amid threats of incoming projectiles as the currently low-level conflict continued to brew despite the efforts",
-        "url": "https://oilprice.com/Geopolitics/Middle-East/US-Iran-Conflict-Flares-Again-as-Gulf-Nations-Brace-for-Attacks.html",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "lngimportsmakeupincreasingshareofcolombiasnaturalgassupply",
-      "item": {
-        "id": "INTL24",
-        "time": "Thu, 29 Oct 2026 09:00:00 EST",
-        "source": "EIA 官方",
-        "title": "LNG imports make up increasing share of Colombia's natural gas supply",
-        "summary": "Colombia is importing more liquefied natural gas (LNG) as domestic production continues to fall. A potential drought this fall and winter could limit the availability of hydroelectric generation and boost the country's demand for natural ga",
-        "url": "https://www.eia.gov/todayinenergy/detail.php?id=68364",
-        "category": "供需库存",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "gielauncheselsabringingeuropeangasstorageandlngdatatoyourphone",
-      "item": {
-        "id": "EU04",
-        "time": "—",
-        "source": "GIE",
-        "title": "GIE launches ELSA, bringing European gas storage and LNG data to your phone",
-        "summary": "",
-        "url": "https://www.gie.eu/gie-launches-elsa-bringing-european-gas-storage-and-lng-data-to-your-phone/",
-        "category": "欧洲气与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "pressreleaseupdatesstorageandlngmaps",
-      "item": {
-        "id": "EU05",
-        "time": "—",
-        "source": "GIE",
-        "title": "Pressrelease: updates Storage and LNG Maps",
-        "summary": "",
-        "url": "https://www.gie.eu/pressrelease-updates-storage-and-lng-maps/",
-        "category": "欧洲气与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "煤价回调高低卡价差为何仍在扩大",
-      "item": {
-        "id": "CNC02",
-        "time": "—",
-        "source": "CCTD",
-        "title": "[煤价回调，高低卡价差为何仍在扩大？]",
-        "summary": "",
-        "url": "https://www.cctd.com.cn/show-42-258012-1.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "旺季预期支撑煤价调整空间有限",
-      "item": {
-        "id": "CNC03",
-        "time": "—",
-        "source": "CCTD",
-        "title": "[旺季预期支撑，煤价调整空间有限]",
-        "summary": "",
-        "url": "https://www.cctd.com.cn/show-42-257983-1.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "换不起停不得煤炭运销老系统有第三条路",
-      "item": {
-        "id": "CNC04",
-        "time": "—",
-        "source": "CCTD",
-        "title": "换不起、停不得：煤炭运销老系统有第三条路！",
-        "summary": "",
-        "url": "https://www.cctd.com.cn/show-176-257984-1.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "关于召开2027年度全国煤炭交易会的通知",
-      "item": {
-        "id": "CNC05",
-        "time": "—",
-        "source": "CCTD",
-        "title": "关于召开2027年度全国煤炭交易会的通知",
-        "summary": "",
-        "url": "https://www.cctd.com.cn/show-69-257850-1.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "2026年夏季全国煤炭交易会",
-      "item": {
-        "id": "CNC06",
-        "time": "—",
-        "source": "CCTD",
-        "title": "2026年夏季全国煤炭交易会",
-        "summary": "",
-        "url": "https://www.cctd.com.cn/index.php?m=content&c=index&a=lists&catid=837",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "2026年110月重点企业原煤产量完成情况",
-      "item": {
-        "id": "CNC07",
-        "time": "—",
-        "source": "CCTD",
-        "title": "2026年1-10月重点企业原煤产量完成情况",
-        "summary": "",
-        "url": "https://www.cctd.com.cn/show-361-258045-1.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "辽宁煤矿安全生产工作会议召开",
-      "item": {
-        "id": "CNC08",
-        "time": "—",
-        "source": "CCTD",
-        "title": "辽宁煤矿安全生产工作会议召开",
-        "summary": "",
-        "url": "https://www.cctd.com.cn/show-108-258041-1.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "10月份内蒙古煤炭价格环比上涨86%",
-      "item": {
-        "id": "CNC09",
-        "time": "—",
-        "source": "CCTD",
-        "title": "10月份内蒙古煤炭价格环比上涨8.6%",
-        "summary": "",
-        "url": "https://www.cctd.com.cn/show-361-258036-1.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "中国平煤神马集团2026年度煤焦战略客户座谈会暨",
-      "item": {
-        "id": "CNC10",
-        "time": "—",
-        "source": "CCTD",
-        "title": "中国平煤神马集团2026年度煤焦战略客户座谈会暨",
-        "summary": "",
-        "url": "https://www.cctd.com.cn/show-22-258035-1.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
       "key": "全国首单迎峰度夏气电日交易试点上线",
       "item": {
         "id": "CNC13",
@@ -1318,6 +1480,272 @@
         "title": "美国9月国际资本净流入 2610亿美元，前值 1998亿美元。",
         "summary": "美国9月国际资本净流入 2610亿美元，前值 1998亿美元。",
         "url": "https://wallstreetcn.com/livenews/3202174",
+        "category": "宏观金融",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "瑞斯康达603803在2026年第三季度业绩说明会上表示运营商集采方面公司订单落地节奏随集采周期项目实施安排有所波动电力油气等行业领域公司稳步推",
+      "item": {
+        "id": "FL04",
+        "time": "2026-11-19 11:16:05",
+        "source": "新浪7×24",
+        "title": "瑞斯康达(603803)在2026年第三季度业绩说明会上表示，运营商集采方面，公司订单落地节奏随集采周期、项目实施安排有所波动。电力、油气等行业领域，公司稳步推",
+        "summary": "【瑞斯康达：算力DCI产品正开展客户测试验证及市场投放】瑞斯康达(603803)在2026年第三季度业绩说明会上表示，运营商集采方面，公司订单落地节奏随集采周期、项目实施安排有所波动。电力、油气等行业领域，公司稳步推进客户拓展与试点落地，持续挖掘行业需求。算力DCI相关产品正有序开展客户测试验证及市场投放，放量节奏取决于客户场景落地进度。",
+        "url": "https://finance.sina.cn/7x24/2026-11-19/detail-inizfunc0438716.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "在2026第九届国际光伏与储能产业大会上澳大利亚国家技术科学与工程院院士尚德电力创始人施正荣表示136号文之后新能源全面进入电力市场光伏过去比谁扩得快",
+      "item": {
+        "id": "FL09",
+        "time": "2026-11-19 11:10:24",
+        "source": "新浪7×24",
+        "title": "在2026第九届国际光伏与储能产业大会上，澳大利亚国家技术科学与工程院院士、尚德电力创始人施正荣表示，136号文之后，新能源全面进入电力市场，光伏过去比谁扩得快",
+        "summary": "【尚德电力创始人施正荣：让光伏去它该去的地方，不要在同一条赛道互相踩踏 】在2026第九届国际光伏与储能产业大会上，澳大利亚国家技术科学与工程院院士、尚德电力创始人施正荣表示，136号文之后，新能源全面进入电力市场，光伏过去比谁扩得快、谁成本低，今后比的是谁的电在正确的时间、正确的节点上被用掉。施正荣认为，光储融合不等于所有做光伏的人都去做储能，光伏人真正的本分，是把光变成电这件事做到极致——做到更轻、更薄、更便宜、更适应场景，让光伏去它该去的地方，而不是都挤在同一条赛道上互",
+        "url": "https://finance.sina.cn/7x24/2026-11-19/detail-inizfunk7822624.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "商品期货开盘液化气原油燃料油沪铜主力合约跌超4%国际铜聚乙烯聚丙烯乙二醇跌超3%集运欧线涨近2%",
+      "item": {
+        "id": "INTL39",
+        "time": "2026-11-19 09:00",
+        "source": "华尔街见闻",
+        "title": "商品期货开盘，液化气、原油、燃料油、沪铜主力合约跌超4%，国际铜、聚乙烯、聚丙烯、乙二醇跌超3%。集运欧线涨近2%。",
+        "summary": "商品期货开盘，液化气、原油、燃料油、沪铜主力合约跌超4%，国际铜、聚乙烯、聚丙烯、乙二醇跌超3%。集运欧线涨近2%。",
+        "url": "https://wallstreetcn.com/livenews/3202267",
+        "category": "供需库存",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "白宫纳瓦霍过渡能源公司navajotransitionalenergyco与马来西亚tnb燃料服务公司签署三年期1亿美元煤炭供应协议",
+      "item": {
+        "id": "FL06",
+        "time": "2026-11-19 11:13:14",
+        "source": "新浪7×24",
+        "title": "白宫：纳瓦霍过渡能源公司（ Navajo Transitional Energy Co.  ）与马来西亚TNB燃料服务公司签署三年期1亿美元煤炭供应协议。",
+        "summary": "白宫：纳瓦霍过渡能源公司（ Navajo Transitional Energy Co.  ）与马来西亚TNB燃料服务公司签署三年期1亿美元煤炭供应协议。",
+        "url": "https://finance.sina.cn/7x24/2026-11-19/detail-inizfuni6320342.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "cctd晋陕蒙煤炭汽运价格速览20261118",
+      "item": {
+        "id": "CNC07",
+        "time": "—",
+        "source": "CCTD",
+        "title": "CCTD：晋陕蒙煤炭汽运价格速览（20261118）",
+        "summary": "",
+        "url": "https://www.cctd.com.cn/index.php?m=content&c=index&a=show&catid=652&id=258064",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "一份亮眼的能源保供答卷",
+      "item": {
+        "id": "CNC08",
+        "time": "—",
+        "source": "CCTD",
+        "title": "一份亮眼的能源保供答卷",
+        "summary": "",
+        "url": "https://www.cctd.com.cn/show-39-258063-1.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "现货白银日内跌1%现报4457美元盎司",
+      "item": {
+        "id": "FL07",
+        "time": "2026-11-19 11:12:25",
+        "source": "新浪7×24",
+        "title": "现货白银日内跌1%，现报44.57美元/盎司。",
+        "summary": "现货白银日内跌1%，现报44.57美元/盎司。",
+        "url": "https://finance.sina.cn/7x24/2026-11-19/detail-inizfunk7824596.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "chinaburnslessoilandcoalastheiranwarreshapesitsenergymix",
+      "item": {
+        "id": "INTL05",
+        "time": "Wed, 18 Nov 2026 16:00:00 -0600",
+        "source": "OilPrice",
+        "title": "China Burns Less Oil and Coal as the Iran War Reshapes Its Energy Mix",
+        "summary": "The war in Iran is causing an enduring upset in global oil and gas markets with long-ranging consequences for the economy, the energy sector, and the climate. For many countries, this has resulted in skyrocketing energy prices and a rapid s",
+        "url": "https://oilprice.com/Energy/Energy-General/China-Burns-Less-Oil-and-Coal-as-the-Iran-War-Reshapes-Its-Energy-Mix.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "伊朗警告地区国家不要为美打击伊朗提供领土设施",
+      "item": {
+        "id": "INTL29",
+        "time": "2026-11-19 10:58",
+        "source": "华尔街见闻",
+        "title": "伊朗警告地区国家不要为美打击伊朗提供领土设施",
+        "summary": "19日凌晨获悉，伊朗外交部发布声明，敦促地区国家采取必要措施，阻止美国继续利用其领土、境内基地和设施，策划、筹备和实施针对伊朗的军事行动，并表示伊朗有权进行防御。声明谴责美军近日袭击伊朗南部沿海地区，并表示伊朗武装部队对中东地区两处涉“策划和支持”对伊军事行动的美军基地实施了防御性打击。",
+        "url": "https://wallstreetcn.com/livenews/3202312",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "俄罗斯总统普京抵达apec领导人非正式会议现场",
+      "item": {
+        "id": "INTL34",
+        "time": "2026-11-19 09:38",
+        "source": "华尔街见闻",
+        "title": "俄罗斯总统普京抵达APEC领导人非正式会议现场",
+        "summary": "11月19日上午，亚太经合组织第三十三次领导人非正式会议将在深圳国际交流中心举行。俄罗斯总统普京抵达会议现场。（央视新闻）",
+        "url": "https://wallstreetcn.com/livenews/3202291",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "日本央行行长植田和男通胀率预计将远高于2%需关注ai需求中东局势和外汇市场价格趋势有超过目标的风险将根据经济和物价情势升息将根据前景",
+      "item": {
+        "id": "INTL38",
+        "time": "2026-11-19 09:10",
+        "source": "华尔街见闻",
+        "title": "日本央行行长植田和男：通胀率预计将远高于2%。\n\n需关注AI需求、中东局势和外汇市场。\n\n价格趋势有超过目标的风险。\n\n将根据经济和物价情势升息。\n\n将根据前景",
+        "summary": "日本央行行长植田和男：通胀率预计将远高于2%。\n\n需关注AI需求、中东局势和外汇市场。\n\n价格趋势有超过目标的风险。\n\n将根据经济和物价情势升息。\n\n将根据前景和风险来决定升息步伐。\n\n将物价趋势稳定在2%左右很重要。",
+        "url": "https://wallstreetcn.com/livenews/3202270",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "需求拖累煤焦震荡寻底",
+      "item": {
+        "id": "CNC02",
+        "time": "—",
+        "source": "CCTD",
+        "title": "[需求拖累，煤焦震荡寻底]",
+        "summary": "",
+        "url": "https://www.cctd.com.cn/show-42-258049-1.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "对话杨剑代表谈煤炭产业",
+      "item": {
+        "id": "CNC09",
+        "time": "—",
+        "source": "CCTD",
+        "title": "对话：杨剑代表谈煤炭产业",
+        "summary": "",
+        "url": "https://www.cctd.com.cn/show-176-258062-1.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "10月份全国出口煤炭29万吨同比下降194%",
+      "item": {
+        "id": "CNC10",
+        "time": "—",
+        "source": "CCTD",
+        "title": "10月份全国出口煤炭29万吨 同比下降19.4%",
+        "summary": "",
+        "url": "https://www.cctd.com.cn/show-114-258052-1.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "白宫煤炭将从蒙大拿州南部的纳瓦霍煤矿供应",
+      "item": {
+        "id": "FL05",
+        "time": "2026-11-19 11:13:22",
+        "source": "新浪7×24",
+        "title": "白宫：煤炭将从蒙大拿州南部的纳瓦霍煤矿供应。",
+        "summary": "白宫：煤炭将从蒙大拿州南部的纳瓦霍煤矿供应。",
+        "url": "https://finance.sina.cn/7x24/2026-11-19/detail-inizfunn4601721.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "白宫该项目将利用美国技术提高印尼煤炭资源的利用率",
+      "item": {
+        "id": "FL12",
+        "time": "2026-11-19 11:09:45",
+        "source": "新浪7×24",
+        "title": "白宫：该项目将利用美国技术提高印尼煤炭资源的利用率。",
+        "summary": " 白宫：该项目将利用美国技术提高印尼煤炭资源的利用率。",
+        "url": "https://finance.sina.cn/7x24/2026-11-19/detail-inizfuni6317717.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "星锐医药与辉瑞达成独家许可协议里程碑付款最高可获23亿美元",
+      "item": {
+        "id": "INTL30",
+        "time": "2026-11-19 10:42",
+        "source": "华尔街见闻",
+        "title": "星锐医药与辉瑞达成独家许可协议，里程碑付款最高可获23亿美元",
+        "summary": "当地时间11月18日，辉瑞公司宣布，其已与星锐医药（Starna Therapeutics）达成一项独家许可协议。根据协议，辉瑞获得三款处于IND申报前阶段、旨在治疗自身免疫性疾病的体内嵌合抗原受体T细胞（in vivo CAR-T）项目在大中华区以外地域的独家开发、生产及商业化权益。",
+        "url": "https://wallstreetcn.com/livenews/3202310",
+        "category": "宏观金融",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "我国虚拟电厂规模快速增长已建成并投运592个",
+      "item": {
+        "id": "INTL33",
+        "time": "2026-11-19 09:43",
+        "source": "华尔街见闻",
+        "title": "我国虚拟电厂规模快速增长，已建成并投运592个",
+        "summary": "国家能源局发布《中国虚拟电厂发展报告（2026）》显示，全国虚拟电厂规模快速增长。截至2026年6月底，全国已建成并投运的虚拟电厂项目数量达到592个，同比增长78.9%；最大调节能力达到2042.8万千瓦，同比增长62.7%，提前完成《关于加快推进虚拟电厂发展的指导意见》提出的2027年全国虚拟电厂调节能力达到2000万千瓦以上的发展目标。（央视新闻）",
+        "url": "https://wallstreetcn.com/livenews/3202294",
+        "category": "供需库存",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "日本央行行长植田和男升息后实际利率仍维持低位将继续密切关注加息的影响债市的运作稳定改善",
+      "item": {
+        "id": "INTL35",
+        "time": "2026-11-19 09:32",
+        "source": "华尔街见闻",
+        "title": "日本央行行长植田和男：升息后实际利率仍维持低位。\n\n将继续密切关注加息的影响。\n\n债市的运作稳定改善。",
+        "summary": "日本央行行长植田和男：升息后实际利率仍维持低位。\n\n将继续密切关注加息的影响。\n\n债市的运作稳定改善。",
+        "url": "https://wallstreetcn.com/livenews/3202286",
         "category": "宏观金融",
         "raw_price": null
       },
