@@ -1,12 +1,16 @@
 {
   "date": "2026-11-20",
-  "updated_at": "2026-11-20 11:08",
+  "updated_at": "2026-11-20 20:49",
   "seen_raw_keys": [
     "10月份全国出口煤炭29万吨同比下降194%",
     "2026年夏季全国煤炭交易会",
+    "anthropic美国ipo首日收涨1707%报9717美元",
     "cctd晋陕蒙煤炭汽运价格速览20261118",
+    "gap的bananarepublic和oldnavy表现疲软下调业绩指引该公司三季度净销售401亿美元分析师预期403亿美元预计全年净销",
     "gielauncheselsabringingeuropeangasstorageandlngdatatoyourphone",
+    "hormuzoilexportscoulddeclineamidinboundtankershortage",
     "lngimportsmakeupincreasingshareofcolombiasnaturalgassupply",
+    "lng船货跨境通首轮交易在沪完成贸易及人民币结算模式进一步丰富",
     "pressreleaseupdatesstorageandlngmaps",
     "russiafacesalogisticsnightmareaftercrimeabridgecollapse",
     "一份亮眼的能源保供答卷",
@@ -14,13 +18,16 @@
     "全面履约监管升级重时间任务2027年电煤保",
     "关于召开2027年度全国煤炭交易会的通知",
     "关于开展中国石油化工股份有限公司天然气分公司华北天然气销售中心2026年11月易气无忧服务竞拍交易的通知",
+    "关于开展中海油能源发展股份有限公司销售服务分公司凝析油竞价交易的公告",
     "关于开展安平管道天然气竞价交易的公告",
     "关于开展安平管道天然气竞价采购交易的公告",
     "关于开展靖边管道天然气竞价交易的公告",
+    "受市场预期美联储将收紧货币政策影响拉美股市跌至一年低点外汇市场走低",
     "对话杨剑代表谈煤炭产业",
     "开展冀宁线干线冀鲁段32阀室管道天然气竞价采购交易的公告",
     "换不起停不得煤炭运销老系统有第三条路",
     "标普500指数初步收跌2%可选消费板块跌28%电信板块跌28%保健工业原材料科技房地产金融日用品公用事业板块至少跌11%能源板块跌0",
+    "沙特领导的联军拦截了一枚也门胡塞武装向沙特南部地区发射的弹道导弹",
     "法国巴黎银行上调对美联储加息前景的预期现在认为3月份也将收紧货币政策即12月1月3月将先后实施每次25个基点的加息",
     "煤价回调高低卡价差为何仍在扩大",
     "熊维中东冲突冲击全球天然气供需格局高气价与区域溢价或将持续",
@@ -28,9 +35,17 @@
     "现货黄金失守3640美元盎司日内跌230%",
     "现货黄金失守3650美元盎司日内跌201%",
     "现货黄金日内跌2%现报364982美元盎司",
+    "现货黄金日内跌幅扩大至19%现报355783美元盎司",
     "现货黄金日内跌幅达20%报364982美元盎司纽约银日内跌幅达35%报4348美元盎司",
+    "现货黄金跌超2%跌至3550美元盎司下方",
     "生物天然气迈入产业化快车道统一价格指数破解行业痛点",
+    "纽约期金失守3640美元盎司日内跌276%",
+    "纽约期银日内跌4%现报4326美元盎司",
+    "美国已为伊朗战事花费逾480亿美元",
+    "美国投资公司协会ici美国货币市场资产降低至7976万亿美元",
+    "美联储官员古尔斯比ai热潮可能使美国经济产能承压并导致过热",
     "美能源部长波斯湾成品油俄柴油供给增加美国柴油价料持续下行",
+    "财捷intuit第一财季净营收435亿美元分析师预期431亿美元公司达成出售mailchimp给bendingsspoons的协议",
     "需求拖累煤焦震荡寻底"
   ],
   "events": [
@@ -1308,6 +1323,516 @@
       "analogy": "历史类比：2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 全国电荒、煤价向电价的成本传导",
       "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
       "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "LNG船货“跨境通”首轮交易在沪完成 贸易及人民币结算模式进一步丰富",
+      "time": "—",
+      "source": "上海石油天然气交易中心",
+      "url": [
+        "http://www.shpgx.com/html/gsxw/20260629/9423.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "即时",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "人民币结算模式丰富对原油进口影响有限，无直接传导至国内原油价格",
+          "detail": "人民币结算模式丰富对原油进口影响有限，无直接传导至国内原油价格"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "人民币结算模式有利于降低LNG进口成本，提升国内天然气供应竞争力，数周内可能传导",
+          "detail": "人民币结算模式有利于降低LNG进口成本，提升国内天然气供应竞争力，数周内可能传导至国内天然气价格"
+        },
+        "coal": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "LNG交易模式对煤炭市场影响有限，无直接传导至国内煤炭价格",
+          "detail": "LNG交易模式对煤炭市场影响有限，无直接传导至国内煤炭价格"
+        },
+        "power": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "人民币结算模式对电力市场影响有限，无直接传导至国内电力价格",
+          "detail": "人民币结算模式对电力市场影响有限，无直接传导至国内电力价格"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2022 俄乌冲突推升 TTF 与进口 LNG 成本",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "关于开展中海油能源发展股份有限公司销售服务分公司凝析油竞价交易的公告",
+      "time": "—",
+      "source": "上海石油天然气交易中心",
+      "url": [
+        "http://www.shpgx.com/html/jygg/20261118/10347.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "凝析油竞价交易可能增加国内原油市场流动性，短期内可能推高国内原油价格",
+          "detail": "凝析油竞价交易可能增加国内原油市场流动性，短期内可能推高国内原油价格"
+        },
+        "gas": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "凝析油交易对天然气市场影响有限，无直接传导至国内天然气价格",
+          "detail": "凝析油交易对天然气市场影响有限，无直接传导至国内天然气价格"
+        },
+        "coal": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "凝析油交易对煤炭市场影响有限，无直接传导至国内煤炭价格",
+          "detail": "凝析油交易对煤炭市场影响有限，无直接传导至国内煤炭价格"
+        },
+        "power": {
+          "dir": "flat",
+          "strength": "—",
+          "lag": "数日",
+          "confidence": "—",
+          "priced_in": "—",
+          "logic": "凝析油交易对电力市场影响有限，无直接传导至国内电力价格",
+          "detail": "凝析油交易对电力市场影响有限，无直接传导至国内电力价格"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "拉美股市跌至一年低点，外汇市场走低",
+      "time": "2026-11-20 04:53",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3202803"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "拉美股市下跌，外汇市场走低，美元走强，对油价产生下行压力",
+          "detail": "拉美股市下跌，外汇市场走低，美元走强，对油价产生下行压力"
+        },
+        "gas": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "拉美股市下跌，外汇市场走低，美元走强，对天然气价格产生下行压力",
+          "detail": "拉美股市下跌，外汇市场走低，美元走强，对天然气价格产生下行压力"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "拉美股市下跌，外汇市场走低，美元走强，对煤炭价格产生轻微下行压力",
+          "detail": "拉美股市下跌，外汇市场走低，美元走强，对煤炭价格产生轻微下行压力"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "拉美股市下跌，外汇市场走低，美元走强，对电力价格产生轻微下行压力",
+          "detail": "拉美股市下跌，外汇市场走低，美元走强，对电力价格产生轻微下行压力"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "纽约期金失守3640美元/盎司，日内跌2.76%",
+      "time": "2026-11-20 05:26:56",
+      "source": "新浪7×24",
+      "url": [
+        "https://finance.sina.cn/7x24/2026-11-20/detail-inizinvs4124036.d.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "黄金价格下跌，可能反映市场对经济前景的担忧，对油价产生下行压力",
+          "detail": "黄金价格下跌，可能反映市场对经济前景的担忧，对油价产生下行压力"
+        },
+        "gas": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "黄金价格下跌，可能反映市场对经济前景的担忧，对天然气价格产生下行压力",
+          "detail": "黄金价格下跌，可能反映市场对经济前景的担忧，对天然气价格产生下行压力"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "黄金价格下跌，可能反映市场对经济前景的担忧，对煤炭价格产生轻微下行压力",
+          "detail": "黄金价格下跌，可能反映市场对经济前景的担忧，对煤炭价格产生轻微下行压力"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "黄金价格下跌，可能反映市场对经济前景的担忧，对电力价格产生轻微下行压力",
+          "detail": "黄金价格下跌，可能反映市场对经济前景的担忧，对电力价格产生轻微下行压力"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "纽约期银日内跌4%，现报43.26美元/盎司",
+      "time": "2026-11-20 05:26:07",
+      "source": "新浪7×24",
+      "url": [
+        "https://finance.sina.cn/7x24/2026-11-20/detail-inizinvv0559571.d.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "白银价格下跌，可能反映市场对经济前景的担忧，对油价产生下行压力",
+          "detail": "白银价格下跌，可能反映市场对经济前景的担忧，对油价产生下行压力"
+        },
+        "gas": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "白银价格下跌，可能反映市场对经济前景的担忧，对天然气价格产生下行压力",
+          "detail": "白银价格下跌，可能反映市场对经济前景的担忧，对天然气价格产生下行压力"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "白银价格下跌，可能反映市场对经济前景的担忧，对煤炭价格产生轻微下行压力",
+          "detail": "白银价格下跌，可能反映市场对经济前景的担忧，对煤炭价格产生轻微下行压力"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "白银价格下跌，可能反映市场对经济前景的担忧，对电力价格产生轻微下行压力",
+          "detail": "白银价格下跌，可能反映市场对经济前景的担忧，对电力价格产生轻微下行压力"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "沙特领导的联军拦截也门胡塞武装导弹",
+      "time": "2026-11-20 10:45:38",
+      "source": "新浪7×24",
+      "url": [
+        "https://finance.sina.cn/7x24/2026-11-20/detail-inizixmk7299817.d.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "中东地区地缘政治紧张，原油供应风险增加，进口到岸平价上升，国内原油价格跟涨；数日",
+          "detail": "中东地区地缘政治紧张，原油供应风险增加，进口到岸平价上升，国内原油价格跟涨；数日内，长协保供缓冲作用有限"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "中东地缘政治紧张导致LNG进口成本上升，国内天然气价格跟涨；数日内，替代发电趋紧",
+          "detail": "中东地缘政治紧张导致LNG进口成本上升，国内天然气价格跟涨；数日内，替代发电趋紧，广东等现货电价可能跟涨"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "地缘政治紧张，能源替代预期增强，进口煤价差预期扩大，国内动力煤价格跟涨；数日内，",
+          "detail": "地缘政治紧张，能源替代预期增强，进口煤价差预期扩大，国内动力煤价格跟涨；数日内，电厂日耗库存影响有限"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "能源替代趋紧，煤电度电燃料成本上升，广东等现货电价可能跟涨；数日内，容量电价影响",
+          "detail": "能源替代趋紧，煤电度电燃料成本上升，广东等现货电价可能跟涨；数日内，容量电价影响有限"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "霍尔木兹海峡油轮短缺可能导致出口下降",
+      "time": "Thu, 19 Nov 2026 17:00:00 -0600",
+      "source": "OilPrice",
+      "url": [
+        "https://oilprice.com/Energy/Crude-Oil/Hormuz-Oil-Exports-Could-Decline-amid-Inbound-Tanker-Shortage.html"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "霍尔木兹海峡油轮短缺，原油出口受限，进口到岸平价上升，国内原油价格跟涨；即时，长",
+          "detail": "霍尔木兹海峡油轮短缺，原油出口受限，进口到岸平价上升，国内原油价格跟涨；即时，长协保供缓冲作用有限"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "原油出口受限，LNG进口成本上升，国内天然气价格跟涨；即时，替代发电趋紧，广东等",
+          "detail": "原油出口受限，LNG进口成本上升，国内天然气价格跟涨；即时，替代发电趋紧，广东等现货电价可能跟涨"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "原油出口受限，能源替代预期增强，进口煤价差预期扩大，国内动力煤价格跟涨；即时，电",
+          "detail": "原油出口受限，能源替代预期增强，进口煤价差预期扩大，国内动力煤价格跟涨；即时，电厂日耗库存影响有限"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "原油出口受限，煤电度电燃料成本上升，广东等现货电价可能跟涨；即时，容量电价影响有",
+          "detail": "原油出口受限，煤电度电燃料成本上升，广东等现货电价可能跟涨；即时，容量电价影响有限"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "美国为伊朗战事花费逾480亿美元",
+      "time": "2026-11-20 10:56",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3202977"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "up",
+          "strength": "强",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美国对伊朗的军事开支增加，地缘政治风险上升，原油进口成本上升，国内原油价格跟涨；",
+          "detail": "美国对伊朗的军事开支增加，地缘政治风险上升，原油进口成本上升，国内原油价格跟涨；数日内，长协保供缓冲作用有限"
+        },
+        "gas": {
+          "dir": "up",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "美国对伊朗的军事开支增加，地缘政治风险上升，LNG进口成本上升，国内天然气价格跟",
+          "detail": "美国对伊朗的军事开支增加，地缘政治风险上升，LNG进口成本上升，国内天然气价格跟涨；数日内，替代发电趋紧，广东等现货电价可能跟涨"
+        },
+        "coal": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美国对伊朗的军事开支增加，地缘政治风险上升，能源替代预期增强，进口煤价差预期扩大",
+          "detail": "美国对伊朗的军事开支增加，地缘政治风险上升，能源替代预期增强，进口煤价差预期扩大，国内动力煤价格跟涨；数日内，电厂日耗库存影响有限"
+        },
+        "power": {
+          "dir": "up",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "美国对伊朗的军事开支增加，地缘政治风险上升，煤电度电燃料成本上升，广东等现货电价",
+          "detail": "美国对伊朗的军事开支增加，地缘政治风险上升，煤电度电燃料成本上升，广东等现货电价可能跟涨；数日内，容量电价影响有限"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给进一步收紧 / 需求超预期 / 冲突升级",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "现货黄金跌超2%，跌至3550美元/盎司下方",
+      "time": "2026-11-20 10:09",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3202955"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "黄金价格下跌，市场风险偏好上升，原油金融属性下降，国内原油价格跟跌；数日内，长协",
+          "detail": "黄金价格下跌，市场风险偏好上升，原油金融属性下降，国内原油价格跟跌；数日内，长协保供缓冲作用有限"
+        },
+        "gas": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "黄金价格下跌，市场风险偏好上升，LNG进口成本下降，国内天然气价格跟跌；数日内，",
+          "detail": "黄金价格下跌，市场风险偏好上升，LNG进口成本下降，国内天然气价格跟跌；数日内，替代发电趋紧，广东等现货电价可能跟跌"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "黄金价格下跌，市场风险偏好上升，能源替代预期减弱，进口煤价差预期缩小，国内动力煤",
+          "detail": "黄金价格下跌，市场风险偏好上升，能源替代预期减弱，进口煤价差预期缩小，国内动力煤价格跟跌；数日内，电厂日耗库存影响有限"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "黄金价格下跌，市场风险偏好上升，煤电度电燃料成本下降，广东等现货电价可能跟跌；数",
+          "detail": "黄金价格下跌，市场风险偏好上升，煤电度电燃料成本下降，广东等现货电价可能跟跌；数日内，容量电价影响有限"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
+    },
+    {
+      "title": "现货黄金日内跌幅扩大至1.9%，现报3557.83美元/盎司",
+      "time": "2026-11-20 10:04",
+      "source": "华尔街见闻",
+      "url": [
+        "https://wallstreetcn.com/livenews/3202948"
+      ],
+      "nature": "确认",
+      "impacts": {
+        "oil": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "即时",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "黄金价格大幅下跌，市场风险偏好上升，原油金融属性下降，国内原油价格跟跌；数日内，",
+          "detail": "黄金价格大幅下跌，市场风险偏好上升，原油金融属性下降，国内原油价格跟跌；数日内，长协保供缓冲作用有限"
+        },
+        "gas": {
+          "dir": "down",
+          "strength": "中",
+          "lag": "数日",
+          "confidence": "中",
+          "priced_in": "部分",
+          "logic": "黄金价格大幅下跌，市场风险偏好上升，LNG进口成本下降，国内天然气价格跟跌；数日",
+          "detail": "黄金价格大幅下跌，市场风险偏好上升，LNG进口成本下降，国内天然气价格跟跌；数日内，替代发电趋紧，广东等现货电价可能跟跌"
+        },
+        "coal": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "黄金价格大幅下跌，市场风险偏好上升，能源替代预期减弱，进口煤价差预期缩小，国内动",
+          "detail": "黄金价格大幅下跌，市场风险偏好上升，能源替代预期减弱，进口煤价差预期缩小，国内动力煤价格跟跌；数日内，电厂日耗库存影响有限"
+        },
+        "power": {
+          "dir": "down",
+          "strength": "弱",
+          "lag": "数日",
+          "confidence": "低",
+          "priced_in": "部分",
+          "logic": "黄金价格大幅下跌，市场风险偏好上升，煤电度电燃料成本下降，广东等现货电价可能跟跌",
+          "detail": "黄金价格大幅下跌，市场风险偏好上升，煤电度电燃料成本下降，广东等现货电价可能跟跌；数日内，容量电价影响有限"
+        }
+      },
+      "chain": "事件改变供需与预期 → 经进口到岸平价 / 汇率 / 海运费 → 国内油气价格 → 能源替代与预期 → 煤电度电燃料成本 → 广东等国内现货电价。",
+      "analogy": "历史类比：2019 沙特设施遇袭、OPEC+ 意外减产对油价的脉冲；2022 俄乌冲突推升 TTF 与进口 LNG 成本；2021 动力煤暴涨与保供限价；2021 全国电荒、煤价向电价的成本传导",
+      "trigger": "强化触发：供给恢复 / 需求转弱 / 风险缓和",
+      "falsify": "证伪：官方澄清，或库存 / 运费 / 现货价出现反向变化。"
     }
   ],
   "brief": {
@@ -1632,216 +2157,6 @@
   },
   "pending": [
     {
-      "key": "lng船货跨境通首轮交易在沪完成贸易及人民币结算模式进一步丰富",
-      "item": {
-        "id": "CNC14",
-        "time": "—",
-        "source": "上海石油天然气交易中心",
-        "title": "LNG船货“跨境通”首轮交易在沪完成 贸易及人民币结算模式进一步丰富",
-        "summary": "",
-        "url": "http://www.shpgx.com/html/gsxw/20260629/9423.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "关于开展中海油能源发展股份有限公司销售服务分公司凝析油竞价交易的公告",
-      "item": {
-        "id": "CNC20",
-        "time": "—",
-        "source": "上海石油天然气交易中心",
-        "title": "关于开展中海油能源发展股份有限公司销售服务分公司凝析油竞价交易的公告",
-        "summary": "",
-        "url": "http://www.shpgx.com/html/jygg/20261118/10347.html",
-        "category": "中国煤与电",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "gap的bananarepublic和oldnavy表现疲软下调业绩指引该公司三季度净销售401亿美元分析师预期403亿美元预计全年净销",
-      "item": {
-        "id": "INTL29",
-        "time": "2026-11-20 05:20",
-        "source": "华尔街见闻",
-        "title": "Gap的Banana Republic和Old Navy表现疲软，下调业绩指引。\n\n该公司三季度净销售40.1亿美元，分析师预期40.3亿美元。\n\n预计全年净销",
-        "summary": "Gap的Banana Republic和Old Navy表现疲软，下调业绩指引。\n\n该公司三季度净销售40.1亿美元，分析师预期40.3亿美元。\n\n预计全年净销售将持平，公司原本预计会增长1%-1.5%。\n\nGap盘后跌3%。",
-        "url": "https://wallstreetcn.com/livenews/3202818",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "anthropic美国ipo首日收涨1707%报9717美元",
-      "item": {
-        "id": "INTL33",
-        "time": "2026-11-20 05:03",
-        "source": "华尔街见闻",
-        "title": "Anthropic美国IPO首日收涨17.07%，报97.17美元。",
-        "summary": "Anthropic美国IPO首日收涨17.07%，报97.17美元。",
-        "url": "https://wallstreetcn.com/livenews/3202811",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "财捷intuit第一财季净营收435亿美元分析师预期431亿美元公司达成出售mailchimp给bendingsspoons的协议",
-      "item": {
-        "id": "INTL34",
-        "time": "2026-11-20 05:01",
-        "source": "华尔街见闻",
-        "title": "财捷Intuit第一财季净营收43.5亿美元，分析师预期43.1亿美元。\n\n公司达成出售Mailchimp给Bendings Spoons的协议。",
-        "summary": "财捷Intuit第一财季净营收43.5亿美元，分析师预期43.1亿美元。\n\n公司达成出售Mailchimp给Bendings Spoons的协议。",
-        "url": "https://wallstreetcn.com/livenews/3202809",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "美国投资公司协会ici美国货币市场资产降低至7976万亿美元",
-      "item": {
-        "id": "INTL36",
-        "time": "2026-11-20 04:59",
-        "source": "华尔街见闻",
-        "title": "美国投资公司协会（ICI）：美国货币市场资产降低至7.976万亿美元。",
-        "summary": "美国投资公司协会（ICI）：美国货币市场资产降低至7.976万亿美元。",
-        "url": "https://wallstreetcn.com/livenews/3202804",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "受市场预期美联储将收紧货币政策影响拉美股市跌至一年低点外汇市场走低",
-      "item": {
-        "id": "INTL37",
-        "time": "2026-11-20 04:53",
-        "source": "华尔街见闻",
-        "title": "受市场预期美联储将收紧货币政策影响，拉美股市跌至一年低点，外汇市场走低",
-        "summary": "受全球市场情绪脆弱影响，MSCI拉美股票指数跌至一年低点，同时市场对美国加息预期升温，也给该地区货币带来压力。该指数下跌2.72%，创2025年11月下旬以来的最低水平。拉美货币综合指数下跌1.96%，触及10个月低点。\n\n“这些走势似乎并非源于基本面的自下而上变化。这更像是短期宏观市场情绪所致，导致不同资产类别之间出现了高度相关性，”Global X新兴市场策略主管多尔森（Malcolm Dorson）表示。 “包括沃勒（Waller）理事在内的美联储理事们均表示，通胀仍朝",
-        "url": "https://wallstreetcn.com/livenews/3202803",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "美联储官员古尔斯比ai热潮可能使美国经济产能承压并导致过热",
-      "item": {
-        "id": "INTL41",
-        "time": "2026-11-20 04:30",
-        "source": "华尔街见闻",
-        "title": "美联储官员古尔斯比：AI热潮可能使美国经济产能承压并导致过热",
-        "summary": "美国芝加哥联储主席古尔斯比（Austan Goolsbee）：服务业通胀的走势对于理解价格压力究竟源于需求还是能源成本等因素至关重要。\n\n事实证明，通胀的顽固程度远超2025年时的预期，而数据中心需求以及人工智能（AI）带来的财富效应正在加剧这一局面。\n\n利率路径的陡峭程度，将取决于这种“高得令人不安”的通胀是否显现出回落至美联储2%目标的迹象。\n\n目前尚未看到通胀正处于重返2%目标的轨道上；通胀不仅来自石油和关税冲击，还包含相当大比重的需求因素。\n\n目前并不担忧薪资上涨会对",
-        "url": "https://wallstreetcn.com/livenews/3202797",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "纽约期金失守3640美元盎司日内跌276%",
-      "item": {
-        "id": "FL01",
-        "time": "2026-11-20 05:26:56",
-        "source": "新浪7×24",
-        "title": "纽约期金失守3640美元/盎司，日内跌2.76%。",
-        "summary": "纽约期金失守3640美元/盎司，日内跌2.76%。",
-        "url": "https://finance.sina.cn/7x24/2026-11-20/detail-inizinvs4124036.d.html",
-        "category": "国内快讯/地缘宏观",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "纽约期银日内跌4%现报4326美元盎司",
-      "item": {
-        "id": "FL03",
-        "time": "2026-11-20 05:26:07",
-        "source": "新浪7×24",
-        "title": "纽约期银日内跌4%，现报43.26美元/盎司。",
-        "summary": "纽约期银日内跌4%，现报43.26美元/盎司。",
-        "url": "https://finance.sina.cn/7x24/2026-11-20/detail-inizinvv0559571.d.html",
-        "category": "国内快讯/地缘宏观",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "沙特领导的联军拦截了一枚也门胡塞武装向沙特南部地区发射的弹道导弹",
-      "item": {
-        "id": "FL08",
-        "time": "2026-11-20 10:45:38",
-        "source": "新浪7×24",
-        "title": "沙特领导的联军：拦截了一枚也门胡塞武装向沙特南部地区发射的弹道导弹。",
-        "summary": "沙特领导的联军：拦截了一枚也门胡塞武装向沙特南部地区发射的弹道导弹。",
-        "url": "https://finance.sina.cn/7x24/2026-11-20/detail-inizixmk7299817.d.html",
-        "category": "国内快讯/地缘宏观",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "hormuzoilexportscoulddeclineamidinboundtankershortage",
-      "item": {
-        "id": "INTL04",
-        "time": "Thu, 19 Nov 2026 17:00:00 -0600",
-        "source": "OilPrice",
-        "title": "Hormuz Oil Exports Could Decline amid Inbound Tanker Shortage",
-        "summary": "Analysts are touting the remarkable recovery in crude oil exports from the Persian Gulf, which have jumped close to pre-war levels in recent months. The oil market reflects the bearish sentiment, with Brent Crude prices sliding in the past ",
-        "url": "https://oilprice.com/Energy/Crude-Oil/Hormuz-Oil-Exports-Could-Decline-amid-Inbound-Tanker-Shortage.html",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "美国已为伊朗战事花费逾480亿美元",
-      "item": {
-        "id": "INTL30",
-        "time": "2026-11-20 10:56",
-        "source": "华尔街见闻",
-        "title": "美国已为伊朗战事花费逾480亿美元",
-        "summary": "美国国防部官员19日在国会听证会上说，截至11月13日的评估显示，美国已为伊朗战事花费483亿美元，且不包含中东地区美军基地遇袭的损失。多名国会议员敦促国防部尽快提供相关数据。",
-        "url": "https://wallstreetcn.com/livenews/3202977",
-        "category": "地缘政治与制裁",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "现货黄金跌超2%跌至3550美元盎司下方",
-      "item": {
-        "id": "INTL32",
-        "time": "2026-11-20 10:09",
-        "source": "华尔街见闻",
-        "title": "现货黄金跌超2%，跌至3550美元/盎司下方。",
-        "summary": "现货黄金跌超2%，跌至3550美元/盎司下方。",
-        "url": "https://wallstreetcn.com/livenews/3202955",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
-      "key": "现货黄金日内跌幅扩大至19%现报355783美元盎司",
-      "item": {
-        "id": "INTL33",
-        "time": "2026-11-20 10:04",
-        "source": "华尔街见闻",
-        "title": "现货黄金日内跌幅扩大至1.9%，现报3557.83美元/盎司。",
-        "summary": "现货黄金日内跌幅扩大至1.9%，现报3557.83美元/盎司。",
-        "url": "https://wallstreetcn.com/livenews/3202948",
-        "category": "宏观金融",
-        "raw_price": null
-      },
-      "attempts": 0
-    },
-    {
       "key": "华泰证券河南分时电价新政征求意见储能项目或受益",
       "item": {
         "id": "INTL40",
@@ -2075,6 +2390,370 @@
         "summary": "",
         "url": "http://www.nmc.cn/publish/tianqiyubao/quanqiuzaihaixingtianqijianceyuebao/index.html",
         "category": "天气季节",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "iranstepsuphormuztankerattacksasoilpricesslide",
+      "item": {
+        "id": "INTL04",
+        "time": "Fri, 20 Nov 2026 06:30:00 -0600",
+        "source": "OilPrice",
+        "title": "Iran Steps Up Hormuz Tanker Attacks as Oil Prices Slide",
+        "summary": "Iran has intensified attacks on tankers in the Strait of Hormuz in recent weeks, just as crude oil flows from the Persian Gulf recover and oil prices fall amid expectations of oversupply within months. The number of attacks soared in Octobe",
+        "url": "https://oilprice.com/Latest-Energy-News/World-News/Iran-Steps-Up-Hormuz-Tanker-Attacks-as-Oil-Prices-Slide.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "全面履约监管升级重时间任务2027年电煤保供中长期合",
+      "item": {
+        "id": "CNC04",
+        "time": "—",
+        "source": "CCTD",
+        "title": "全面履约、监管升级、重时间任务——2027年电煤保供中长期合...",
+        "summary": "",
+        "url": "https://www.cctd.com.cn/index.php?m=content&c=index&a=show&catid=651&id=258084",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "关于开展中海油珠海新能源有限公司2026年12月2027年1月lng运力竞价交易公告",
+      "item": {
+        "id": "CNC21",
+        "time": "—",
+        "source": "上海石油天然气交易中心",
+        "title": "关于开展中海油珠海新能源有限公司2026年12月-2027年1月LNG运力竞价交易公告",
+        "summary": "",
+        "url": "http://www.shpgx.com/html/jygg/20261120/10359.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "关于开展中海油湛江新能源有限公司2026年12月2027年1月lng运力竞价交易公告",
+      "item": {
+        "id": "CNC22",
+        "time": "—",
+        "source": "上海石油天然气交易中心",
+        "title": "关于开展中海油湛江新能源有限公司2026年12月-2027年1月LNG运力竞价交易公告",
+        "summary": "",
+        "url": "http://www.shpgx.com/html/jygg/20261120/10358.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "测算显示俄罗斯11月油气收入预计同比增长45%至94亿美元",
+      "item": {
+        "id": "FL01",
+        "time": "2026-11-20 20:48:25",
+        "source": "新浪7×24",
+        "title": "测算显示，俄罗斯11月油气收入预计同比增长45%，至94亿美元。",
+        "summary": "测算显示，俄罗斯11月油气收入预计同比增长45%，至94亿美元。",
+        "url": "https://finance.sina.cn/7x24/2026-11-20/detail-inizkyxc0191108.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "trumpsukraineenergytruceunravelsasrussianmissileshitkyiv",
+      "item": {
+        "id": "INTL01",
+        "time": "Fri, 20 Nov 2026 06:30:00 -0600",
+        "source": "OilPrice",
+        "title": "Trump’s Ukraine Energy Truce Unravels as Russian Missiles Hit Kyiv",
+        "summary": "Politics, Geopolitics & Conflict Trump’s October “energy truce” between Russia and Ukraine in October is over, and Vladimir Putin has taken a new one off the table. After meeting Trump and Xi at the APEC summit on Thursday, Putin said Russi",
+        "url": "https://oilprice.com/Energy/Energy-General/Trumps-Ukraine-Energy-Truce-Unravels-as-Russian-Missiles-Hit-Kyiv.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "kushnersaysrussiacomfortablewithideaofnatolikesecurityguaranteesforukraine",
+      "item": {
+        "id": "INTL16",
+        "time": "Fri, 20 Nov 2026 09:56:03 GMT",
+        "source": "CNBC 能源",
+        "title": "Kushner says Russia 'comfortable' with idea of NATO-like security guarantees for Ukraine",
+        "summary": "Kushner said President Donald Trump is open to such a guarantee, but its form and whether Russia and Ukraine would accept it remain unclear.",
+        "url": "https://www.cnbc.com/2026/11/20/kushner-ukraine-nato-russia-trump-putin.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "关于开展江苏省天然气销售有限公司2026年11月易气无忧服务竞拍交易的通知",
+      "item": {
+        "id": "CNC17",
+        "time": "—",
+        "source": "上海石油天然气交易中心",
+        "title": "关于开展江苏省天然气销售有限公司2026年11月“易气无忧”服务竞拍交易的通知",
+        "summary": "",
+        "url": "http://www.shpgx.com/html/jygg/20261120/10365.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "关于开展中国石化天然气分公司山东地区2026年11月易气无忧服务竞拍交易的通知",
+      "item": {
+        "id": "CNC18",
+        "time": "—",
+        "source": "上海石油天然气交易中心",
+        "title": "关于开展中国石化天然气分公司山东地区2026年11月“易气无忧”服务竞拍交易的通知",
+        "summary": "",
+        "url": "http://www.shpgx.com/html/jygg/20261120/10362.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "关于开展国家管网西气东输一线88阀室管道天然气竞价交易的公告",
+      "item": {
+        "id": "CNC19",
+        "time": "—",
+        "source": "上海石油天然气交易中心",
+        "title": "关于开展国家管网西气东输一线88#阀室管道天然气竞价交易的公告",
+        "summary": "",
+        "url": "http://www.shpgx.com/html/jygg/20261120/10361.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "wticrudesinksmorethan5%asglobaloilglutfearsgrow",
+      "item": {
+        "id": "INTL03",
+        "time": "Fri, 20 Nov 2026 06:30:00 -0600",
+        "source": "OilPrice",
+        "title": "WTI Crude Sinks More Than 5% as Global Oil Glut Fears Grow",
+        "summary": "The oil market spent the week weighing an increase in global supply against the risk of further disruptions in the Middle East. More crude is reaching buyers from the region, while U.S. inventories are building. Attacks on tankers and energ",
+        "url": "https://oilprice.com/Energy/Energy-General/WTI-Crude-Sinks-More-Than-5-as-Global-Oil-Glut-Fears-Grow.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "iranrefusesnuclearinspectionsasusmilitarythreatsmount",
+      "item": {
+        "id": "INTL05",
+        "time": "Fri, 20 Nov 2026 05:30:00 -0600",
+        "source": "OilPrice",
+        "title": "Iran Refuses Nuclear Inspections as U.S. Military Threats Mount",
+        "summary": "Iran has warned once again that it would not grant access to its nuclear sites and materials to UN inspectors amid continued U.S. threats of military strikes, a senior Iranian official was quoted as saying on Friday.  “We will not accept be",
+        "url": "https://oilprice.com/Latest-Energy-News/World-News/Iran-Refuses-Nuclear-Inspections-as-US-Military-Threats-Mount.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "iranmovestorestartoilexportsdespiteusnavalblockade",
+      "item": {
+        "id": "INTL07",
+        "time": "Fri, 20 Nov 2026 03:00:00 -0600",
+        "source": "OilPrice",
+        "title": "Iran Moves to Restart Oil Exports Despite U.S. Naval Blockade",
+        "summary": "Iran is preparing to relaunch crude oil exports even as the United States says it is going to tighten the naval blockade on Iranian ports it imposed earlier this year in response to Iran’s closing of the Strait of Hormuz. Bloomberg reported",
+        "url": "https://oilprice.com/Latest-Energy-News/World-News/Iran-Moves-to-Restart-Oil-Exports-Despite-US-Naval-Blockade.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "oilpricesreboundashouthiattacksreignitemiddleeastsupplyfears",
+      "item": {
+        "id": "INTL09",
+        "time": "Thu, 19 Nov 2026 23:51:00 -0600",
+        "source": "OilPrice",
+        "title": "Oil Prices Rebound as Houthi Attacks Reignite Middle East Supply Fears",
+        "summary": "Crude oil prices earlier today reversed a decline that began earlier in the week, gaining on reports of fresh Houthi attacks on Saudi targets and continued tanker trouble in the Strait of Hormuz. At the time of writing, Brent crude was trad",
+        "url": "https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Rebound-as-Houthi-Attacks-Reignite-Middle-East-Supply-Fears.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "putinscoresmassivewinatfirsttrilateralmeetingrebuildingstandingasukrainewargrindson",
+      "item": {
+        "id": "INTL15",
+        "time": "Fri, 20 Nov 2026 09:26:45 GMT",
+        "source": "CNBC 能源",
+        "title": "Putin scores ‘massive win’ at first trilateral meeting, rebuilding standing as Ukraine war grinds on",
+        "summary": "Putin was positioned as an equal beside the leaders of the U.S. and China, handing a win to the authoritarian leader bogged down in a multi-year war.",
+        "url": "https://www.cnbc.com/2026/11/20/putin-xi-china-trump-russia-ukraine-.html",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "以色列被曝升级大卫投石索防空系统",
+      "item": {
+        "id": "INTL40",
+        "time": "2026-11-20 18:58",
+        "source": "华尔街见闻",
+        "title": "以色列被曝升级“大卫投石索”防空系统",
+        "summary": "据以色列方面11月20日消息，以色列已对其“大卫投石索”中程防空系统完成技术升级并扩大拦截范围，旨在增强对弹道导弹的防御能力。消息援引以色列空军防空调查负责人的话说，在今年早些时候以色列与伊朗的冲突中，伊朗大规模发射弹道导弹一度暴露出以色列防空反导体系的漏洞，但也为以军提供了大量实战数据，促使军方在短时间内对防空系统进行针对性改进。（央视）",
+        "url": "https://wallstreetcn.com/livenews/3203325",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "俄副外长乌克兰加入北约完全不可接受",
+      "item": {
+        "id": "INTL44",
+        "time": "2026-11-20 18:33",
+        "source": "华尔街见闻",
+        "title": "俄副外长：乌克兰加入北约“完全不可接受”",
+        "summary": "当地时间11月20日，据俄罗斯方面消息，俄罗斯外交部副部长里亚布科夫表示，乌克兰加入北约对俄方而言“完全不可接受”，为乌方谋求“准成员国”地位或寻找某种“创造性解决方案”也不会被俄方接受。",
+        "url": "https://wallstreetcn.com/livenews/3203291",
+        "category": "地缘政治与制裁",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "鄂尔多斯市煤矿智能化建设推进会召开",
+      "item": {
+        "id": "CNC08",
+        "time": "—",
+        "source": "CCTD",
+        "title": "鄂尔多斯市煤矿智能化建设推进会召开",
+        "summary": "",
+        "url": "https://www.cctd.com.cn/show-176-258082-1.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "胡玉亭主持召开煤矿整合升级工作推进会议",
+      "item": {
+        "id": "CNC09",
+        "time": "—",
+        "source": "CCTD",
+        "title": "胡玉亭主持召开煤矿整合升级工作推进会议",
+        "summary": "",
+        "url": "https://www.cctd.com.cn/show-176-258081-1.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "商务部上周全国煤炭价格总体平稳",
+      "item": {
+        "id": "CNC10",
+        "time": "—",
+        "source": "CCTD",
+        "title": "商务部：上周全国煤炭价格总体平稳",
+        "summary": "",
+        "url": "https://www.cctd.com.cn/show-361-258080-1.html",
+        "category": "中国煤与电",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "胡塞武装发言人发布照片标记今日潜在的打击地点",
+      "item": {
+        "id": "FL05",
+        "time": "2026-11-20 20:42:05",
+        "source": "新浪7×24",
+        "title": "胡塞武装发言人发布照片，标记今日潜在的打击地点",
+        "summary": "胡塞武装发言人发布照片，标记今日潜在的打击地点",
+        "url": "https://finance.sina.cn/7x24/2026-11-20/detail-inizkywy3837552.d.html",
+        "category": "国内快讯/地缘宏观",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "anthropic报告称其ipo总募集毛收入约为935亿美元",
+      "item": {
+        "id": "INTL30",
+        "time": "2026-11-20 20:47",
+        "source": "华尔街见闻",
+        "title": "Anthropic报告称，其IPO总募集毛收入约为935亿美元",
+        "summary": "Anthropic报告称，其IPO总募集毛收入约为935亿美元，包括配售在内的IPO总募集毛收入约为1,195亿美元。",
+        "url": "https://wallstreetcn.com/livenews/3203388",
+        "category": "宏观金融",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "宁德时代与东方汇理银行签署5亿美元销售融资战略框架协议",
+      "item": {
+        "id": "INTL32",
+        "time": "2026-11-20 20:37",
+        "source": "华尔街见闻",
+        "title": "宁德时代与东方汇理银行签署5亿美元销售融资战略框架协议",
+        "summary": "11月20日，据宁德时代消息，东方汇理银行（Credit Agricole）与宁德时代于近日在巴黎签署5亿美元销售融资战略框架协议。此次合作由东方汇理银行巴黎总行直接牵头，将为宁德时代全球合作伙伴提供融资支持，帮助更多储能项目落地。",
+        "url": "https://wallstreetcn.com/livenews/3203381",
+        "category": "宏观金融",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "alphabet通过发行加拿大债券筹集419亿美元",
+      "item": {
+        "id": "INTL33",
+        "time": "2026-11-20 20:17",
+        "source": "华尔街见闻",
+        "title": "Alphabet通过发行加拿大债券筹集41.9亿美元",
+        "summary": "据周五向美国证券交易委员会提交的定价条款清单显示，Alphabet通过分四批发行的加拿大债券，筹集了60亿加元 (合41.9亿美元)。谷歌母公司在这份文件中表示 ，所筹集的资金将用于一般企业用途，其中可能包括偿还未偿债务。Alphabet预计在扣除承销折扣（即银行手续费）且未扣除相关费用后，将获得约59.7亿加元。此次发行的定价于11月19日确定，计划于11月24日交割。（路透）",
+        "url": "https://wallstreetcn.com/livenews/3203374",
+        "category": "宏观金融",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "spacex为ai芯片筹资320亿美元债务收益率超过8%",
+      "item": {
+        "id": "INTL34",
+        "time": "2026-11-20 20:03",
+        "source": "华尔街见闻",
+        "title": "SpaceX为AI芯片筹资320亿美元 债务收益率超过8%",
+        "summary": "SpaceX为获取人工智能芯片而进行的320亿美元债务融资，可能成为类似交易的范本。随着AI热潮催生的下一轮融资启动，这类融资对借款企业而言可能代价不菲。这项结构复杂的融资中，大部分债务以超过8%的收益率售出。这一水平通常不会出现在投资级债务市场，反映出投资者普遍担忧AI巨额支出可能无法获得相应回报。",
+        "url": "https://wallstreetcn.com/livenews/3203370",
+        "category": "宏观金融",
+        "raw_price": null
+      },
+      "attempts": 0
+    },
+    {
+      "key": "交易员削减对欧洲央行加息的押注倾向于认为到2027年底仅会加息两次",
+      "item": {
+        "id": "INTL45",
+        "time": "2026-11-20 18:25",
+        "source": "华尔街见闻",
+        "title": "交易员削减对欧洲央行加息的押注，倾向于认为到2027年底仅会加息两次。",
+        "summary": "交易员削减对欧洲央行加息的押注，倾向于认为到2027年底仅会加息两次。",
+        "url": "https://wallstreetcn.com/livenews/3203276",
+        "category": "宏观金融",
         "raw_price": null
       },
       "attempts": 0
