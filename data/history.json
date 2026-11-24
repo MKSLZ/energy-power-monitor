@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-11-24 10:54",
+    "oil": "86.37 $/桶",
+    "oil_chg": "-0.36%",
+    "oil_up": false,
+    "gas": "3.54 $/MMBtu",
+    "gas_chg": "+0.54%",
+    "gas_up": true,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "也门荷台达市通信设施遭空袭（当日10事件/本档+10）"
+  },
+  {
     "time": "2026-11-23 22:32",
     "oil": "90.72 $/桶",
     "oil_chg": "-2.00%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "伊朗称油轮在霍尔木兹海峡遭水雷袭击（当日11事件/本档+11）"
-  },
-  {
-    "time": "2026-11-13 20:09",
-    "oil": "625.7 元/桶",
-    "oil_chg": "+3.06%",
-    "oil_up": true,
-    "gas": "3.7 $/MMBtu",
-    "gas_chg": "-1.31%",
-    "gas_up": false,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "也门胡塞武装袭击沙特输油管道泵站（当日35事件/本档+10）"
   }
 ]
