@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-11-26 21:51",
+    "oil": "91.31 $/桶",
+    "oil_chg": "+0.74%",
+    "oil_up": true,
+    "gas": "3.61 $/MMBtu",
+    "gas_chg": "-1.23%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "WTI 1月原油期货收涨1.63美元，涨幅1.99%，报83（当日39事件/本档+15）"
+  },
+  {
     "time": "2026-11-26 12:09",
     "oil": "91.13 $/桶",
     "oil_chg": "+0.54%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "胡塞武装袭击沙特民用目标（当日11事件/本档+11）"
-  },
-  {
-    "time": "2026-11-15 15:50",
-    "oil": "96.29 $/桶",
-    "oil_chg": "+0.49%",
-    "oil_up": true,
-    "gas": "3.62 $/MMBtu",
-    "gas_chg": "-3.44%",
-    "gas_up": false,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "伊朗称油轮在霍尔木兹海峡触雷起火（当日34事件/本档+10）"
   }
 ]
