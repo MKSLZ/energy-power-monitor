@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-11-28 03:28",
+    "oil": "90.47 $/桶",
+    "oil_chg": "-1.30%",
+    "oil_up": false,
+    "gas": "3.5 $/MMBtu",
+    "gas_chg": "-4.37%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▼ 气▲ 煤■ 电▲",
+    "event": "中东冲突冲击全球天然气供需格局，高气价与区域溢价或将持续（当日12事件/本档+12）"
+  },
+  {
     "time": "2026-11-27 17:40",
     "oil": "602.4 元/桶",
     "oil_chg": "+0.75%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "伊朗表示霍尔木兹海峡发生第四起油轮触雷事件（当日14事件/本档+14）"
-  },
-  {
-    "time": "2026-11-16 15:58",
-    "oil": "621 元/桶",
-    "oil_chg": "+0.40%",
-    "oil_up": true,
-    "gas": "3.52 $/MMBtu",
-    "gas_chg": "-2.50%",
-    "gas_up": false,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "胡塞武装袭击沙特民用目标（当日31事件/本档+10）"
   }
 ]
