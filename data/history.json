@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-11-27 17:40",
+    "oil": "602.4 元/桶",
+    "oil_chg": "+0.75%",
+    "oil_up": true,
+    "gas": "3.56 $/MMBtu",
+    "gas_chg": "-2.57%",
+    "gas_up": false,
+    "coal": "N/A",
+    "coal_chg": "N/A",
+    "coal_up": null,
+    "power": "N/A",
+    "power_chg": "N/A",
+    "power_up": null,
+    "dir": "油▲ 气▲ 煤▲ 电▲",
+    "event": "受中东能源设施与油轮接连遇袭影响，油价有望迎来本月首次周线收（当日19事件/本档+9）"
+  },
+  {
     "time": "2026-11-27 08:34",
     "oil": "91.75 $/桶",
     "oil_chg": "+1.23%",
@@ -491,22 +508,5 @@
     "power_up": null,
     "dir": "油▲ 气▲ 煤▲ 电▲",
     "event": "胡塞武装袭击沙特民用目标（当日31事件/本档+10）"
-  },
-  {
-    "time": "2026-11-16 07:24",
-    "oil": "95.42 $/桶",
-    "oil_chg": "-0.44%",
-    "oil_up": false,
-    "gas": "3.56 $/MMBtu",
-    "gas_chg": "-1.25%",
-    "gas_up": false,
-    "coal": "N/A",
-    "coal_chg": "N/A",
-    "coal_up": null,
-    "power": "N/A",
-    "power_chg": "N/A",
-    "power_up": null,
-    "dir": "油▲ 气▲ 煤▲ 电▲",
-    "event": "胡塞武装袭击沙特民用目标（当日21事件/本档+10）"
   }
 ]
